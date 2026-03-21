@@ -1,0 +1,72 @@
+Inverter Code,Manufacturer Fault Source,Fault Type,Manufacturer Description,Possible Causes,LT Description,Potential Parts,Comments
+1052,Earth Fault,,The PV array exceeds the differential current limit of the PV terminals,,,,
+2052,Under-voltage 24V Converter,,The power semiconductors control voltage is below 20V,,,,
+0010,AC Frequency Low,Software,,Utility grid frequency fell below the allowable limit,,,
+0011,AC Frequency High,Software,,Utility grid frequency rose above the allowable limit,,,
+0012,AC Voltage Low,Software,,"AC Switch
+Micrologic",,,
+0013,AC Voltage High,Software,,,,,
+0015,Grid Disconnection,Software,,"AC Switch
+Micrologic",,,
+0016,DC Disconnect Switch,Software,,"K31 is inoperable
+Q11 is inoperable",,,
+0017,Phase Error,Software,,Phase Rotation of the incoming grid connections is wrong,,,
+0018,AC Contactor Circuit Fault,Software,,"K1 is inoperable
+K33 is inoperable",AC Contactor Fault,AC Contactor / auxiliary contact,Check aux cabling into contactor
+0019,PV Over-I Positive,Hardware,,"P3 on control unit is loose or disconnected
+PV system wiring short
+T13 is inoperable",,,
+0020,PV Over-I Negative,Hardware,,"P3 on control unit is loose or disconnected
+PV system wiring short
+T14 is inoperable",,,
+0021,PV Over Voltage,Software,,"Lightning strike on PV system wiring
+PV System Mis-wiring",,,
+0023,Bus Voltage High,Software,,"Lightning strike on PV system wiring
+PV System Mis-wiring",,,
+0033,Ground Over Current,Software,,"Fault between ground and live parts of the AC or DC system
+P3 on control unit is loose or disconnected",,,
+0035,Fault Class 35,Software,The Bender relay has detected a fault,,RISO,,
+0040,Programming Software,Software,The system is in Programming mode,,,,
+0041,State Invalid,Software,,"CPU error
+Internal RAM error",,,
+0042,Serial EEPROM Write Error,Software,,"CPU error
+Internal ROM error",,,
+0043,Serial EEPROM Timeout,Software,,"CPU error
+Internal ROM error",,,
+0044,Bad NOVRAM Memory,Software,,"CPU error
+Internal NOVRAM error",,,
+0045,Interrupt 2 Timeout,Software,,"CPU error
+Internal A to D converter error",,,
+0047,Software Test,Software,Software test fault has occurred,,,,
+0048,Bad Memory,Software,,"CPU error
+Internal SRAM error",,,
+0049,Control Voltage Low,Software,,"Fuses F5, F6, F7 blown
+Units with optional ride-through: UPS is defective",,,
+0054,Control Voltage High,Software,,"External control voltage source defective
+Units with optional ride-through: UPS is defective",,,
+0062,Matrix Temperature,Hardware,,"Air flow on heat sink impeded due to accumulation of debris
+External cooling fan inoperable
+Operation above rated ambient temperature for an extended period of time",,,
+0072,Local E-STOP,Software,Control unit has detected a loss of 15VDC at terminal J2-1,Local E-STOP button is depressed,,,
+0073,Remote E-STOP,Software,Control unit has detected a loss of 15VDC at terminal J2-5,,,,
+0075,Shutdown Remotely,Software,,Remote Shutdown command via GUI,,,
+0082,Matrix Not On,Software,,"FPGA inoperable
+Software acknowledge bit not accepted",,,
+0083,Matrix Not Off,Software,,"FPGA inoperable
+Software acknowledge bit not accepted",,,
+0130,Matrix Over Current - Phase A,Hardware,,"AC system wiring short
+P3 on control unit is loose or disconnected",,,
+0152,IGBT Over Current,,The current has exceeded 2000 Amps,,Over current on AC side,AC CT (in power stage),
+0153,DC Over-current,,DC Bus current has exceeded 1250A average,,,,
+0230,Matrix Over Current - Phase B,Hardware,,"AC system wiring short
+P3 on control unit is loose or disconnected",,,
+0252,Switch Fault,,"An IGBT was activated, but no feedback signal was received confirming activation. There may be insufficient gate drive signal quality.",,,,
+0430,Matrix Over Current - Phase C,Hardware,,"AC system wiring short
+P3 on control unit is loose or disconnected",,,
+0452,Over-temperature,,AC Current converter's cooling element temperature has exceeded 80C. The temperature is displayed in the display.,,,,
+0852,Bus Voltage High,Hardware,,"Lightning strike on PV system wiring
+PV System Mis-wiring",,,
+0852,Over-voltage DC Bus,,The PV circuit voltage has exceeded 950V,,,,
+0853,Too Cold or Internal Voltage not in Range,,"The internal temperature sensor is reporting temp. below 0C.
+The internal control circuit supply voltage or clock have malfunctioned.",,,,
+XX34,Unused Matrix Over-I,Hardware,This fault indicates that the inverter has detected a control unit board failure,Problem on the control unit board,,,

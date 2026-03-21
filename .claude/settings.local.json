@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run dev)",
+      "Bash(npm install)",
+      "Bash(npx tsc --noEmit)",
+      "Bash(python -c \"import openpyxl; wb = openpyxl.load_workbook\\(''E:/Github Projects/LTES/Ltes Documents/Database/Schneider GT Fault Codes.xlsx''\\); ws = wb.active; print\\([cell.value for cell in ws[1]]\\)\")",
+      "Bash(python:*)",
+      "Bash(pip install:*)",
+      "mcp__ide__getDiagnostics",
+      "mcp__OpusCode__understand_image"
+    ]
+  }
+}

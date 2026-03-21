@@ -1,0 +1,106 @@
+code,label,severity,brand
+1301,Left-hand rotating magnetic field is connected.,,SMA
+1500,AC grid not stable,,SMA
+3403,PV array voltage is too high.,,SMA
+3404,Open-circuit voltage is too high. Disturbance detected by standard monitoring,,SMA
+3406,The DC voltage is too high.,,SMA
+3501,RISO error - below 1kOhm,,SMA
+3502,GFDI has tripped,,SMA
+3504,The insulation monitoring device has detected an insulation error.,,SMA
+3507,A ground fault has occurred on the ungrounded terminal of the PV array.,,SMA
+3510,The inverter has detected an insulation error on the inverter bridge.,,SMA
+3511,,,SMA
+3512,,,SMA
+3515,,,SMA
+3517,,,SMA
+3520,,,SMA
+3601,RISO error - below 45kOhm,,SMA
+3803,PV Array Current is too high,,SMA
+3803,The PV array current is too high.,,SMA
+4003,Reverse current detected,,SMA
+4003,Reverse currents detected in the PV array or DC connection polarity reversed,,SMA
+6002,,,SMA
+6113,,,SMA
+6115,,,SMA
+6116,,,SMA
+6117,,,SMA
+6119,,,SMA
+6120,Watchdog tripping error,,SMA
+6121,No response from watchdog,,SMA
+6122,Ten internal monitoring errors have occurred in succession.,,SMA
+6128,General error,,SMA
+6404,Stack fault,,SMA
+6405,Overvoltage in the DC link of the inverter bridge,,SMA
+6410,24V supply voltage is invalid.,,SMA
+6417,15V supply voltage is invalid.,,SMA
+6418,Overtemperature of the inverter bridge,,SMA
+6422,Inverter doesn't know which stack it has,,SMA
+6423,Overtemperature in the switch cabinet,,SMA
+6425,Synchronization error with utility grid,,SMA
+6427,Sensor error of DC voltage measurement,,SMA
+6440,The HV transformer is no longer hermetically sealed,,SMA
+6441,Sensor error during measurement of DC Voltage,,SMA
+6443,Unspecified error in digital signal processor,,SMA
+6447,Self-test of inverter bridge failed,,SMA
+6448,RISO settings incorrect,,SMA
+6451,Measured AC voltage of the inverter is less than utility grid voltage.,,SMA
+6452,Measured AC voltage of the utility grid is less than inverter voltage.,,SMA
+6453,AC voltage of grid limit monitoring is faulty.,,SMA
+6454,AC current is faulty.,,SMA
+6455,AC voltage is faulty.,,SMA
+6456,Pre-charging circuit of DC link is defective.,,SMA
+6457,Capacitor self test has failed,,SMA
+6461,Insulation monitoring device has not adopted threshold.,,SMA
+6471,Online capacitor self-test has failed.,,SMA
+6472,Endless loop between online and offline capacitor test,,SMA
+6486,Inadmissible deviations between AC power and DC power has been detected,,SMA
+6487,AC ground fault has been detected.,,SMA
+6501,Interior temperature of inverter is too high.,,SMA
+6502,Temperature of inverter bridge is too high.,,SMA
+6508,External temp sensor faulty,,SMA
+6512,Minimum operating temperature not reached.,,SMA
+6605,The fast stop was tripped due overtemperature in the switch cabinet.,,SMA
+7001,Cable break or short circuit at inverter temperature sensor,,SMA
+7002,Cable break or short circuit at inverter temperature sensor,,SMA
+7004,Cable break or short circuit at inverter temperature sensor,,SMA
+7006,Cable break or short circuit at inverter temperature sensor,,SMA
+7501,Interior fan is defective,,SMA
+7502,Interior fan is defective,,SMA
+7503,Interior fan is defective,,SMA
+7507,Interior fan is defective,,SMA
+7510,Interior fan is defective,,SMA
+7600,Internal Comms Error,,SMA
+7601,Internal inverter error,,SMA
+7602,Internal communication error has occurred or communication is interrupted.,,SMA
+7605,Internal communication error has occurred or communication is interrupted.,,SMA
+7704,DC switch fault,,SMA
+7706,Faulty switching status of the DC switchgear,,SMA
+7707,AC Contactor fault,,SMA
+7708,Remote GFDI,,SMA
+7709,90% of switch cycles of the DC switchgear reached,,SMA
+7710,100% of switch cycles of the DC switchgear reached,,SMA
+7714,GFDI switch number high,,SMA
+7801,Surge arrester is defective,,SMA
+7901,Reverse current has occurred in PV array,,SMA
+8004,The inverter starts to derate due to overcurrent at the DC switchgear (SMID),,SMA
+8701,External active power setpoint,,SMA
+8702,,,SMA
+8703,,,SMA
+8704,,,SMA
+9000,Power electronics self-test is running. This message disappears once the self-test is complete.,,SMA
+9009,Fast stop has tripped.,,SMA
+9013,,,SMA
+9019,Fast stop circuit needs checking,,SMA
+0103,Grid voltage is too high. Overvoltage detected by redundant monitoring.,,SMA
+0104,Grid voltage is too high. Overvoltage detected by standard monitoring.,,SMA
+0203,Grid voltage is too low. Undervoltage detected by redundant monitoring.,,SMA
+0204,Grid voltage is too low. Undervoltage detected by standard monitoring.,,SMA
+0205,Grid synchronization not possible,,SMA
+0404,Frequency change per second too high for grid operation,,SMA
+0502,,,SMA
+0503,,,SMA
+0504,,,SMA
+0505,,,SMA
+0506,,,SMA
+0801,,,SMA
+0802,,,SMA

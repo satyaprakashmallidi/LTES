@@ -1,0 +1,44 @@
+code,label,severity,brand
+1052,Earth Fault,,Schneider GT
+2052,Under-voltage 24V Converter,,Schneider GT
+0010,AC Frequency Low,Software,Schneider GT
+0011,AC Frequency High,Software,Schneider GT
+0012,AC Voltage Low,Software,Schneider GT
+0013,AC Voltage High,Software,Schneider GT
+0015,Grid Disconnection,Software,Schneider GT
+0016,DC Disconnect Switch,Software,Schneider GT
+0017,Phase Error,Software,Schneider GT
+0018,AC Contactor Fault,Software,Schneider GT
+0019,PV Over-I Positive,Hardware,Schneider GT
+0020,PV Over-I Negative,Hardware,Schneider GT
+0021,PV Over Voltage,Software,Schneider GT
+0023,Bus Voltage High,Software,Schneider GT
+0033,Ground Over Current,Software,Schneider GT
+0035,RISO,Software,Schneider GT
+0040,Programming Software,Software,Schneider GT
+0041,State Invalid,Software,Schneider GT
+0042,Serial EEPROM Write Error,Software,Schneider GT
+0043,Serial EEPROM Timeout,Software,Schneider GT
+0044,Bad NOVRAM Memory,Software,Schneider GT
+0045,Interrupt 2 Timeout,Software,Schneider GT
+0047,Software Test,Software,Schneider GT
+0048,Bad Memory,Software,Schneider GT
+0049,Control Voltage Low,Software,Schneider GT
+0054,Control Voltage High,Software,Schneider GT
+0062,Matrix Temperature,Hardware,Schneider GT
+0072,Local E-STOP,Software,Schneider GT
+0073,Remote E-STOP,Software,Schneider GT
+0075,Shutdown Remotely,Software,Schneider GT
+0082,Matrix Not On,Software,Schneider GT
+0083,Matrix Not Off,Software,Schneider GT
+0130,Matrix Over Current - Phase A,Hardware,Schneider GT
+0152,Over current on AC side,,Schneider GT
+0153,DC Over-current,,Schneider GT
+0230,Matrix Over Current - Phase B,Hardware,Schneider GT
+0252,Switch Fault,,Schneider GT
+0430,Matrix Over Current - Phase C,Hardware,Schneider GT
+0452,Over-temperature,,Schneider GT
+0852,Bus Voltage High,Hardware,Schneider GT
+0852,Over-voltage DC Bus,,Schneider GT
+0853,Too Cold or Internal Voltage not in Range,,Schneider GT
+XX34,Unused Matrix Over-I,Hardware,Schneider GT

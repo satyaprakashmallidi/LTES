@@ -1,0 +1,45 @@
+code,label,severity,brand
+1000,Schneider Operation Manual,,Schneider XC
+2038,Anlg. P. Lim Out of Range,,Schneider XC
+2050,Single Phase Transient,,Schneider XC
+2077,PVO Aux Power,,Schneider XC
+2100,Line Control not Ready,,Schneider XC
+2601,Hardware DC Over Voltage,,Schneider XC
+2616,RISO or QF11 off,,Schneider XC
+4005,Fan fault,,Schneider XC
+4036,RTC Service Mode,,Schneider XC
+0006,PV Masterpact opened during operation,,Schneider XC
+0007,AC Masterpact opened during operation,,Schneider XC
+0010,AC Masterpact doesn't close,,Schneider XC
+0015,DC Masterpact doesn't close,,Schneider XC
+0020,AC Caps AC MOV,,Schneider XC
+0026,ASIC Reset,,Schneider XC
+0027,MTHA (time counter),,Schneider XC
+0031,Current Sensor,,Schneider XC
+0032,Thermal Sensor S/C,,Schneider XC
+0033,Thermal Sensor O/C,,Schneider XC
+0040,PV Voltage Sensor,,Schneider XC
+0041,PV Current Sensor,,Schneider XC
+0050,Phase Imbalance,,Schneider XC
+0070,LC EEPROM,,Schneider XC
+0071,Calibration EEPROM Zone,,Schneider XC
+0072,APP Flash,,Schneider XC
+0073,APP EEPROM,,Schneider XC
+0076,Power Supply Fault,,Schneider XC
+0078,24V Aux Power,,Schneider XC
+0079,CPU,,Schneider XC
+0088,Daily CB cycling service,,Schneider XC
+0201,Internal SW,,Schneider XC
+0202,Incompatible Configuration,,Schneider XC
+0203,Invalid FGA Number,,Schneider XC
+0260,Unidentified LC,,Schneider XC
+0261,Incompatible Option Card,,Schneider XC
+0262,Incompatible Power Rating,,Schneider XC
+0263,Incompatible LC,,Schneider XC
+0611,Precharging Timeout,,Schneider XC
+0620,AC Over Current,,Schneider XC
+0630,IGBT Response,,Schneider XC
+0804,Door Interlock,,Schneider XC
+0820,RCD Over Current,,Schneider XC
+0821,GFD Contact Response,,Schneider XC
+0822,Ground Path is Open,,Schneider XC
