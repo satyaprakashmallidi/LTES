@@ -74,6 +74,40 @@ export default function Dashboard() {
     return matchesSearch && matchesStatus && matchesPriority;
   });
 
+  const needsQuoteJobs = jobs.filter(j => j.status === "Logged Fault" && j.priority === "HIGH");
+  const quoteSentJobs = jobs.filter(j => j.status === "Quote Sent" && !j.poReceived);
+  const readyToInvoiceJobs = jobs.filter(j => j.status === "Completed" && !j.invoiceNumber);
+  const needingAttentionJobs = jobs.filter(j => !j.reportLink || j.ramsStatus === "Pending");
+
+  const handleSendQuote = (job: Job) => {
+    const quoteNumber = prompt(`Enter Quote Number for ${job.siteName}:`, `Q-${format(new Date(), "yyyy")}-${job.id.split('-').pop()}`);
+    if (quoteNumber) {
+      updateMutation.mutate({ 
+        id: job.id, 
+        updates: { 
+          ...job, 
+          status: "Quote Sent", 
+          quoteNumber: quoteNumber,
+          quoteDate: format(new Date(), "yyyy-MM-dd") 
+        } 
+      });
+    }
+  };
+
+  const handleMarkInvoiced = (job: Job) => {
+    const invNumber = prompt(`Enter Invoice Number for ${job.siteName}:`, `INV-${job.id.split('-').pop()}`);
+    if (invNumber) {
+      updateMutation.mutate({ 
+        id: job.id, 
+        updates: { 
+          ...job, 
+          status: "Invoiced", 
+          invoiceNumber: invNumber 
+        } 
+      });
+    }
+  };
+
   const handleSaveJob = (job: Job) => {
     const isNew = !jobs.find(j => j.id === job.id);
     if (isNew) {
@@ -247,17 +281,23 @@ export default function Dashboard() {
             <Card className="bg-sidebar-accent/30 border-sidebar-border overflow-hidden">
               <div className="bg-red-500/10 px-4 py-2 border-b border-red-500/20 flex items-center justify-between">
                 <span className="text-xs font-black text-red-500 tracking-wider">⚡ URGENT (Needs Quote)</span>
-                <Badge variant="destructive" className="h-4 px-1 text-[9px]">2 JOBS</Badge>
+                <Badge variant="destructive" className="h-4 px-1 text-[9px]">{needsQuoteJobs.length} JOBS</Badge>
               </div>
               <div className="p-4 space-y-3">
-                <div className="flex items-center justify-between p-3 rounded-lg bg-white/5 border border-white/5">
-                  <p className="text-xs font-bold text-white"><span className="text-red-500">🔴</span> Homestead 2.2 — Inverter DOWN</p>
-                  <Button size="sm" className="h-7 text-[10px] bg-primary text-black font-bold uppercase">Send Quote</Button>
-                </div>
-                <div className="flex items-center justify-between p-3 rounded-lg bg-white/5 border border-white/5">
-                  <p className="text-xs font-bold text-white"><span className="text-red-500">🔴</span> Solar Farm South — No production</p>
-                  <Button size="sm" className="h-7 text-[10px] bg-primary text-black font-bold uppercase">Send Quote</Button>
-                </div>
+                {needsQuoteJobs.length > 0 ? needsQuoteJobs.map(j => (
+                  <div key={j.id} className="flex items-center justify-between p-3 rounded-lg bg-white/5 border border-white/5 hover:border-white/10 transition-all cursor-pointer" onClick={() => { setSelectedJob(j); setDetailsOpen(true); }}>
+                    <p className="text-xs font-bold text-white"><span className="text-red-500">🔴</span> {j.siteName} — {j.id}</p>
+                    <Button 
+                      size="sm" 
+                      className="h-7 text-[10px] bg-primary text-black font-bold uppercase"
+                      onClick={(e) => { e.stopPropagation(); handleSendQuote(j); }}
+                    >
+                      Send Quote
+                    </Button>
+                  </div>
+                )) : (
+                  <p className="text-xs text-white/20 italic p-4 text-center">No high priority faults</p>
+                )}
               </div>
             </Card>
 
@@ -265,23 +305,20 @@ export default function Dashboard() {
             <Card className="bg-sidebar-accent/30 border-sidebar-border overflow-hidden">
               <div className="bg-amber-500/10 px-4 py-2 border-b border-amber-500/20 flex items-center justify-between">
                 <span className="text-xs font-black text-amber-500 tracking-wider">📋 QUOTE SENT (Chase Post-PO)</span>
-                <Badge className="h-4 px-1 text-[9px] bg-amber-500/20 text-amber-500 border-none">2 JOBS</Badge>
+                <Badge className="h-4 px-1 text-[9px] bg-amber-500/20 text-amber-500 border-none">{quoteSentJobs.length} JOBS</Badge>
               </div>
               <div className="p-4 space-y-3">
-                <div className="flex items-center justify-between p-3 rounded-lg bg-white/5 border border-white/5">
-                  <div>
-                    <p className="text-xs font-bold text-white">Wind Farm North</p>
-                    <p className="text-[10px] text-slate-500">Sent 3 days ago</p>
+                {quoteSentJobs.length > 0 ? quoteSentJobs.map(j => (
+                  <div key={j.id} className="flex items-center justify-between p-3 rounded-lg bg-white/5 border border-white/5 hover:border-white/10 transition-all cursor-pointer" onClick={() => { setSelectedJob(j); setDetailsOpen(true); }}>
+                    <div>
+                      <p className="text-xs font-bold text-white">{j.siteName}</p>
+                      <p className="text-[10px] text-slate-500 italic">Quote: {j.quoteNumber || "N/A"}</p>
+                    </div>
+                    <Button variant="outline" size="sm" className="h-7 text-[10px] border-amber-500/30 text-amber-500 font-bold hover:bg-amber-500/10" onClick={(e) => { e.stopPropagation(); navigate("/inbox"); }}>Chase Customer</Button>
                   </div>
-                  <Button variant="outline" size="sm" className="h-7 text-[10px] border-amber-500/30 text-amber-500 font-bold hover:bg-amber-500/10">Chase Customer</Button>
-                </div>
-                <div className="flex items-center justify-between p-3 rounded-lg bg-white/5 border border-white/5">
-                  <div>
-                    <p className="text-xs font-bold text-white">SolarCo Ltd</p>
-                    <p className="text-[10px] text-slate-500">Sent 1 week ago</p>
-                  </div>
-                  <Button variant="outline" size="sm" className="h-7 text-[10px] border-amber-500/30 text-amber-500 font-bold hover:bg-amber-500/10">Chase Customer</Button>
-                </div>
+                )) : (
+                  <p className="text-xs text-white/20 italic p-4 text-center">No quotes pending PO</p>
+                )}
               </div>
             </Card>
 
@@ -289,17 +326,23 @@ export default function Dashboard() {
             <Card className="bg-sidebar-accent/30 border-sidebar-border overflow-hidden">
               <div className="bg-green-500/10 px-4 py-2 border-b border-green-500/20 flex items-center justify-between">
                 <span className="text-xs font-black text-green-500 tracking-wider">✅ READY TO INVOICE</span>
-                <Badge className="h-4 px-1 text-[9px] bg-green-500/20 text-green-500 border-none">2 JOBS</Badge>
+                <Badge className="h-4 px-1 text-[9px] bg-green-500/20 text-green-500 border-none">{readyToInvoiceJobs.length} JOBS</Badge>
               </div>
               <div className="p-4 space-y-3">
-                <div className="flex items-center justify-between p-3 rounded-lg bg-white/5 border border-white/5">
-                  <p className="text-xs font-bold text-white">✅ Wind Farm North — Job Comp</p>
-                  <Button size="sm" className="h-7 text-[10px] bg-green-600 text-white font-bold uppercase hover:bg-green-700">Invoiced</Button>
-                </div>
-                <div className="flex items-center justify-between p-3 rounded-lg bg-white/5 border border-white/5">
-                  <p className="text-xs font-bold text-white">✅ SolarCo Ltd — Site 2 Comp</p>
-                  <Button size="sm" className="h-7 text-[10px] bg-green-600 text-white font-bold uppercase hover:bg-green-700">Invoiced</Button>
-                </div>
+                {readyToInvoiceJobs.length > 0 ? readyToInvoiceJobs.map(j => (
+                  <div key={j.id} className="flex items-center justify-between p-3 rounded-lg bg-white/5 border border-white/5 hover:border-white/10 transition-all cursor-pointer" onClick={() => { setSelectedJob(j); setDetailsOpen(true); }}>
+                    <p className="text-xs font-bold text-white">✅ {j.siteName} — {j.id}</p>
+                    <Button 
+                      size="sm" 
+                      className="h-7 text-[10px] bg-green-600 text-white font-bold uppercase hover:bg-green-700 shadow-sm"
+                      onClick={(e) => { e.stopPropagation(); handleMarkInvoiced(j); }}
+                    >
+                      Mark Invoiced
+                    </Button>
+                  </div>
+                )) : (
+                  <p className="text-xs text-white/20 italic p-4 text-center">No jobs ready for invoice</p>
+                )}
               </div>
             </Card>
 
@@ -307,16 +350,19 @@ export default function Dashboard() {
             <Card className="bg-sidebar-accent/30 border-sidebar-border overflow-hidden">
               <div className="bg-primary/10 px-4 py-2 border-b border-primary/20 flex items-center justify-between">
                 <span className="text-xs font-black text-primary tracking-wider">⚠️ JOBS NEEDING ATTENTION</span>
+                <Badge className="h-4 px-1 text-[9px] bg-primary/20 text-primary border-none">{needingAttentionJobs.length} JOBS</Badge>
               </div>
               <div className="p-4 space-y-3">
-                <div className="flex items-center justify-between p-3 rounded-lg bg-white/5 border border-white/5">
-                  <p className="text-xs font-bold text-white">⚠️ SolarCo Site 3 — No Report</p>
-                  <Button variant="ghost" size="sm" className="h-7 text-[10px] text-primary hover:bg-primary/10 font-bold underline">Link Report</Button>
-                </div>
-                <div className="flex items-center justify-between p-3 rounded-lg bg-white/5 border border-white/5">
-                  <p className="text-xs font-bold text-white">⚠️ Wind Farm East — No RAMS</p>
-                  <Button variant="ghost" size="sm" className="h-7 text-[10px] text-primary hover:bg-primary/10 font-bold underline">Upload RAMS</Button>
-                </div>
+                {needingAttentionJobs.length > 0 ? needingAttentionJobs.map(j => (
+                  <div key={j.id} className="flex items-center justify-between p-3 rounded-lg bg-white/5 border border-white/5 hover:border-white/10 transition-all cursor-pointer" onClick={() => { setSelectedJob(j); setDetailsOpen(true); }}>
+                    <p className="text-xs font-bold text-white">⚠️ {j.siteName} — {j.ramsStatus === "Pending" ? "Need RAMS" : "Need Report"}</p>
+                    <Button variant="ghost" size="sm" className="h-7 text-[10px] text-primary hover:bg-primary/10 font-bold underline px-1" onClick={(e) => { e.stopPropagation(); setSelectedJob(j); setDetailsOpen(true); }}>
+                      View Details
+                    </Button>
+                  </div>
+                )) : (
+                  <p className="text-xs text-white/20 italic p-4 text-center">All jobs have docs</p>
+                )}
               </div>
             </Card>
           </div>
