@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { format } from "date-fns";
 import {
   Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription,
@@ -101,7 +101,7 @@ export function CreateJobWizard({ open, onOpenChange, onSave, allJobs, editJob, 
           ramsSent: editJob.ramsSent,
           jobNotes: editJob.jobNotes,
           markComplete: editJob.markComplete,
-          invoiceNumber: editJob.invoiceNumber,
+          invoiceNumber: editJob.invoiceNumber || "",
         }
       : { ...emptyForm, scheduledDate: prefillScheduledDate || "" }
   );
@@ -131,7 +131,7 @@ export function CreateJobWizard({ open, onOpenChange, onSave, allJobs, editJob, 
               ramsSent: editJob.ramsSent,
               jobNotes: editJob.jobNotes,
               markComplete: editJob.markComplete,
-              invoiceNumber: editJob.invoiceNumber,
+              invoiceNumber: editJob.invoiceNumber || "",
             }
           : { ...emptyForm, scheduledDate: prefillScheduledDate || "" }
       );
@@ -156,9 +156,40 @@ export function CreateJobWizard({ open, onOpenChange, onSave, allJobs, editJob, 
         brand: e.manufacturer || "",
       }))
     : [{ location: "Manual Entry / Unknown", type: "", model: "", serial: "", brand: "" }];
+  
   const selectedEquipment = equipmentList.find(e => e.location === form.inverterLocation);
   const brand = selectedEquipment?.brand || "";
-  const availableFaultCodes = brand ? (faultCodesByBrand?.[brand] || []) : [];
+  
+  // Smart fault code brand mapping
+  const availableFaultCodes = useMemo(() => {
+    if (!brand || !faultCodesByBrand) return [];
+    
+    // 1. Try exact match
+    if (faultCodesByBrand[brand]) {
+      return faultCodesByBrand[brand];
+    }
+    
+    // 2. Try fuzzy match (if the fault code brand includes our brand name, or vice versa)
+    // and collect all matching brand codes (e.g. "Schneider" matches "Schneider XC" and "Schneider GT")
+    const brandLower = brand.toLowerCase();
+    let codes: any[] = [];
+    
+    Object.keys(faultCodesByBrand).forEach(b => {
+      const bLower = b.toLowerCase();
+      if (bLower.includes(brandLower) || brandLower.includes(bLower)) {
+        codes = [...codes, ...faultCodesByBrand[b]];
+      }
+    });
+    
+    // Deduplicate by code
+    const seen = new Set();
+    return codes.filter(c => {
+      const isDuplicate = seen.has(c.code);
+      seen.add(c.code);
+      return !isDuplicate;
+    });
+  }, [brand, faultCodesByBrand]);
+
   const selectedFault = availableFaultCodes.find(fc => fc.code === form.faultCode);
 
   const priority: Priority = (form.contractType && form.inverterInProduction)
@@ -187,14 +218,6 @@ export function CreateJobWizard({ open, onOpenChange, onSave, allJobs, editJob, 
       return aJobs - bJobs;
     });
   }, [form.scheduledDate, allJobs]);
-
-  const validateStep1 = (): boolean => {
-    const errs: Record<string, string> = {};
-    if (!form.siteId) errs.siteId = "Site must be selected";
-    if (!form.reportedFault && !form.faultCode) errs.reportedFault = "Fault info required";
-    setErrors(errs);
-    return Object.keys(errs).length === 0;
-  };
 
   const handleSave = () => {
     const site = sites.find(s => s.id === form.siteId);
@@ -240,10 +263,10 @@ export function CreateJobWizard({ open, onOpenChange, onSave, allJobs, editJob, 
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-xl max-h-[90vh] overflow-y-auto bg-sidebar border-sidebar-border text-sidebar-foreground">
+      <DialogContent className="max-w-xl max-h-[90vh] overflow-y-auto bg-sidebar border-sidebar-border text-sidebar-foreground no-scrollbar">
         <DialogHeader>
           <DialogTitle className="text-white font-black uppercase tracking-tight">
-            {editJob ? `EDIT JOB ${editJob.id}` : "NEW JOB"} — Page {step} of 2
+            {editJob ? `EDIT JOB ${editJob.id}` : "NEW JOB"} — PAGE {step} OF 2
           </DialogTitle>
           <DialogDescription className="text-sidebar-foreground/60">
             {step === 1 ? "Step 1: Select Customer, Site & Inverter" : "Step 2: Quote, PO & Scheduling"}
@@ -304,13 +327,17 @@ export function CreateJobWizard({ open, onOpenChange, onSave, allJobs, editJob, 
                   <SelectValue placeholder="Select inverter location" />
                 </SelectTrigger>
                 <SelectContent className="bg-sidebar border-sidebar-border text-white">
-                  {equipmentList.map(e => <SelectItem key={e.location} value={e.location}>{e.location}</SelectItem>)}
+                  {equipmentList.map(e => (
+                    <SelectItem key={e.location} value={e.location}>
+                      {e.location}
+                    </SelectItem>
+                  ))}
                 </SelectContent>
               </Select>
             </div>
 
             {/* Inverter Details (Auto) */}
-            {selectedEquipment && (
+            {selectedEquipment && selectedEquipment.location !== "Manual Entry / Unknown" && (
               <Card className="bg-sidebar-accent/30 border-sidebar-border p-4 space-y-3">
                  <Label className="text-[10px] font-black uppercase text-sidebar-foreground/40 tracking-widest">Inverter Details (Auto-populated)</Label>
                  <div className="grid grid-cols-2 gap-4">
@@ -326,23 +353,51 @@ export function CreateJobWizard({ open, onOpenChange, onSave, allJobs, editJob, 
               </Card>
             )}
 
-            {/* Fault Code & Desc */}
+            {/* Inverter In Production */}
+            <div className="space-y-1.5">
+              <Label className="text-[10px] font-black uppercase text-sidebar-foreground/40 tracking-widest">Inverter In Production? *</Label>
+              <Select 
+                value={form.inverterInProduction} 
+                onValueChange={v => set("inverterInProduction", v as InverterProduction)}
+              >
+                <SelectTrigger className="bg-sidebar-accent/50 border-sidebar-border h-11 text-white">
+                  <SelectValue placeholder="Select status" />
+                </SelectTrigger>
+                <SelectContent className="bg-sidebar border-sidebar-border text-white">
+                  <SelectItem value="Yes">Yes</SelectItem>
+                  <SelectItem value="Yes Reduced Production">Yes Reduced Production</SelectItem>
+                  <SelectItem value="No">No</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+
+            {/* Fault Code & Priority */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                <div className="space-y-1.5">
                   <Label className="text-[10px] font-black uppercase text-sidebar-foreground/40 tracking-widest">Fault Code *</Label>
-                  <Select value={form.faultCode} onValueChange={v => set("faultCode", v)} disabled={!brand}>
+                  <Select 
+                    value={form.faultCode} 
+                    onValueChange={v => set("faultCode", v)} 
+                    disabled={availableFaultCodes.length === 0}
+                  >
                     <SelectTrigger className="bg-sidebar-accent/50 border-sidebar-border h-11 text-white">
-                      <SelectValue placeholder="Select fault code" />
+                      <SelectValue placeholder={brand ? "Select fault code" : "Select inverter first"} />
                     </SelectTrigger>
                     <SelectContent className="bg-sidebar border-sidebar-border text-white">
-                      {availableFaultCodes.map(fc => <SelectItem key={fc.code} value={fc.code}>{fc.code}</SelectItem>)}
+                      {availableFaultCodes.map(fc => (
+                        <SelectItem key={fc.code} value={fc.code}>
+                          {fc.code} {fc.label ? `— ${fc.label.substring(0, 30)}...` : ""}
+                        </SelectItem>
+                      ))}
                     </SelectContent>
                   </Select>
                </div>
                <div className="space-y-1.5">
                   <Label className="text-[10px] font-black uppercase text-sidebar-foreground/40 tracking-widest">Priority</Label>
                   <Badge className={cn("w-full h-11 justify-center text-xs font-black rounded-md", 
-                    priority === "HIGH" ? "bg-red-600" : priority === "MEDIUM" ? "bg-amber-600" : "bg-green-600"
+                    priority === "HIGH" ? "bg-red-600 hover:bg-red-700" : 
+                    priority === "MEDIUM" ? "bg-amber-600 hover:bg-amber-700" : 
+                    "bg-green-600 hover:bg-green-700"
                   )}>
                     {priority}
                   </Badge>
@@ -350,7 +405,8 @@ export function CreateJobWizard({ open, onOpenChange, onSave, allJobs, editJob, 
             </div>
 
             {selectedFault && (
-               <p className="text-xs font-bold text-primary italic bg-primary/5 p-2 rounded">
+               <p className="text-xs font-bold text-primary italic bg-primary/5 p-3 rounded-lg border border-primary/20">
+                  <AlertTriangle className="h-3 w-3 inline mr-2 text-primary" />
                   Auto-populated Info: {selectedFault.label}
                </p>
             )}
@@ -366,7 +422,11 @@ export function CreateJobWizard({ open, onOpenChange, onSave, allJobs, editJob, 
             </div>
 
             <div className="flex justify-end pt-4">
-              <Button onClick={() => setStep(2)} className="bg-primary text-black font-black uppercase tracking-tighter">
+              <Button 
+                onClick={() => setStep(2)} 
+                disabled={!form.siteId || !form.inverterLocation}
+                className="bg-primary text-black font-black uppercase tracking-tighter hover:bg-primary/90"
+              >
                 Next: Schedule & Quote →
               </Button>
             </div>
@@ -379,7 +439,6 @@ export function CreateJobWizard({ open, onOpenChange, onSave, allJobs, editJob, 
                <div className="space-y-1.5">
                   <Label className="text-[10px] font-black uppercase text-sidebar-foreground/40 tracking-widest">Quote Number</Label>
                   <Input value={form.quoteNumber} onChange={e => set("quoteNumber", e.target.value)} className="bg-sidebar-accent/50 border-sidebar-border text-white" placeholder="Q-2026-XXXX" />
-                  <p className="text-[10px] text-sidebar-foreground/30">Enter quote number to send to customer.</p>
                </div>
                <div className="space-y-1.5">
                   <Label className="text-[10px] font-black uppercase text-sidebar-foreground/40 tracking-widest">Purchase Order (PO)</Label>
@@ -399,11 +458,12 @@ export function CreateJobWizard({ open, onOpenChange, onSave, allJobs, editJob, 
                 </SelectContent>
               </Select>
             </div>
+
             {!isSimon ? (
               <div className="space-y-4">
                  <div className="flex items-center gap-2 text-primary">
                     <CalendarIcon className="h-4 w-4" />
-                    <span className="text-[10px] font-black uppercase tracking-widest">Luke's Command Center — Scheduling</span>
+                    <span className="text-[10px] font-black uppercase tracking-widest">Scheduling & Assignment</span>
                  </div>
                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="space-y-1.5">
@@ -420,7 +480,7 @@ export function CreateJobWizard({ open, onOpenChange, onSave, allJobs, editJob, 
                             mode="single"
                             selected={form.scheduledDate ? new Date(form.scheduledDate) : undefined}
                             onSelect={date => { set("scheduledDate", date ? format(date, "yyyy-MM-dd") : ""); setCalOpen(false); }}
-                            className="bg-sidebar border-none text-white"
+                            initialFocus
                           />
                         </PopoverContent>
                       </Popover>
@@ -457,9 +517,9 @@ export function CreateJobWizard({ open, onOpenChange, onSave, allJobs, editJob, 
                  </div>
                  <p className="text-xs text-sidebar-foreground/60 italic leading-relaxed">
                     Luke will schedule this job after PO is received. 
-                    Do not change the fields below. Contact Luke to schedule.
+                    Contact Luke for scheduling updates.
                  </p>
-  
+   
                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="space-y-1.5">
                       <Label className="text-[10px] font-black uppercase text-sidebar-foreground/40 tracking-widest">Scheduled Date</Label>
@@ -467,7 +527,7 @@ export function CreateJobWizard({ open, onOpenChange, onSave, allJobs, editJob, 
                         value={form.scheduledDate} 
                         className="bg-sidebar-accent/10 border-sidebar-border text-sidebar-foreground/30 cursor-not-allowed h-11" 
                         readOnly 
-                        placeholder="Select Date (Luke Only)"
+                        placeholder="Visit TBD"
                       />
                     </div>
                     <div className="space-y-1.5">
@@ -476,7 +536,7 @@ export function CreateJobWizard({ open, onOpenChange, onSave, allJobs, editJob, 
                         value={form.engineer} 
                         className="bg-sidebar-accent/10 border-sidebar-border text-sidebar-foreground/30 cursor-not-allowed h-11" 
                         readOnly 
-                        placeholder="Assign Engineer (Luke Only)"
+                        placeholder="Engineer TBD"
                       />
                     </div>
                  </div>
@@ -497,8 +557,11 @@ export function CreateJobWizard({ open, onOpenChange, onSave, allJobs, editJob, 
               <Button variant="ghost" onClick={() => setStep(1)} className="text-white hover:bg-white/5">← Back</Button>
               <div className="flex gap-2">
                 <Button variant="outline" onClick={() => onOpenChange(false)} className="border-sidebar-border text-white hover:bg-white/5">Cancel</Button>
-                <Button onClick={handleSave} className="bg-primary text-black font-black uppercase tracking-tighter">
-                  {editJob ? "Update Job" : "Save Job"}
+                <Button 
+                  onClick={handleSave} 
+                  className="bg-primary text-black font-black uppercase tracking-tighter hover:bg-primary/90 shadow-lg shadow-primary/20"
+                >
+                  {editJob ? "Update Job Details" : "Save Job & Create Card"}
                 </Button>
               </div>
             </div>

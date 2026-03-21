@@ -1,12 +1,14 @@
+import { useMemo } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { MapPin, Calendar, Users, FileText, AlertTriangle, ExternalLink, Download, CheckCircle2, ShieldAlert, Edit } from "lucide-react";
+import { MapPin, Calendar, Users, FileText, AlertTriangle, ExternalLink, Download, CheckCircle2, ShieldAlert, Edit, Info } from "lucide-react";
 import type { Job, JobStatus, Priority } from "@/data/mockJobs";
 import { generateRA, generateMS, generateJobSheet, generateAllPdfs, getRAFilename, getMSFilename, getJobSheetFilename } from "@/utils/generateJobPdfs";
 import type { DocStatus } from "@/pages/Jobs";
 import { cn } from "@/lib/utils";
+import { useFaultCodes } from "@/hooks/useFaultCodes";
 
 interface JobDetailsModalProps {
   job: Job | null;
@@ -66,9 +68,30 @@ export function JobDetailsModal({ job, open, onOpenChange, onEdit, docStatus, on
     onDocsGenerated?.(job.id, { ra: true, ms: true, sheet: true });
   };
 
+  const { data: faultCodesByBrand } = useFaultCodes();
+  
+  const faultLabel = useMemo(() => {
+    if (!job.faultCode || !faultCodesByBrand) return "";
+    
+    // Try to find brand in equipment details or job
+    const brand = job.inverterType || ""; // Usually brand is in inverterType for existing jobs
+    const brandLower = brand.toLowerCase();
+    
+    let allMatchingCodes: any[] = [];
+    Object.keys(faultCodesByBrand).forEach(b => {
+      const bLower = b.toLowerCase();
+      if (bLower.includes(brandLower) || brandLower.includes(bLower)) {
+        allMatchingCodes = [...allMatchingCodes, ...faultCodesByBrand[b]];
+      }
+    });
+    
+    const fault = allMatchingCodes.find(fc => fc.code === job.faultCode);
+    return fault?.label || "";
+  }, [job.faultCode, job.inverterType, faultCodesByBrand]);
+
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto bg-sidebar border-sidebar-border text-sidebar-foreground">
+      <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto bg-sidebar border-sidebar-border text-sidebar-foreground no-scrollbar">
         <DialogHeader className="border-b border-sidebar-border pb-4 mb-4">
           <DialogTitle className="flex items-center justify-between">
             <div className="flex items-center gap-3">
@@ -125,7 +148,14 @@ export function JobDetailsModal({ job, open, onOpenChange, onEdit, docStatus, on
                  <AlertTriangle className="h-4 w-4" /> Fault Information
                </h4>
                <div className="bg-red-500/5 p-4 rounded-xl border border-red-500/10 space-y-4">
-                  <Field label="Fault Code" value={job.faultCode} />
+                  <div className="flex justify-between items-start">
+                    <Field label="Fault Code" value={job.faultCode} />
+                    {faultLabel && (
+                      <Badge variant="outline" className="text-[9px] font-black border-red-500/30 text-red-400 bg-red-500/5">
+                        {faultLabel}
+                      </Badge>
+                    )}
+                  </div>
                   <div className="space-y-1">
                     <p className="text-[10px] font-black uppercase text-red-500/40 tracking-widest">Reported Issue</p>
                     <p className="text-sm font-bold text-white italic">"{job.reportedFault || "No fault description submitted."}"</p>
