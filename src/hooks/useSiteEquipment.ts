@@ -11,8 +11,34 @@ export interface SiteEquipment {
   installation_date: string | null;
   warranty_expiry: string | null;
   notes: string | null;
+  station: string | null;
+  location: string | null;
+  power: string | null;
   created_at: string;
   updated_at: string;
+}
+
+/**
+ * Ensures a location identifier is available.
+ * Prioritizes the database 'location' column, then parses 'notes', 
+ * then falls back to serial number.
+ */
+export function resolveLocation(e: any): string {
+  // 1. Use database 'location' column if present and not empty
+  if (e.location && e.location.trim()) {
+    return e.location;
+  }
+
+  // 2. Try parsing from notes field
+  if (e.notes) {
+    const match = e.notes.match(/Location:\s*([^|]+)/i);
+    if (match && match[1]) {
+      return match[1].trim();
+    }
+  }
+  
+  // 3. Fallback to serial number or ID
+  return e.serial_number || e.id;
 }
 
 export function useSiteEquipment(siteId?: string) {
@@ -31,7 +57,11 @@ export function useSiteEquipment(siteId?: string) {
       const { data, error } = await query;
       
       if (error) throw error;
-      return data as SiteEquipment[];
+      
+      return (data as any[]).map(e => ({
+        ...e,
+        location: resolveLocation(e)
+      })) as SiteEquipment[];
     },
     enabled: !!siteId,
   });
@@ -47,7 +77,11 @@ export function useAllEquipment() {
         .order("manufacturer");
       
       if (error) throw error;
-      return data as SiteEquipment[];
+      
+      return (data as any[]).map(e => ({
+        ...e,
+        location: resolveLocation(e)
+      })) as SiteEquipment[];
     },
   });
 }

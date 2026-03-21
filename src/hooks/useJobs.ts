@@ -1,6 +1,8 @@
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
+import type { Job as FrontendJob } from "@/data/mockJobs";
+import { initialJobs } from "@/data/mockJobs";
 
 export interface Job {
   id: string;
@@ -53,7 +55,48 @@ export function useJobs() {
         .order("created_at", { ascending: false });
       
       if (error) throw error;
-      return data as JobWithSite[];
+
+      if (!data || data.length === 0) {
+        return initialJobs;
+      }
+      
+      // Map DB schema to frontend Job structure
+      return (data as JobWithSite[]).map(job => {
+        const eq = job.equipment_details || {};
+        return {
+          id: job.job_number,
+          contactName: eq.contact_name || job.sites?.site_contact_name || "",
+          contactPhone: eq.contact_phone || job.sites?.site_contact_phone || "",
+          contactEmail: eq.contact_email || "",
+          siteName: job.sites?.site_name || "Unknown Site",
+          siteId: job.site_id || "",
+          address: job.sites?.address || "",
+          inverterLocation: eq.inverter_location || "N/A",
+          contractType: job.job_type as any,
+          inverterType: eq.inverter_type || "",
+          inverterModel: eq.inverter_model || "",
+          serialNumber: eq.serial_number || "",
+          inverterInProduction: eq.inverter_production || "No",
+          faultCode: eq.fault_code || "",
+          reportedFault: job.description || "",
+          priority: eq.priority || "MEDIUM",
+          status: job.status as any,
+          ramsStatus: job.rams_status as any,
+          quoteNumber: job.quote_number || "",
+          quoteDate: eq.quote_date || "",
+          poNumber: eq.po_number || "",
+          poReceived: eq.po_received || false,
+          scheduledDate: job.scheduled_date || "",
+          engineer: job.technician || "",
+          accessCode: job.sites?.access_codes || eq.access_code || "",
+          distance: eq.distance || 0,
+          ramsSent: eq.rams_sent || false,
+          jobNotes: job.notes || "",
+          markComplete: !!job.completion_date,
+          invoiceNumber: job.invoice_number || "",
+          reportLink: job.report_link || ""
+        } as FrontendJob;
+      });
     },
   });
 }
@@ -63,10 +106,45 @@ export function useCreateJob() {
   const { toast } = useToast();
 
   return useMutation({
-    mutationFn: async (job: Omit<Job, "id" | "created_at" | "updated_at">) => {
+    mutationFn: async (job: any) => {
+      // Map local Job format to Supabase table schema
+      const supabaseJob = {
+        job_number: job.id,
+        site_id: job.siteId,
+        status: job.status,
+        rams_status: job.ramsStatus,
+        scheduled_date: job.scheduledDate || null,
+        technician: job.engineer || null,
+        description: job.reportedFault || null,
+        notes: job.jobNotes || null,
+        invoice_number: job.invoiceNumber || null,
+        quote_number: job.quoteNumber || null,
+        report_link: job.reportLink || null,
+        job_type: job.contractType || "Chargeable",
+        equipment_details: {
+          inverter_location: job.inverterLocation,
+          inverter_type: job.inverterType,
+          inverter_model: job.inverterModel,
+          serial_number: job.serialNumber,
+          inverter_in_production: job.inverterInProduction,
+          fault_code: job.faultCode,
+          contact_name: job.contactName,
+          contact_phone: job.contactPhone,
+          contact_email: job.contactEmail,
+          contract_type: job.contractType,
+          access_code: job.accessCode,
+          distance: job.distance,
+          po_number: job.poNumber,
+          po_received: job.poReceived,
+          quote_date: job.quoteDate,
+          rams_sent: job.ramsSent,
+          mark_complete: job.markComplete
+        }
+      };
+
       const { data, error } = await supabase
         .from("jobs")
-        .insert([job])
+        .insert([supabaseJob])
         .select()
         .single();
       
@@ -95,11 +173,50 @@ export function useUpdateJob() {
   const { toast } = useToast();
 
   return useMutation({
-    mutationFn: async ({ id, updates }: { id: string; updates: Partial<Job> }) => {
+    mutationFn: async ({ id, updates }: { id: string; updates: any }) => {
+      // Map updates to Supabase format if they come from the flat Job structure
+      const supabaseUpdates: any = {};
+      
+      if (updates.id) supabaseUpdates.job_number = updates.id;
+      if (updates.siteId) supabaseUpdates.site_id = updates.siteId;
+      if (updates.status) supabaseUpdates.status = updates.status;
+      if (updates.ramsStatus) supabaseUpdates.rams_status = updates.ramsStatus;
+      if (updates.scheduledDate !== undefined) supabaseUpdates.scheduled_date = updates.scheduledDate || null;
+      if (updates.engineer !== undefined) supabaseUpdates.technician = updates.engineer || null;
+      if (updates.reportedFault !== undefined) supabaseUpdates.description = updates.reportedFault || null;
+      if (updates.jobNotes !== undefined) supabaseUpdates.notes = updates.jobNotes || null;
+      if (updates.invoiceNumber !== undefined) supabaseUpdates.invoice_number = updates.invoiceNumber || null;
+      if (updates.quoteNumber !== undefined) supabaseUpdates.quote_number = updates.quoteNumber || null;
+      if (updates.reportLink !== undefined) supabaseUpdates.report_link = updates.reportLink || null;
+      if (updates.contractType !== undefined) supabaseUpdates.job_type = updates.contractType || "Chargeable";
+
+      // Handle nested equipment_details
+      if (updates.inverterLocation !== undefined || updates.serialNumber !== undefined || updates.faultCode !== undefined) {
+        supabaseUpdates.equipment_details = {
+          inverter_location: updates.inverterLocation,
+          inverter_type: updates.inverterType,
+          inverter_model: updates.inverterModel,
+          serial_number: updates.serialNumber,
+          inverter_in_production: updates.inverterInProduction,
+          fault_code: updates.faultCode,
+          contact_name: updates.contactName,
+          contact_phone: updates.contactPhone,
+          contact_email: updates.contactEmail,
+          contract_type: updates.contractType,
+          access_code: updates.accessCode,
+          distance: updates.distance,
+          po_number: updates.poNumber,
+          po_received: updates.poReceived,
+          quote_date: updates.quoteDate,
+          rams_sent: updates.ramsSent,
+          mark_complete: updates.markComplete
+        };
+      }
+
       const { data, error } = await supabase
         .from("jobs")
-        .update(updates)
-        .eq("id", id)
+        .update(supabaseUpdates)
+        .eq("job_number", id) // Use job_number if that's what we use as id in the frontend
         .select()
         .single();
       

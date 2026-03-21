@@ -250,7 +250,7 @@ const aiInsights = {
   ],
 };
 
-const Analytics = () => {
+const Analytics = ({ hideHeader = false }: { hideHeader?: boolean }) => {
   const [timeRange, setTimeRange] = useState<TimeRange>("30");
 
   const getStatusBadge = (status: string) => {
@@ -284,25 +284,29 @@ const Analytics = () => {
 
   return (
     <div className="space-y-8">
-      <Breadcrumb items={[{ label: "Fault Analytics" }]} />
-      
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-        <div>
-          <div className="flex items-center gap-3 flex-wrap mb-2">
-            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight">Fault Analytics</h1>
-            <Badge className="bg-blue-600 text-white border-0 font-semibold text-sm">
-              🤖 Phase 3: AI Pattern Recognition
-            </Badge>
+      {!hideHeader && (
+        <>
+          <Breadcrumb items={[{ label: "Fault Analytics" }]} />
+          
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div>
+              <div className="flex items-center gap-3 flex-wrap mb-2">
+                <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight">Fault Analytics</h1>
+                <Badge className="bg-blue-600 text-white border-0 font-semibold text-sm">
+                  🤖 Phase 3: AI Pattern Recognition
+                </Badge>
+              </div>
+              <p className="text-muted-foreground mt-2 text-sm sm:text-base lg:text-lg">
+                Management insights and AI-powered trend analysis for central inverter maintenance
+              </p>
+            </div>
+            <Button variant="outline" size="lg" className="min-h-[44px] active:scale-95">
+              <TrendingUp className="mr-2 h-4 w-4" />
+              Export Report
+            </Button>
           </div>
-          <p className="text-muted-foreground mt-2 text-sm sm:text-base lg:text-lg">
-            Management insights and AI-powered trend analysis for central inverter maintenance
-          </p>
-        </div>
-        <Button variant="outline" size="lg" className="min-h-[44px] active:scale-95">
-          <TrendingUp className="mr-2 h-4 w-4" />
-          Export Report
-        </Button>
-      </div>
+        </>
+      )}
 
       {/* Time Range Filters */}
       <Card>

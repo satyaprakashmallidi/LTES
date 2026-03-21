@@ -7,8 +7,7 @@ import { CreateJobWizard } from "@/components/jobs/CreateJobWizard";
 import { JobDetailsModal } from "@/components/jobs/JobDetailsModal";
 import { useToast } from "@/hooks/use-toast";
 
-// Jobs should be fetched from Supabase using useJobs hook
-const initialJobs: Job[] = [];
+import { initialJobs } from "@/data/mockJobs";
 
 const CalendarPage = () => {
   const { toast } = useToast();
@@ -39,6 +38,9 @@ const CalendarPage = () => {
     setCreateOpen(true);
   };
 
+  const isSimon = true; // For now, the general /calendar route is for Simon's role
+  const role = isSimon ? "Simon" : "Admin";
+
   return (
     <div className="space-y-6">
       {/* Header */}
@@ -46,7 +48,7 @@ const CalendarPage = () => {
         <div>
           <h1 className="text-2xl sm:text-3xl font-bold tracking-tight">Calendar</h1>
           <p className="text-muted-foreground mt-1 text-sm sm:text-base">
-            View and manage job schedule
+            View job schedule {isSimon && "(Read-Only Scheduling)"}
           </p>
         </div>
         <Button className="min-h-[44px] active:scale-95" onClick={() => { setEditJob(null); setCreateOpen(true); }}>
@@ -59,6 +61,7 @@ const CalendarPage = () => {
         jobs={jobs}
         onSelectJob={handleViewDetails}
         onCreateJob={handleCreateFromDate}
+        role={role}
       />
 
       <CreateJobWizard
@@ -69,6 +72,7 @@ const CalendarPage = () => {
         editJob={editJob}
         prefillScheduledDate={prefillDate}
         initialStep={prefillDate ? 2 : 1}
+        role={role}
       />
 
       <JobDetailsModal
@@ -76,6 +80,7 @@ const CalendarPage = () => {
         open={detailsOpen}
         onOpenChange={setDetailsOpen}
         onEdit={handleEditFromDetails}
+        role={role}
       />
     </div>
   );

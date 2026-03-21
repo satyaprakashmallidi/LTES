@@ -24,13 +24,14 @@ interface CalendarViewProps {
   jobs: Job[];
   onSelectJob: (job: Job) => void;
   onCreateJob?: (prefillDate: string) => void;
+  role?: "Admin" | "Simon";
 }
 
 const statusColors: Record<JobStatus, string> = {
   "Logged Fault": "bg-red-600",
   "Quote Sent": "bg-amber-500",
   "Approved": "bg-blue-600",
-  "In Progress": "bg-purple-600",
+  "Scheduled": "bg-purple-600",
   "Completed": "bg-green-600",
   "Invoiced": "bg-zinc-500",
 };
@@ -39,7 +40,7 @@ const statusTextColors: Record<JobStatus, string> = {
   "Logged Fault": "bg-red-600 text-white",
   "Quote Sent": "bg-amber-500 text-white",
   "Approved": "bg-blue-600 text-white",
-  "In Progress": "bg-purple-600 text-white",
+  "Scheduled": "bg-purple-600 text-white",
   "Completed": "bg-green-600 text-white",
   "Invoiced": "bg-zinc-500 text-white",
 };
@@ -59,11 +60,13 @@ function getJobsForDate(jobs: Job[], date: Date): Job[] {
   return jobs.filter(j => j.scheduledDate === dateStr);
 }
 
-export function CalendarView({ jobs, onSelectJob, onCreateJob }: CalendarViewProps) {
+export function CalendarView({ jobs, onSelectJob, onCreateJob, role = "Admin" }: CalendarViewProps) {
   const [viewMode, setViewMode] = useState<CalendarViewMode>("month");
   const [currentDate, setCurrentDate] = useState(new Date());
   const [engineerFilter, setEngineerFilter] = useState("all");
   const [dayModalDate, setDayModalDate] = useState<Date | null>(null);
+
+  const isSimon = role === "Simon";
 
   const filteredJobs = useMemo(() => {
     if (engineerFilter === "all") return jobs;
@@ -79,7 +82,7 @@ export function CalendarView({ jobs, onSelectJob, onCreateJob }: CalendarViewPro
     const dayJobs = getJobsForDate(filteredJobs, date);
     if (dayJobs.length > 0) {
       setDayModalDate(date);
-    } else if (onCreateJob) {
+    } else if (onCreateJob && !isSimon) {
       onCreateJob(format(date, "yyyy-MM-dd"));
     }
   };
@@ -269,7 +272,7 @@ export function CalendarView({ jobs, onSelectJob, onCreateJob }: CalendarViewPro
                 <Card
                   key={job.id}
                   className={`p-4 cursor-pointer hover:ring-1 hover:ring-primary/50 transition-all border-l-4`}
-                  style={{ borderLeftColor: `hsl(var(--${job.status === "Logged Fault" ? "destructive" : job.status === "In Progress" ? "primary" : "muted"}))` }}
+                  style={{ borderLeftColor: `hsl(var(--${job.status === "Logged Fault" ? "destructive" : job.status === "Scheduled" ? "primary" : "muted"}))` }}
                   onClick={() => onSelectJob(job)}
                 >
                   <div className="flex items-start justify-between mb-2">

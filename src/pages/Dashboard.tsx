@@ -1,472 +1,345 @@
-import { DashboardCard } from "@/components/DashboardCard";
-import { Breadcrumb } from "@/components/Breadcrumb";
-import { StatCard } from "@/components/StatCard";
-import {
-  FileText,
-  FileCheck,
-  Briefcase,
-  Package,
+import { useState, useMemo } from "react";
+import { useNavigate } from "react-router-dom";
+import { 
+  FileText, 
+  FileCheck, 
+  Briefcase, 
+  LayoutDashboard,
+  Inbox,
+  Settings,
+  Search,
+  FilterX,
+  Plus,
+  ArrowRight,
+  TrendingDown,
   TrendingUp,
-  DollarSign,
-  Users,
-  CheckCircle2,
+  AlertCircle,
   Clock,
-  CalendarDays,
+  CheckCircle2,
+  AlertTriangle,
+  Eye,
+  Edit
 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
-import { useNavigate } from "react-router-dom";
-import { useToast } from "@/hooks/use-toast";
-import { RAMSReviewDialog } from "@/components/RAMSReviewDialog";
-import { useState, useMemo } from "react";
-import { startOfWeek, endOfWeek, eachDayOfInterval, format, isWithinInterval } from "date-fns";
-import { useJobs } from "@/hooks/useJobs";
-import { useInventoryParts } from "@/hooks/useInventoryParts";
+import { Card } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { 
+  Select, 
+  SelectContent, 
+  SelectItem, 
+  SelectTrigger, 
+  SelectValue 
+} from "@/components/ui/select";
+import { useJobs, useCreateJob, useUpdateJob } from "@/hooks/useJobs";
+import { SidebarTrigger } from "@/components/ui/sidebar";
+import { KanbanBoard } from "@/components/jobs/KanbanBoard";
+import { CreateJobWizard } from "@/components/jobs/CreateJobWizard";
+import { JobDetailsModal } from "@/components/jobs/JobDetailsModal";
+import type { Job } from "@/data/mockJobs";
+import { format, isSameWeek } from "date-fns";
+import { cn } from "@/lib/utils";
 
-// Quotes - fetched from Supabase jobs table (quote_number populated)
-const quotesAwaitingApproval: { id: string; client: string; value: number; project: string; date: string }[] = [];
+export default function Dashboard() {
+  const navigate = useNavigate();
+  const { data: jobs = [], isLoading } = useJobs();
+  const createMutation = useCreateJob();
+  const updateMutation = useUpdateJob();
 
-// RAMS - no data yet
-const ramsAwaitingReview: { id: string; project: string; site: string; tech: string; submitted: string }[] = [];
+  const [search, setSearch] = useState("");
+  const [customerFilter, setCustomerFilter] = useState("all");
+  const [priorityFilter, setPriorityFilter] = useState("all");
+  const [statusFilter, setStatusFilter] = useState("all");
+  const [siteFilter, setSiteFilter] = useState("all");
+  
+  const [createOpen, setCreateOpen] = useState(false);
+  const [detailsOpen, setDetailsOpen] = useState(false);
+  const [selectedJob, setSelectedJob] = useState<Job | null>(null);
 
-function MiniWeekCalendar({ navigate, jobs }: { navigate: (path: string) => void; jobs: { scheduled_date: string | null }[] }) {
-  const today = new Date();
-  const weekStart = startOfWeek(today, { weekStartsOn: 1 });
-  const weekEnd = endOfWeek(today, { weekStartsOn: 1 });
-  const weekDays = eachDayOfInterval({ start: weekStart, end: weekEnd });
+  // Stats
+  const jobsToday = jobs.filter(j => j.scheduledDate === format(new Date(), "yyyy-MM-dd")).length;
+  const completedThisMonth = jobs.filter(j => {
+    if (j.status !== "Completed" && j.status !== "Invoiced") return false;
+    const date = j.scheduledDate ? new Date(j.scheduledDate) : null;
+    return date && date.getMonth() === new Date().getMonth();
+  }).length;
+  const pendingInvoice = jobs.filter(j => j.status === "Completed").length;
 
-  const dayCounts = weekDays.map(day => {
-    const dateStr = format(day, "yyyy-MM-dd");
-    return {
-      day,
-      label: format(day, "EEE"),
-      date: format(day, "d"),
-      count: jobs.filter(j => j.scheduled_date && j.scheduled_date.startsWith(dateStr)).length,
-      isToday: format(day, "yyyy-MM-dd") === format(today, "yyyy-MM-dd"),
-    };
+  const filteredJobs = jobs.filter(job => {
+    const matchesSearch = job.siteName.toLowerCase().includes(search.toLowerCase()) || 
+                         (job.id && job.id.toLowerCase().includes(search.toLowerCase())) ||
+                         (job.contactName && job.contactName.toLowerCase().includes(search.toLowerCase()));
+    const matchesStatus = statusFilter === "all" || job.status === statusFilter;
+    const matchesPriority = priorityFilter === "all" || job.priority === priorityFilter;
+    return matchesSearch && matchesStatus && matchesPriority;
   });
 
-  const maxCount = Math.max(...dayCounts.map(d => d.count), 1);
+  const handleSaveJob = (job: Job) => {
+    const isNew = !jobs.find(j => j.id === job.id);
+    if (isNew) {
+      createMutation.mutate(job);
+    } else {
+      updateMutation.mutate({ id: job.id, updates: job });
+    }
+  };
+
+  if (isLoading) return <div className="p-8 text-white">Loading Simon's Dashboard...</div>;
 
   return (
-    <DashboardCard title="This Week" icon={CalendarDays} navigateTo="/calendar">
-      <div className="grid grid-cols-7 gap-2">
-        {dayCounts.map(d => (
-          <div
-            key={d.label}
-            className="flex flex-col items-center gap-1 cursor-pointer hover:bg-muted/30 rounded-md p-1 transition-colors"
-            onClick={(e) => { e.stopPropagation(); navigate("/calendar"); }}
-          >
-            <span className={`text-[10px] font-medium ${d.isToday ? "text-primary" : "text-muted-foreground"}`}>
-              {d.label}
-            </span>
-            <div className="w-full h-12 flex items-end justify-center">
-              <div
-                className={`w-5 rounded-t ${d.isToday ? "bg-primary" : "bg-muted-foreground/30"}`}
-                style={{ height: `${Math.max((d.count / maxCount) * 100, 8)}%` }}
+    <div className="flex-1 flex flex-col h-full overflow-hidden bg-sidebar text-sidebar-foreground">
+      {/* 🔴 LT ENERGY SERVICES HEADER */}
+      <div className="bg-sidebar border-b border-sidebar-border px-6 py-3 flex items-center justify-between sticky top-0 z-20">
+        <div className="flex items-center gap-4">
+          <SidebarTrigger className="text-white hover:bg-white/5" />
+          <div className="flex items-center gap-2">
+            <div className="h-8 w-8 bg-primary rounded flex items-center justify-center">
+              <span className="text-black font-black text-xs">LT</span>
+            </div>
+            <h1 className="text-lg font-black tracking-tighter text-white">LT ENERGY SERVICES</h1>
+          </div>
+        </div>
+
+        <div className="flex items-center gap-3">
+          <div className="text-right">
+            <p className="text-sm font-bold text-white leading-tight">Simon Scott</p>
+            <p className="text-[10px] text-primary font-bold uppercase tracking-wider">Office Manager</p>
+          </div>
+          <div className="h-9 w-9 rounded-full bg-sidebar-accent border border-sidebar-border flex items-center justify-center">
+            <span className="text-xs font-bold text-white">SS</span>
+          </div>
+        </div>
+      </div>
+
+
+      <div className="flex-1 overflow-y-auto overflow-x-hidden no-scrollbar p-6 space-y-6">
+        {/* MY STATS */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <Card className="bg-sidebar-accent/50 border-sidebar-border p-4 flex items-center justify-between">
+            <div>
+              <p className="text-[10px] font-bold text-sidebar-foreground/50 uppercase tracking-widest mb-1">My Jobs Today</p>
+              <p className="text-2xl font-black text-white">{jobsToday}</p>
+            </div>
+            <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center">
+              <Clock className="h-5 w-5 text-primary" />
+            </div>
+          </Card>
+          <Card className="bg-sidebar-accent/50 border-sidebar-border p-4 flex items-center justify-between">
+            <div>
+              <p className="text-[10px] font-bold text-sidebar-foreground/50 uppercase tracking-widest mb-1">Completed This Month</p>
+              <p className="text-2xl font-black text-white">{completedThisMonth}</p>
+            </div>
+            <div className="h-10 w-10 rounded-lg bg-green-500/10 flex items-center justify-center">
+              <CheckCircle2 className="h-5 w-5 text-green-500" />
+            </div>
+          </Card>
+          <Card className="bg-sidebar-accent/50 border-sidebar-border p-4 flex items-center justify-between">
+            <div>
+              <p className="text-[10px] font-bold text-sidebar-foreground/50 uppercase tracking-widest mb-1">Pending Invoice</p>
+              <p className="text-2xl font-black text-white">{pendingInvoice}</p>
+            </div>
+            <div className="h-10 w-10 rounded-lg bg-amber-500/10 flex items-center justify-center">
+              <FileText className="h-5 w-5 text-amber-500" />
+            </div>
+          </Card>
+        </div>
+
+        {/* FILTERS */}
+        <Card className="p-4 bg-sidebar-accent/30 border-sidebar-border border-dashed">
+          <div className="flex flex-wrap items-center gap-3">
+            <div className="relative flex-1 min-w-[200px]">
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-sidebar-foreground/40" />
+              <Input 
+                placeholder="Search jobs..." 
+                className="pl-9 bg-sidebar-accent border-sidebar-border text-white placeholder:text-sidebar-foreground/30 h-9 text-sm" 
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
               />
             </div>
-            <span className={`text-xs font-bold ${d.isToday ? "text-primary" : ""}`}>{d.count}</span>
-            <span className={`text-[10px] ${d.isToday ? "text-primary font-bold" : "text-muted-foreground"}`}>{d.date}</span>
-          </div>
-        ))}
-      </div>
-    </DashboardCard>
-  );
-}
+            
+            <Select value={customerFilter} onValueChange={setCustomerFilter}>
+              <SelectTrigger className="w-[140px] bg-sidebar-accent border-sidebar-border text-white h-9 text-xs">
+                <SelectValue placeholder="Customer" />
+              </SelectTrigger>
+              <SelectContent className="bg-sidebar border-sidebar-border text-white">
+                <SelectItem value="all">All Customers</SelectItem>
+                <SelectItem value="SolarCo">SolarCo Ltd</SelectItem>
+                <SelectItem value="WindFarm">Wind Farm North</SelectItem>
+              </SelectContent>
+            </Select>
 
-const Dashboard = () => {
-  const navigate = useNavigate();
-  const { toast } = useToast();
-  const [selectedRAMSId, setSelectedRAMSId] = useState<string | null>(null);
+            <Select value={priorityFilter} onValueChange={setPriorityFilter}>
+              <SelectTrigger className="w-[120px] bg-sidebar-accent border-sidebar-border text-white h-9 text-xs">
+                <SelectValue placeholder="Priority" />
+              </SelectTrigger>
+              <SelectContent className="bg-sidebar border-sidebar-border text-white">
+                <SelectItem value="all">All Priorities</SelectItem>
+                <SelectItem value="HIGH">🔴 HIGH</SelectItem>
+                <SelectItem value="MEDIUM">🟡 MEDIUM</SelectItem>
+                <SelectItem value="LOW">🟢 LOW</SelectItem>
+              </SelectContent>
+            </Select>
 
-  const { data: supabaseJobs = [] } = useJobs();
-  const { data: inventoryParts = [] } = useInventoryParts();
+            <Select value={statusFilter} onValueChange={setStatusFilter}>
+              <SelectTrigger className="w-[130px] bg-sidebar-accent border-sidebar-border text-white h-9 text-xs">
+                <SelectValue placeholder="Status" />
+              </SelectTrigger>
+              <SelectContent className="bg-sidebar border-sidebar-border text-white">
+                <SelectItem value="all">All Statuses</SelectItem>
+                <SelectItem value="Logged Fault">Logged Fault</SelectItem>
+                <SelectItem value="Quote Sent">Quote Sent</SelectItem>
+                <SelectItem value="Approved">Approved</SelectItem>
+                <SelectItem value="Scheduled">Scheduled</SelectItem>
+                <SelectItem value="Completed">Completed</SelectItem>
+                <SelectItem value="Invoiced">Invoiced</SelectItem>
+              </SelectContent>
+            </Select>
 
-  // Compute jobs this week
-  const today = new Date();
-  const weekStart = startOfWeek(today, { weekStartsOn: 1 });
-  const weekEnd = endOfWeek(today, { weekStartsOn: 1 });
+            <Button variant="ghost" size="sm" className="text-sidebar-foreground/40 hover:text-white h-9 px-2" onClick={() => {
+              setSearch("");
+              setCustomerFilter("all");
+              setPriorityFilter("all");
+              setStatusFilter("all");
+            }}>
+              <FilterX className="h-4 w-4 mr-1" />
+              Clear Filters
+            </Button>
 
-  const jobsThisWeek = supabaseJobs.filter(j => {
-    if (!j.scheduled_date) return false;
-    const sched = new Date(j.scheduled_date);
-    return isWithinInterval(sched, { start: weekStart, end: weekEnd });
-  });
-
-  const lowStockItems = inventoryParts
-    .filter(p => {
-      const total = p.warehouse_stock + p.terry_van_stock + p.jason_van_stock;
-      return total < (p.min_stock_level ?? 5);
-    })
-    .map(p => ({
-      id: p.id,
-      item: p.part_name,
-      stock: p.warehouse_stock + p.terry_van_stock + p.jason_van_stock,
-      minStock: p.min_stock_level ?? 5,
-      supplier: p.category,
-      critical: (p.warehouse_stock + p.terry_van_stock + p.jason_van_stock) === 0,
-    }));
-
-  const completedJobs = supabaseJobs.filter(j => j.status === "Completed" || j.status === "Invoiced").length;
-  const bookedJobs = supabaseJobs.filter(j => j.technician && j.scheduled_date && j.status !== "Completed" && j.status !== "Invoiced");
-
-  const getJobStatusBadge = (status: string) => {
-    const styles: Record<string, string> = {
-      Complete: "bg-success text-success-foreground",
-      Booked: "bg-info text-info-foreground",
-      "Not done": "bg-destructive text-destructive-foreground",
-      "Awaiting RAMS": "bg-warning text-warning-foreground",
-    };
-    return (
-      <Badge className={styles[status] || "bg-muted text-muted-foreground"}>
-        {status}
-      </Badge>
-    );
-  };
-
-  const formatCurrency = (value: number) => {
-    return new Intl.NumberFormat("en-GB", {
-      style: "currency",
-      currency: "GBP",
-    }).format(value);
-  };
-
-  const handleQuickAction = (action: string) => {
-    toast({
-      title: "Action initiated",
-      description: `${action} started successfully`,
-    });
-  };
-
-
-  return (
-    <div className="space-y-6 sm:space-y-8">
-      <Breadcrumb items={[{ label: "Dashboard" }]} />
-      
-      <div>
-        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight">Dashboard</h1>
-        <p className="text-muted-foreground mt-2 text-base sm:text-lg">
-          Central Inverter Maintenance Operations - Quick insights and actionable items
-        </p>
-      </div>
-
-      {/* Key Metrics */}
-      <div className="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-        <StatCard
-          title="Active Jobs This Week"
-          value={jobsThisWeek.length}
-          icon={Briefcase}
-          trend={<span className="text-muted-foreground">{bookedJobs.length} scheduled</span>}
-        />
-        <StatCard
-          title="Total Jobs"
-          value={supabaseJobs.length}
-          icon={DollarSign}
-          trend={<span className="text-muted-foreground">in database</span>}
-        />
-        <StatCard
-          title="RAMS Awaiting Review"
-          value={0}
-          icon={FileCheck}
-          description="Requires immediate attention"
-        />
-        <StatCard
-          title="Jobs Completed"
-          value={`${completedJobs}/${supabaseJobs.length}`}
-          icon={CheckCircle2}
-          trend={<span className="text-success">{supabaseJobs.length > 0 ? Math.round((completedJobs/supabaseJobs.length)*100) : 0}% completion rate</span>}
-        />
-      </div>
-
-      {/* Mini Week Calendar */}
-      <MiniWeekCalendar navigate={navigate} jobs={supabaseJobs} />
-
-      <div className="grid gap-4 sm:gap-6 grid-cols-1 lg:grid-cols-3">
-        {/* Mobile Job Sheets - NEW */}
-        <DashboardCard
-          title={
-            <div className="flex items-center gap-2 flex-wrap">
-              <span>Mobile Job Sheets</span>
-              <Badge className="bg-purple-600 text-white border-0 font-semibold">
-                🤖 AI Voice Notes - Phase 1
-              </Badge>
-            </div>
-          }
-          icon={FileCheck}
-          count={bookedJobs.length}
-          navigateTo="/mobile-job-sheets"
-          className="lg:col-span-3 border-primary/20 bg-primary/5"
-        >
-          <div className="space-y-4">
-            <div className="bg-background/50 rounded-lg p-4">
-              <p className="text-sm font-medium mb-2">📱 New Mobile Features Available</p>
-              <div className="grid sm:grid-cols-3 gap-3 text-xs">
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-success" />
-                  <span>Point of Works Risk Assessment</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-success" />
-                  <span>Photo & Voice Notes Capture</span>
-                  <Badge className="text-xs bg-purple-600 text-white border-0 font-semibold">🤖 AI</Badge>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-success" />
-                  <span>Live Van Stock Levels</span>
-                </div>
-              </div>
-            </div>
-            <Button 
-              variant="default" 
-              size="lg" 
-              className="w-full"
-              onClick={() => navigate("/mobile-job-sheets")}
-            >
-              Open Mobile Job Sheets →
+            <Button className="ml-auto bg-primary text-black hover:bg-primary/90 h-9 font-bold px-4 shadow-lg shadow-primary/20" onClick={() => setCreateOpen(true)}>
+              <Plus className="h-4 w-4 mr-2" />
+              NEW JOB
             </Button>
           </div>
-        </DashboardCard>
+        </Card>
 
-        {/* Quotes Awaiting Approval */}
-        <DashboardCard
-          title={
-            <div className="flex items-center gap-2 flex-wrap">
-              <span>Quotes Awaiting Approval</span>
-              <Badge className="bg-green-600 text-white border-0 text-xs font-semibold">
-                Phase 1 (AI Templates - Phase 2)
-              </Badge>
-            </div>
-          }
-          icon={FileText}
-          count={quotesAwaitingApproval.length}
-          navigateTo="/quotes"
-        >
-          <div className="space-y-3 max-h-80 overflow-y-auto overflow-x-hidden pr-3">
-            {quotesAwaitingApproval.slice(0, 4).map((quote) => (
-              <div 
-                key={quote.id} 
-                className="space-y-1 pb-3 border-b last:border-b-0 cursor-pointer hover:bg-muted/50 active:bg-muted px-3 py-2 sm:py-3 rounded-md transition-colors min-h-[44px] flex flex-col justify-center"
-                onClick={() => navigate(`/quotes?quoteId=${quote.id}`)}
-              >
-                <div className="flex justify-between items-start">
-                  <div className="flex-1">
-                    <p className="font-semibold text-sm">{quote.id}</p>
-                    <p className="text-xs text-muted-foreground">{quote.client}</p>
-                    <p className="text-xs text-muted-foreground mt-0.5">{quote.project}</p>
-                  </div>
-                  <p className="font-bold text-primary text-sm">{formatCurrency(quote.value)}</p>
-                </div>
-                <p className="text-xs text-muted-foreground flex items-center gap-1">
-                  <Clock className="h-3 w-3" /> {quote.date}
-                </p>
-              </div>
-            ))}
-            <Button 
-              variant="outline" 
-              size="sm" 
-              className="w-full mt-2"
-              onClick={(e) => {
-                e.stopPropagation();
-                navigate("/quotes");
+        {/* KANBAN BOARD */}
+        <Card className="bg-sidebar-accent/10 border-sidebar-border p-6 relative">
+          <div className="flex items-center justify-between mb-4">
+             <h3 className="text-sm font-bold text-white uppercase tracking-widest flex items-center gap-2">
+                <LayoutDashboard className="h-4 w-4 text-primary" /> Kanban Board
+             </h3>
+             <p className="text-[10px] text-amber-500 font-bold bg-amber-500/10 px-2 py-1 rounded border border-amber-500/20 flex items-center gap-1">
+                <AlertTriangle className="h-3 w-3" /> NOTE: You cannot schedule jobs. Contact Luke to schedule.
+             </p>
+          </div>
+          
+          <div className="overflow-x-auto pb-4 no-scrollbar">
+            <KanbanBoard 
+              jobs={filteredJobs} 
+              onSelectJob={(job) => {
+                setSelectedJob(job);
+                setDetailsOpen(true);
               }}
-            >
-              View All {quotesAwaitingApproval.length} Quotes →
-            </Button>
+              // @ts-ignore
+              role="Simon" // We'll add this to KanbanBoard
+            />
           </div>
-        </DashboardCard>
+        </Card>
 
-        {/* RAMS Awaiting Review */}
-        <DashboardCard
-          title="RAMS Awaiting Review"
-          icon={FileCheck}
-          count={ramsAwaitingReview.length}
-        >
-          <div className="space-y-3">
-            {ramsAwaitingReview.map((rams) => (
-              <div 
-                key={rams.id} 
-                className="space-y-1 pb-3 border-b last:border-b-0 cursor-pointer hover:bg-muted/50 active:bg-muted -mx-2 px-2 py-2 sm:py-3 rounded-md transition-colors min-h-[44px] flex flex-col justify-center"
-                onClick={() => setSelectedRAMSId(rams.id)}
-              >
-                <p className="font-semibold text-sm">{rams.id}</p>
-                <p className="text-xs text-muted-foreground">{rams.project}</p>
-                <div className="flex items-center justify-between mt-2">
-                  <p className="text-xs text-muted-foreground flex items-center gap-1">
-                    <Users className="h-3 w-3" /> {rams.tech}
-                  </p>
-                  <p className="text-xs text-muted-foreground">{rams.submitted}</p>
+        {/* MY PENDING ACTIONS */}
+        <div className="space-y-4">
+          <div className="flex items-center gap-2 text-white">
+            <AlertCircle className="h-5 w-5 text-primary" />
+            <h3 className="text-lg font-black tracking-tight">MY PENDING ACTIONS</h3>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+            {/* URGENT */}
+            <Card className="bg-sidebar-accent/30 border-sidebar-border overflow-hidden">
+              <div className="bg-red-500/10 px-4 py-2 border-b border-red-500/20 flex items-center justify-between">
+                <span className="text-xs font-black text-red-500 tracking-wider">⚡ URGENT (Needs Quote)</span>
+                <Badge variant="destructive" className="h-4 px-1 text-[9px]">2 JOBS</Badge>
+              </div>
+              <div className="p-4 space-y-3">
+                <div className="flex items-center justify-between p-3 rounded-lg bg-white/5 border border-white/5">
+                  <p className="text-xs font-bold text-white"><span className="text-red-500">🔴</span> Homestead 2.2 — Inverter DOWN</p>
+                  <Button size="sm" className="h-7 text-[10px] bg-primary text-black font-bold uppercase">Send Quote</Button>
+                </div>
+                <div className="flex items-center justify-between p-3 rounded-lg bg-white/5 border border-white/5">
+                  <p className="text-xs font-bold text-white"><span className="text-red-500">🔴</span> Solar Farm South — No production</p>
+                  <Button size="sm" className="h-7 text-[10px] bg-primary text-black font-bold uppercase">Send Quote</Button>
                 </div>
               </div>
-            ))}
-          </div>
-        </DashboardCard>
+            </Card>
 
-        {/* Jobs Scheduled This Week */}
-        <DashboardCard
-          title="Jobs Scheduled This Week"
-          icon={Briefcase}
-          count={bookedJobs.length}
-        >
-          <div className="space-y-3 max-h-80 overflow-y-auto overflow-x-hidden pr-3">
-            {bookedJobs.slice(0, 5).map((job) => (
-              <div 
-                key={job.id} 
-                className="space-y-1 pb-3 border-b last:border-b-0 cursor-pointer hover:bg-muted/50 active:bg-muted px-3 py-2 sm:py-3 rounded-md transition-colors min-h-[44px] flex flex-col justify-center"
-                onClick={() => navigate(`/jobs?jobId=${job.job_number}`)}
-              >
-                <div className="flex justify-between items-start">
-                  <div className="flex-1">
-                    <p className="font-semibold text-sm">{job.job_number}</p>
-                    <p className="text-xs text-muted-foreground">{job.sites?.site_name || "No site"}</p>
-                    <p className="text-xs text-muted-foreground">{job.description || job.job_type}</p>
+            {/* AWAITING PO */}
+            <Card className="bg-sidebar-accent/30 border-sidebar-border overflow-hidden">
+              <div className="bg-amber-500/10 px-4 py-2 border-b border-amber-500/20 flex items-center justify-between">
+                <span className="text-xs font-black text-amber-500 tracking-wider">📋 QUOTE SENT (Chase Post-PO)</span>
+                <Badge className="h-4 px-1 text-[9px] bg-amber-500/20 text-amber-500 border-none">2 JOBS</Badge>
+              </div>
+              <div className="p-4 space-y-3">
+                <div className="flex items-center justify-between p-3 rounded-lg bg-white/5 border border-white/5">
+                  <div>
+                    <p className="text-xs font-bold text-white">Wind Farm North</p>
+                    <p className="text-[10px] text-slate-500">Sent 3 days ago</p>
                   </div>
-                  {getJobStatusBadge(job.status)}
+                  <Button variant="outline" size="sm" className="h-7 text-[10px] border-amber-500/30 text-amber-500 font-bold hover:bg-amber-500/10">Chase Customer</Button>
                 </div>
-                <div className="flex items-center justify-between mt-1">
-                  <p className="text-xs text-muted-foreground flex items-center gap-1">
-                    <Users className="h-3 w-3" /> {job.technician || "Unassigned"}
-                  </p>
-                  <p className="text-xs font-medium">
-                    {job.scheduled_date ? format(new Date(job.scheduled_date), "dd MMM") : "No date"}
-                  </p>
-                </div>
-              </div>
-            ))}
-            <Button 
-              variant="outline" 
-              size="sm" 
-              className="w-full mt-2"
-              onClick={(e) => {
-                e.stopPropagation();
-                navigate("/jobs");
-              }}
-            >
-              View All {bookedJobs.length} Jobs →
-            </Button>
-          </div>
-        </DashboardCard>
-
-        {/* Inventory Alerts */}
-        <DashboardCard
-          title={
-            <div className="flex items-center gap-2 flex-wrap">
-              <span>Inventory Alerts</span>
-              <Badge className="bg-green-600 text-white border-0 text-xs font-semibold">
-                Phase 1 (🤖 AI - Phase 3)
-              </Badge>
-            </div>
-          }
-          icon={Package}
-          count={lowStockItems.filter(i => i.critical).length}
-          navigateTo="/inventory"
-        >
-          <div className="space-y-3">
-            {lowStockItems.map((item) => (
-              <div 
-                key={item.id} 
-                className="space-y-1 pb-3 border-b last:border-b-0 cursor-pointer hover:bg-muted/50 active:bg-muted -mx-2 px-2 py-2 sm:py-3 rounded-md transition-colors min-h-[44px] flex flex-col justify-center"
-                onClick={() => navigate(`/inventory?itemId=${item.id}`)}
-              >
-                <div className="flex justify-between items-start">
-                  <div className="flex-1">
-                    <div className="flex items-center gap-2">
-                      <p className="font-semibold text-sm">{item.item}</p>
-                      {item.critical && <Badge variant="destructive" className="text-xs py-0">Critical</Badge>}
-                    </div>
-                    <p className="text-xs text-muted-foreground">{item.supplier}</p>
+                <div className="flex items-center justify-between p-3 rounded-lg bg-white/5 border border-white/5">
+                  <div>
+                    <p className="text-xs font-bold text-white">SolarCo Ltd</p>
+                    <p className="text-[10px] text-slate-500">Sent 1 week ago</p>
                   </div>
-                  <div className="text-right">
-                    <p className="text-sm font-bold text-destructive">{item.stock}</p>
-                    <p className="text-xs text-muted-foreground">/ {item.minStock}</p>
-                  </div>
+                  <Button variant="outline" size="sm" className="h-7 text-[10px] border-amber-500/30 text-amber-500 font-bold hover:bg-amber-500/10">Chase Customer</Button>
                 </div>
               </div>
-            ))}
-            <Button 
-              variant="outline" 
-              size="sm" 
-              className="w-full mt-2"
-              onClick={(e) => {
-                e.stopPropagation();
-                handleQuickAction("Inventory Restock");
-                navigate("/inventory");
-              }}
-            >
-              Restock Items →
-            </Button>
-          </div>
-        </DashboardCard>
+            </Card>
 
+            {/* READY TO INVOICE */}
+            <Card className="bg-sidebar-accent/30 border-sidebar-border overflow-hidden">
+              <div className="bg-green-500/10 px-4 py-2 border-b border-green-500/20 flex items-center justify-between">
+                <span className="text-xs font-black text-green-500 tracking-wider">✅ READY TO INVOICE</span>
+                <Badge className="h-4 px-1 text-[9px] bg-green-500/20 text-green-500 border-none">2 JOBS</Badge>
+              </div>
+              <div className="p-4 space-y-3">
+                <div className="flex items-center justify-between p-3 rounded-lg bg-white/5 border border-white/5">
+                  <p className="text-xs font-bold text-white">✅ Wind Farm North — Job Comp</p>
+                  <Button size="sm" className="h-7 text-[10px] bg-green-600 text-white font-bold uppercase hover:bg-green-700">Invoiced</Button>
+                </div>
+                <div className="flex items-center justify-between p-3 rounded-lg bg-white/5 border border-white/5">
+                  <p className="text-xs font-bold text-white">✅ SolarCo Ltd — Site 2 Comp</p>
+                  <Button size="sm" className="h-7 text-[10px] bg-green-600 text-white font-bold uppercase hover:bg-green-700">Invoiced</Button>
+                </div>
+              </div>
+            </Card>
 
-        {/* Fault Insights */}
-        <DashboardCard
-          title={
-            <div className="flex items-center gap-2 flex-wrap">
-              <span>Fault Analytics & Insights</span>
-              <Badge className="bg-blue-600 text-white border-0 font-semibold">
-                🤖 AI Pattern Recognition - Phase 3
-              </Badge>
-            </div>
-          }
-          icon={TrendingUp}
-          navigateTo="/analytics"
-          className="lg:col-span-3"
-        >
-          <div className="space-y-4">
-            <div className="rounded-lg bg-primary/5 border border-primary/20 p-4">
-              <div className="flex items-start gap-3">
-                <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
-                  <TrendingUp className="h-5 w-5 text-primary" />
+            {/* JOBS NEEDING ATTENTION */}
+            <Card className="bg-sidebar-accent/30 border-sidebar-border overflow-hidden">
+              <div className="bg-primary/10 px-4 py-2 border-b border-primary/20 flex items-center justify-between">
+                <span className="text-xs font-black text-primary tracking-wider">⚠️ JOBS NEEDING ATTENTION</span>
+              </div>
+              <div className="p-4 space-y-3">
+                <div className="flex items-center justify-between p-3 rounded-lg bg-white/5 border border-white/5">
+                  <p className="text-xs font-bold text-white">⚠️ SolarCo Site 3 — No Report</p>
+                  <Button variant="ghost" size="sm" className="h-7 text-[10px] text-primary hover:bg-primary/10 font-bold underline">Link Report</Button>
                 </div>
-                <div className="flex-1">
-                  <p className="text-sm font-semibold mb-2 text-foreground">AI-Detected Pattern</p>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    <span className="font-semibold text-foreground">5 SMA inverter faults</span> repeated within 30 days — check supplier batch{" "}
-                    <span className="font-semibold text-foreground">#483</span>. This represents a{" "}
-                    <span className="font-semibold text-warning">40% increase</span> from the previous period.
-                  </p>
+                <div className="flex items-center justify-between p-3 rounded-lg bg-white/5 border border-white/5">
+                  <p className="text-xs font-bold text-white">⚠️ Wind Farm East — No RAMS</p>
+                  <Button variant="ghost" size="sm" className="h-7 text-[10px] text-primary hover:bg-primary/10 font-bold underline">Upload RAMS</Button>
                 </div>
               </div>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-              <div className="rounded-lg bg-card border p-4 text-center hover:shadow-md transition-shadow">
-                <p className="text-3xl font-bold text-destructive">30</p>
-                <p className="text-xs text-muted-foreground mt-1">Active Faults</p>
-                <Badge variant="destructive" className="mt-2 text-xs">+15% this month</Badge>
-              </div>
-              <div className="rounded-lg bg-card border p-4 text-center hover:shadow-md transition-shadow">
-                <p className="text-3xl font-bold text-success">1.8</p>
-                <p className="text-xs text-muted-foreground mt-1">Avg Resolution (days)</p>
-                <Badge className="bg-success text-success-foreground mt-2 text-xs">-0.6 days</Badge>
-              </div>
-              <div className="rounded-lg bg-card border p-4 text-center hover:shadow-md transition-shadow">
-                <p className="text-3xl font-bold text-warning">42%</p>
-                <p className="text-xs text-muted-foreground mt-1">SMA Inverters</p>
-                <Badge className="bg-warning text-warning-foreground mt-2 text-xs">Top issue</Badge>
-              </div>
-            </div>
-            <Button 
-              variant="outline" 
-              size="sm" 
-              className="w-full"
-              onClick={() => navigate("/analytics")}
-            >
-              View Full Analytics & AI Insights →
-            </Button>
+            </Card>
           </div>
-        </DashboardCard>
+        </div>
       </div>
 
-      {/* RAMS Review Dialog */}
-      <RAMSReviewDialog
-        open={!!selectedRAMSId}
-        onOpenChange={(open) => !open && setSelectedRAMSId(null)}
-        ramsId={selectedRAMSId || ""}
+      <CreateJobWizard 
+        open={createOpen} 
+        onOpenChange={setCreateOpen} 
+        onSave={handleSaveJob} 
+        allJobs={jobs}
+        // @ts-ignore
+        role="Simon" // For read-only fields
+      />
+
+      <JobDetailsModal 
+        job={selectedJob} 
+        open={detailsOpen} 
+        onOpenChange={setDetailsOpen} 
+        onEdit={(job) => { setSelectedJob(job); setCreateOpen(true); }}
+        // @ts-ignore
+        role="Simon" // No delete button
       />
     </div>
   );
-};
-
-export default Dashboard;
+}

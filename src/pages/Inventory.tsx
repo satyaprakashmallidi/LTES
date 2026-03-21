@@ -99,7 +99,7 @@ function toInventoryItem(p: InventoryPart) {
   };
 }
 
-const Inventory = () => {
+const Inventory = ({ hideHeader = false }: { hideHeader?: boolean }) => {
   const [searchParams] = useSearchParams();
   const [selectedItem, setSelectedItem] = useState<InventoryItem | null>(null);
   const { data: parts = [], isLoading } = useInventoryParts();
@@ -194,28 +194,32 @@ const Inventory = () => {
 
   return (
     <div className="space-y-8">
-      <Breadcrumb items={[{ label: "Inventory" }]} />
-      
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-        <div>
-          <div className="flex items-center gap-2 flex-wrap mb-1">
-            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight">Inventory</h1>
-            <Badge className="bg-green-600 text-white border-0 text-xs font-semibold">
-              Phase 1
-            </Badge>
-            <Badge className="bg-purple-600 text-white border-0 text-xs font-semibold">
-              🤖 AI Predictions - Phase 3
-            </Badge>
+      {!hideHeader && (
+        <>
+          <Breadcrumb items={[{ label: "Inventory" }]} />
+          
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div>
+              <div className="flex items-center gap-2 flex-wrap mb-1">
+                <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight">Inventory</h1>
+                <Badge className="bg-green-600 text-white border-0 text-xs font-semibold">
+                  Phase 1
+                </Badge>
+                <Badge className="bg-purple-600 text-white border-0 text-xs font-semibold">
+                  🤖 AI Predictions - Phase 3
+                </Badge>
+              </div>
+              <p className="text-muted-foreground mt-2 text-sm sm:text-base lg:text-lg">
+                Track parts, equipment, and stock levels for solar inverter maintenance
+              </p>
+            </div>
+            <Button className="min-h-[44px] active:scale-95">
+              <Package className="mr-2 h-4 w-4" />
+              Add New Item
+            </Button>
           </div>
-          <p className="text-muted-foreground mt-2 text-sm sm:text-base lg:text-lg">
-            Track parts, equipment, and stock levels for solar inverter maintenance
-          </p>
-        </div>
-        <Button className="min-h-[44px] active:scale-95">
-          <Package className="mr-2 h-4 w-4" />
-          Add New Item
-        </Button>
-      </div>
+        </>
+      )}
 
       {/* Summary Cards & Charts */}
       <div className="grid gap-4 sm:gap-6 grid-cols-1 lg:grid-cols-2">

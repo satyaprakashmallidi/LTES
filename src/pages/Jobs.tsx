@@ -11,7 +11,7 @@ import {
   Briefcase, MapPin, Users, ExternalLink, Receipt, LayoutGrid, List, CalendarDays,
 } from "lucide-react";
 import { type Job, type JobStatus, type RAMSStatus } from "@/data/mockJobs";
-import { useJobs, type JobWithSite } from "@/hooks/useJobs";
+import { useJobs, useCreateJob, useUpdateJob, type JobWithSite } from "@/hooks/useJobs";
 import { CreateJobWizard } from "@/components/jobs/CreateJobWizard";
 import { JobDetailsModal } from "@/components/jobs/JobDetailsModal";
 import { KanbanBoard } from "@/components/jobs/KanbanBoard";
@@ -25,7 +25,7 @@ const statusColors: Record<JobStatus, string> = {
   "Logged Fault": "bg-red-600 text-white hover:bg-red-600",
   "Quote Sent": "bg-amber-500 text-white hover:bg-amber-500",
   "Approved": "bg-blue-600 text-white hover:bg-blue-600",
-  "In Progress": "bg-purple-600 text-white hover:bg-purple-600",
+  "Scheduled": "bg-purple-600 text-white hover:bg-purple-600",
   "Completed": "bg-zinc-700 text-white hover:bg-zinc-700",
   "Invoiced": "bg-zinc-500 text-white hover:bg-zinc-500",
 };
@@ -42,42 +42,10 @@ const Jobs = () => {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
   const { toast } = useToast();
-  const { data: supabaseJobs, isLoading } = useJobs();
+  const { data: jobs = [], isLoading } = useJobs();
+  const createMutation = useCreateJob();
+  const updateMutation = useUpdateJob();
 
-  // Transform Supabase data to local Job format
-  const jobs: Job[] = (supabaseJobs || []).map((j: JobWithSite) => ({
-    id: j.job_number,
-    contactName: "",
-    contactPhone: "",
-    contactEmail: "",
-    siteName: j.sites?.site_name || "",
-    siteId: j.site_id || "",
-    address: j.sites?.address || "",
-    inverterLocation: "",
-    contractType: "Contract/SLA" as const,
-    inverterType: "",
-    inverterModel: "",
-    serialNumber: "",
-    inverterInProduction: "Yes" as const,
-    faultCode: "",
-    reportedFault: j.description || "",
-    priority: "LOW" as const,
-    status: j.status as JobStatus,
-    ramsStatus: (j.rams_status || "Pending") as RAMSStatus,
-    quoteNumber: j.quote_number || "",
-    quoteDate: "",
-    poNumber: "",
-    poReceived: false,
-    scheduledDate: j.scheduled_date || "",
-    engineer: j.technician || "",
-    accessCode: j.sites?.access_codes || "",
-    distance: 0,
-    ramsSent: false,
-    jobNotes: j.notes || "",
-    markComplete: false,
-    invoiceNumber: j.invoice_number || "",
-    reportLink: j.report_link || "",
-  }));
   const [filterTab, setFilterTab] = useState<FilterTab>("All");
   const [viewMode, setViewMode] = useState<"table" | "kanban" | "calendar">("table");
   const [prefillDate, setPrefillDate] = useState("");
@@ -126,16 +94,12 @@ const Jobs = () => {
 
   const handleSaveJob = (job: Job) => {
     const isNew = !jobs.find(j => j.id === job.id);
-    setJobs(prev => {
-      const idx = prev.findIndex(j => j.id === job.id);
-      if (idx >= 0) {
-        const updated = [...prev];
-        updated[idx] = job;
-        return updated;
-      }
-      return [job, ...prev];
-    });
-    toast({ title: "Job Saved", description: `${job.id} has been saved.` });
+    
+    if (isNew) {
+      createMutation.mutate(job);
+    } else {
+      updateMutation.mutate({ id: job.id, updates: job });
+    }
 
     // Show PDF generation dialog for new jobs
     if (isNew) {
@@ -151,9 +115,7 @@ const Jobs = () => {
     }));
     // Update RAMS status if both RA+MS generated
     if (docs.ra && docs.ms) {
-      setJobs(prev => prev.map(j =>
-        j.id === jobId && j.ramsStatus !== "Not Required" ? { ...j, ramsStatus: "Approved" as RAMSStatus } : j
-      ));
+      updateMutation.mutate({ id: jobId, updates: { ramsStatus: "Approved" } });
     }
   };
 

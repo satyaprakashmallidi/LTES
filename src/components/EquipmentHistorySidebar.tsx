@@ -7,7 +7,7 @@ interface JobHistoryItem {
   jobNumber: string;
   date: string;
   issue: string;
-  status: "Complete" | "In Progress";
+  status: "Completed" | "Scheduled";
   technician: string;
 }
 
@@ -96,9 +96,9 @@ export const EquipmentHistorySidebar = ({
                       {job.jobNumber}
                     </span>
                     <Badge
-                      variant={job.status === "Complete" ? "default" : "secondary"}
+                      variant={job.status === "Completed" ? "default" : "secondary"}
                       className={
-                        job.status === "Complete"
+                        job.status === "Completed"
                           ? "bg-green-500 text-white hover:bg-green-600"
                           : "bg-yellow-500 text-white hover:bg-yellow-600"
                       }
