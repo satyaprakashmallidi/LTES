@@ -46,13 +46,34 @@ const lukeNavItems = [
   { title: "Analytics", url: "/admin1/analytics", icon: Settings, key: "analytics" },
 ];
 
-export function AppSidebar() {
+const engineerNavItems = [
+  { title: "My Jobs", url: "/dashboard", icon: Briefcase },
+  { title: "Calendar", url: "/dashboard/calendar", icon: Calendar },
+  { title: "Van Stock", url: "/dashboard/inventory", icon: Box },
+];
+
+export function AppSidebar({ userRole }: { userRole?: string | null }) {
   const { open } = useSidebar();
   const [isHovered, setIsHovered] = useState(false);
   const location = useLocation();
 
-  const isLukeDashboard = location.pathname.startsWith("/admin1");
-  const itemsToShow = isLukeDashboard ? lukeNavItems : mainNavItems;
+  let isLuke = location.pathname.startsWith("/admin1");
+  let isEngineer = location.pathname.startsWith("/dashboard");
+  let isSimon = location.pathname.startsWith("/admin2") || (!isLuke && !isEngineer && userRole === "admin2");
+
+  if (!isLuke && !isEngineer && !isSimon) {
+    if (userRole === "admin1") isLuke = true;
+    else if (userRole === "engineer") isEngineer = true;
+    else isSimon = true;
+  }
+
+  let itemsToShow = mainNavItems;
+  if (isLuke) itemsToShow = lukeNavItems;
+  if (isEngineer) itemsToShow = engineerNavItems;
+
+  let sidebarLabel = "MAIN MENU";
+  if (isLuke) sidebarLabel = "Luke's Dashboard";
+  if (isEngineer) sidebarLabel = "Engineer";
 
   return (
     <Sidebar collapsible="icon">
@@ -125,7 +146,7 @@ export function AppSidebar() {
       <SidebarContent>
         <SidebarGroup>
           <SidebarGroupLabel className="text-xs uppercase tracking-widest font-black text-sidebar-foreground/30">
-            {isLukeDashboard ? "Luke's Dashboard" : "MAIN MENU"}
+            {sidebarLabel}
           </SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
@@ -138,16 +159,16 @@ export function AppSidebar() {
                       className={({ isActive }) =>
                         cn(
                           "transition-colors duration-200",
-                          !isLukeDashboard ? "text-primary hover:text-primary/80" : (isActive ? "bg-sidebar-accent text-sidebar-accent-foreground font-medium" : "")
+                          !isLuke ? "text-primary hover:text-primary/80" : (isActive ? "bg-sidebar-accent text-sidebar-accent-foreground font-medium" : "")
                         )
                       }
                     >
                       <item.icon className={cn(
                         "transition-all duration-200", 
                         open ? "h-5 w-5" : "h-7 w-7",
-                        !isLukeDashboard && "text-primary"
+                        !isLuke && "text-primary"
                       )} />
-                      <span className={cn(!isLukeDashboard && "font-bold")}>{item.title}</span>
+                      <span className={cn(!isLuke && "font-bold")}>{item.title}</span>
                       {item.badge && (
                         <span className="ml-auto h-5 w-5 rounded-full bg-primary text-black text-[10px] font-black flex items-center justify-center shadow-lg shadow-primary/20">
                           {item.badge}

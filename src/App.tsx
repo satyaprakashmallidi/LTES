@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/AppSidebar";
 import { useIsMobile } from "@/hooks/use-mobile";
@@ -17,29 +17,37 @@ import MobileJobSheets from "./pages/MobileJobSheets";
 import MobileJobView from "./pages/MobileJobView";
 import CalendarPage from "./pages/CalendarPage";
 import LukeDashboard from "./pages/LukeDashboard";
+import EngineerDashboard from "./pages/EngineerDashboard";
 import ComingSoon from "./pages/ComingSoon";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 
 const AppLayout = () => {
   const isMobile = useIsMobile();
   const navigate = useNavigate();
+  const [userRole, setUserRole] = useState<"admin1" | "admin2" | "engineer" | null>(null);
 
   useEffect(() => {
     // Initial session check
     const checkSession = async () => {
       const { data: { session } } = await supabase.auth.getSession();
-      if (session && window.location.pathname === "/") {
+      if (session) {
         const email = session.user?.email || "";
-        if (email.toLowerCase().includes("simon")) {
-          navigate("/admin2");
-        } else {
-          navigate("/admin1");
+        const emailLower = email.toLowerCase();
+        let role: "admin1" | "admin2" | "engineer" = "admin1";
+        if (emailLower.includes("simon")) role = "admin2";
+        else if (emailLower.includes("terry") || emailLower.includes("jason")) role = "engineer";
+        setUserRole(role);
+
+        if (window.location.pathname === "/") {
+          if (role === "admin2") navigate("/admin2");
+          else if (role === "engineer") navigate("/dashboard");
+          else navigate("/admin1");
         }
       }
     };
@@ -50,13 +58,20 @@ const AppLayout = () => {
     const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
       if (event === "SIGNED_IN" && session) {
         const email = session.user?.email || "";
-        if (email.toLowerCase().includes("simon")) {
-          navigate("/admin2");
-        } else {
-          navigate("/admin1");
+        const emailLower = email.toLowerCase();
+        let role: "admin1" | "admin2" | "engineer" = "admin1";
+        if (emailLower.includes("simon")) role = "admin2";
+        else if (emailLower.includes("terry") || emailLower.includes("jason")) role = "engineer";
+        setUserRole(role);
+
+        if (window.location.pathname === "/") {
+          if (role === "admin2") navigate("/admin2");
+          else if (role === "engineer") navigate("/dashboard");
+          else navigate("/admin1");
         }
       }
       if (event === "SIGNED_OUT") {
+        setUserRole(null);
         navigate("/");
       }
     });
@@ -67,7 +82,7 @@ const AppLayout = () => {
   return (
     <SidebarProvider defaultOpen={!isMobile}>
       <div className="flex h-screen w-full overflow-hidden bg-background">
-        <AppSidebar />
+        <AppSidebar userRole={userRole} />
         <main className="flex-1 relative overflow-hidden flex flex-col">
           <Routes>
             <Route path="/" element={<Auth />} />
@@ -83,6 +98,7 @@ const AppLayout = () => {
             <Route path="/settings" element={<ComingSoon />} />
             <Route path="/admin1/*" element={<LukeDashboard />} />
             <Route path="/admin2" element={<Dashboard />} />
+            <Route path="/dashboard/*" element={<EngineerDashboard />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
