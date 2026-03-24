@@ -22,8 +22,10 @@ import {
   ChevronDown,
   ArrowLeft,
   Settings,
-  Info
+  Info,
+  TrendingUp
 } from "lucide-react";
+import { DashboardHeader } from "@/components/layout/DashboardHeader";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -34,6 +36,15 @@ import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { useNavigate, useLocation } from "react-router-dom";
 import { SidebarTrigger } from "@/components/ui/sidebar";
+import { 
+  ResponsiveContainer, 
+  AreaChart, 
+  Area, 
+  XAxis, 
+  YAxis,
+  CartesianGrid,
+  Tooltip as ChartTooltip
+} from "recharts";
 import { cn } from "@/lib/utils";
 
 // Mock Van Stock Data
@@ -56,7 +67,8 @@ export default function EngineerDashboard() {
   const getTabFromPath = () => {
     if (location.pathname.endsWith("/calendar")) return "calendar";
     if (location.pathname.endsWith("/inventory")) return "stock";
-    return "jobs";
+    if (location.pathname.endsWith("/jobs")) return "jobs";
+    return "dashboard";
   };
 
   const [activeTab, setActiveTab] = useState(getTabFromPath());
@@ -69,27 +81,58 @@ export default function EngineerDashboard() {
     setActiveTab(val);
     if (val === "calendar") navigate("/dashboard/calendar");
     else if (val === "stock") navigate("/dashboard/inventory");
+    else if (val === "jobs") navigate("/dashboard/jobs");
     else navigate("/dashboard");
   };
 
   const [selectedJobId, setSelectedJobId] = useState<string | null>(null);
   const [vanStock, setVanStock] = useState(INITIAL_VAN_STOCK);
+  const [timeRange, setTimeRange] = useState<"MONTH" | "WEEK" | "TODAY">("WEEK");
   
   // Engineer identification
-  const [userName, setUserName] = useState("Terry");
+  const [userName, setUserName] = useState("");
+
+  useEffect(() => {
+    async function getProfile() {
+      const { data: { user } } = await supabase.auth.getUser();
+      if (user) {
+        // Sync with team database to get the official name used for assignments
+        const { data: teamData } = await (supabase
+          .from("team_members") as any)
+          .select("name")
+          .eq("email", user.email)
+          .maybeSingle();
+
+        if (teamData?.name) {
+          setUserName(teamData.name);
+        } else {
+          setUserName(user.user_metadata?.full_name || user.email?.split("@")[0] || "Engineer");
+        }
+      }
+    }
+    getProfile();
+  }, []);
+
+  const myJobs = useMemo(() => {
+    if (!userName) return [];
+    return jobs.filter(j => {
+      if (!j.engineer) return false;
+      return j.engineer.toLowerCase() === userName.toLowerCase();
+    });
+  }, [jobs, userName]);
 
   const todayJobs = useMemo(() => {
-    return jobs.filter(j => j.scheduledDate && isSameDay(new Date(j.scheduledDate), new Date()));
-  }, [jobs]);
+    return myJobs.filter(j => j.scheduledDate && isSameDay(new Date(j.scheduledDate), new Date()));
+  }, [myJobs]);
 
   const upcomingJobs = useMemo(() => {
     const today = new Date();
-    return jobs.filter(j => {
+    return myJobs.filter(j => {
       if (!j.scheduledDate) return false;
       const date = new Date(j.scheduledDate);
       return date > today && date <= addDays(today, 3);
     }).sort((a, b) => new Date(a.scheduledDate).getTime() - new Date(b.scheduledDate).getTime());
-  }, [jobs]);
+  }, [myJobs]);
 
   const handleLogout = async () => {
     await supabase.auth.signOut();
@@ -101,7 +144,80 @@ export default function EngineerDashboard() {
     [jobs, selectedJobId]
   );
 
-  if (isLoading) return <div className="p-8 text-white">Loading Terry's Dashboard...</div>;
+  const stats = useMemo(() => {
+    const total = myJobs.length;
+    const completed = myJobs.filter(j => j.status === "Completed" || j.markComplete).length;
+    const pending = total - completed;
+    return { total, completed, pending };
+  }, [myJobs]);
+
+  const chartData = useMemo(() => {
+    const today = new Date();
+    const data = [];
+    
+    if (timeRange === "TODAY") {
+      // Generate 24 hours for Today, every 2 hours as requested
+      for (let i = 0; i <= 24; i += 2) {
+        const hourDate = new Date(today);
+        hourDate.setHours(i, 0, 0, 0);
+        
+        // Format as 12am, 2am, etc.
+        const label = format(hourDate, "ha").toLowerCase();
+        
+        // Count jobs that are scheduled for today (any time) 
+        // In a real app we might filter by hour, but for this summary, 
+        // showing the overall today status across the timeline as 0 until work happens is common.
+        // For a more dynamic feel, we'll mock some distribution if it's "today"
+        const totalToday = myJobs.filter(j => j.scheduledDate && isSameDay(new Date(j.scheduledDate), today)).length;
+        const completedToday = myJobs.filter(j => 
+          j.scheduledDate && 
+          isSameDay(new Date(j.scheduledDate), today) && 
+          (j.status === "Completed" || j.markComplete)
+        ).length;
+
+        // Mock some data distribution so the graph isn't just a flat line at 0 or max
+        // In a real system, we'd check if the job was completed BY this hour.
+        const hour = new Date().getHours();
+        const isPast = i <= hour;
+        
+        data.push({ 
+          name: label, 
+          total: totalToday > 0 ? totalToday : 0, 
+          completed: (isPast && completedToday > 0) ? completedToday : 0 
+        });
+      }
+    } else {
+      const days = timeRange === "MONTH" ? 30 : 7;
+      for (let i = days - 1; i >= 0; i--) {
+        const date = addDays(today, -i);
+        const dayLabel = format(date, days === 7 ? "EEE" : "MMM d");
+        
+        const totalOnDay = myJobs.filter(j => 
+          j.scheduledDate && isSameDay(new Date(j.scheduledDate), date)
+        ).length;
+        
+        const completedOnDay = myJobs.filter(j => 
+          j.scheduledDate && 
+          isSameDay(new Date(j.scheduledDate), date) && 
+          (j.status === "Completed" || j.markComplete)
+        ).length;
+
+        data.push({ name: dayLabel, total: totalOnDay, completed: completedOnDay });
+      }
+    }
+    return data;
+  }, [myJobs, timeRange]);
+
+  const headerTitle = useMemo(() => {
+    switch (activeTab) {
+      case "jobs": return "MY JOBS";
+      case "calendar": return "CALENDAR";
+      case "stock": return "VAN STOCK";
+      default: return "DASHBOARD";
+    }
+  }, [activeTab]);
+
+  if (isLoading) return <div className="p-8 text-white">Loading {userName || "Engineer"}'s Dashboard...</div>;
 
   if (selectedJobId && selectedJob) {
     return (
@@ -119,18 +235,127 @@ export default function EngineerDashboard() {
 
   return (
     <div className="flex-1 flex flex-col h-full bg-sidebar text-foreground overflow-hidden">
+      <DashboardHeader title={headerTitle} role="Engineer" userName={userName} />
       <div className="flex-1 overflow-y-auto no-scrollbar pb-20 pt-6 px-4">
         <Tabs value={activeTab} onValueChange={handleTabChange} className="w-full">
 
 
-          <TabsContent value="jobs" className="m-0 space-y-6">
+          <TabsContent value="dashboard" className="m-0 space-y-6">
              <div className="space-y-1">
-               <h2 className="text-xl font-black tracking-tight uppercase">GOOD MORNING {userName.toUpperCase()}</h2>
-               <p className="text-[10px] text-white/40 font-bold uppercase tracking-widest">
+               <h2 className="text-lg lg:text-xl font-black tracking-tight uppercase">GOOD MORNING {userName.toUpperCase()}</h2>
+               <p className="text-[10px] lg:text-xs text-white/40 font-bold uppercase tracking-widest">
                  Today: {format(new Date(), "EEEE, d MMMM yyyy")}
                </p>
              </div>
 
+             {/* DASHBOARD STATS SECTION */}
+             <div className="space-y-4">
+                <div className="grid grid-cols-2 gap-3 lg:gap-4">
+                  <div className="bg-white/5 backdrop-blur-sm border border-white/10 border-l-4 border-l-primary p-3 lg:p-4 rounded-xl shadow-xl flex flex-col justify-between h-28 lg:h-32 transition-all hover:bg-white/[0.07]">
+                    <p className="text-[9px] md:text-[10px] uppercase font-black text-primary/80 mb-1 tracking-widest">Total Jobs</p>
+                    <p className="text-3xl md:text-4xl font-black text-white">{stats.total}</p>
+                  </div>
+                  <div className="bg-white/5 backdrop-blur-sm border border-white/10 border-l-4 border-l-green-500 p-3 md:p-4 rounded-xl shadow-xl flex flex-col justify-between h-28 md:h-32 transition-all hover:bg-white/[0.07]">
+                    <p className="text-[9px] md:text-[10px] uppercase font-black text-green-500/80 mb-1 tracking-widest">Completed</p>
+                    <p className="text-3xl md:text-4xl font-black text-white">{stats.completed}</p>
+                  </div>
+                </div>
+
+                <div className="bg-white/5 backdrop-blur-sm border border-white/10 p-4 lg:p-5 rounded-xl shadow-xl h-[280px] lg:h-[350px] transition-all hover:bg-white/[0.1]">
+                   <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-4 lg:mb-6">
+                      <div className="space-y-0.5 lg:space-y-1">
+                        <p className="text-[9px] lg:text-[10px] uppercase font-black text-white/40 tracking-widest flex items-center gap-2">
+                          <TrendingUp className="h-3.5 w-3.5 lg:h-4 w-4 text-primary" /> Performance Trends
+                        </p>
+                        <h4 className="text-[10px] lg:text-xs font-black text-white uppercase tracking-tight">Activity Overview</h4>
+                      </div>
+
+                      <div className="flex items-center justify-between lg:justify-end gap-2 lg:gap-4">
+                         <div className="flex items-center gap-2 lg:gap-4 ml-1 lg:ml-2 pb-1">
+                           <div className="flex items-center gap-1">
+                              <div className="h-1.5 w-1.5 rounded-full bg-primary shadow-[0_0_8px_rgba(255,255,0,0.4)]" />
+                              <span className="text-[7px] md:text-[8px] font-black text-white/30 uppercase tracking-widest">Planned</span>
+                           </div>
+                           <div className="flex items-center gap-1">
+                              <div className="h-1.5 w-1.5 rounded-full bg-green-500 shadow-[0_0_8px_rgba(34,197,94,0.4)]" />
+                              <span className="text-[7px] md:text-[8px] font-black text-white/30 uppercase tracking-widest">Finished</span>
+                           </div>
+                         </div>
+                         <div className="flex bg-white/5 border border-white/10 rounded-full p-1 scale-90 lg:scale-95 origin-right">
+                           {["MONTH", "WEEK", "TODAY"].map((range) => (
+                             <button
+                               key={range}
+                               onClick={() => setTimeRange(range as any)}
+                               className={cn(
+                                 "px-3 md:px-5 py-1 rounded-full text-[8px] md:text-[9px] font-black uppercase tracking-widest transition-all duration-300",
+                                 timeRange === range 
+                                   ? "bg-primary text-black shadow-lg scale-105" 
+                                   : "text-white/40 hover:text-white/60"
+                               )}
+                             >
+                               {range}
+                             </button>
+                           ))}
+                         </div>
+                      </div>
+                   </div>
+                   <div className="h-[200px] lg:h-[260px] w-full mt-auto">
+                     <ResponsiveContainer width="100%" height="100%">
+                        <AreaChart data={chartData} margin={{ top: 10, right: 10, left: -20, bottom: 20 }}>
+                        <defs>
+                          <linearGradient id="colorTotal" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="5%" stopColor="hsl(var(--primary))" stopOpacity={0.4}/>
+                            <stop offset="95%" stopColor="hsl(var(--primary))" stopOpacity={0}/>
+                          </linearGradient>
+                          <linearGradient id="colorCompleted" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="5%" stopColor="#22c55e" stopOpacity={0.4}/>
+                            <stop offset="95%" stopColor="#22c55e" stopOpacity={0}/>
+                          </linearGradient>
+                        </defs>
+                        <XAxis 
+                          dataKey="name" 
+                          axisLine={false} 
+                          tickLine={false} 
+                          fontSize={9} 
+                          tick={{ fill: 'rgba(255, 255, 255, 0.2)', fontWeight: 'bold' }} 
+                          minTickGap={timeRange === "MONTH" ? 40 : (timeRange === "TODAY" ? 5 : 10)}
+                        />
+                        <Area 
+                          type="monotone" 
+                          dataKey="total" 
+                          stroke="hsl(var(--primary))" 
+                          strokeWidth={3}
+                          fillOpacity={1} 
+                          fill="url(#colorTotal)" 
+                        />
+                        <Area 
+                          type="monotone" 
+                          dataKey="completed" 
+                          stroke="#22c55e" 
+                          strokeWidth={3}
+                          fillOpacity={1} 
+                          fill="url(#colorCompleted)" 
+                        />
+                      </AreaChart>
+                    </ResponsiveContainer>
+                 </div>
+                </div>
+              </div>
+
+             <div className="space-y-4">
+                <div className="flex items-center justify-between border-b border-white/10 pb-1">
+                   <h3 className="text-xs font-black text-white/40 tracking-[0.2em] uppercase">Quick Summary</h3>
+                </div>
+                <div className="p-4 bg-white/5 rounded-xl border border-dashed border-white/10">
+                   <p className="text-xs text-white/50 leading-relaxed font-bold">
+                     You have <span className="text-primary">{todayJobs.length} jobs</span> scheduled for today and <span className="text-primary">{upcomingJobs.length} jobs</span> in the next 3 days. 
+                     Keep up the great work!
+                   </p>
+                </div>
+             </div>
+          </TabsContent>
+
+          <TabsContent value="jobs" className="m-0 space-y-6">
                <div className="space-y-4">
                  <div className="flex items-center justify-between border-b border-primary/20 pb-1">
                    <h3 className="text-xs font-black text-primary tracking-[0.2em] uppercase">Today's Jobs ({todayJobs.length})</h3>
@@ -163,8 +388,9 @@ export default function EngineerDashboard() {
                    {upcomingJobs.length > 0 ? upcomingJobs.map(job => (
                      <div key={job.id} className="p-4 bg-white/5 rounded-xl border border-white/5 flex items-center justify-between group" onClick={() => setSelectedJobId(job.id)}>
                         <div className="space-y-1">
-                          <p className="text-[10px] font-black text-primary uppercase">
-                            📅 {format(new Date(job.scheduledDate), "EEEE d MMMM")}
+                          <p className="text-[10px] font-black text-primary uppercase flex items-center gap-1.5">
+                            <Calendar className="h-3 w-3" />
+                            {format(new Date(job.scheduledDate), "EEEE d MMMM")}
                           </p>
                           <p className="text-sm font-bold text-white">{job.siteName}</p>
                           <p className="text-[10px] text-white/40 font-bold uppercase tracking-widest">
@@ -271,12 +497,12 @@ function JobCard({ job, onView, onArrive }: { job: any; onView: () => void; onAr
            </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-2 pt-2">
-           <Button className="bg-[#1a1a1a] border border-white/10 hover:bg-white/5 text-white font-black text-[10px] uppercase h-11" onClick={onView}>
-             <FileText className="h-4 w-4 mr-2" /> View Job Sheet
+        <div className="grid grid-cols-2 gap-2 lg:gap-3 pt-2">
+           <Button className="bg-[#1a1a1a] border border-white/10 hover:bg-white/5 text-white font-black text-[9px] md:text-[10px] uppercase h-10 md:h-11" onClick={onView}>
+             <FileText className="h-3.5 w-3.5 md:h-4 w-4 mr-1.5 md:mr-2" /> <span className="truncate">View Sheet</span>
            </Button>
-           <Button className="bg-primary text-black font-black text-[10px] uppercase h-11" onClick={onArrive}>
-             <CheckCircle2 className="h-4 w-4 mr-2" /> Mark Arrived
+           <Button className="bg-primary text-black font-black text-[9px] md:text-[10px] uppercase h-10 md:h-11" onClick={onArrive}>
+             <CheckCircle2 className="h-3.5 w-3.5 md:h-4 w-4 mr-1.5 md:mr-2" /> <span className="truncate">Arrived</span>
            </Button>
         </div>
       </div>
@@ -351,7 +577,7 @@ function JobSheetView({ job, onBack, onComplete }: { job: any; onBack: () => voi
           </h3>
           <div className="bg-card p-5 rounded-2xl border border-sidebar-border grid grid-cols-2 gap-y-4">
             <DetailItem label="Location" value={job.inverterLocation} />
-            <DetailItem label="Status" value="❌ Faulty" />
+            <DetailItem label="Status" value="Faulty" color="text-red-500" />
             <DetailItem label="Model" value={job.inverterModel} colSpan={2} />
             <DetailItem label="Serial" value={job.serialNumber} colSpan={2} />
           </div>
@@ -507,7 +733,10 @@ function VanStockView({ stock, engineerName }: { stock: any[]; engineerName: str
 
        <div className="space-y-4">
           <div className="flex items-center justify-between border-b border-red-500/20 pb-1">
-            <h3 className="text-xs font-black text-red-500 tracking-[0.1em] uppercase">🔴 Needs Restock</h3>
+            <h3 className="text-xs font-black text-red-500 tracking-[0.1em] uppercase flex items-center gap-1.5">
+              <AlertCircle className="h-3.5 w-3.5" />
+              Needs Restock
+            </h3>
           </div>
           <div className="grid grid-cols-1 gap-2">
              {lowStock.map(item => (
@@ -518,7 +747,10 @@ function VanStockView({ stock, engineerName }: { stock: any[]; engineerName: str
 
        <div className="space-y-4 pt-4">
           <div className="flex items-center justify-between border-b border-green-500/20 pb-1">
-            <h3 className="text-xs font-black text-green-500 tracking-[0.1em] uppercase">✅ Healthy Stock</h3>
+            <h3 className="text-xs font-black text-green-500 tracking-[0.1em] uppercase flex items-center gap-1.5">
+              <CheckCircle2 className="h-3.5 w-3.5" />
+              Healthy Stock
+            </h3>
           </div>
           <div className="grid grid-cols-1 gap-2">
              {goodStock.map(item => (

@@ -18,8 +18,12 @@ import MobileJobView from "./pages/MobileJobView";
 import CalendarPage from "./pages/CalendarPage";
 import LukeDashboard from "./pages/LukeDashboard";
 import EngineerDashboard from "./pages/EngineerDashboard";
+import AccountSettings from "./pages/AccountSettings";
 import ComingSoon from "./pages/ComingSoon";
+import Team from "./pages/Team";
 import NotFound from "./pages/NotFound";
+import { AnimatePresence } from "framer-motion";
+import { PageTransition } from "@/components/PageTransition";
 
 const queryClient = new QueryClient();
 
@@ -30,7 +34,9 @@ import { supabase } from "@/integrations/supabase/client";
 const AppLayout = () => {
   const isMobile = useIsMobile();
   const navigate = useNavigate();
+  const location = useLocation();
   const [userRole, setUserRole] = useState<"admin1" | "admin2" | "engineer" | null>(null);
+  const isAuthPage = location.pathname === "/";
 
   useEffect(() => {
     // Initial session check
@@ -39,9 +45,20 @@ const AppLayout = () => {
       if (session) {
         const email = session.user?.email || "";
         const emailLower = email.toLowerCase();
-        let role: "admin1" | "admin2" | "engineer" = "admin1";
-        if (emailLower.includes("simon")) role = "admin2";
-        else if (emailLower.includes("terry") || emailLower.includes("jason")) role = "engineer";
+        
+        const admin1Emails = [
+          "luke@ltenergyservices.co.uk", 
+          "terry@ltenergyservices.co.uk", 
+          "rish@25terawatts.com"
+        ];
+        
+        let role: "admin1" | "admin2" | "engineer" = "engineer";
+        if (admin1Emails.includes(emailLower)) {
+          role = "admin1";
+        } else if (emailLower === "simon@ltenergyservices.co.uk") {
+          role = "admin2";
+        }
+        
         setUserRole(role);
 
         if (window.location.pathname === "/") {
@@ -59,9 +76,20 @@ const AppLayout = () => {
       if (event === "SIGNED_IN" && session) {
         const email = session.user?.email || "";
         const emailLower = email.toLowerCase();
-        let role: "admin1" | "admin2" | "engineer" = "admin1";
-        if (emailLower.includes("simon")) role = "admin2";
-        else if (emailLower.includes("terry") || emailLower.includes("jason")) role = "engineer";
+        
+        const admin1Emails = [
+          "luke@ltenergyservices.co.uk", 
+          "terry@ltenergyservices.co.uk", 
+          "rish@25terawatts.com"
+        ];
+        
+        let role: "admin1" | "admin2" | "engineer" = "engineer";
+        if (admin1Emails.includes(emailLower)) {
+          role = "admin1";
+        } else if (emailLower === "simon@ltenergyservices.co.uk") {
+          role = "admin2";
+        }
+        
         setUserRole(role);
 
         if (window.location.pathname === "/") {
@@ -81,28 +109,32 @@ const AppLayout = () => {
 
   return (
     <SidebarProvider defaultOpen={!isMobile}>
-      <div className="flex h-screen w-full overflow-hidden bg-background">
-        <AppSidebar userRole={userRole} />
+      <div className="flex h-screen w-screen overflow-hidden bg-background">
+        {!isAuthPage && <AppSidebar userRole={userRole} />}
         <main className="flex-1 relative overflow-hidden flex flex-col">
-          <Routes>
-            <Route path="/" element={<Auth />} />
-            <Route path="/rams-review" element={<RAMSReview />} />
-            <Route path="/jobs" element={<Jobs />} />
-            <Route path="/jobs/:id/mobile" element={<MobileJobView />} />
-            <Route path="/calendar" element={<CalendarPage />} />
-            <Route path="/quotes" element={<Quotes />} />
-            <Route path="/inventory" element={<Inventory />} />
-            <Route path="/analytics" element={<Analytics />} />
-            <Route path="/mobile-job-sheets" element={<MobileJobSheets />} />
-            <Route path="/inbox" element={<ComingSoon />} />
-            <Route path="/settings" element={<ComingSoon />} />
-            <Route path="/admin1/*" element={<LukeDashboard />} />
-            <Route path="/admin2" element={<Dashboard />} />
-            <Route path="/dashboard/*" element={<EngineerDashboard />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-            <Route path="*" element={<NotFound />} />
-          </Routes>
+          <AnimatePresence mode="wait">
+            <Routes location={location} key={location.pathname}>
+              <Route path="/" element={<PageTransition><Auth /></PageTransition>} />
+              <Route path="/rams-review" element={<PageTransition><RAMSReview /></PageTransition>} />
+              <Route path="/jobs" element={<PageTransition><Jobs /></PageTransition>} />
+              <Route path="/jobs/:id/mobile" element={<PageTransition><MobileJobView /></PageTransition>} />
+              <Route path="/calendar" element={<PageTransition><CalendarPage /></PageTransition>} />
+              <Route path="/quotes" element={<PageTransition><Quotes /></PageTransition>} />
+              <Route path="/inventory" element={<PageTransition><Inventory /></PageTransition>} />
+              <Route path="/analytics" element={<PageTransition><Analytics /></PageTransition>} />
+              <Route path="/mobile-job-sheets" element={<PageTransition><MobileJobSheets /></PageTransition>} />
+              <Route path="/account" element={<PageTransition><AccountSettings /></PageTransition>} />
+              <Route path="/team" element={<PageTransition><Team /></PageTransition>} />
+              <Route path="/settings" element={<PageTransition><ComingSoon /></PageTransition>} />
+              <Route path="/admin1/*" element={<PageTransition><LukeDashboard /></PageTransition>} />
+              <Route path="/admin2" element={<PageTransition><Dashboard /></PageTransition>} />
+              <Route path="/dashboard/*" element={<PageTransition><EngineerDashboard /></PageTransition>} />
+              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+              <Route path="*" element={<PageTransition><NotFound /></PageTransition>} />
+            </Routes>
+          </AnimatePresence>
         </main>
+        <div style={{ position: 'fixed', right: '4px', bottom: '2px', fontSize: '6px', fontWeight: '300', color: 'rgba(228, 228, 231, 0.6)', zIndex: 9999, pointerEvents: 'none', userSelect: 'none', letterSpacing: '0' }}>VRK</div>
       </div>
     </SidebarProvider>
   );

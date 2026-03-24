@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { 
   FileText, 
@@ -18,8 +18,20 @@ import {
   CheckCircle2,
   AlertTriangle,
   Eye,
-  Edit
+  Edit,
+  LogOut,
+  User,
+  Zap
 } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { supabase } from "@/integrations/supabase/client";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -39,6 +51,7 @@ import { JobDetailsModal } from "@/components/jobs/JobDetailsModal";
 import type { Job } from "@/data/mockJobs";
 import { format, isSameWeek } from "date-fns";
 import { cn } from "@/lib/utils";
+import { DashboardHeader } from "@/components/layout/DashboardHeader";
 
 export default function Dashboard() {
   const navigate = useNavigate();
@@ -55,15 +68,20 @@ export default function Dashboard() {
   const [createOpen, setCreateOpen] = useState(false);
   const [detailsOpen, setDetailsOpen] = useState(false);
   const [selectedJob, setSelectedJob] = useState<Job | null>(null);
+  const [userData, setUserData] = useState<{ name: string; email: string }>({ name: "", email: "" });
 
-  // Stats
-  const jobsToday = jobs.filter(j => j.scheduledDate === format(new Date(), "yyyy-MM-dd")).length;
-  const completedThisMonth = jobs.filter(j => {
-    if (j.status !== "Completed" && j.status !== "Invoiced") return false;
-    const date = j.scheduledDate ? new Date(j.scheduledDate) : null;
-    return date && date.getMonth() === new Date().getMonth();
-  }).length;
-  const pendingInvoice = jobs.filter(j => j.status === "Completed").length;
+  useEffect(() => {
+    async function getProfile() {
+      const { data: { user } } = await supabase.auth.getUser();
+      if (user) {
+        setUserData({
+          name: user.user_metadata?.full_name || user.email?.split("@")[0] || "Office Manager",
+          email: user.email || ""
+        });
+      }
+    }
+    getProfile();
+  }, []);
 
   const filteredJobs = jobs.filter(job => {
     const matchesSearch = job.siteName.toLowerCase().includes(search.toLowerCase()) || 
@@ -73,6 +91,15 @@ export default function Dashboard() {
     const matchesPriority = priorityFilter === "all" || job.priority === priorityFilter;
     return matchesSearch && matchesStatus && matchesPriority;
   });
+
+  // Stats
+  const jobsToday = filteredJobs.filter(j => j.scheduledDate === format(new Date(), "yyyy-MM-dd")).length;
+  const completedThisMonth = filteredJobs.filter(j => {
+    if (j.status !== "Completed" && j.status !== "Invoiced") return false;
+    const date = j.scheduledDate ? new Date(j.scheduledDate) : null;
+    return date && date.getMonth() === new Date().getMonth();
+  }).length;
+  const pendingInvoice = filteredJobs.filter(j => j.status === "Completed").length;
 
   const needsQuoteJobs = jobs.filter(j => j.status === "Logged Fault" && j.priority === "HIGH");
   const quoteSentJobs = jobs.filter(j => j.status === "Quote Sent" && !j.poReceived);
@@ -117,32 +144,11 @@ export default function Dashboard() {
     }
   };
 
-  if (isLoading) return <div className="p-8 text-white">Loading Simon's Dashboard...</div>;
+  if (isLoading) return <div className="p-8 text-white">Loading Dashboard...</div>;
 
   return (
     <div className="flex-1 flex flex-col h-full overflow-hidden bg-sidebar text-sidebar-foreground">
-      {/* 🔴 LT ENERGY SERVICES HEADER */}
-      <div className="bg-sidebar border-b border-sidebar-border px-6 py-3 flex items-center justify-between sticky top-0 z-20">
-        <div className="flex items-center gap-4">
-          <SidebarTrigger className="text-white hover:bg-white/5" />
-          <div className="flex items-center gap-2">
-            <div className="h-8 w-8 bg-primary rounded flex items-center justify-center">
-              <span className="text-black font-black text-xs">LT</span>
-            </div>
-            <h1 className="text-lg font-black tracking-tighter text-white">LT ENERGY SERVICES</h1>
-          </div>
-        </div>
-
-        <div className="flex items-center gap-3">
-          <div className="text-right">
-            <p className="text-sm font-bold text-white leading-tight">Simon Scott</p>
-            <p className="text-[10px] text-primary font-bold uppercase tracking-wider">Office Manager</p>
-          </div>
-          <div className="h-9 w-9 rounded-full bg-sidebar-accent border border-sidebar-border flex items-center justify-center">
-            <span className="text-xs font-bold text-white">SS</span>
-          </div>
-        </div>
-      </div>
+      <DashboardHeader userName={userData.name} role="Office Manager" />
 
 
       <div className="flex-1 overflow-y-auto overflow-x-hidden no-scrollbar p-6 space-y-6">
@@ -196,8 +202,7 @@ export default function Dashboard() {
               </SelectTrigger>
               <SelectContent className="bg-sidebar border-sidebar-border text-white">
                 <SelectItem value="all">All Customers</SelectItem>
-                <SelectItem value="SolarCo">SolarCo Ltd</SelectItem>
-                <SelectItem value="WindFarm">Wind Farm North</SelectItem>
+
               </SelectContent>
             </Select>
 
@@ -207,9 +212,24 @@ export default function Dashboard() {
               </SelectTrigger>
               <SelectContent className="bg-sidebar border-sidebar-border text-white">
                 <SelectItem value="all">All Priorities</SelectItem>
-                <SelectItem value="HIGH">🔴 HIGH</SelectItem>
-                <SelectItem value="MEDIUM">🟡 MEDIUM</SelectItem>
-                <SelectItem value="LOW">🟢 LOW</SelectItem>
+                <SelectItem value="HIGH">
+                  <div className="flex items-center gap-2">
+                    <AlertCircle className="h-3 w-3 text-red-500" />
+                    HIGH
+                  </div>
+                </SelectItem>
+                <SelectItem value="MEDIUM">
+                  <div className="flex items-center gap-2">
+                    <AlertCircle className="h-3 w-3 text-amber-500" />
+                    MEDIUM
+                  </div>
+                </SelectItem>
+                <SelectItem value="LOW">
+                  <div className="flex items-center gap-2">
+                    <AlertCircle className="h-3 w-3 text-green-500" />
+                    LOW
+                  </div>
+                </SelectItem>
               </SelectContent>
             </Select>
 
@@ -238,7 +258,7 @@ export default function Dashboard() {
               Clear Filters
             </Button>
 
-            <Button className="ml-auto bg-primary text-black hover:bg-primary/90 h-9 font-bold px-4 shadow-lg shadow-primary/20" onClick={() => setCreateOpen(true)}>
+            <Button className="ml-auto bg-primary text-black hover:bg-primary/90 h-9 font-bold px-4 shadow-lg shadow-primary/20" onClick={() => { setSelectedJob(null); setCreateOpen(true); }}>
               <Plus className="h-4 w-4 mr-2" />
               NEW JOB
             </Button>
@@ -263,8 +283,12 @@ export default function Dashboard() {
                 setSelectedJob(job);
                 setDetailsOpen(true);
               }}
-              // @ts-ignore
-              role="Simon" // We'll add this to KanbanBoard
+              onEditJob={(job) => {
+                setSelectedJob(job);
+                setCreateOpen(true);
+              }}
+              onDeleteJob={() => {}} // Disabled for Simon
+              role="Simon" 
             />
           </div>
         </Card>
@@ -280,13 +304,19 @@ export default function Dashboard() {
             {/* URGENT */}
             <Card className="bg-sidebar-accent/30 border-sidebar-border overflow-hidden">
               <div className="bg-red-500/10 px-4 py-2 border-b border-red-500/20 flex items-center justify-between">
-                <span className="text-xs font-black text-red-500 tracking-wider">⚡ URGENT (Needs Quote)</span>
+                <span className="text-xs font-black text-red-500 tracking-wider flex items-center gap-1.5">
+                  <Zap className="h-3 w-3" />
+                  URGENT (Needs Quote)
+                </span>
                 <Badge variant="destructive" className="h-4 px-1 text-[9px]">{needsQuoteJobs.length} JOBS</Badge>
               </div>
               <div className="p-4 space-y-3">
                 {needsQuoteJobs.length > 0 ? needsQuoteJobs.map(j => (
                   <div key={j.id} className="flex items-center justify-between p-3 rounded-lg bg-white/5 border border-white/5 hover:border-white/10 transition-all cursor-pointer" onClick={() => { setSelectedJob(j); setDetailsOpen(true); }}>
-                    <p className="text-xs font-bold text-white"><span className="text-red-500">🔴</span> {j.siteName} — {j.id}</p>
+                    <p className="text-xs font-bold text-white flex items-center gap-2">
+                      <AlertCircle className="h-3 w-3 text-red-500" />
+                      {j.siteName} — {j.id}
+                    </p>
                     <Button 
                       size="sm" 
                       className="h-7 text-[10px] bg-primary text-black font-bold uppercase"
@@ -331,7 +361,10 @@ export default function Dashboard() {
               <div className="p-4 space-y-3">
                 {readyToInvoiceJobs.length > 0 ? readyToInvoiceJobs.map(j => (
                   <div key={j.id} className="flex items-center justify-between p-3 rounded-lg bg-white/5 border border-white/5 hover:border-white/10 transition-all cursor-pointer" onClick={() => { setSelectedJob(j); setDetailsOpen(true); }}>
-                    <p className="text-xs font-bold text-white">✅ {j.siteName} — {j.id}</p>
+                    <p className="text-xs font-bold text-white flex items-center gap-2">
+                      <CheckCircle2 className="h-3 w-3 text-green-500" />
+                      {j.siteName} — {j.id}
+                    </p>
                     <Button 
                       size="sm" 
                       className="h-7 text-[10px] bg-green-600 text-white font-bold uppercase hover:bg-green-700 shadow-sm"
@@ -374,6 +407,7 @@ export default function Dashboard() {
         onOpenChange={setCreateOpen} 
         onSave={handleSaveJob} 
         allJobs={jobs}
+        editJob={selectedJob}
         // @ts-ignore
         role="Simon" // For read-only fields
       />
@@ -383,7 +417,7 @@ export default function Dashboard() {
         open={detailsOpen} 
         onOpenChange={setDetailsOpen} 
         onEdit={(job) => { setSelectedJob(job); setCreateOpen(true); }}
-        // @ts-ignore
+        onDelete={() => {}} // Disabled for Simon
         role="Simon" // No delete button
       />
     </div>

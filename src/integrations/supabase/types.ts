@@ -350,6 +350,36 @@ export type Database = {
           },
         ]
       }
+      team_members: {
+        Row: {
+          id: string
+          name: string
+          email: string
+          role: string
+          phone: string | null
+          status: string
+          created_at: string
+        }
+        Insert: {
+          id?: string
+          name: string
+          email: string
+          role: string
+          phone?: string | null
+          status?: string
+          created_at?: string
+        }
+        Update: {
+          id?: string
+          name?: string
+          email?: string
+          role?: string
+          phone?: string | null
+          status?: string
+          created_at?: string
+        }
+        Relationships: []
+      }
       sites: {
         Row: {
           access_codes: string | null

@@ -20,6 +20,8 @@ import { Calendar as CalendarComponent } from "@/components/ui/calendar";
 import {
   CalendarIcon, Check, ChevronsUpDown, AlertTriangle, ShieldAlert,
   Upload, FileText, Zap, Mic, MicOff,
+  UserCircle, MapPin, ClipboardList, ShoppingCart, CreditCard, CheckCircle2,
+  HardDrive, Info, Circle,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import {
@@ -31,6 +33,7 @@ import { useSites } from "@/hooks/useSites";
 import { useAllEquipment } from "@/hooks/useSiteEquipment";
 import { EngineerAvailabilityPanel } from "./EngineerAvailabilityPanel";
 import { VoiceInput } from "../VoiceInput";
+import { useTeam } from "@/hooks/useTeam";
 
 interface CreateJobWizardProps {
   open: boolean;
@@ -71,6 +74,7 @@ const emptyForm = {
   siteInduction: "",
   invoiceNumber: "",
   invoiceAttachment: "",
+  scheduledTime: ""
 };
 
 // ─── File upload helper ─────────────────────────────────────────────────────
@@ -141,20 +145,21 @@ function PriorityBadge({ priority }: { priority: Priority }) {
 }
 
 // ─── Auto status display ────────────────────────────────────────────────────
-const STATUS_CONFIG: Record<JobStatus, { icon: string; color: string; border: string; bg: string }> = {
-  "Logged Fault": { icon: "🔴", color: "text-red-400", border: "border-red-500/30", bg: "bg-red-500/5" },
-  "Quote Sent":   { icon: "🟡", color: "text-amber-400", border: "border-amber-500/30", bg: "bg-amber-500/5" },
-  "Approved":     { icon: "🔵", color: "text-blue-400",  border: "border-blue-500/30",  bg: "bg-blue-500/5" },
-  "In Progress":  { icon: "🟣", color: "text-purple-400",border: "border-purple-500/30",bg: "bg-purple-500/5" },
-  "Completed":    { icon: "🟢", color: "text-green-400",  border: "border-green-500/30", bg: "bg-green-500/5" },
-  "Invoiced":     { icon: "⚪", color: "text-gray-400",   border: "border-gray-500/30", bg: "bg-gray-500/5" },
+const STATUS_CONFIG: Record<JobStatus, { icon: React.ReactNode; color: string; border: string; bg: string }> = {
+  "Logged Fault": { icon: <Circle className="h-5 w-5 fill-current" />, color: "text-red-400", border: "border-red-500/30", bg: "bg-red-500/5" },
+  "Quote Sent":   { icon: <Circle className="h-5 w-5 fill-current" />, color: "text-amber-400", border: "border-amber-500/30", bg: "bg-amber-500/5" },
+  "Approved":     { icon: <Circle className="h-5 w-5 fill-current" />, color: "text-blue-400",  border: "border-blue-500/30",  bg: "bg-blue-500/5" },
+  "Scheduled":    { icon: <Circle className="h-5 w-5 fill-current" />, color: "text-purple-400",border: "border-purple-500/30",bg: "bg-purple-500/5" },
+  "In Progress": { icon: <Circle className="h-5 w-5 fill-current" />, color: "text-blue-500",  border: "border-blue-600/30",  bg: "bg-blue-600/5" },
+  "Completed":    { icon: <Circle className="h-5 w-5 fill-current" />, color: "text-green-400",  border: "border-green-500/30", bg: "bg-green-500/5" },
+  "Invoiced":     { icon: <Circle className="h-5 w-5 fill-current" />, color: "text-gray-400",   border: "border-gray-500/30", bg: "bg-gray-500/5" },
 };
 
 function AutoStatusDisplay({ status }: { status: JobStatus }) {
   const cfg = STATUS_CONFIG[status];
   return (
     <div className={cn("rounded-lg border p-3 flex items-center gap-3", cfg.border, cfg.bg)}>
-      <span className="text-xl">{cfg.icon}</span>
+      <div className={cn("flex-shrink-0 animate-pulse", cfg.color)}>{cfg.icon}</div>
       <div className="flex-1 min-w-0">
         <p className={cn("text-sm font-black uppercase tracking-wide", cfg.color)}>{status}</p>
         <p className="text-[10px] text-sidebar-foreground/40 mt-0.5">
@@ -171,10 +176,16 @@ export function CreateJobWizard({
   const { data: faultCodesByBrand } = useFaultCodes();
   const { data: sites = [] } = useSites();
   const { data: allEquipment = [] } = useAllEquipment();
+  const { team: teamMembers = [] } = useTeam();
+  const dbEngineers = useMemo(() => {
+    return teamMembers.filter(m => m.role === "Engineer" || m.role === "Admin");
+  }, [teamMembers]);
+
   const [step, setStep] = useState(initialStep || 1);
   const [siteOpen, setSiteOpen] = useState(false);
   const [calOpen, setCalOpen] = useState(false);
   const [quoteCalOpen, setQuoteCalOpen] = useState(false);
+  const [faultOpen, setFaultOpen] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
 
   const isSimon = role === "Simon";
@@ -209,6 +220,7 @@ export function CreateJobWizard({
           siteInduction: editJob.siteInduction || "",
           invoiceNumber: editJob.invoiceNumber || "",
           invoiceAttachment: editJob.invoiceAttachment || "",
+          scheduledTime: editJob.scheduledTime || ""
         }
       : { ...emptyForm, scheduledDate: prefillScheduledDate || "" }
   );
@@ -245,6 +257,7 @@ export function CreateJobWizard({
               siteInduction: editJob.siteInduction || "",
               invoiceNumber: editJob.invoiceNumber || "",
               invoiceAttachment: editJob.invoiceAttachment || "",
+              scheduledTime: editJob.scheduledTime || ""
             }
           : { ...emptyForm, scheduledDate: prefillScheduledDate || "" }
       );
@@ -309,21 +322,23 @@ export function CreateJobWizard({
   const selectedEquipment = equipmentList.find(e => e.location === form.inverterLocation);
   const brand = selectedEquipment?.brand || "";
 
-  // Fault codes cascade from brand
+  // Fault codes: Show all codes from all brands as requested
   const availableFaultCodes = useMemo(() => {
-    if (!brand || !faultCodesByBrand) return [];
-    if (faultCodesByBrand[brand]) return faultCodesByBrand[brand];
-    const brandLower = brand.toLowerCase();
-    let codes: { code: string; label: string; severity: string }[] = [];
-    Object.keys(faultCodesByBrand).forEach(b => {
-      const bLower = b.toLowerCase();
-      if (bLower.includes(brandLower) || brandLower.includes(bLower)) {
-        codes = [...codes, ...faultCodesByBrand[b]];
-      }
+    if (!faultCodesByBrand) return [];
+    
+    const all: { code: string; label: string; severity: string }[] = [];
+    Object.values(faultCodesByBrand).forEach(codes => {
+      all.push(...(codes as any[]));
     });
+    
+    // De-duplicate by code
     const seen = new Set<string>();
-    return codes.filter(c => { if (seen.has(c.code)) return false; seen.add(c.code); return true; });
-  }, [brand, faultCodesByBrand]);
+    return all.filter(c => { 
+      if (!c.code || seen.has(c.code)) return false; 
+      seen.add(c.code); 
+      return true; 
+    }).sort((a, b) => a.code.localeCompare(b.code));
+  }, [faultCodesByBrand]);
 
   const selectedFault = availableFaultCodes.find(fc => fc.code === form.faultCode);
 
@@ -348,25 +363,27 @@ export function CreateJobWizard({
 
   // Sorted engineers
   const sortedEngineers = useMemo(() => {
-    if (!form.scheduledDate) return engineers;
-    return [...engineers].sort((a, b) => {
-      const aJobs = allJobs.filter(j => j.scheduledDate === form.scheduledDate && j.engineer === a.name).length;
-      const bJobs = allJobs.filter(j => j.scheduledDate === form.scheduledDate && j.engineer === b.name).length;
+    const list = dbEngineers.length > 0 ? dbEngineers : engineers;
+    if (!form.scheduledDate) return list;
+    return [...list].sort((a, b) => {
+      const aJobs = allJobs.filter(j => j.scheduledDate === form.scheduledDate && (j.engineer === a.name)).length;
+      const bJobs = allJobs.filter(j => j.scheduledDate === form.scheduledDate && (j.engineer === b.name)).length;
       return aJobs - bJobs;
     });
-  }, [form.scheduledDate, allJobs]);
+  }, [form.scheduledDate, allJobs, dbEngineers]);
 
   // Availability summary
   const availSummary = useMemo(() => {
+    const list = dbEngineers.length > 0 ? dbEngineers : engineers;
     if (!form.scheduledDate) return null;
-    const engs = engineers.map(e => ({
+    const engs = list.map(e => ({
       name: e.name,
       count: getEngineerJobCount(e.id, form.scheduledDate, allJobs),
     }));
     const free = engs.filter(e => e.count === 0).length;
     const busy = engs.filter(e => e.count > 0).length;
     return { free, busy };
-  }, [form.scheduledDate, allJobs]);
+  }, [form.scheduledDate, allJobs, dbEngineers]);
 
   // Engineer hint
   const engineerHint = useMemo(() => {
@@ -428,6 +445,7 @@ export function CreateJobWizard({
       invoiceNumber: form.invoiceNumber,
       invoiceAttachment: form.invoiceAttachment,
       reportLink: editJob?.reportLink || "",
+      scheduledTime: form.scheduledTime
     };
 
     onSave(job);
@@ -472,8 +490,9 @@ export function CreateJobWizard({
 
             {/* SECTION: Contact Information */}
             <div>
-              <p className="text-[10px] font-black uppercase text-sidebar-foreground/40 tracking-widest mb-3">
-                📋 Contact Information
+              <p className="text-[10px] font-black uppercase text-primary tracking-widest mb-3 flex items-center gap-2">
+                <UserCircle className="h-3.5 w-3.5" />
+                Contact Information
               </p>
               <div className="grid grid-cols-3 gap-3">
                 <div className="space-y-1.5">
@@ -511,8 +530,9 @@ export function CreateJobWizard({
 
             {/* SECTION: Site Selection */}
             <div className="space-y-4">
-              <p className="text-[10px] font-black uppercase text-sidebar-foreground/40 tracking-widest">
-                📍 Site Selection
+              <p className="text-[10px] font-black uppercase text-primary tracking-widest flex items-center gap-2">
+                <MapPin className="h-3.5 w-3.5" />
+                Site Selection
               </p>
 
               {/* Site Name */}
@@ -620,8 +640,9 @@ export function CreateJobWizard({
             {/* SECTION: Inverter Details (Auto-filled) */}
             {hasInverterData || form.inverterLocation ? (
               <div className="rounded-lg border border-sidebar-border bg-sidebar-accent/20 p-4 space-y-3">
-                <p className="text-[10px] font-black uppercase text-sidebar-foreground/40 tracking-widest">
-                  🔧 Inverter Details
+                <p className="text-[10px] font-black uppercase text-primary tracking-widest flex items-center gap-2">
+                  <HardDrive className="h-3.5 w-3.5" />
+                  Inverter Details
                 </p>
                 <div className="grid grid-cols-3 gap-3">
                   <div className="space-y-1">
@@ -648,8 +669,9 @@ export function CreateJobWizard({
 
             {/* SECTION: Fault Information */}
             <div className="space-y-4">
-              <p className="text-[10px] font-black uppercase text-sidebar-foreground/40 tracking-widest">
-                ⚠ Fault Information
+              <p className="text-[10px] font-black uppercase text-primary tracking-widest flex items-center gap-2">
+                <Zap className="h-3.5 w-3.5" />
+                Fault Information
               </p>
 
               {/* Inverter In Production */}
@@ -674,30 +696,51 @@ export function CreateJobWizard({
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="space-y-1.5">
                   <Label className="text-[10px] font-black uppercase text-sidebar-foreground/40 tracking-widest">Fault Code *</Label>
-                  <Select
-                    value={form.faultCode}
-                    onValueChange={v => set("faultCode", v)}
-                    disabled={availableFaultCodes.length === 0}
-                  >
-                    <SelectTrigger className="bg-sidebar-accent/50 border-sidebar-border h-11 text-white">
-                      <SelectValue
-                        placeholder={
-                          brand
-                            ? availableFaultCodes.length === 0
-                              ? "No fault codes for this type"
-                              : "Select fault code"
-                            : "Select inverter first"
-                        }
-                      />
-                    </SelectTrigger>
-                    <SelectContent className="bg-sidebar border-sidebar-border text-white">
-                      {availableFaultCodes.map(fc => (
-                        <SelectItem key={fc.code} value={fc.code}>
-                          {fc.code}{fc.label ? ` — ${fc.label.substring(0, 30)}...` : ""}
-                        </SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
+                  <Popover open={faultOpen} onOpenChange={setFaultOpen}>
+                    <PopoverTrigger asChild>
+                      <Button
+                        variant="outline"
+                        role="combobox"
+                        aria-expanded={faultOpen}
+                        disabled={availableFaultCodes.length === 0}
+                        className="w-full justify-between bg-sidebar-accent/50 border-sidebar-border h-11 text-white hover:bg-sidebar-accent/70"
+                      >
+                        <span className={cn("truncate", !form.faultCode && "text-sidebar-foreground/40")}>
+                          {form.faultCode 
+                            ? `${form.faultCode}${selectedFault?.label ? ` — ${selectedFault.label}` : ""}`
+                            : availableFaultCodes.length > 0 ? "Select fault code" : "No fault codes available"}
+                        </span>
+                        <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-40" />
+                      </Button>
+                    </PopoverTrigger>
+                    <PopoverContent className="w-[var(--radix-popover-trigger-width)] p-0 bg-sidebar border-sidebar-border shadow-2xl z-[100]" align="start">
+                      <Command className="bg-transparent">
+                        <CommandInput placeholder="Search fault codes..." className="text-white" />
+                        <CommandList className="max-h-[300px]">
+                          <CommandEmpty>No fault code found.</CommandEmpty>
+                          <CommandGroup>
+                            {availableFaultCodes.map(fc => (
+                              <CommandItem
+                                key={fc.code}
+                                value={`${fc.code} ${fc.label}`}
+                                className="text-white hover:bg-primary hover:text-black cursor-pointer data-[selected='true']:bg-primary data-[selected='true']:text-black"
+                                onSelect={() => {
+                                  set("faultCode", fc.code);
+                                  setFaultOpen(false);
+                                }}
+                              >
+                                <Check className={cn("mr-2 h-4 w-4", form.faultCode === fc.code ? "opacity-100" : "opacity-0")} />
+                                <div className="flex flex-col">
+                                  <span className="font-bold">{fc.code}</span>
+                                  {fc.label && <span className="text-[10px] opacity-70 line-clamp-1">{fc.label}</span>}
+                                </div>
+                              </CommandItem>
+                            ))}
+                          </CommandGroup>
+                        </CommandList>
+                      </Command>
+                    </PopoverContent>
+                  </Popover>
                 </div>
                 <div className="space-y-1.5">
                   <Label className="text-[10px] font-black uppercase text-sidebar-foreground/40 tracking-widest">Priority</Label>
@@ -762,8 +805,9 @@ export function CreateJobWizard({
 
             {/* SECTION: Quote Details */}
             <div className="space-y-3">
-              <p className="text-[10px] font-black uppercase text-sidebar-foreground/40 tracking-widest">
-                📄 Quote Details
+              <p className="text-[10px] font-black uppercase text-primary tracking-widest flex items-center gap-2">
+                <FileText className="h-3.5 w-3.5" />
+                Quote Details
               </p>
               <div className="grid grid-cols-2 gap-3">
                 <div className="space-y-1.5">
@@ -809,8 +853,9 @@ export function CreateJobWizard({
 
             {/* SECTION: Purchase Order */}
             <div className="space-y-3">
-              <p className="text-[10px] font-black uppercase text-sidebar-foreground/40 tracking-widest">
-                🛒 Purchase Order
+              <p className="text-[10px] font-black uppercase text-primary tracking-widest flex items-center gap-2">
+                <ShoppingCart className="h-3.5 w-3.5" />
+                Purchase Order
               </p>
               <div className="grid grid-cols-2 gap-3">
                 <div className="space-y-1.5">
@@ -848,20 +893,9 @@ export function CreateJobWizard({
               <div className="space-y-4">
                 <div className="flex items-center gap-2 text-primary">
                   <CalendarIcon className="h-4 w-4" />
-                  <span className="text-[10px] font-black uppercase tracking-widest">Scheduling & Assignment</span>
+                  <span className="text-[10px] font-black uppercase tracking-widest text-primary">Scheduling & Assignment</span>
                 </div>
 
-                {/* Availability summary bar */}
-                {availSummary && (
-                  <div className="flex items-center gap-2">
-                    <span className="bg-green-500/10 text-green-400 text-xs font-bold px-2.5 py-1 rounded-full border border-green-500/20">
-                      {availSummary.free} free
-                    </span>
-                    <span className="bg-amber-500/10 text-amber-400 text-xs font-bold px-2.5 py-1 rounded-full border border-amber-500/20">
-                      {availSummary.busy} busy
-                    </span>
-                  </div>
-                )}
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                   <div className="space-y-1.5">
@@ -890,6 +924,18 @@ export function CreateJobWizard({
                       </PopoverContent>
                     </Popover>
                   </div>
+                  <div className="space-y-1.5">
+                    <Label className="text-[10px] font-black uppercase text-sidebar-foreground/40 tracking-widest">Scheduled Time</Label>
+                    <Input
+                      type="time"
+                      value={form.scheduledTime}
+                      onChange={e => set("scheduledTime", e.target.value)}
+                      className="bg-sidebar-accent/50 border-sidebar-border h-11 text-white [color-scheme:dark]"
+                    />
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 gap-3">
                   <div className="space-y-1.5">
                     <Label className="text-[10px] font-black uppercase text-sidebar-foreground/40 tracking-widest">Assign Engineer</Label>
                     <Select value={form.engineer} onValueChange={v => set("engineer", v)}>
@@ -946,15 +992,6 @@ export function CreateJobWizard({
                   </div>
                 </div>
 
-                {/* Engineer Availability Panel */}
-                {form.scheduledDate && (
-                  <EngineerAvailabilityPanel
-                    selectedDate={form.scheduledDate}
-                    jobs={allJobs}
-                    onSelectEngineer={name => set("engineer", name)}
-                    selectedEngineer={form.engineer}
-                  />
-                )}
 
                 {/* RAMS */}
                 <div className="grid grid-cols-2 gap-3">
@@ -980,9 +1017,9 @@ export function CreateJobWizard({
               </div>
             ) : (
               <div className="p-4 border border-dashed border-red-500/20 bg-red-500/5 rounded-xl space-y-4">
-                <div className="flex items-center gap-2 text-red-500 mb-1">
+                <div className="flex items-center gap-2 text-primary mb-1">
                   <ShieldAlert className="h-4 w-4" />
-                  <span className="text-[10px] font-black uppercase tracking-widest">SCHEDULING RESTRICTED</span>
+                  <span className="text-[10px] font-black uppercase tracking-widest text-primary">SCHEDULING RESTRICTED</span>
                 </div>
                 <p className="text-xs text-sidebar-foreground/60 italic leading-relaxed">
                   Luke will schedule this job after PO is received. Contact Luke for scheduling updates.
@@ -1029,8 +1066,9 @@ export function CreateJobWizard({
 
             {/* SECTION: Job Completion */}
             <div className="space-y-3">
-              <p className="text-[10px] font-black uppercase text-sidebar-foreground/40 tracking-widest">
-                ✅ Job Completion
+              <p className="text-[10px] font-black uppercase text-primary tracking-widest flex items-center gap-2">
+                <CheckCircle2 className="h-3.5 w-3.5" />
+                Job Completion
               </p>
               <div className="grid grid-cols-2 gap-3">
                 <FileUpload
@@ -1061,8 +1099,9 @@ export function CreateJobWizard({
 
             {/* SECTION: Invoice */}
             <div className="space-y-3">
-              <p className="text-[10px] font-black uppercase text-sidebar-foreground/40 tracking-widest">
-                💰 Invoice
+              <p className="text-[10px] font-black uppercase text-primary tracking-widest flex items-center gap-2">
+                <CreditCard className="h-3.5 w-3.5" />
+                Invoice
               </p>
               <div className="grid grid-cols-2 gap-3">
                 <div className="space-y-1.5">

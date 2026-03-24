@@ -12,6 +12,8 @@ import {
 import { useToast } from "@/hooks/use-toast";
 import {
   Briefcase, MapPin, Users, ExternalLink, Receipt, LayoutGrid, List, CalendarDays, Trash2,
+  Smartphone, Target,
+  CheckCircle2, AlertCircle
 } from "lucide-react";
 import { type Job, type JobStatus, type RAMSStatus } from "@/data/mockJobs";
 import { useJobs, useCreateJob, useUpdateJob, useDeleteJob, type JobWithSite } from "@/hooks/useJobs";
@@ -21,6 +23,7 @@ import { KanbanBoard } from "@/components/jobs/KanbanBoard";
 import { CalendarView } from "@/components/jobs/CalendarView";
 import { RAMSWorkflowDialog } from "@/components/RAMSWorkflowDialog";
 import { PdfGenerateDialog } from "@/components/jobs/PdfGenerateDialog";
+import { DashboardHeader } from "@/components/layout/DashboardHeader";
 
 type FilterTab = "All" | "Unbooked" | "Booked" | "Completed";
 
@@ -29,6 +32,7 @@ const statusColors: Record<JobStatus, string> = {
   "Quote Sent": "bg-amber-500 text-white hover:bg-amber-500",
   "Approved": "bg-blue-600 text-white hover:bg-blue-600",
   "Scheduled": "bg-purple-600 text-white hover:bg-purple-600",
+  "In Progress": "bg-blue-500 text-white hover:bg-blue-500",
   "Completed": "bg-zinc-700 text-white hover:bg-zinc-700",
   "Invoiced": "bg-zinc-500 text-white hover:bg-zinc-500",
 };
@@ -68,6 +72,7 @@ const Jobs = () => {
   const [pdfDialogOpen, setPdfDialogOpen] = useState(false);
   const [pdfDialogJob, setPdfDialogJob] = useState<Job | null>(null);
   const [deleteJob, setDeleteJob] = useState<Job | null>(null);
+  const [initialStep, setInitialStep] = useState(1);
 
   // Auto-open from URL
   useEffect(() => {
@@ -142,14 +147,14 @@ const Jobs = () => {
   };
 
   return (
-    <div className="space-y-6">
+    <div className="flex flex-col h-full bg-sidebar text-sidebar-foreground">
+      <DashboardHeader />
+      <div className="p-6 overflow-auto no-scrollbar space-y-6 flex-1">
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
           <div className="flex items-center gap-2 flex-wrap mb-1">
             <h1 className="text-2xl sm:text-3xl font-bold tracking-tight">Jobs Overview</h1>
-            <Badge className="bg-green-600 text-white border-0 text-xs font-semibold">Phase 1</Badge>
-            <Badge className="bg-orange-600 text-white border-0 text-xs font-semibold">🎯 Intelligent Assignment - Phase 2</Badge>
           </div>
           <p className="text-muted-foreground mt-1 text-sm sm:text-base">
             Control center for scheduling and monitoring all jobs
@@ -177,33 +182,11 @@ const Jobs = () => {
                   variant={filterTab === tab ? "default" : "outline"}
                   onClick={() => setFilterTab(tab)}
                 >
-                  {label} ({count})
+                  {label}
                 </Button>
               ))}
             </div>
-            <div className="flex gap-1 border border-border rounded-md p-0.5">
-              <Button
-                variant={viewMode === "table" ? "default" : "ghost"}
-                size="sm"
-                onClick={() => setViewMode("table")}
-              >
-                <List className="h-4 w-4" />
-              </Button>
-              <Button
-                variant={viewMode === "kanban" ? "default" : "ghost"}
-                size="sm"
-                onClick={() => setViewMode("kanban")}
-              >
-                <LayoutGrid className="h-4 w-4" />
-              </Button>
-              <Button
-                variant={viewMode === "calendar" ? "default" : "ghost"}
-                size="sm"
-                onClick={() => setViewMode("calendar")}
-              >
-                <CalendarDays className="h-4 w-4" />
-              </Button>
-            </div>
+
           </div>
         </CardContent>
       </Card>
@@ -213,7 +196,8 @@ const Jobs = () => {
         <CalendarView
           jobs={filteredJobs}
           onSelectJob={j => handleViewDetails(j)}
-          onCreateJob={(date) => { setPrefillDate(date); setEditJob(null); setCreateOpen(true); }}
+          onCreateJob={(date) => { setPrefillDate(date); setEditJob(null); setInitialStep(2); setCreateOpen(true); }}
+          onEditJob={(job) => { setEditJob(job); setInitialStep(2); setCreateOpen(true); }}
         />
       ) : viewMode === "kanban" ? (
         <KanbanBoard jobs={filteredJobs} onSelectJob={j => handleViewDetails(j)} docStatuses={docStatuses} />
@@ -222,7 +206,7 @@ const Jobs = () => {
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <Briefcase className="h-5 w-5" />
-              {filterTab === "All" ? "All Jobs" : `${filterTab} Jobs`} ({filteredJobs.length})
+              {filterTab === "All" ? "All Jobs" : `${filterTab} Jobs`}
             </CardTitle>
           </CardHeader>
           <CardContent>
@@ -281,14 +265,14 @@ const Jobs = () => {
                         </TableCell>
                         <TableCell>
                           <div className="flex items-center gap-1.5">
-                            <span className="flex items-center gap-0.5 text-[10px] text-muted-foreground">
-                              <span className={`h-2 w-2 rounded-full ${ds?.ra ? "bg-green-500" : "bg-red-500"}`} />RA
+                            <span className="flex items-center gap-1 text-[10px] text-muted-foreground">
+                              {ds?.ra ? <CheckCircle2 className="h-3 w-3 text-green-500" /> : <AlertCircle className="h-3 w-3 text-red-500" />} RA
                             </span>
-                            <span className="flex items-center gap-0.5 text-[10px] text-muted-foreground">
-                              <span className={`h-2 w-2 rounded-full ${ds?.ms ? "bg-green-500" : "bg-red-500"}`} />MS
+                            <span className="flex items-center gap-1 text-[10px] text-muted-foreground">
+                              {ds?.ms ? <CheckCircle2 className="h-3 w-3 text-green-500" /> : <AlertCircle className="h-3 w-3 text-red-500" />} MS
                             </span>
-                            <span className="flex items-center gap-0.5 text-[10px] text-muted-foreground">
-                              <span className={`h-2 w-2 rounded-full ${ds?.sheet ? "bg-green-500" : "bg-red-500"}`} />Sheet
+                            <span className="flex items-center gap-1 text-[10px] text-muted-foreground">
+                              {ds?.sheet ? <CheckCircle2 className="h-3 w-3 text-green-500" /> : <AlertCircle className="h-3 w-3 text-red-500" />} Sheet
                             </span>
                           </div>
                         </TableCell>
@@ -316,10 +300,11 @@ const Jobs = () => {
                           <div className="flex gap-2 justify-end">
                             <Button
                               size="sm"
-                              className="min-h-[44px] bg-primary hover:bg-primary/90"
+                              className="min-h-[44px] bg-primary hover:bg-primary/90 text-black font-bold"
                               onClick={e => { e.stopPropagation(); navigate(`/jobs/${job.id}/mobile`); }}
                             >
-                              📱 Open Mobile
+                              <Smartphone className="mr-2 h-4 w-4" />
+                              Open Mobile
                             </Button>
                             <Button
                               variant="outline"
@@ -352,12 +337,12 @@ const Jobs = () => {
       {/* Create/Edit Wizard */}
       <CreateJobWizard
         open={createOpen}
-        onOpenChange={v => { setCreateOpen(v); if (!v) { setEditJob(null); setPrefillDate(""); } }}
+        onOpenChange={v => { setCreateOpen(v); if (!v) { setEditJob(null); setPrefillDate(""); setInitialStep(1); } }}
         onSave={handleSaveJob}
         allJobs={jobs}
         editJob={editJob}
         prefillScheduledDate={prefillDate}
-        initialStep={prefillDate ? 2 : 1}
+        initialStep={initialStep}
       />
 
       {/* View Details Modal */}
@@ -443,6 +428,7 @@ const Jobs = () => {
           </div>
         </DialogContent>
       </Dialog>
+      </div>
     </div>
   );
 };

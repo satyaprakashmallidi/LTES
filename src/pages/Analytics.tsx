@@ -18,7 +18,17 @@ import {
   Calendar,
   MapPin,
   Package,
+  Bot,
+  Zap,
+  ClipboardList,
+  CheckCircle2,
+  AlertCircle,
+  History,
+  Activity,
+  BarChart3
 } from "lucide-react";
+import { useJobs } from "@/hooks/useJobs";
+import { format, subDays, isAfter } from "date-fns";
 import {
   BarChart,
   Bar,
@@ -35,223 +45,95 @@ import {
 
 type TimeRange = "30" | "90" | "all";
 
-const faultsByManufacturer = {
-  "30": [
-    { name: "SMA", value: 12, color: "hsl(var(--chart-1))" },
-    { name: "Fronius", value: 8, color: "hsl(var(--chart-2))" },
-    { name: "Huawei", value: 5, color: "hsl(var(--chart-3))" },
-    { name: "Solis", value: 3, color: "hsl(var(--chart-4))" },
-    { name: "Other", value: 2, color: "hsl(var(--chart-5))" },
-  ],
-  "90": [
-    { name: "SMA", value: 28, color: "hsl(var(--chart-1))" },
-    { name: "Fronius", value: 18, color: "hsl(var(--chart-2))" },
-    { name: "Huawei", value: 12, color: "hsl(var(--chart-3))" },
-    { name: "Solis", value: 8, color: "hsl(var(--chart-4))" },
-    { name: "Other", value: 5, color: "hsl(var(--chart-5))" },
-  ],
-  all: [
-    { name: "SMA", value: 45, color: "hsl(var(--chart-1))" },
-    { name: "Fronius", value: 32, color: "hsl(var(--chart-2))" },
-    { name: "Huawei", value: 24, color: "hsl(var(--chart-3))" },
-    { name: "Solis", value: 15, color: "hsl(var(--chart-4))" },
-    { name: "Other", value: 12, color: "hsl(var(--chart-5))" },
-  ],
-};
-
-const repeatFaultsData = {
-  "30": [
-    { category: "Inverter Failure", count: 5 },
-    { category: "DC Isolator", count: 3 },
-    { category: "Communication", count: 2 },
-    { category: "Power Loss", count: 1 },
-  ],
-  "90": [
-    { category: "Inverter Failure", count: 12 },
-    { category: "DC Isolator", count: 8 },
-    { category: "Communication", count: 6 },
-    { category: "Power Loss", count: 4 },
-    { category: "Panel Issues", count: 2 },
-  ],
-  all: [
-    { category: "Inverter Failure", count: 24 },
-    { category: "DC Isolator", count: 16 },
-    { category: "Communication", count: 12 },
-    { category: "Power Loss", count: 9 },
-    { category: "Panel Issues", count: 5 },
-    { category: "Other", count: 3 },
-  ],
-};
-
-const sitesWithRepeatIssues = {
-  "30": [
-    {
-      site: "Solar Farm A - Northampton",
-      faultType: "SMA Inverter Failure",
-      occurrences: 3,
-      lastFault: "2024-01-18",
-      status: "Ongoing",
-    },
-    {
-      site: "Industrial Park B - Birmingham",
-      faultType: "DC Isolator Failure",
-      occurrences: 2,
-      lastFault: "2024-01-15",
-      status: "Monitoring",
-    },
-  ],
-  "90": [
-    {
-      site: "Solar Farm A - Northampton",
-      faultType: "SMA Inverter Failure",
-      occurrences: 5,
-      lastFault: "2024-01-18",
-      status: "Ongoing",
-    },
-    {
-      site: "Industrial Park B - Birmingham",
-      faultType: "DC Isolator Failure",
-      occurrences: 4,
-      lastFault: "2024-01-15",
-      status: "Monitoring",
-    },
-    {
-      site: "Warehouse Complex C - Manchester",
-      faultType: "Communication Loss",
-      occurrences: 3,
-      lastFault: "2024-01-12",
-      status: "Resolved",
-    },
-    {
-      site: "Retail Park D - Leeds",
-      faultType: "Power Output Drop",
-      occurrences: 2,
-      lastFault: "2024-01-10",
-      status: "Monitoring",
-    },
-  ],
-  all: [
-    {
-      site: "Solar Farm A - Northampton",
-      faultType: "SMA Inverter Failure",
-      occurrences: 8,
-      lastFault: "2024-01-18",
-      status: "Ongoing",
-    },
-    {
-      site: "Industrial Park B - Birmingham",
-      faultType: "DC Isolator Failure",
-      occurrences: 7,
-      lastFault: "2024-01-15",
-      status: "Monitoring",
-    },
-    {
-      site: "Warehouse Complex C - Manchester",
-      faultType: "Communication Loss",
-      occurrences: 5,
-      lastFault: "2024-01-12",
-      status: "Resolved",
-    },
-    {
-      site: "Retail Park D - Leeds",
-      faultType: "Power Output Drop",
-      occurrences: 4,
-      lastFault: "2024-01-10",
-      status: "Monitoring",
-    },
-    {
-      site: "Office Block E - Sheffield",
-      faultType: "Panel Degradation",
-      occurrences: 3,
-      lastFault: "2024-01-08",
-      status: "Ongoing",
-    },
-  ],
-};
-
-const aiInsights = {
-  "30": [
-    {
-      severity: "high",
-      title: "SMA Inverter Pattern Detected",
-      insight:
-        "5 SMA inverter faults repeated within 30 days — check supplier batch #483. All failures show identical error codes (E-0104) suggesting manufacturing defect.",
-    },
-    {
-      severity: "high",
-      title: "DC Isolator Supplier Issue",
-      insight:
-        "Replace DC isolator supplier; 20% failure rate last month. Current batch shows premature contact wear after 6-8 months instead of rated 10 years.",
-    },
-    {
-      severity: "medium",
-      title: "Communication Module Firmware",
-      insight:
-        "Update communication modules at 3 sites showing intermittent connectivity. Firmware v2.4.1 resolves the 4G dropout issue observed in version 2.3.x.",
-    },
-  ],
-  "90": [
-    {
-      severity: "high",
-      title: "SMA Inverter Pattern Detected",
-      insight:
-        "12 SMA inverter faults within 90 days concentrated in batch #483 and #487. Contact SMA technical support for batch replacement program eligibility.",
-    },
-    {
-      severity: "high",
-      title: "DC Isolator Supplier Issue",
-      insight:
-        "Replace DC isolator supplier; 8 failures in 90 days represents 18% failure rate. Switch to Eaton or ABB alternatives with proven field reliability.",
-    },
-    {
-      severity: "medium",
-      title: "Seasonal Communication Issues",
-      insight:
-        "Communication faults increase 40% during winter months. Consider upgrading to industrial-grade 4G modules with extended temperature range (-40°C to +85°C).",
-    },
-    {
-      severity: "medium",
-      title: "Geographic Clustering",
-      insight:
-        "Manchester and Birmingham sites show 3x higher fault rates than southern sites. Environmental factors (higher humidity, temperature swings) may require upgraded component specs.",
-    },
-  ],
-  all: [
-    {
-      severity: "high",
-      title: "SMA Inverter Long-term Trend",
-      insight:
-        "24 SMA inverter failures over 12 months, predominantly in batches manufactured Q2 2023. Consider preventive replacement for remaining units from this production run.",
-    },
-    {
-      severity: "high",
-      title: "DC Isolator Supplier Issue",
-      insight:
-        "16 DC isolator failures represents 15% failure rate across entire install base. Immediate supplier switch recommended. Calculate warranty claims and consider legal action.",
-    },
-    {
-      severity: "medium",
-      title: "Communication Infrastructure",
-      insight:
-        "Communication faults correlate with specific cellular network coverage gaps. Deploy dual-SIM modules or add local WiFi backup at 5 identified problem sites.",
-    },
-    {
-      severity: "medium",
-      title: "Maintenance Schedule Optimization",
-      insight:
-        "Sites with 6-month inspection intervals show 35% fewer repeat faults than those on annual schedules. ROI analysis suggests quarterly inspections for high-value installations.",
-    },
-    {
-      severity: "low",
-      title: "Weather Impact Analysis",
-      insight:
-        "Power output drops correlate with storm activity. 8 of 9 power loss events occurred within 72 hours of severe weather. Review surge protection and grounding at affected sites.",
-    },
-  ],
-};
+// Real data processing will happen inside the component
 
 const Analytics = ({ hideHeader = false }: { hideHeader?: boolean }) => {
+  const { data: dbJobs = [], isLoading } = useJobs();
   const [timeRange, setTimeRange] = useState<TimeRange>("30");
+
+  const filteredByTime = dbJobs.filter(job => {
+    if (timeRange === "all") return true;
+    const dateToUse = job.scheduledDate || job.createdAt;
+    if (!dateToUse) return false;
+    const jobDate = new Date(dateToUse);
+    const cutoff = subDays(new Date(), parseInt(timeRange));
+    return isAfter(jobDate, cutoff);
+  });
+
+  // Calculate Faults by Manufacturer
+  const manufacturers: Record<string, number> = {};
+  filteredByTime.forEach(job => {
+    const name = job.inverterType || "Other";
+    manufacturers[name] = (manufacturers[name] || 0) + 1;
+  });
+
+  const chartColors = [
+    "hsl(var(--chart-1))",
+    "hsl(var(--chart-2))",
+    "hsl(var(--chart-3))",
+    "hsl(var(--chart-4))",
+    "hsl(var(--chart-5))",
+  ];
+
+  const currentFaults = Object.entries(manufacturers)
+    .sort((a, b) => b[1] - a[1])
+    .map(([name, value], index) => ({
+      name,
+      value,
+      color: chartColors[index % chartColors.length]
+    }));
+
+  // Calculate Repeat Faults by Category
+  const categories: Record<string, number> = {};
+  filteredByTime.forEach(job => {
+    const cat = job.reportedFault || "General Fault";
+    categories[cat] = (categories[cat] || 0) + 1;
+  });
+
+  const currentRepeatFaults = Object.entries(categories)
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 5)
+    .map(([category, count]) => ({ category, count }));
+
+  // Sites with Repeat Issues
+  const sites: Record<string, { site: string, type: string, count: number, last: string }> = {};
+  filteredByTime.forEach(job => {
+    const key = job.siteName;
+    if (!sites[key]) {
+      sites[key] = { site: job.siteName, type: job.reportedFault, count: 0, last: job.scheduledDate };
+    }
+    sites[key].count += 1;
+    if (job.scheduledDate > sites[key].last) sites[key].last = job.scheduledDate;
+  });
+
+  const currentSites = Object.values(sites)
+    .filter(s => s.count > 1)
+    .sort((a, b) => b.count - a.count)
+    .map(s => ({
+      site: s.site,
+      faultType: s.type,
+      occurrences: s.count,
+      lastFault: s.last,
+      status: s.count > 3 ? "Ongoing" : "Monitoring"
+    }));
+
+  // AI Insights mock (based on real data results)
+  const currentInsights = [
+    ...(currentFaults[0]?.value > 5 ? [{
+      severity: "high",
+      title: `${currentFaults[0].name} Pattern Detected`,
+      insight: `${currentFaults[0].value} ${currentFaults[0].name} faults detected in selected period. Pattern suggests common batch failure or environment trigger.`
+    }] : []),
+    {
+      severity: "medium",
+      title: "Site Density Alert",
+      insight: `${filteredByTime.length} total faults analyzed. Active monitoring of ${currentSites.length} repeat-issue sites is recommended.`
+    }
+  ];
+
+  const totalFaults = filteredByTime.length;
+
+  if (isLoading) return <div className="p-8 text-slate-400">Analyzing fault data...</div>;
 
   const getStatusBadge = (status: string) => {
     const styles: Record<string, string> = {
@@ -275,13 +157,6 @@ const Analytics = ({ hideHeader = false }: { hideHeader?: boolean }) => {
     );
   };
 
-  const currentFaults = faultsByManufacturer[timeRange];
-  const currentRepeatFaults = repeatFaultsData[timeRange];
-  const currentSites = sitesWithRepeatIssues[timeRange];
-  const currentInsights = aiInsights[timeRange];
-
-  const totalFaults = currentFaults.reduce((sum, item) => sum + item.value, 0);
-
   return (
     <div className="space-y-8">
       {!hideHeader && (
@@ -292,12 +167,9 @@ const Analytics = ({ hideHeader = false }: { hideHeader?: boolean }) => {
             <div>
               <div className="flex items-center gap-3 flex-wrap mb-2">
                 <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight">Fault Analytics</h1>
-                <Badge className="bg-blue-600 text-white border-0 font-semibold text-sm">
-                  🤖 Phase 3: AI Pattern Recognition
-                </Badge>
               </div>
-              <p className="text-muted-foreground mt-2 text-sm sm:text-base lg:text-lg">
-                Management insights and AI-powered trend analysis for central inverter maintenance
+              <p className="text-muted-foreground mt-2 text-sm sm:text-base lg:text-lg italic">
+                Dynamic management insights powered by real-time maintenance data.
               </p>
             </div>
             <Button variant="outline" size="lg" className="min-h-[44px] active:scale-95">
@@ -388,9 +260,9 @@ const Analytics = ({ hideHeader = false }: { hideHeader?: boolean }) => {
             <Package className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">{currentFaults[0].name}</div>
+            <div className="text-2xl font-bold">{currentFaults[0]?.name || "N/A"}</div>
             <p className="text-xs text-muted-foreground mt-1">
-              {currentFaults[0].value} incidents
+              {currentFaults[0]?.value || 0} incidents
             </p>
           </CardContent>
         </Card>
@@ -403,9 +275,6 @@ const Analytics = ({ hideHeader = false }: { hideHeader?: boolean }) => {
           <CardHeader>
             <CardTitle className="flex items-center gap-2 flex-wrap">
               <span>Faults by Manufacturer</span>
-              <Badge className="bg-blue-600 text-white border-0 font-semibold text-xs">
-                🤖 Phase 3
-              </Badge>
             </CardTitle>
           </CardHeader>
           <CardContent>
@@ -444,9 +313,6 @@ const Analytics = ({ hideHeader = false }: { hideHeader?: boolean }) => {
           <CardHeader>
             <CardTitle className="flex items-center gap-2 flex-wrap">
               <span>Repeat Faults by Category</span>
-              <Badge className="bg-blue-600 text-white border-0 font-semibold text-xs">
-                🤖 Phase 3
-              </Badge>
             </CardTitle>
           </CardHeader>
           <CardContent>
@@ -487,9 +353,6 @@ const Analytics = ({ hideHeader = false }: { hideHeader?: boolean }) => {
               <Sparkles className="h-5 w-5 text-primary" />
             </div>
             <span>AI Insights Summary</span>
-            <Badge className="bg-blue-600 text-white border-0 font-semibold">
-              🤖 Phase 3
-            </Badge>
           </CardTitle>
           <p className="text-sm text-muted-foreground">
             Automated pattern detection and actionable recommendations powered by machine learning
@@ -523,9 +386,6 @@ const Analytics = ({ hideHeader = false }: { hideHeader?: boolean }) => {
           <CardTitle className="flex items-center gap-2 flex-wrap">
             <MapPin className="h-5 w-5" />
             <span>Sites with Repeat Issues</span>
-            <Badge className="bg-blue-600 text-white border-0 font-semibold text-xs">
-              🤖 Phase 3
-            </Badge>
           </CardTitle>
         </CardHeader>
         <CardContent>

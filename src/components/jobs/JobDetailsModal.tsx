@@ -3,7 +3,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { MapPin, Calendar, Users, FileText, AlertTriangle, ExternalLink, Download, CheckCircle2, ShieldAlert, Edit, Info, Trash2 } from "lucide-react";
+import { MapPin, Calendar, Users, FileText, AlertTriangle, ExternalLink, Download, CheckCircle2, ShieldAlert, Edit, Info, Trash2, Clock } from "lucide-react";
 import type { Job, JobStatus, Priority } from "@/data/mockJobs";
 import { generateRA, generateMS, generateJobSheet, generateAllPdfs, getRAFilename, getMSFilename, getJobSheetFilename } from "@/utils/generateJobPdfs";
 import type { DocStatus } from "@/pages/Jobs";
@@ -20,6 +20,7 @@ interface JobDetailsModalProps {
   docStatus?: DocStatus;
   onDocsGenerated?: (jobId: string, docs: DocStatus) => void;
   role?: "Admin" | "Simon";
+  showActions?: boolean;
 }
 
 const statusColors: Record<JobStatus, string> = {
@@ -27,6 +28,7 @@ const statusColors: Record<JobStatus, string> = {
   "Quote Sent": "bg-amber-500/20 text-amber-500 border-amber-500/30",
   "Approved": "bg-blue-600/20 text-blue-500 border-blue-500/30",
   "Scheduled": "bg-purple-600/20 text-purple-500 border-purple-500/30",
+  "In Progress": "bg-blue-500/20 text-blue-500 border-blue-500/30",
   "Completed": "bg-green-500/20 text-green-500 border-green-500/30",
   "Invoiced": "bg-zinc-500/20 text-zinc-400 border-zinc-500/30",
 };
@@ -37,16 +39,23 @@ const priorityColors: Record<Priority, string> = {
   LOW: "bg-green-600 text-white",
 };
 
-function Field({ label, value }: { label: string; value: string | undefined }) {
+function Field({ label, value }: { label: string; value: React.ReactNode }) {
   return (
     <div className="space-y-1">
       <p className="text-[10px] font-black uppercase text-sidebar-foreground/40 tracking-widest">{label}</p>
-      <p className="text-sm font-bold text-white tracking-tight">{value || "—"}</p>
+      {typeof value === 'string' ? (
+        <p className="text-sm font-bold text-white tracking-tight">{value || "—"}</p>
+      ) : (
+        <div className="text-sm font-bold text-white tracking-tight">{value || "—"}</div>
+      )}
     </div>
   );
 }
 
-export function JobDetailsModal({ job, open, onOpenChange, onEdit, onDelete, docStatus, onDocsGenerated, role = "Admin" }: JobDetailsModalProps) {
+export function JobDetailsModal({ 
+  job, open, onOpenChange, onEdit, onDelete, docStatus, onDocsGenerated, 
+  role = "Admin", showActions = true 
+}: JobDetailsModalProps) {
   if (!job) return null;
 
   const ds = docStatus || { ra: false, ms: false, sheet: false };
@@ -172,7 +181,19 @@ export function JobDetailsModal({ job, open, onOpenChange, onEdit, onDelete, doc
                   <Field label="Quote Number" value={job.quoteNumber} />
                   <Field label="PO Number" value={job.poNumber} />
                   <Field label="Invoice #" value={job.invoiceNumber} />
-                  <Field label="PO Status" value={job.poReceived ? "✅ RECEIVED" : "⏳ PENDING"} />
+                  <Field label="PO Status" value={
+                    job.poReceived ? (
+                      <span className="flex items-center gap-1.5 text-green-500">
+                        <CheckCircle2 className="h-3.5 w-3.5" />
+                        RECEIVED
+                      </span>
+                    ) : (
+                      <span className="flex items-center gap-1.5 text-amber-500 font-bold">
+                        <Clock className="h-3.5 w-3.5" />
+                        PENDING
+                      </span>
+                    )
+                  } />
                </div>
              </div>
           </div>
@@ -227,15 +248,21 @@ export function JobDetailsModal({ job, open, onOpenChange, onEdit, onDelete, doc
            {isSimon && (
               <p className="text-[10px] text-amber-500 font-bold uppercase italic">* Scheduling restricted for coordinator</p>
            )}
-           <div className="flex gap-2 ml-auto">
-             <Button variant="ghost" onClick={() => onOpenChange(false)} className="text-white hover:bg-white/5">Close</Button>
-             <Button variant="ghost" onClick={() => { onOpenChange(false); onDelete(job); }} className="text-red-400 hover:text-red-300 hover:bg-red-500/10">
-               <Trash2 className="h-4 w-4 mr-2" /> Delete
-             </Button>
-             <Button onClick={() => { onEdit(job); }} className="bg-primary text-black font-black uppercase tracking-tight shadow-xl shadow-primary/20">
-               <Edit className="h-4 w-4 mr-2" /> Edit Job
-             </Button>
-           </div>
+            <div className="flex gap-2 ml-auto">
+              <Button variant="ghost" onClick={() => onOpenChange(false)} className="text-white hover:bg-white/5">Close</Button>
+              {showActions && (
+                <>
+                  {!isSimon && (
+                    <Button variant="ghost" onClick={() => { onOpenChange(false); onDelete(job); }} className="text-red-400 hover:text-red-300 hover:bg-red-500/10">
+                      <Trash2 className="h-4 w-4 mr-2" /> Delete
+                    </Button>
+                  )}
+                  <Button onClick={() => { onEdit(job); }} className="bg-primary text-black font-black uppercase tracking-tight shadow-xl shadow-primary/20">
+                    <Edit className="h-4 w-4 mr-2" /> Edit Job
+                  </Button>
+                </>
+              )}
+            </div>
         </div>
       </DialogContent>
     </Dialog>

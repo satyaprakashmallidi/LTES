@@ -31,11 +31,19 @@ export default function Auth() {
 
       toast.success("Welcome back to LTES Portal");
       
-      // Simple routing logic: if email contains "simon", go to admin2, else admin1
-      if (email.toLowerCase().includes("simon")) {
+      const emailLower = email.toLowerCase();
+      const admin1Emails = [
+        "luke@ltenergyservices.co.uk", 
+        "terry@ltenergyservices.co.uk", 
+        "rish@25terawatts.com"
+      ];
+      
+      if (admin1Emails.includes(emailLower)) {
+        navigate("/admin1");
+      } else if (emailLower === "simon@ltenergyservices.co.uk") {
         navigate("/admin2");
       } else {
-        navigate("/admin1");
+        navigate("/dashboard");
       }
     } catch (error: any) {
       toast.error(error.message || "Failed to login");

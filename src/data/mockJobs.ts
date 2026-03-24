@@ -1,4 +1,4 @@
-export type JobStatus = "Logged Fault" | "Quote Sent" | "Approved" | "In Progress" | "Completed" | "Invoiced";
+export type JobStatus = "Logged Fault" | "Quote Sent" | "Approved" | "Scheduled" | "Completed" | "Invoiced" | "In Progress";
 export type RAMSStatus = "Approved" | "Pending" | "Not Required";
 export type Priority = "LOW" | "MEDIUM" | "HIGH";
 export type ContractType = "Contract/SLA" | "Chargeable";
@@ -43,15 +43,12 @@ export interface Job {
   invoiceNumber: string;
   invoiceAttachment: string;
   reportLink: string;
+  scheduledTime?: string;
+  createdAt?: string;
 }
 
 // Engineers - these should be fetched from Supabase users table
-export const engineers = [
-  { id: "1", name: "Terry" },
-  { id: "2", name: "Jason" },
-  { id: "3", name: "Chris" },
-  { id: "4", name: "Dave" },
-];
+export const engineers: { id: string; name: string }[] = [];
 
 // Fault codes - fetched from Supabase fault_codes table
 
@@ -79,7 +76,7 @@ export function calculateStatus(fields: {
 }): JobStatus {
   if (fields.invoiceNumber) return "Invoiced";
   if (fields.jobSheetUploaded || fields.markComplete) return "Completed";
-  if (fields.scheduledDate && fields.engineer) return "In Progress";
+  if (fields.scheduledDate && fields.engineer) return "Scheduled";
   if (fields.poNumber && (fields.poReceived || fields.contractType === "Contract/SLA")) return "Approved";
   if ((fields.quoteNumber && fields.quoteDate) || fields.contractType === "Contract/SLA") return "Quote Sent";
   return "Logged Fault";
@@ -95,7 +92,8 @@ export function generateJobId(existingJobs: Job[]): string {
   const year = new Date().getFullYear();
   const maxNum = existingJobs
     .map(j => {
-      const parts = j.id.split("-");
+      if (!j.jobNumber) return 0;
+      const parts = j.jobNumber.split("-");
       return parts.length >= 3 ? parseInt(parts[2]) : 0;
     })
     .reduce((max, n) => Math.max(max, n), 0);

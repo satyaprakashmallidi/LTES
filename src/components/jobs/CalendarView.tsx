@@ -14,7 +14,15 @@ import {
 import {
   Dialog, DialogContent, DialogHeader, DialogTitle,
 } from "@/components/ui/dialog";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, MoreHorizontal, Calendar as CalendarIcon, FileText } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { motion } from "framer-motion";
+import { cn } from "@/lib/utils";
 import type { Job, JobStatus, Priority } from "@/data/mockJobs";
 import { engineers } from "@/data/mockJobs";
 
@@ -24,6 +32,7 @@ interface CalendarViewProps {
   jobs: Job[];
   onSelectJob: (job: Job) => void;
   onCreateJob?: (prefillDate: string) => void;
+  onEditJob?: (job: Job) => void;
   role?: "Admin" | "Simon";
 }
 
@@ -32,6 +41,7 @@ const statusColors: Record<JobStatus, string> = {
   "Quote Sent": "bg-amber-500",
   "Approved": "bg-blue-600",
   "Scheduled": "bg-purple-600",
+  "In Progress": "bg-blue-500",
   "Completed": "bg-green-600",
   "Invoiced": "bg-zinc-500",
 };
@@ -41,6 +51,7 @@ const statusTextColors: Record<JobStatus, string> = {
   "Quote Sent": "bg-amber-500 text-white",
   "Approved": "bg-blue-600 text-white",
   "Scheduled": "bg-purple-600 text-white",
+  "In Progress": "bg-blue-500 text-white",
   "Completed": "bg-green-600 text-white",
   "Invoiced": "bg-zinc-500 text-white",
 };
@@ -60,7 +71,7 @@ function getJobsForDate(jobs: Job[], date: Date): Job[] {
   return jobs.filter(j => j.scheduledDate === dateStr);
 }
 
-export function CalendarView({ jobs, onSelectJob, onCreateJob, role = "Admin" }: CalendarViewProps) {
+export function CalendarView({ jobs, onSelectJob, onCreateJob, onEditJob, role = "Admin" }: CalendarViewProps) {
   const [viewMode, setViewMode] = useState<CalendarViewMode>("month");
   const [currentDate, setCurrentDate] = useState(new Date());
   const [engineerFilter, setEngineerFilter] = useState("all");
@@ -79,12 +90,7 @@ export function CalendarView({ jobs, onSelectJob, onCreateJob, role = "Admin" }:
   const goNext = () => setCurrentDate(prev => viewMode === "month" ? addMonths(prev, 1) : addWeeks(prev, 1));
 
   const handleDayClick = (date: Date) => {
-    const dayJobs = getJobsForDate(filteredJobs, date);
-    if (dayJobs.length > 0) {
-      setDayModalDate(date);
-    } else if (onCreateJob && !isSimon) {
-      onCreateJob(format(date, "yyyy-MM-dd"));
-    }
+    setDayModalDate(date);
   };
 
   // Month view data
@@ -137,17 +143,31 @@ export function CalendarView({ jobs, onSelectJob, onCreateJob, role = "Admin" }:
               ))}
             </SelectContent>
           </Select>
-          <div className="flex gap-0.5 border border-border rounded-md p-0.5">
+          <div className="flex bg-[#1e293b]/50 border border-white/10 rounded-full p-1 relative">
             {(["month", "week", "today"] as CalendarViewMode[]).map(mode => (
-              <Button
+              <button
                 key={mode}
-                variant={viewMode === mode ? "default" : "ghost"}
-                size="sm"
-                className="text-xs h-7 px-3"
                 onClick={() => setViewMode(mode)}
+                className={cn(
+                  "relative z-10 px-4 py-1 text-xs font-bold transition-colors duration-200 uppercase tracking-tight",
+                  viewMode === mode ? "text-slate-900" : "text-slate-400 hover:text-white"
+                )}
               >
-                {mode.charAt(0).toUpperCase() + mode.slice(1)}
-              </Button>
+                {viewMode === mode && (
+                  <motion.div
+                    layoutId="calendarMode"
+                    className="absolute inset-0 bg-primary rounded-full shadow-lg"
+                    transition={{
+                      type: "spring",
+                      stiffness: 400,
+                      damping: 30
+                    }}
+                  />
+                )}
+                <span className="relative z-20">
+                  {mode.charAt(0).toUpperCase() + mode.slice(1)}
+                </span>
+              </button>
             ))}
           </div>
         </div>
@@ -194,7 +214,7 @@ export function CalendarView({ jobs, onSelectJob, onCreateJob, role = "Admin" }:
                         className={`w-full text-left rounded px-1 py-0.5 text-[10px] text-white truncate ${statusColors[job.status]}`}
                         onClick={e => { e.stopPropagation(); onSelectJob(job); }}
                       >
-                        {job.siteName.split(" - ")[0]} {job.engineer ? `(${getInitials(job.engineer)})` : ""}
+                        {job.scheduledTime ? `${job.scheduledTime} ` : ""}{job.siteName.split(" - ")[0]} {job.engineer ? `(${getInitials(job.engineer)})` : ""}
                       </button>
                     ))}
                     {dayJobs.length > 3 && (
@@ -241,7 +261,10 @@ export function CalendarView({ jobs, onSelectJob, onCreateJob, role = "Admin" }:
                         onClick={() => onSelectJob(job)}
                       >
                         <span className={`h-2.5 w-2.5 rounded-full shrink-0 ${statusColors[job.status]}`} />
-                        <span className="text-sm font-medium flex-1 truncate">{job.siteName}</span>
+                        <div className="flex flex-col flex-1 min-w-0">
+                          <span className="text-sm font-medium truncate">{job.siteName}</span>
+                          <span className="text-[10px] text-muted-foreground font-bold uppercase tracking-wider">{job.scheduledTime || "No Time Set"}</span>
+                        </div>
                         <span className="text-xs text-muted-foreground">{job.engineer || "Unassigned"}</span>
                         <Badge className={`${priorityColors[job.priority]} text-[10px] px-1.5 py-0`}>{job.priority}</Badge>
                       </div>
@@ -286,8 +309,12 @@ export function CalendarView({ jobs, onSelectJob, onCreateJob, role = "Admin" }:
                   {job.reportedFault && (
                     <p className="text-sm text-muted-foreground line-clamp-2 mb-2">{job.reportedFault}</p>
                   )}
-                  <div className="flex items-center gap-2 text-xs text-muted-foreground">
-                    <span>{job.engineer || "Unassigned"}</span>
+                  <div className="flex items-center justify-between mt-2 pt-2 border-t border-white/5">
+                    <div className="flex items-center gap-2 text-xs text-muted-foreground font-bold uppercase">
+                      <span className="text-primary">{job.scheduledTime || "ALL DAY"}</span>
+                      <span>•</span>
+                      <span>{job.engineer || "Unassigned"}</span>
+                    </div>
                   </div>
                 </Card>
               ))}
@@ -298,37 +325,111 @@ export function CalendarView({ jobs, onSelectJob, onCreateJob, role = "Admin" }:
 
       {/* Day detail modal */}
       <Dialog open={!!dayModalDate} onOpenChange={v => { if (!v) setDayModalDate(null); }}>
-        <DialogContent className="max-w-md">
-          <DialogHeader>
-            <DialogTitle>
-              {dayModalDate && format(dayModalDate, "EEEE, d MMMM yyyy")}
-            </DialogTitle>
-          </DialogHeader>
-          <div className="space-y-2">
-            {dayModalJobs.map(job => (
-              <div
-                key={job.id}
-                className="flex items-center gap-3 p-3 rounded-md border border-border hover:bg-muted/30 cursor-pointer"
-                onClick={() => { setDayModalDate(null); onSelectJob(job); }}
-              >
-                <span className={`h-3 w-3 rounded-full shrink-0 ${statusColors[job.status]}`} />
-                <div className="flex-1 min-w-0">
-                  <p className="text-sm font-medium truncate">{job.siteName}</p>
-                  <p className="text-xs text-muted-foreground">{job.engineer || "Unassigned"} • {job.id}</p>
+        <DialogContent className="max-w-md bg-sidebar border-sidebar-border text-white shadow-2xl p-0 overflow-hidden">
+          <div className="p-6 bg-gradient-to-br from-sidebar to-sidebar-accent/30">
+            <DialogHeader className="mb-6">
+              <div className="flex items-baseline gap-2">
+                <span className="text-4xl font-black text-primary leading-none">
+                  {dayModalDate && format(dayModalDate, "dd")}
+                </span>
+                <div className="flex flex-col">
+                  <DialogTitle className="text-xl font-black uppercase tracking-tighter text-white leading-none">
+                    {dayModalDate && format(dayModalDate, "MMMM yyyy")}
+                  </DialogTitle>
+                  <span className="text-[10px] font-black uppercase tracking-widest text-sidebar-foreground/40 mt-1">
+                    {dayModalDate && format(dayModalDate, "EEEE")}
+                  </span>
                 </div>
-                <Badge className={`${priorityColors[job.priority]} text-[10px]`}>{job.priority}</Badge>
               </div>
-            ))}
-            {onCreateJob && dayModalDate && (
-              <Button
-                variant="outline"
-                size="sm"
-                className="w-full mt-2"
-                onClick={() => { setDayModalDate(null); onCreateJob(format(dayModalDate, "yyyy-MM-dd")); }}
-              >
-                + Schedule New Job
-              </Button>
-            )}
+            </DialogHeader>
+
+            <div className="space-y-6">
+
+
+              {/* Jobs List */}
+              <div className="space-y-3">
+                <p className="text-[10px] font-black uppercase text-sidebar-foreground/40 tracking-widest px-1">
+                  Scheduled Jobs ({dayModalJobs.length})
+                </p>
+                {dayModalJobs.length === 0 ? (
+                  <div className="border border-dashed border-white/5 rounded-xl py-6 flex flex-col items-center justify-center bg-black/5">
+                    <span className="text-[10px] font-black text-white/10 uppercase tracking-widest">No Jobs Scheduled</span>
+                  </div>
+                ) : (
+                  <div className="space-y-2 max-h-[300px] overflow-y-auto pr-1 no-scrollbar">
+                    {dayModalJobs.map(job => (
+                      <div
+                        key={job.id}
+                        className="group relative flex items-center gap-3 p-3 rounded-xl border border-white/5 bg-sidebar-accent/30 hover:bg-sidebar-accent/50 hover:border-sidebar-border transition-all cursor-pointer"
+                        onClick={() => { setDayModalDate(null); onSelectJob(job); }}
+                      >
+                        <div className={`h-1.5 w-1.5 rounded-full shrink-0 shadow-sm ${statusColors[job.status]}`} />
+                        <div className="flex-1 min-w-0">
+                          <p className="text-[11px] font-black text-primary uppercase leading-tight truncate tracking-tight">
+                            {job.contactName || "Direct Customer"}
+                          </p>
+                          <p className="text-sm font-bold text-white truncate leading-tight mt-0.5">{job.siteName}</p>
+                          <p className="text-[10px] text-sidebar-foreground/50 font-medium flex items-center gap-1.5 mt-1 font-bold uppercase tracking-wider">
+                            <span className="text-primary">{job.scheduledTime || "ALL DAY"}</span>
+                            <span>•</span>
+                            <span>{job.engineer || "TBD"}</span>
+                          </p>
+                        </div>
+                        <div className="flex items-center gap-1.5 shrink-0">
+                          <Badge className={`${priorityColors[job.priority]} text-[9px] font-black rounded px-1.5 py-0 h-4 border-none shadow-sm`}>
+                            {job.priority}
+                          </Badge>
+                          
+                          {!isSimon && onEditJob && (
+                            <DropdownMenu>
+                              <DropdownMenuTrigger asChild onClick={(e) => e.stopPropagation()}>
+                                <Button variant="ghost" size="icon" className="h-6 w-6 text-sidebar-foreground/40 hover:text-white hover:bg-white/5 p-0">
+                                  <MoreHorizontal className="h-3.5 w-3.5" />
+                                </Button>
+                              </DropdownMenuTrigger>
+                              <DropdownMenuContent align="end" className="bg-sidebar border-sidebar-border text-white shadow-2xl min-w-[120px]">
+                                <DropdownMenuItem 
+                                  className="text-[10px] font-black uppercase tracking-widest focus:bg-white/5 focus:text-primary cursor-pointer gap-2"
+                                  onClick={(e) => { e.stopPropagation(); setDayModalDate(null); onSelectJob(job); }}
+                                >
+                                  <FileText className="h-3 w-3" />
+                                  View Details
+                                </DropdownMenuItem>
+                                <DropdownMenuItem 
+                                  className="text-[10px] font-black uppercase tracking-widest focus:bg-white/5 focus:text-primary cursor-pointer gap-2"
+                                  onClick={(e) => { e.stopPropagation(); setDayModalDate(null); onEditJob(job); }}
+                                >
+                                  <CalendarIcon className="h-3 w-3" />
+                                  Reschedule
+                                </DropdownMenuItem>
+                              </DropdownMenuContent>
+                            </DropdownMenu>
+                          )}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              <div className="pt-6 flex gap-3">
+                {!isSimon && onCreateJob && dayModalDate && (
+                  <Button
+                    className="flex-1 bg-primary text-black font-black uppercase tracking-tight hover:bg-primary/90 shadow-xl shadow-primary/20 h-11"
+                    onClick={() => { setDayModalDate(null); onCreateJob(format(dayModalDate, "yyyy-MM-dd")); }}
+                  >
+                    + Create Job
+                  </Button>
+                )}
+                <Button 
+                  variant="ghost" 
+                  className={`${(!isSimon && onCreateJob && dayModalDate) ? 'flex-1' : 'w-full'} text-[10px] font-black uppercase tracking-widest text-sidebar-foreground/40 hover:text-white hover:bg-white/5 h-11`}
+                  onClick={() => setDayModalDate(null)}
+                >
+                  Close Schedule
+                </Button>
+              </div>
+            </div>
           </div>
         </DialogContent>
       </Dialog>

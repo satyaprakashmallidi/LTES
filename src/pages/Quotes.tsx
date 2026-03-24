@@ -170,15 +170,7 @@ const Quotes = () => {
       
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
-          <div className="flex items-center gap-2 flex-wrap mb-1">
-            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight">Quotes</h1>
-            <Badge className="bg-green-600 text-white border-0 text-xs font-semibold">
-              Phase 1
-            </Badge>
-            <Badge className="bg-orange-600 text-white border-0 text-xs font-semibold">
-              🤖 AI Templates - Phase 2
-            </Badge>
-          </div>
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight mb-1">Quotes</h1>
           <p className="text-muted-foreground mt-2 text-sm sm:text-base lg:text-lg">
             Manage and track project quotes for central inverter maintenance
           </p>

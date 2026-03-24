@@ -1,6 +1,6 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { useJobs, useCreateJob, useUpdateJob } from "@/hooks/useJobs";
+import { useJobs, useCreateJob, useUpdateJob, useDeleteJob } from "@/hooks/useJobs";
 import { SidebarTrigger } from "@/components/ui/sidebar";
 import { KanbanBoard } from "@/components/jobs/KanbanBoard";
 import { Badge } from "@/components/ui/badge";
@@ -21,7 +21,30 @@ import {
   ChevronRight,
   User,
   Users,
+  Trash2,
+  LogOut,
+  AlertCircle,
+  CheckCircle2
 } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { supabase } from "@/integrations/supabase/client";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+} from "@/components/ui/alert-dialog";
 import { Card } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
 import { format, startOfWeek, addDays, isSameDay, isSameWeek } from "date-fns";
@@ -31,12 +54,16 @@ import { JobDetailsModal } from "@/components/jobs/JobDetailsModal";
 import { CalendarView } from "@/components/jobs/CalendarView";
 import Inventory from "@/pages/Inventory";
 import Analytics from "@/pages/Analytics";
+import { TeamManagement } from "@/components/TeamManagement";
+import { DashboardHeader } from "@/components/layout/DashboardHeader";
 import type { Job } from "@/data/mockJobs";
+import { engineers } from "@/data/mockJobs";
 
 export default function LukeDashboard() {
   const { data: dbJobs = [], isLoading } = useJobs();
   const createMutation = useCreateJob();
   const updateMutation = useUpdateJob();
+  const deleteMutation = useDeleteJob();
   const location = useLocation();
   const navigate = useNavigate();
   
@@ -64,16 +91,24 @@ export default function LukeDashboard() {
   const [createOpen, setCreateOpen] = useState(false);
   const [detailsOpen, setDetailsOpen] = useState(false);
   const [selectedJob, setSelectedJob] = useState<Job | null>(null);
+  const [deleteId, setDeleteId] = useState<string | null>(null);
+  const [deleteJobNumber, setDeleteJobNumber] = useState<string>("");
+  const [prefillDate, setPrefillDate] = useState("");
+  const [initialWizardStep, setInitialWizardStep] = useState(1);
+  const [userData, setUserData] = useState<{ name: string; email: string }>({ name: "", email: "" });
 
-  // Stats calculations
-  const highPriorityCount = jobs.filter(j => j.priority === "HIGH").length;
-  const todayJobsCount = jobs.filter(j => j.scheduledDate === format(new Date(), "yyyy-MM-dd")).length;
-  const completedThisWeek = jobs.filter(j => {
-    if (j.status !== "Completed" && j.status !== "Invoiced") return false;
-    return j.scheduledDate && isSameWeek(new Date(j.scheduledDate), new Date(), { weekStartsOn: 1 });
-  }).length;
-  const totalActive = jobs.filter(j => j.status !== "Invoiced").length;
-  const awaitingInvoice = jobs.filter(j => j.status === "Completed").length;
+  useEffect(() => {
+    async function getProfile() {
+      const { data: { user } } = await supabase.auth.getUser();
+      if (user) {
+        setUserData({
+          name: user.user_metadata?.full_name || user.email?.split("@")[0] || "Director",
+          email: user.email || ""
+        });
+      }
+    }
+    getProfile();
+  }, []);
 
   const filteredJobs = jobs.filter(job => {
     const matchesSearch = job.siteName.toLowerCase().includes(search.toLowerCase()) || 
@@ -84,11 +119,39 @@ export default function LukeDashboard() {
     return matchesSearch && matchesEngineer && matchesPriority;
   });
 
+  // Stats calculations
+  const highPriorityCount = filteredJobs.filter(j => j.priority === "HIGH").length;
+  const todayJobsCount = filteredJobs.filter(j => j.scheduledDate === format(new Date(), "yyyy-MM-dd")).length;
+  const completedThisWeek = filteredJobs.filter(j => {
+    if (j.status !== "Completed" && j.status !== "Invoiced") return false;
+    return j.scheduledDate && isSameWeek(new Date(j.scheduledDate), new Date(), { weekStartsOn: 1 });
+  }).length;
+  const totalActive = filteredJobs.filter(j => j.status !== "Invoiced").length;
+  const awaitingInvoice = filteredJobs.filter(j => j.status === "Completed").length;
+
   const weekDays = Array.from({ length: 7 }, (_, i) => addDays(startOfWeek(new Date(), { weekStartsOn: 1 }), i));
 
   const handleSelectJob = (job: Job) => {
     setSelectedJob(job);
     setDetailsOpen(true);
+  };
+
+  const handleEditJob = (job: Job) => {
+    setSelectedJob(job);
+    setInitialWizardStep(2); // Reschedule goes straight to Step 2
+    setCreateOpen(true);
+  };
+
+  const handleDeleteJob = (job: Job) => {
+    setDeleteId(job.id);
+    setDeleteJobNumber(job.jobNumber);
+  };
+
+  const handleCreateFromDate = (date: string) => {
+    setPrefillDate(date);
+    setSelectedJob(null);
+    setInitialWizardStep(2); // Creating from calendar day also goes straight to scheduling
+    setCreateOpen(true);
   };
 
   const handleSaveJob = (job: Job) => {
@@ -100,34 +163,44 @@ export default function LukeDashboard() {
     }
   };
 
-  if (isLoading) return <div className="p-8">Loading Luke's Command Center...</div>;
+  if (isLoading) return <div className="p-8">Loading Dashboard...</div>;
 
   const renderContent = () => {
     switch (activeTab) {
       case "Calendar":
         return (
-          <div className="p-6">
-            <CalendarView jobs={jobs} onSelectJob={handleSelectJob} />
+          <div className="p-6 max-w-[1700px] mx-auto w-full">
+            <CalendarView 
+              jobs={jobs} 
+              onSelectJob={handleSelectJob}
+              onCreateJob={handleCreateFromDate}
+              onEditJob={handleEditJob}
+            />
           </div>
         );
       case "Inventory":
         return (
-          <div className="p-6">
+          <div className="p-6 max-w-[1700px] mx-auto w-full">
             <Inventory hideHeader={true} />
           </div>
         );
       case "Analytics":
         return (
-          <div className="p-6">
+          <div className="p-6 max-w-[1700px] mx-auto w-full">
             <Analytics hideHeader={true} />
           </div>
         );
       case "Team":
         return (
-          <div className="p-12 text-center text-slate-400">
-            <Users className="h-16 w-16 mx-auto mb-4 opacity-20" />
-            <h2 className="text-xl font-bold text-white">Team Management</h2>
-            <p>Team view is currently under development.</p>
+          <div className="p-12">
+            <div className="mb-8">
+              <h2 className="text-3xl font-black text-white tracking-tight uppercase italic flex items-center gap-3">
+                <Users className="h-8 w-8 text-primary" />
+                Team Management
+              </h2>
+              <p className="text-slate-400 font-medium pt-1">Manage engineers, office managers and administrative access.</p>
+            </div>
+            <TeamManagement />
           </div>
         );
       default:
@@ -176,8 +249,9 @@ export default function LukeDashboard() {
                   </SelectTrigger>
                   <SelectContent className="bg-[#1e293b] border-white/10 text-white">
                     <SelectItem value="all">All Engineers</SelectItem>
-                    <SelectItem value="Terry Morris">Terry Morris</SelectItem>
-                    <SelectItem value="Jason">Jason</SelectItem>
+                    {engineers.map(eng => (
+                      <SelectItem key={eng.id} value={eng.name}>{eng.name}</SelectItem>
+                    ))}
                   </SelectContent>
                 </Select>
 
@@ -187,9 +261,24 @@ export default function LukeDashboard() {
                   </SelectTrigger>
                   <SelectContent className="bg-[#1e293b] border-white/10 text-white">
                     <SelectItem value="all">All Priorities</SelectItem>
-                    <SelectItem value="HIGH">🔴 HIGH</SelectItem>
-                    <SelectItem value="MEDIUM">🟡 MEDIUM</SelectItem>
-                    <SelectItem value="LOW">🟢 LOW</SelectItem>
+                    <SelectItem value="HIGH">
+                      <div className="flex items-center gap-2">
+                        <AlertCircle className="h-3 w-3 text-red-500" />
+                        HIGH
+                      </div>
+                    </SelectItem>
+                    <SelectItem value="MEDIUM">
+                      <div className="flex items-center gap-2">
+                        <AlertCircle className="h-3 w-3 text-amber-500" />
+                        MEDIUM
+                      </div>
+                    </SelectItem>
+                    <SelectItem value="LOW">
+                      <div className="flex items-center gap-2">
+                        <AlertCircle className="h-3 w-3 text-green-500" />
+                        LOW
+                      </div>
+                    </SelectItem>
                   </SelectContent>
                 </Select>
 
@@ -214,7 +303,7 @@ export default function LukeDashboard() {
                   Clear Filters
                 </Button>
 
-                <Button className="ml-auto bg-primary text-black hover:bg-primary/90 shadow-lg shadow-primary/20 font-bold" onClick={() => setCreateOpen(true)}>
+                <Button className="ml-auto bg-primary text-black hover:bg-primary/90 shadow-lg shadow-primary/20 font-bold" onClick={() => { setSelectedJob(null); setCreateOpen(true); }}>
                   <Plus className="h-4 w-4 mr-2" />
                   NEW JOB
                 </Button>
@@ -222,10 +311,12 @@ export default function LukeDashboard() {
             </Card>
 
             {/* Kanban Board */}
-            <div className="overflow-x-auto pb-4 no-scrollbar">
+            <div className="overflow-x-auto pb-4 pt-4 px-2 no-scrollbar">
               <KanbanBoard 
                 jobs={filteredJobs} 
                 onSelectJob={handleSelectJob} 
+                onEditJob={handleEditJob}
+                onDeleteJob={handleDeleteJob}
               />
             </div>
 
@@ -237,35 +328,30 @@ export default function LukeDashboard() {
 
   return (
     <div className="flex-1 flex flex-col h-full overflow-hidden bg-sidebar">
-      {/* Top Header Section */}
-      <div className="bg-sidebar border-b border-sidebar-border px-6 py-4 flex items-center justify-between sticky top-0 z-20 h-16">
-        <div className="flex items-center gap-4">
-          <SidebarTrigger className="text-white hover:bg-white/5" />
-          <h1 className="text-lg font-bold text-white tracking-tight">
-            {activeTab === "Dashboard" ? "Luke's Command Center" : `Luke's Dashboard / ${activeTab}`}
-          </h1>
-        </div>
-
-        <div className="flex items-center gap-3">
-          <div className="text-right hidden sm:block">
-            <p className="text-sm font-bold leading-none text-white">Luke Morris</p>
-            <p className="text-[10px] text-slate-400 uppercase font-semibold">Director</p>
-          </div>
-          <div className="h-10 w-10 rounded-full bg-[#2c3344] flex items-center justify-center border border-sidebar-border shadow-inner">
-            <User className="h-5 w-5 text-slate-400" />
-          </div>
-        </div>
-      </div>
-
-      <div className="flex-1 overflow-y-auto overflow-x-hidden no-scrollbar">
+      <DashboardHeader 
+        title={activeTab === "Dashboard" ? "DASHBOARD" : activeTab.toUpperCase()} 
+        role="Director" 
+        userName={userData.name} 
+      />
+      <div className="flex-1 overflow-y-auto no-scrollbar">
         {renderContent()}
       </div>
 
       <CreateJobWizard 
         open={createOpen} 
-        onOpenChange={setCreateOpen} 
+        onOpenChange={(open) => {
+          setCreateOpen(open);
+          if (!open) {
+            setSelectedJob(null);
+            setPrefillDate("");
+            setInitialWizardStep(1);
+          }
+        }}
         onSave={handleSaveJob} 
         allJobs={jobs}
+        editJob={selectedJob}
+        prefillScheduledDate={prefillDate}
+        initialStep={initialWizardStep}
       />
 
       <JobDetailsModal 
@@ -273,7 +359,40 @@ export default function LukeDashboard() {
         open={detailsOpen} 
         onOpenChange={setDetailsOpen} 
         onEdit={(job) => { setSelectedJob(job); setCreateOpen(true); }}
+        onDelete={handleDeleteJob}
+        showActions={false}
       />
+
+      <AlertDialog open={!!deleteId} onOpenChange={(open) => !open && setDeleteId(null)}>
+        <AlertDialogContent className="bg-sidebar border-sidebar-border text-white">
+          <AlertDialogHeader>
+            <AlertDialogTitle className="flex items-center gap-2">
+              <Trash2 className="h-5 w-5 text-red-500" />
+              Confirm Deletion
+            </AlertDialogTitle>
+            <AlertDialogDescription className="text-slate-400">
+              Are you sure you want to delete job <span className="text-white font-bold">{deleteJobNumber}</span>? 
+              This action cannot be undone.
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogCancel className="bg-white/5 border-white/10 text-white hover:bg-white/10">
+              Cancel
+            </AlertDialogCancel>
+            <AlertDialogAction 
+              onClick={() => {
+                if (deleteId) {
+                  deleteMutation.mutate(deleteId);
+                  setDeleteId(null);
+                }
+              }}
+              className="bg-red-600 text-white hover:bg-red-700 font-bold"
+            >
+              Delete Job
+            </AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
     </div>
   );
 }

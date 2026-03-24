@@ -28,7 +28,9 @@ import {
   Building2,
   Shield,
   PoundSterling,
+  Search,
 } from "lucide-react";
+import { Input } from "@/components/ui/input";
 import {
   LineChart,
   Line,
@@ -103,7 +105,14 @@ const Inventory = ({ hideHeader = false }: { hideHeader?: boolean }) => {
   const [searchParams] = useSearchParams();
   const [selectedItem, setSelectedItem] = useState<InventoryItem | null>(null);
   const { data: parts = [], isLoading } = useInventoryParts();
+  const [searchQuery, setSearchQuery] = useState("");
   const inventoryData: InventoryItem[] = parts.map(toInventoryItem);
+
+  const filteredInventory = inventoryData.filter(item => 
+    item.partName.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    item.partNumber.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    item.supplier.toLowerCase().includes(searchQuery.toLowerCase())
+  );
 
   // Compute stock value by category
   const totalStockValue = inventoryData.reduce(
@@ -202,12 +211,6 @@ const Inventory = ({ hideHeader = false }: { hideHeader?: boolean }) => {
             <div>
               <div className="flex items-center gap-2 flex-wrap mb-1">
                 <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight">Inventory</h1>
-                <Badge className="bg-green-600 text-white border-0 text-xs font-semibold">
-                  Phase 1
-                </Badge>
-                <Badge className="bg-purple-600 text-white border-0 text-xs font-semibold">
-                  🤖 AI Predictions - Phase 3
-                </Badge>
               </div>
               <p className="text-muted-foreground mt-2 text-sm sm:text-base lg:text-lg">
                 Track parts, equipment, and stock levels for solar inverter maintenance
@@ -333,11 +336,20 @@ const Inventory = ({ hideHeader = false }: { hideHeader?: boolean }) => {
 
       {/* Inventory Table */}
       <Card>
-        <CardHeader>
+        <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-4">
           <CardTitle className="flex items-center gap-2">
             <Package className="h-5 w-5" />
             All Inventory Items
           </CardTitle>
+          <div className="relative w-64">
+            <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
+            <Input
+              placeholder="Search inventory..."
+              className="pl-9 bg-muted/40 border-border/40 focus:bg-background transition-colors"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
+          </div>
         </CardHeader>
         <CardContent>
           <div className="rounded-md border overflow-x-auto">
@@ -362,13 +374,13 @@ const Inventory = ({ hideHeader = false }: { hideHeader?: boolean }) => {
                       Loading inventory...
                     </TableCell>
                   </TableRow>
-                ) : inventoryData.length === 0 ? (
+                ) : filteredInventory.length === 0 ? (
                   <TableRow>
                     <TableCell colSpan={9} className="text-center py-8 text-muted-foreground">
-                      No inventory items found. Import your stock list to get started.
+                      No matching parts found. Try a different search term.
                     </TableCell>
                   </TableRow>
-                ) : inventoryData.map((item) => (
+                ) : filteredInventory.map((item) => (
                   <TableRow
                     key={item.id}
                     className={`hover:bg-muted/50 active:bg-muted ${

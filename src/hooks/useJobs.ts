@@ -38,6 +38,7 @@ export interface JobWithSite extends Job {
 export function useJobs() {
   return useQuery({
     queryKey: ["jobs"],
+    refetchInterval: 5000, // Real-time: Refresh every 5 seconds
     queryFn: async () => {
       const { data, error } = await supabase
         .from("jobs")
@@ -77,7 +78,7 @@ export function useJobs() {
           faultCode: eq.fault_code || "",
           reportedFault: job.description || "",
           priority: eq.priority || "MEDIUM",
-          status: job.status as any,
+          status: (job.status || "Logged Fault") as any,
           ramsStatus: job.rams_status as any,
           quoteNumber: job.quote_number || "",
           quoteDate: eq.quote_date || "",
@@ -85,7 +86,7 @@ export function useJobs() {
           poNumber: eq.po_number || "",
           poReceived: eq.po_received || false,
           poAttachment: eq.po_attachment || "",
-          scheduledDate: job.scheduled_date || "",
+          scheduledDate: job.scheduled_date ? job.scheduled_date.slice(0, 10) : "",
           engineer: job.technician || "",
           accessCode: job.sites?.access_codes || eq.access_code || "",
           distance: eq.distance || 0,
@@ -97,7 +98,9 @@ export function useJobs() {
           siteInduction: eq.site_induction || "",
           invoiceNumber: job.invoice_number || "",
           invoiceAttachment: eq.invoice_attachment || "",
-          reportLink: job.report_link || ""
+          reportLink: job.report_link || "",
+          scheduledTime: eq.scheduled_time || "",
+          createdAt: job.created_at
         } as FrontendJob;
       });
     },
@@ -148,6 +151,7 @@ export function useCreateJob() {
           job_sheet: job.jobSheet,
           site_induction: job.siteInduction,
           invoice_attachment: job.invoiceAttachment,
+          scheduled_time: job.scheduledTime
         }
       };
 
@@ -252,6 +256,7 @@ export function useUpdateJob() {
           job_sheet: updates.jobSheet,
           site_induction: updates.siteInduction,
           invoice_attachment: updates.invoiceAttachment,
+          scheduled_time: updates.scheduledTime
         };
       }
 
