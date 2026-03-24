@@ -1,0 +1,1484 @@
+site_id,equipment_type,manufacturer,model,serial_number,installation_date,warranty_expiry,notes
+79748607-4a39-4ffd-a162-ce6c9aaefc8d,Inverter,ABB,ABB PVS800-57,8151502988,,,Station: 1 | Location: 1 | Power: 800kW | Inverters: 4
+79748607-4a39-4ffd-a162-ce6c9aaefc8d,Inverter,ABB,ABB PVS800-57,8151502650,,,Station: 1 | Location: 2 | Power: 800kW
+79748607-4a39-4ffd-a162-ce6c9aaefc8d,Inverter,ABB,ABB PVS800-57,8151501155,,,Station: 2 | Location: 3 | Power: 800kW
+79748607-4a39-4ffd-a162-ce6c9aaefc8d,Inverter,ABB,ABB PVS800-57,8151501248,,,Station: 2 | Location: 4 | Power: 800kW
+d48e90ac-4b8c-4cbf-94e5-09cdac9956ab,Inverter,Schneider,Schneider Conext Core XC,U21522001614,,,Station: A | Location: A.1 | Power: 680kW | Inverters: 6
+d48e90ac-4b8c-4cbf-94e5-09cdac9956ab,Inverter,Schneider,Schneider Conext Core XC,U21511030011,,,Station: A | Location: A.2 | Power: 680kW
+d48e90ac-4b8c-4cbf-94e5-09cdac9956ab,Inverter,Schneider,Schneider Conext Core XC,U21511000514,,,Station: B | Location: B.1 | Power: 680kW
+d48e90ac-4b8c-4cbf-94e5-09cdac9956ab,Inverter,Schneider,Schneider Conext Core XC,U21511030008,,,Station: B | Location: B.2 | Power: 680kW
+d48e90ac-4b8c-4cbf-94e5-09cdac9956ab,Inverter,Schneider,Schneider Conext Core XC,U21524030022,,,Station: C | Location: C.1 | Power: 680kW
+d48e90ac-4b8c-4cbf-94e5-09cdac9956ab,Inverter,Schneider,Schneider Conext Core XC,U21511000511,,,Station: C | Location: C.2 | Power: 680kW
+40940012-e997-4f71-99c4-d2d03b7ec3e9,Inverter,SMA,SMA SC-xxxCP-10,180804428,,,Station: 1 | Location: 1.1 | Inverters: 4
+40940012-e997-4f71-99c4-d2d03b7ec3e9,Inverter,SMA,SMA SC-xxxCP-10,180804429,,,Station: 1 | Location: 1.2
+40940012-e997-4f71-99c4-d2d03b7ec3e9,Inverter,SMA,SMA SC-xxxCP-10,180804430,,,Station: 2 | Location: 2.1
+40940012-e997-4f71-99c4-d2d03b7ec3e9,Inverter,SMA,SMA SC-xxxCP-10,180804431,,,Station: 2 | Location: 2.2
+1a0c03f8-58fa-4763-a773-f476d44767dc,Inverter,Schneider,Schneider Conext Core XC,U21543000194,,,Station: A | Location: A.1 | Power: 680kW | Inverters: 14
+1a0c03f8-58fa-4763-a773-f476d44767dc,Inverter,Schneider,Schneider Conext Core XC,U21541001052,,,Station: A | Location: A.2 | Power: 680kW
+1a0c03f8-58fa-4763-a773-f476d44767dc,Inverter,Schneider,Schneider Conext Core XC,U21535000405,,,Station: B | Location: B.1 | Power: 680kW
+1a0c03f8-58fa-4763-a773-f476d44767dc,Inverter,Schneider,Schneider Conext Core XC,U21536000717,,,Station: B | Location: B.2 | Power: 680kW
+1a0c03f8-58fa-4763-a773-f476d44767dc,Inverter,Schneider,Schneider Conext Core XC,U21542001554,,,Station: C | Location: C.1 | Power: 680kW
+1a0c03f8-58fa-4763-a773-f476d44767dc,Inverter,Schneider,Schneider Conext Core XC,U21541000999,,,Station: C | Location: C.2 | Power: 680kW
+1a0c03f8-58fa-4763-a773-f476d44767dc,Inverter,Schneider,Schneider Conext Core XC,U21541001002,,,Station: D | Location: D.1 | Power: 680kW
+1a0c03f8-58fa-4763-a773-f476d44767dc,Inverter,Schneider,Schneider Conext Core XC,U21543000592,,,Station: D | Location: D.2 | Power: 680kW
+1a0c03f8-58fa-4763-a773-f476d44767dc,Inverter,Schneider,Schneider Conext Core XC,U21542001738,,,Station: E | Location: E.1 | Power: 680kW
+1a0c03f8-58fa-4763-a773-f476d44767dc,Inverter,Schneider,Schneider Conext Core XC,U21538000856,,,Station: E | Location: E.2 | Power: 680kW
+1a0c03f8-58fa-4763-a773-f476d44767dc,Inverter,Schneider,Schneider Conext Core XC,U21543000102,,,Station: F | Location: F.1 | Power: 680kW
+1a0c03f8-58fa-4763-a773-f476d44767dc,Inverter,Schneider,Schneider Conext Core XC,U21541000364,,,Station: F | Location: F.2 | Power: 680kW
+1a0c03f8-58fa-4763-a773-f476d44767dc,Inverter,Schneider,Schneider Conext Core XC,U21543000591,,,Station: G | Location: G.1 | Power: 680kW
+1a0c03f8-58fa-4763-a773-f476d44767dc,Inverter,Schneider,Schneider Conext Core XC,U21535000414,,,Station: G | Location: G.2 | Power: 680kW
+0031f77b-bb0a-42d2-a41b-92b00feb00a0,Inverter,SMA,SMA SC-xxxCP-10,180801642,,,Station: 1 | Location: 1.1 | Power: 900kW | Inverters: 6
+0031f77b-bb0a-42d2-a41b-92b00feb00a0,Inverter,SMA,SMA SC-xxxCP-10,180801643,,,Station: 1 | Location: 1.2 | Power: 900kW
+0031f77b-bb0a-42d2-a41b-92b00feb00a0,Inverter,SMA,SMA SC-xxxCP-10,180801656,,,Station: 2 | Location: 2.1 | Power: 900kW
+0031f77b-bb0a-42d2-a41b-92b00feb00a0,Inverter,SMA,SMA SC-xxxCP-10,180801657,,,Station: 2 | Location: 2.2 | Power: 900kW
+0031f77b-bb0a-42d2-a41b-92b00feb00a0,Inverter,SMA,SMA SC-xxxCP-10,180801654,,,Station: 3 | Location: 3.1 | Power: 900kW
+0031f77b-bb0a-42d2-a41b-92b00feb00a0,Inverter,SMA,SMA SC-xxxCP-10,180801655,,,Station: 3 | Location: 3.2 | Power: 900kW
+d3aebd40-fbd7-4405-a640-0bf08fa4e5e6,Inverter,SMA,SMA SC-xxxCP-10,180802319,,,Station: 1 | Location: 1.1 | Power: 900kW | Inverters: 4
+d3aebd40-fbd7-4405-a640-0bf08fa4e5e6,Inverter,SMA,SMA SC-xxxCP-10,180802318,,,Station: 1 | Location: 1.2 | Power: 900kW
+d3aebd40-fbd7-4405-a640-0bf08fa4e5e6,Inverter,SMA,SMA SC-xxxCP-10,180802275,,,Station: 2 | Location: 2.1 | Power: 900kW
+d3aebd40-fbd7-4405-a640-0bf08fa4e5e6,Inverter,SMA,SMA SC-xxxCP-10,180802274,,,Station: 2 | Location: 2.2 | Power: 900kW
+4b97df08-e832-4471-ae34-d04058e1d6b7,Inverter,Schneider,Schneider Conext Core XC,Aspatria 1.1,,,Station: 1 | Location: 1A | Power: 680kW | Inverters: 22
+4b97df08-e832-4471-ae34-d04058e1d6b7,Inverter,Schneider,Schneider Conext Core XC,Aspatria 1.2,,,Station: 1 | Location: 1B | Power: 680kW
+4b97df08-e832-4471-ae34-d04058e1d6b7,Inverter,Schneider,Schneider Conext Core XC,Aspatria 2.1,,,Station: 2 | Location: 2A | Power: 680kW
+4b97df08-e832-4471-ae34-d04058e1d6b7,Inverter,Schneider,Schneider Conext Core XC,Aspatria 2.2,,,Station: 2 | Location: 2B | Power: 680kW
+4b97df08-e832-4471-ae34-d04058e1d6b7,Inverter,Schneider,Schneider Conext Core XC,Aspatria 3.1,,,Station: 3 | Location: 3A | Power: 680kW
+4b97df08-e832-4471-ae34-d04058e1d6b7,Inverter,Schneider,Schneider Conext Core XC,Aspatria 3.2,,,Station: 3 | Location: 3B | Power: 680kW
+4b97df08-e832-4471-ae34-d04058e1d6b7,Inverter,Schneider,Schneider Conext Core XC,Aspatria 4.1,,,Station: 4 | Location: 4A | Power: 680kW
+4b97df08-e832-4471-ae34-d04058e1d6b7,Inverter,Schneider,Schneider Conext Core XC,Aspatria 4.2,,,Station: 4 | Location: 4B | Power: 680kW
+4b97df08-e832-4471-ae34-d04058e1d6b7,Inverter,Schneider,Schneider Conext Core XC,Aspatria 5.1,,,Station: 5 | Location: 5A | Power: 680kW
+4b97df08-e832-4471-ae34-d04058e1d6b7,Inverter,Schneider,Schneider Conext Core XC,Aspatria 5.2,,,Station: 5 | Location: 5B | Power: 680kW
+4b97df08-e832-4471-ae34-d04058e1d6b7,Inverter,Schneider,Schneider Conext Core XC,U21436020004,,,Station: 6 | Location: 6A | Power: 680kW
+4b97df08-e832-4471-ae34-d04058e1d6b7,Inverter,Schneider,Schneider Conext Core XC,Aspatria 6.2,,,Station: 6 | Location: 6B | Power: 680kW
+4b97df08-e832-4471-ae34-d04058e1d6b7,Inverter,Schneider,Schneider Conext Core XC,Aspatria 7.1,,,Station: 7 | Location: 7A | Power: 680kW
+4b97df08-e832-4471-ae34-d04058e1d6b7,Inverter,Schneider,Schneider Conext Core XC,Aspatria 7.2,,,Station: 7 | Location: 7B | Power: 680kW
+4b97df08-e832-4471-ae34-d04058e1d6b7,Inverter,Schneider,Schneider Conext Core XC,Aspatria 8.1,,,Station: 8 | Location: 8A | Power: 680kW
+4b97df08-e832-4471-ae34-d04058e1d6b7,Inverter,Schneider,Schneider Conext Core XC,Aspatria 8.2,,,Station: 8 | Location: 8B | Power: 680kW
+4b97df08-e832-4471-ae34-d04058e1d6b7,Inverter,Schneider,Schneider Conext Core XC,Aspatria 9.1,,,Station: 9 | Location: 9A | Power: 680kW
+4b97df08-e832-4471-ae34-d04058e1d6b7,Inverter,Schneider,Schneider Conext Core XC,Aspatria 9.2,,,Station: 9 | Location: 9B | Power: 680kW
+4b97df08-e832-4471-ae34-d04058e1d6b7,Inverter,Schneider,Schneider Conext Core XC,Aspatria 10.1,,,Station: 10 | Location: 10A | Power: 680kW
+4b97df08-e832-4471-ae34-d04058e1d6b7,Inverter,Schneider,Schneider Conext Core XC,Aspatria 10.2,,,Station: 10 | Location: 10B | Power: 680kW
+4b97df08-e832-4471-ae34-d04058e1d6b7,Inverter,Schneider,Schneider Conext Core XC,Aspatria 11.1,,,Station: 11 | Location: 11A | Power: 680kW
+4b97df08-e832-4471-ae34-d04058e1d6b7,Inverter,Schneider,Schneider Conext Core XC,Aspatria 11.2,,,Station: 11 | Location: 11B | Power: 680kW
+452b0b1f-f992-4c5b-bd54-365c7e0172fd,Inverter,SMA,SMA SC-xxxCP-10,180351309,,,Station: 1 | Location: 1.1 | Power: 900kW | Inverters: 15
+452b0b1f-f992-4c5b-bd54-365c7e0172fd,Inverter,SMA,SMA SC-xxxCP-10,180351310,,,Station: 1 | Location: 1.2 | Power: 900kW
+452b0b1f-f992-4c5b-bd54-365c7e0172fd,Inverter,SMA,SMA SC-xxxCP-10,180351307,,,Station: 2 | Location: 2.3 | Power: 900kW
+452b0b1f-f992-4c5b-bd54-365c7e0172fd,Inverter,SMA,SMA SC-xxxCP-10,180351308,,,Station: 2 | Location: 2.4 | Power: 900kW
+452b0b1f-f992-4c5b-bd54-365c7e0172fd,Inverter,SMA,SMA SC-xxxCP-10,180351305,,,Station: 3 | Location: 3.5 | Power: 900kW
+452b0b1f-f992-4c5b-bd54-365c7e0172fd,Inverter,SMA,SMA SC-xxxCP-10,180351306,,,Station: 3 | Location: 3.6 | Power: 900kW
+452b0b1f-f992-4c5b-bd54-365c7e0172fd,Inverter,SMA,SMA SC-xxxCP-10,180351303,,,Station: 4 | Location: 4.7 | Power: 900kW
+452b0b1f-f992-4c5b-bd54-365c7e0172fd,Inverter,SMA,SMA SC-xxxCP-10,180351304,,,Station: 4 | Location: 4.8 | Power: 900kW
+452b0b1f-f992-4c5b-bd54-365c7e0172fd,Inverter,SMA,SMA SC-xxxCP-10,180351381,,,Station: 5 | Location: 5.9 | Power: 900kW
+452b0b1f-f992-4c5b-bd54-365c7e0172fd,Inverter,SMA,SMA SC-xxxCP-10,180351281,,,Station: 6 | Location: 6.1 | Power: 900kW
+452b0b1f-f992-4c5b-bd54-365c7e0172fd,Inverter,SMA,SMA SC-xxxCP-10,180351282,,,Station: 6 | Location: 6.11 | Power: 900kW
+452b0b1f-f992-4c5b-bd54-365c7e0172fd,Inverter,SMA,SMA SC-xxxCP-10,180351283,,,Station: 7 | Location: 7.12 | Power: 900kW
+452b0b1f-f992-4c5b-bd54-365c7e0172fd,Inverter,SMA,SMA SC-xxxCP-10,180351284,,,Station: 7 | Location: 7.13 | Power: 900kW
+452b0b1f-f992-4c5b-bd54-365c7e0172fd,Inverter,SMA,SMA SC-xxxCP-10,180351302,,,Station: 8 | Location: 8.14 | Power: 900kW
+452b0b1f-f992-4c5b-bd54-365c7e0172fd,Inverter,SMA,SMA SC-xxxCP-10,180351285,,,Station: 8 | Location: 8.15 | Power: 900kW
+3ab358ea-538c-4d73-bb44-2b7138affd1c,Inverter,SMA,SMA SC-xxxCP-10,180351311,,,Station: 1 | Location: 1.1 | Power: 900kW | Inverters: 12
+3ab358ea-538c-4d73-bb44-2b7138affd1c,Inverter,SMA,SMA SC-xxxCP-10,180351312,,,Station: 1 | Location: 1.2 | Power: 900kW
+3ab358ea-538c-4d73-bb44-2b7138affd1c,Inverter,SMA,SMA SC-xxxCP-10,180351319,,,Station: 2 | Location: 2.1 | Power: 900kW
+3ab358ea-538c-4d73-bb44-2b7138affd1c,Inverter,SMA,SMA SC-xxxCP-10,180351320,,,Station: 2 | Location: 2.2 | Power: 900kW
+3ab358ea-538c-4d73-bb44-2b7138affd1c,Inverter,SMA,SMA SC-xxxCP-10,180351321,,,Station: 3 | Location: 3.1 | Power: 900kW
+3ab358ea-538c-4d73-bb44-2b7138affd1c,Inverter,SMA,SMA SC-xxxCP-10,180351322,,,Station: 3 | Location: 3.2 | Power: 900kW
+3ab358ea-538c-4d73-bb44-2b7138affd1c,Inverter,SMA,SMA SC-xxxCP-10,180351387,,,Station: 4 | Location: 4.1 | Power: 900kW
+3ab358ea-538c-4d73-bb44-2b7138affd1c,Inverter,SMA,SMA SC-xxxCP-10,180351388,,,Station: 4 | Location: 4.2 | Power: 900kW
+3ab358ea-538c-4d73-bb44-2b7138affd1c,Inverter,SMA,SMA SC-xxxCP-10,180351389,,,Station: 5 | Location: 5.1 | Power: 900kW
+3ab358ea-538c-4d73-bb44-2b7138affd1c,Inverter,SMA,SMA SC-xxxCP-10,180800028,,,Station: 5 | Location: 5.2 | Power: 900kW
+3ab358ea-538c-4d73-bb44-2b7138affd1c,Inverter,SMA,SMA SC-xxxCP-10,180800029,,,Station: 6 | Location: 6.1 | Power: 900kW
+3ab358ea-538c-4d73-bb44-2b7138affd1c,Inverter,SMA,SMA SC-xxxCP-10,180800030,,,Station: 6 | Location: 6.2 | Power: 900kW
+3f247b33-85ee-4b4a-be79-28dbb03f8b23,Inverter,SMA,SMA SC-xxxCP-10,180191821,,,Station: 1 | Location: 1.1 | Inverters: 6
+3f247b33-85ee-4b4a-be79-28dbb03f8b23,Inverter,SMA,SMA SC-xxxCP-10,180191818,,,Station: 1 | Location: 1.2
+3f247b33-85ee-4b4a-be79-28dbb03f8b23,Inverter,SMA,SMA SC-xxxCP-10,180191813,,,Station: 2 | Location: 2.1
+3f247b33-85ee-4b4a-be79-28dbb03f8b23,Inverter,SMA,SMA SC-xxxCP-10,180191822,,,Station: 2 | Location: 2.2
+3f247b33-85ee-4b4a-be79-28dbb03f8b23,Inverter,SMA,SMA SC-xxxCP-10,180191823,,,Station: 3 | Location: 3.1
+3f247b33-85ee-4b4a-be79-28dbb03f8b23,Inverter,SMA,SMA SC-xxxCP-10,180191825,,,Station: 3 | Location: 3.2
+c26437d6-7f4a-4966-9454-9a7269c3819b,Inverter,SMA,SMA SC-xxxCP-10,,,,Location: 1 | Power: 800kW | Inverters: 5
+c26437d6-7f4a-4966-9454-9a7269c3819b,Inverter,SMA,SMA SC-xxxCP-10,180192401,,,Location: 2 | Power: 800kW
+c26437d6-7f4a-4966-9454-9a7269c3819b,Inverter,SMA,SMA SC-xxxCP-10,,,,Location: 3 | Power: 800kW
+c26437d6-7f4a-4966-9454-9a7269c3819b,Inverter,SMA,SMA SC-xxxCP-10,,,,Location: 4 | Power: 800kW
+c26437d6-7f4a-4966-9454-9a7269c3819b,Inverter,SMA,SMA SC-xxxCP-10,,,,Location: 5 | Power: 800kW
+d21b5faa-1f48-4c05-af77-b9c3ac183146,Inverter,Schneider,Schneider Conext Core XC,U21439020011,,,Station: 1 | Location: 1.1 | Power: 680kW | Inverters: 10
+d21b5faa-1f48-4c05-af77-b9c3ac183146,Inverter,Schneider,Schneider Conext Core XC,U21443001153,,,Station: 1 | Location: 1.2 | Power: 680kW
+d21b5faa-1f48-4c05-af77-b9c3ac183146,Inverter,Schneider,Schneider Conext Core XC,U21439030002,,,Station: 2 | Location: 2.1 | Power: 680kW
+d21b5faa-1f48-4c05-af77-b9c3ac183146,Inverter,Schneider,Schneider Conext Core XC,U21443001190,,,Station: 2 | Location: 2.2 | Power: 680kW
+d21b5faa-1f48-4c05-af77-b9c3ac183146,Inverter,Schneider,Schneider Conext Core XC,U21443001192,,,Station: 3 | Location: 3.1 | Power: 680kW
+d21b5faa-1f48-4c05-af77-b9c3ac183146,Inverter,Schneider,Schneider Conext Core XC,U21440000069,,,Station: 3 | Location: 3.2 | Power: 680kW
+d21b5faa-1f48-4c05-af77-b9c3ac183146,Inverter,Schneider,Schneider Conext Core XC,U21447001403,,,Station: 4 | Location: 4.1 | Power: 680kW
+d21b5faa-1f48-4c05-af77-b9c3ac183146,Inverter,Schneider,Schneider Conext Core XC,U21449030008,,,Station: 4 | Location: 4.2 | Power: 680kW
+d21b5faa-1f48-4c05-af77-b9c3ac183146,Inverter,Schneider,Schneider Conext Core XC,U21440033003,,,Station: 5 | Location: 5.1 | Power: 680kW
+d21b5faa-1f48-4c05-af77-b9c3ac183146,Inverter,Schneider,Schneider Conext Core XC,U21439030003,,,Station: 5 | Location: 5.2 | Power: 680kW
+68002642-0e95-4084-9176-6424ce695433,Inverter,Schneider,Schneider Conext Core XC,U21540000504,,,Station: A | Location: A.1 | Power: 680kW | Inverters: 6
+68002642-0e95-4084-9176-6424ce695433,Inverter,Schneider,Schneider Conext Core XC,U21540000842,,,Station: A | Location: A.2 | Power: 680kW
+68002642-0e95-4084-9176-6424ce695433,Inverter,Schneider,Schneider Conext Core XC,U21540000889,,,Station: B | Location: B.1 | Power: 680kW
+68002642-0e95-4084-9176-6424ce695433,Inverter,Schneider,Schneider Conext Core XC,U21540000890,,,Station: B | Location: B.2 | Power: 680kW
+68002642-0e95-4084-9176-6424ce695433,Inverter,Schneider,Schneider Conext Core XC,U21537001230,,,Station: C | Location: C.1 | Power: 680kW
+68002642-0e95-4084-9176-6424ce695433,Inverter,Schneider,Schneider Conext Core XC,U21537000975,,,Station: C | Location: C.2 | Power: 680kW
+eeeb89fe-a3c6-4d33-9050-665e52e0cfa0,Inverter,SMA,SMA SC-xxxCP-10,180800660,,,Location: 1 | Inverters: 5
+eeeb89fe-a3c6-4d33-9050-665e52e0cfa0,Inverter,SMA,SMA SC-xxxCP-10,180800753,,,Location: 2
+eeeb89fe-a3c6-4d33-9050-665e52e0cfa0,Inverter,SMA,SMA SC-xxxCP-10,180800752,,,Location: 3
+eeeb89fe-a3c6-4d33-9050-665e52e0cfa0,Inverter,SMA,SMA SC-xxxCP-10,180800751,,,Location: 4
+eeeb89fe-a3c6-4d33-9050-665e52e0cfa0,Inverter,SMA,SMA SC-xxxCP-10,180800627,,,Location: 5
+37ba0759-4b33-470f-8d0f-211e4aefa794,Inverter,Schneider,Schneider Conext Core XC,N21220000029,,,Station: 1 | Location: 1.1 | Power: 680kW | Inverters: 5
+37ba0759-4b33-470f-8d0f-211e4aefa794,Inverter,Schneider,Schneider Conext Core XC,N21206000045,,,Station: 2 | Location: 2.1 | Power: 680kW
+37ba0759-4b33-470f-8d0f-211e4aefa794,Inverter,Schneider,Schneider Conext Core XC,N21221000598,,,Station: 2 | Location: 2.2 | Power: 680kW
+37ba0759-4b33-470f-8d0f-211e4aefa794,Inverter,Schneider,Schneider Conext Core XC,N21220000023,,,Station: 3 | Location: 3.1 | Power: 680kW
+37ba0759-4b33-470f-8d0f-211e4aefa794,Inverter,Schneider,Schneider Conext Core XC,N21221000595,,,Station: 3 | Location: 3.2 | Power: 680kW
+9f490210-bb12-45ff-a63d-582b51973e16,Inverter,Schneider,Schneider Conext Core XC,U21532030049,,,Station: A | Location: A.1 | Power: 680kW | Inverters: 6
+9f490210-bb12-45ff-a63d-582b51973e16,Inverter,Schneider,Schneider Conext Core XC,U21533000120,,,Station: A | Location: A.2 | Power: 680kW
+9f490210-bb12-45ff-a63d-582b51973e16,Inverter,Schneider,Schneider Conext Core XC,U21532030002,,,Station: A | Location: A.3 | Power: 680kW
+9f490210-bb12-45ff-a63d-582b51973e16,Inverter,Schneider,Schneider Conext Core XC,U21533000119,,,Station: B | Location: B.1 | Power: 680kW
+9f490210-bb12-45ff-a63d-582b51973e16,Inverter,Schneider,Schneider Conext Core XC,U21522001107,,,Station: B | Location: B.2 | Power: 680kW
+9f490210-bb12-45ff-a63d-582b51973e16,Inverter,Schneider,Schneider Conext Core XC,U21544001453,,,Station: B | Location: B.3 | Power: 680kW
+9529ebf9-9cb7-44c8-bacd-d997e37c42e2,Inverter,SMA,SMA SC-xxxCP-10,180801961,,,Station: 1 | Location: 1 | Power: 850kW | Inverters: 4
+9529ebf9-9cb7-44c8-bacd-d997e37c42e2,Inverter,SMA,SMA SC-xxxCP-10,180801962,,,Station: 1 | Location: 2 | Power: 850kW
+9529ebf9-9cb7-44c8-bacd-d997e37c42e2,Inverter,SMA,SMA SC-xxxCP-10,180801960,,,Station: 2 | Location: 3 | Power: 850kW
+9529ebf9-9cb7-44c8-bacd-d997e37c42e2,Inverter,SMA,SMA SC-xxxCP-10,180801963,,,Station: 2 | Location: 4 | Power: 850kW
+2a84d225-37a0-48ac-be08-10913a8648df,Inverter,SMA,SMA SC-xxxCP-10,180351220,,,Location: 1.1 | Inverters: 8
+2a84d225-37a0-48ac-be08-10913a8648df,Inverter,SMA,SMA SC-xxxCP-10,180351219,,,Location: 1.2
+2a84d225-37a0-48ac-be08-10913a8648df,Inverter,SMA,SMA SC-xxxCP-10,180181337,,,Location: 2.1
+2a84d225-37a0-48ac-be08-10913a8648df,Inverter,SMA,SMA SC-xxxCP-10,180181336,,,Location: 2.2
+2a84d225-37a0-48ac-be08-10913a8648df,Inverter,SMA,SMA SC-xxxCP-10,180351224,,,Location: 3.1
+2a84d225-37a0-48ac-be08-10913a8648df,Inverter,SMA,SMA SC-xxxCP-10,180351223,,,Location: 3.2
+2a84d225-37a0-48ac-be08-10913a8648df,Inverter,SMA,SMA SC-xxxCP-10,180351222,,,Location: 4.1
+2a84d225-37a0-48ac-be08-10913a8648df,Inverter,SMA,SMA SC-xxxCP-10,180351221,,,Location: 4.2
+630789c1-779c-47ab-b6fe-19f3cc520657,Inverter,Schneider,Schneider Conext Core XC,,,,Station: 1 | Location: 1 | Power: 680kW | Inverters: 15
+630789c1-779c-47ab-b6fe-19f3cc520657,Inverter,Schneider,Schneider Conext Core XC,,,,Station: 1 | Location: 2 | Power: 680kW
+630789c1-779c-47ab-b6fe-19f3cc520657,Inverter,Schneider,Schneider Conext Core XC,,,,Station: 1 | Location: 3 | Power: 680kW
+630789c1-779c-47ab-b6fe-19f3cc520657,Inverter,Schneider,Schneider Conext Core XC,U21541001046,,,Station: 2 | Location: 4 | Power: 680kW
+630789c1-779c-47ab-b6fe-19f3cc520657,Inverter,Schneider,Schneider Conext Core XC,,,,Station: 2 | Location: 5 | Power: 680kW
+630789c1-779c-47ab-b6fe-19f3cc520657,Inverter,Schneider,Schneider Conext Core XC,U21541001114,,,Station: 2 | Location: 6 | Power: 680kW
+630789c1-779c-47ab-b6fe-19f3cc520657,Inverter,Schneider,Schneider Conext Core XC,,,,Station: 3 | Location: 7 | Power: 680kW
+630789c1-779c-47ab-b6fe-19f3cc520657,Inverter,Schneider,Schneider Conext Core XC,,,,Station: 3 | Location: 8 | Power: 680kW
+630789c1-779c-47ab-b6fe-19f3cc520657,Inverter,Schneider,Schneider Conext Core XC,,,,Station: 3 | Location: 9 | Power: 680kW
+630789c1-779c-47ab-b6fe-19f3cc520657,Inverter,Schneider,Schneider Conext Core XC,,,,Station: 4 | Location: 10 | Power: 680kW
+630789c1-779c-47ab-b6fe-19f3cc520657,Inverter,Schneider,Schneider Conext Core XC,,,,Station: 4 | Location: 11 | Power: 680kW
+630789c1-779c-47ab-b6fe-19f3cc520657,Inverter,Schneider,Schneider Conext Core XC,,,,Station: 4 | Location: 12 | Power: 680kW
+630789c1-779c-47ab-b6fe-19f3cc520657,Inverter,Schneider,Schneider Conext Core XC,,,,Station: 5 | Location: 13 | Power: 680kW
+630789c1-779c-47ab-b6fe-19f3cc520657,Inverter,Schneider,Schneider Conext Core XC,,,,Station: 5 | Location: 14 | Power: 680kW
+630789c1-779c-47ab-b6fe-19f3cc520657,Inverter,Schneider,Schneider Conext Core XC,,,,Station: 5 | Location: 15 | Power: 680kW
+d7d4b3d3-a2c5-4833-a618-eca457423bdc,Inverter,SMA,SMA SC-xxxx,3016034527,,,Station: 1 | Location: 1 | Power: 2200kW | Inverters: 3
+d7d4b3d3-a2c5-4833-a618-eca457423bdc,Inverter,SMA,SMA SC-xxxCP-10,180800374,,,Station: 2 | Location: 2.1 | Power: 900kW
+d7d4b3d3-a2c5-4833-a618-eca457423bdc,Inverter,SMA,SMA SC-xxxCP-10,180800373,,,Station: 2 | Location: 2.2 | Power: 900kW
+66b94879-ff98-4e6e-9aae-9715789e3c80,Inverter,SMA,SMA SC-xxxCP-10,180350803,,,Station: 1 | Location: 1.1 | Power: 900kW | Inverters: 32
+66b94879-ff98-4e6e-9aae-9715789e3c80,Inverter,SMA,SMA SC-xxxCP-10,180350804,,,Station: 1 | Location: 1.2 | Power: 900kW
+66b94879-ff98-4e6e-9aae-9715789e3c80,Inverter,SMA,SMA SC-xxxCP-10,180350805,,,Station: 2 | Location: 2.1 | Power: 900kW
+66b94879-ff98-4e6e-9aae-9715789e3c80,Inverter,SMA,SMA SC-xxxCP-10,180350806,,,Station: 2 | Location: 2.2 | Power: 900kW
+66b94879-ff98-4e6e-9aae-9715789e3c80,Inverter,SMA,SMA SC-xxxCP-10,180350807,,,Station: 3 | Location: 3.1 | Power: 900kW
+66b94879-ff98-4e6e-9aae-9715789e3c80,Inverter,SMA,SMA SC-xxxCP-10,180350808,,,Station: 3 | Location: 3.2 | Power: 900kW
+66b94879-ff98-4e6e-9aae-9715789e3c80,Inverter,SMA,SMA SC-xxxCP-10,180350848,,,Station: 4 | Location: 4.1 | Power: 900kW
+66b94879-ff98-4e6e-9aae-9715789e3c80,Inverter,SMA,SMA SC-xxxCP-10,180350849,,,Station: 4 | Location: 4.2 | Power: 900kW
+66b94879-ff98-4e6e-9aae-9715789e3c80,Inverter,SMA,SMA SC-xxxCP-10,180350850,,,Station: 5 | Location: 5.1 | Power: 900kW
+66b94879-ff98-4e6e-9aae-9715789e3c80,Inverter,SMA,SMA SC-xxxCP-10,180350868,,,Station: 5 | Location: 5.2 | Power: 900kW
+66b94879-ff98-4e6e-9aae-9715789e3c80,Inverter,SMA,SMA SC-xxxCP-10,180350809,,,Station: 6 | Location: 6.1 | Power: 900kW
+66b94879-ff98-4e6e-9aae-9715789e3c80,Inverter,SMA,SMA SC-xxxCP-10,180350810,,,Station: 6 | Location: 6.2 | Power: 900kW
+66b94879-ff98-4e6e-9aae-9715789e3c80,Inverter,SMA,SMA SC-xxxCP-10,180350811,,,Station: 7 | Location: 7.1 | Power: 900kW
+66b94879-ff98-4e6e-9aae-9715789e3c80,Inverter,SMA,SMA SC-xxxCP-10,180350812,,,Station: 7 | Location: 7.2 | Power: 900kW
+66b94879-ff98-4e6e-9aae-9715789e3c80,Inverter,SMA,SMA SC-xxxCP-10,180350813,,,Station: 8 | Location: 8.1 | Power: 900kW
+66b94879-ff98-4e6e-9aae-9715789e3c80,Inverter,SMA,SMA SC-xxxCP-10,180350814,,,Station: 8 | Location: 8.2 | Power: 900kW
+66b94879-ff98-4e6e-9aae-9715789e3c80,Inverter,SMA,SMA SC-xxxCP-10,180350819,,,Station: 9 | Location: 9.1 | Power: 900kW
+66b94879-ff98-4e6e-9aae-9715789e3c80,Inverter,SMA,SMA SC-xxxCP-10,180350820,,,Station: 9 | Location: 9.2 | Power: 900kW
+66b94879-ff98-4e6e-9aae-9715789e3c80,Inverter,SMA,SMA SC-xxxCP-10,180181322,,,Station: 10 | Location: 10.1 | Power: 900kW
+66b94879-ff98-4e6e-9aae-9715789e3c80,Inverter,SMA,SMA SC-xxxCP-10,180181323,,,Station: 10 | Location: 10.2 | Power: 900kW
+66b94879-ff98-4e6e-9aae-9715789e3c80,Inverter,SMA,SMA SC-xxxCP-10,180350870,,,Station: 11 | Location: 11.1 | Power: 900kW
+66b94879-ff98-4e6e-9aae-9715789e3c80,Inverter,SMA,SMA SC-xxxCP-10,180350869,,,Station: 11 | Location: 11.2 | Power: 900kW
+66b94879-ff98-4e6e-9aae-9715789e3c80,Inverter,SMA,SMA SC-xxxCP-10,180350872,,,Station: 12 | Location: 12.1 | Power: 900kW
+66b94879-ff98-4e6e-9aae-9715789e3c80,Inverter,SMA,SMA SC-xxxCP-10,180350871,,,Station: 12 | Location: 12.2 | Power: 900kW
+66b94879-ff98-4e6e-9aae-9715789e3c80,Inverter,SMA,SMA SC-xxxCP-10,180350873,,,Station: 13 | Location: 13.1 | Power: 900kW
+66b94879-ff98-4e6e-9aae-9715789e3c80,Inverter,SMA,SMA SC-xxxCP-10,180350874,,,Station: 13 | Location: 13.2 | Power: 900kW
+66b94879-ff98-4e6e-9aae-9715789e3c80,Inverter,SMA,SMA SC-xxxCP-10,180350815,,,Station: 14 | Location: 14.1 | Power: 900kW
+66b94879-ff98-4e6e-9aae-9715789e3c80,Inverter,SMA,SMA SC-xxxCP-10,180350816,,,Station: 14 | Location: 14.2 | Power: 900kW
+66b94879-ff98-4e6e-9aae-9715789e3c80,Inverter,SMA,SMA SC-xxxCP-10,180350817,,,Station: 15 | Location: 15.1 | Power: 900kW
+66b94879-ff98-4e6e-9aae-9715789e3c80,Inverter,SMA,SMA SC-xxxCP-10,180350818,,,Station: 15 | Location: 15.2 | Power: 900kW
+66b94879-ff98-4e6e-9aae-9715789e3c80,Inverter,SMA,SMA SC-xxxCP-10,180350843,,,Station: 16 | Location: 16.1 | Power: 900kW
+66b94879-ff98-4e6e-9aae-9715789e3c80,Inverter,SMA,SMA SC-xxxCP-10,180350847,,,Station: 16 | Location: 16.2 | Power: 900kW
+9c70a8cd-1dc3-4a6f-a747-abb23d24470f,Inverter,SMA,SMA SC-xxxCP-10,180193264,,,Station: 1 | Location: 1.1 | Power: 850kW | Inverters: 16
+9c70a8cd-1dc3-4a6f-a747-abb23d24470f,Inverter,SMA,SMA SC-xxxCP-10,180193265,,,Station: 1 | Location: 1.2 | Power: 850kW
+9c70a8cd-1dc3-4a6f-a747-abb23d24470f,Inverter,SMA,SMA SC-xxxCP-10,185350065,,,Station: 2 | Location: 2.1 | Power: 850kW
+9c70a8cd-1dc3-4a6f-a747-abb23d24470f,Inverter,SMA,SMA SC-xxxCP-10,185350066,,,Station: 2 | Location: 2.2 | Power: 850kW
+9c70a8cd-1dc3-4a6f-a747-abb23d24470f,Inverter,SMA,SMA SC-xxxCP-10,185350067,,,Station: 3 | Location: 3.1 | Power: 850kW
+9c70a8cd-1dc3-4a6f-a747-abb23d24470f,Inverter,SMA,SMA SC-xxxCP-10,185350068,,,Station: 3 | Location: 3.2 | Power: 850kW
+9c70a8cd-1dc3-4a6f-a747-abb23d24470f,Inverter,SMA,SMA SC-xxxCP-10,180351278,,,Station: 4 | Location: 4.1 | Power: 850kW
+9c70a8cd-1dc3-4a6f-a747-abb23d24470f,Inverter,SMA,SMA SC-xxxCP-10,180351279,,,Station: 4 | Location: 4.2 | Power: 850kW
+9c70a8cd-1dc3-4a6f-a747-abb23d24470f,Inverter,SMA,SMA SC-xxxCP-10,180351280,,,Station: 5 | Location: 5.1 | Power: 850kW
+9c70a8cd-1dc3-4a6f-a747-abb23d24470f,Inverter,SMA,SMA SC-xxxCP-10,180351289,,,Station: 5 | Location: 5.2 | Power: 850kW
+9c70a8cd-1dc3-4a6f-a747-abb23d24470f,Inverter,SMA,SMA SC-xxxCP-10,180193266,,,Station: 6 | Location: 6.1 | Power: 850kW
+9c70a8cd-1dc3-4a6f-a747-abb23d24470f,Inverter,SMA,SMA SC-xxxCP-10,180193267,,,Station: 6 | Location: 6.2 | Power: 850kW
+9c70a8cd-1dc3-4a6f-a747-abb23d24470f,Inverter,SMA,SMA SC-xxxCP-10,180193268,,,Station: 7 | Location: 7.1 | Power: 850kW
+9c70a8cd-1dc3-4a6f-a747-abb23d24470f,Inverter,SMA,SMA SC-xxxCP-10,180193269,,,Station: 7 | Location: 7.2 | Power: 850kW
+9c70a8cd-1dc3-4a6f-a747-abb23d24470f,Inverter,SMA,SMA SC-xxxCP-10,180193270,,,Station: 8 | Location: 8.1 | Power: 850kW
+9c70a8cd-1dc3-4a6f-a747-abb23d24470f,Inverter,SMA,SMA SC-xxxCP-10,180193271,,,Station: 8 | Location: 8.2 | Power: 850kW
+e7abc42b-c23c-4f49-a3a0-d86f986a58a0,Inverter,SMA,SMA SC-xxxx,180500758,,,Station: 1 | Location: 1 | Inverters: 3
+e7abc42b-c23c-4f49-a3a0-d86f986a58a0,Inverter,SMA,SMA SC-xxxCP-10,180802241,,,Station: 2 | Location: 2
+e7abc42b-c23c-4f49-a3a0-d86f986a58a0,Inverter,SMA,SMA SC-xxxCP-10,180802240,,,Station: 2 | Location: 3
+b1e63efb-f0d5-413c-8098-8e182acda3a1,Inverter,SMA,SMA SC-xxxx,3016881174,,,Location: 4 | Power: 2200kW | Inverters: 21
+098d7b68-d58a-4f7f-9681-e6da5fdf29c8,Inverter,SMA,SMA SC-xxxCP-10,180340431,,,Station: 1 | Location: 1 | Power: 850kW | Inverters: 4
+098d7b68-d58a-4f7f-9681-e6da5fdf29c8,Inverter,SMA,SMA SC-xxxCP-10,180340432,,,Station: 1 | Location: 2 | Power: 850kW
+098d7b68-d58a-4f7f-9681-e6da5fdf29c8,Inverter,SMA,SMA SC-xxxCP-10,180340433,,,Station: 2 | Location: 3 | Power: 850kW
+098d7b68-d58a-4f7f-9681-e6da5fdf29c8,Inverter,SMA,SMA SC-xxxCP-10,180340430,,,Station: 2 | Location: 4 | Power: 850kW
+eda1c206-48d2-4708-bb03-15641b727b76,Inverter,SMA,SMA SC-xxxCP-10,180800251,,,Station: 1 | Location: 1 | Power: 800kW | Inverters: 4
+eda1c206-48d2-4708-bb03-15641b727b76,Inverter,SMA,SMA SC-xxxCP-10,180800253,,,Station: 1 | Location: 2 | Power: 800kW
+eda1c206-48d2-4708-bb03-15641b727b76,Inverter,SMA,SMA SC-xxxCP-10,180800252,,,Station: 2 | Location: 3 | Power: 800kW
+eda1c206-48d2-4708-bb03-15641b727b76,Inverter,SMA,SMA SC-xxxCP-10,180800254,,,Station: 2 | Location: 4 | Power: 800kW
+9380be71-85a1-4db9-9dcf-cb45afe3b74c,Inverter,SMA,SMA SC-xxxCP-10,180351033,,,Station: 1 | Location: 1.1 | Power: 900kW | Inverters: 4
+9380be71-85a1-4db9-9dcf-cb45afe3b74c,Inverter,SMA,SMA SC-xxxCP-10,180351032,,,Station: 1 | Location: 1.2 | Power: 900kW
+9380be71-85a1-4db9-9dcf-cb45afe3b74c,Inverter,SMA,SMA SC-xxxCP-10,180351035,,,Station: 2 | Location: 2.1 | Power: 900kW
+9380be71-85a1-4db9-9dcf-cb45afe3b74c,Inverter,SMA,SMA SC-xxxCP-10,180351034,,,Station: 2 | Location: 2.2 | Power: 900kW
+6b00dd26-48e5-47ce-b5da-0f9ad0f781e1,Inverter,SMA,SMA SC-xxxCP-10,180802227,,,Station: 1 | Location: 1.1 | Power: 1000kW | Inverters: 4
+6b00dd26-48e5-47ce-b5da-0f9ad0f781e1,Inverter,SMA,SMA SC-xxxCP-10,180802228,,,Station: 1 | Location: 1.2 | Power: 1000kW
+6b00dd26-48e5-47ce-b5da-0f9ad0f781e1,Inverter,SMA,SMA SC-xxxCP-10,180802225,,,Station: 2 | Location: 2.1 | Power: 1000kW
+6b00dd26-48e5-47ce-b5da-0f9ad0f781e1,Inverter,SMA,SMA SC-xxxCP-10,180802226,,,Station: 2 | Location: 2.2 | Power: 1000kW
+fbce879b-688b-4661-b889-192ef547328e,Inverter,SMA,SMA SC-xxxCP-10,180802013,,,Station: 1 | Location: 1.1 | Power: 900kW | Inverters: 3
+fbce879b-688b-4661-b889-192ef547328e,Inverter,SMA,SMA SC-xxxCP-10,180802012,,,Station: 1 | Location: 1.2 | Power: 900kW
+fbce879b-688b-4661-b889-192ef547328e,Inverter,SMA,SMA SC-xxxCP-10,180802014,,,Station: 2 | Location: 2.1 | Power: 900kW
+bc21d3e4-e614-4a39-bd56-174459fefdce,Inverter,Gamesa,Gamesa 1.25MW,220340,,,Station: 3 | Location: 3.1 | Power: 1250kW
+378bed3e-b450-49e3-82e8-75edd707de23,Inverter,SMA,SMA SC-xxxCP-10,180191302,,,Station: 1 | Location: 1.1 | Power: 630kW | Inverters: 5
+378bed3e-b450-49e3-82e8-75edd707de23,Inverter,SMA,SMA SC-xxxCP-10,180191299,,,Station: 1 | Location: 1.2 | Power: 630kW
+378bed3e-b450-49e3-82e8-75edd707de23,Inverter,SMA,SMA SC-xxxCP-10,180191301,,,Station: 2 | Location: 2.1 | Power: 630kW
+378bed3e-b450-49e3-82e8-75edd707de23,Inverter,SMA,SMA SC-xxxCP-10,180191300,,,Station: 2 | Location: 2.2 | Power: 630kW
+378bed3e-b450-49e3-82e8-75edd707de23,Inverter,SMA,SMA SC-xxxCP-10,180191298,,,Station: 3 | Location: 3.1 | Power: 630kW
+629f21cc-9997-44e8-b284-c624fe1161cf,Inverter,Schneider,Schneider Conext Core XC,U21539000496,,,Station: 1 | Location: 1.1 | Power: 680kW | Inverters: 6
+629f21cc-9997-44e8-b284-c624fe1161cf,Inverter,Schneider,Schneider Conext Core XC,U21540001205,,,Station: 1 | Location: 1.2 | Power: 680kW
+629f21cc-9997-44e8-b284-c624fe1161cf,Inverter,Schneider,Schneider Conext Core XC,U21540000855,,,Station: 1 | Location: 1.3 | Power: 680kW
+629f21cc-9997-44e8-b284-c624fe1161cf,Inverter,Schneider,Schneider Conext Core XC,U21533000711,,,Station: 2 | Location: 2.1 | Power: 680kW
+629f21cc-9997-44e8-b284-c624fe1161cf,Inverter,Schneider,Schneider Conext Core XC,U21541001674,,,Station: 2 | Location: 2.2 | Power: 680kW
+629f21cc-9997-44e8-b284-c624fe1161cf,Inverter,Schneider,Schneider Conext Core XC,U21539000959,,,Station: 2 | Location: 2.3 | Power: 680kW
+3ecd9ab2-a08b-4b9f-bfb8-fecba6da806c,Inverter,SMA,SMA SC-xxxCP-10,180210688,,,Station: 2 | Location: I3 | Power: 720kW | Inverters: 10
+3ecd9ab2-a08b-4b9f-bfb8-fecba6da806c,Inverter,SMA,SMA SC-xxxCP-10,180210689,,,Station: 2 | Location: I4 | Power: 720kW
+8bce325a-dfc0-46ef-a0bc-ad7b369e47a9,Inverter,Schneider,Schneider Conext Core XC,U21422001694,,,Station: A | Location: A.1 | Power: 680kW | Inverters: 18
+8bce325a-dfc0-46ef-a0bc-ad7b369e47a9,Inverter,Schneider,Schneider Conext Core XC,U21422003441,,,Station: A | Location: A.2 | Power: 680kW
+8bce325a-dfc0-46ef-a0bc-ad7b369e47a9,Inverter,Schneider,Schneider Conext Core XC,U21423000075,,,Station: B | Location: B.1 | Power: 680kW
+8bce325a-dfc0-46ef-a0bc-ad7b369e47a9,Inverter,Schneider,Schneider Conext Core XC,U21422001697,,,Station: B | Location: B.2 | Power: 680kW
+8bce325a-dfc0-46ef-a0bc-ad7b369e47a9,Inverter,Schneider,Schneider Conext Core XC,U21423001579,,,Station: C | Location: C.1 | Power: 680kW
+8bce325a-dfc0-46ef-a0bc-ad7b369e47a9,Inverter,Schneider,Schneider Conext Core XC,U21421000252,,,Station: C | Location: C.2 | Power: 680kW
+8bce325a-dfc0-46ef-a0bc-ad7b369e47a9,Inverter,Schneider,Schneider Conext Core XC,U21424001190,,,Station: D | Location: D.1 | Power: 680kW
+8bce325a-dfc0-46ef-a0bc-ad7b369e47a9,Inverter,Schneider,Schneider Conext Core XC,U21423000074,,,Station: D | Location: D.2 | Power: 680kW
+8bce325a-dfc0-46ef-a0bc-ad7b369e47a9,Inverter,Schneider,Schneider Conext Core XC,U21423001582,,,Station: E | Location: E.1 | Power: 680kW
+8bce325a-dfc0-46ef-a0bc-ad7b369e47a9,Inverter,Schneider,Schneider Conext Core XC,U21423000073,,,Station: E | Location: E.2 | Power: 680kW
+8bce325a-dfc0-46ef-a0bc-ad7b369e47a9,Inverter,Schneider,Schneider Conext Core XC,U21423000072,,,Station: F | Location: F.1 | Power: 680kW
+8bce325a-dfc0-46ef-a0bc-ad7b369e47a9,Inverter,Schneider,Schneider Conext Core XC,U21421000671,,,Station: F | Location: F.2 | Power: 680kW
+8bce325a-dfc0-46ef-a0bc-ad7b369e47a9,Inverter,Schneider,Schneider Conext Core XC,U21421000670,,,Station: G | Location: G.1 | Power: 680kW
+8bce325a-dfc0-46ef-a0bc-ad7b369e47a9,Inverter,Schneider,Schneider Conext Core XC,U21424002921,,,Station: G | Location: G.2 | Power: 680kW
+8bce325a-dfc0-46ef-a0bc-ad7b369e47a9,Inverter,Schneider,Schneider Conext Core XC,U21425001235,,,Station: H | Location: H.1 | Power: 680kW
+8bce325a-dfc0-46ef-a0bc-ad7b369e47a9,Inverter,Schneider,Schneider Conext Core XC,U21423001585,,,Station: H | Location: H.2 | Power: 680kW
+8bce325a-dfc0-46ef-a0bc-ad7b369e47a9,Inverter,Schneider,Schneider Conext Core XC,U21423002424,,,Station: I | Location: I.1 | Power: 680kW
+8bce325a-dfc0-46ef-a0bc-ad7b369e47a9,Inverter,Schneider,Schneider Conext Core XC,U21426001657,,,Station: I | Location: I.2 | Power: 680kW
+3ac1942d-6917-4875-a7bc-1d4596a5874a,Inverter,SMA,SMA SC-xxxCP-10,180802229,,,Station: 1 | Location: 1.1 | Power: 800kW | Inverters: 6
+3ac1942d-6917-4875-a7bc-1d4596a5874a,Inverter,SMA,SMA SC-xxxCP-10,180802257,,,Station: 1 | Location: 1.2 | Power: 800kW
+3ac1942d-6917-4875-a7bc-1d4596a5874a,Inverter,SMA,SMA SC-xxxCP-10,180802230,,,Station: 2 | Location: 2.1 | Power: 800kW
+3ac1942d-6917-4875-a7bc-1d4596a5874a,Inverter,SMA,SMA SC-xxxCP-10,180802258,,,Station: 2 | Location: 2.2 | Power: 800kW
+3ac1942d-6917-4875-a7bc-1d4596a5874a,Inverter,SMA,SMA SC-xxxCP-10,180802231,,,Station: 3 | Location: 3.1 | Power: 800kW
+3ac1942d-6917-4875-a7bc-1d4596a5874a,Inverter,SMA,SMA SC-xxxCP-10,180802259,,,Station: 3 | Location: 3.2 | Power: 800kW
+636b0b4f-592f-4461-854b-12d1024139a3,Inverter,SMA,SMA SC-xxxCP-10,180191842,,,Station: 1 | Location: 1.1 | Power: 800kW | Inverters: 5
+636b0b4f-592f-4461-854b-12d1024139a3,Inverter,SMA,SMA SC-xxxCP-10,180191843,,,Station: 1 | Location: 1.2 | Power: 800kW
+636b0b4f-592f-4461-854b-12d1024139a3,Inverter,SMA,SMA SC-xxxCP-10,180191844,,,Station: 2 | Location: 2.1 | Power: 800kW
+636b0b4f-592f-4461-854b-12d1024139a3,Inverter,SMA,SMA SC-xxxCP-10,180191845,,,Station: 2 | Location: 2.2 | Power: 800kW
+636b0b4f-592f-4461-854b-12d1024139a3,Inverter,SMA,SMA SC-xxxCP-10,180191846,,,Station: 3 | Location: 3.1 | Power: 800kW
+641522bd-d001-4881-b54b-0d1cf2a366b6,Inverter,Schneider,Schneider Conext Core XC,N21207000015,,,Station: 1 | Location: 1.1 | Power: 680kW | Inverters: 3
+641522bd-d001-4881-b54b-0d1cf2a366b6,Inverter,Schneider,Schneider Conext Core XC,N21206000041,,,Station: 2 | Location: 2.1 | Power: 680kW
+641522bd-d001-4881-b54b-0d1cf2a366b6,Inverter,Schneider,Schneider Conext Core XC,Chard 2.2,,,Station: 2 | Location: 2.2 | Power: 680kW
+9556dcde-37a4-4fcc-89d4-183c1e5c1ac0,Inverter,SMA,SMA SC-xxxCP-10,180802681,,,Location: 1 | Power: 1000kW | Inverters: 11
+9556dcde-37a4-4fcc-89d4-183c1e5c1ac0,Inverter,SMA,SMA SC-xxxCP-10,180802666,,,Location: 2
+9556dcde-37a4-4fcc-89d4-183c1e5c1ac0,Inverter,SMA,SMA SC-xxxCP-10,180802665,,,Location: 3
+9556dcde-37a4-4fcc-89d4-183c1e5c1ac0,Inverter,SMA,SMA SC-xxxCP-10,180802682,,,Location: 4
+9556dcde-37a4-4fcc-89d4-183c1e5c1ac0,Inverter,SMA,SMA SC-xxxCP-10,180802677,,,Location: 5
+9556dcde-37a4-4fcc-89d4-183c1e5c1ac0,Inverter,SMA,SMA SC-xxxCP-10,180802680,,,Location: 6
+9556dcde-37a4-4fcc-89d4-183c1e5c1ac0,Inverter,SMA,SMA SC-xxxCP-10,180802668,,,Location: 7
+9556dcde-37a4-4fcc-89d4-183c1e5c1ac0,Inverter,SMA,SMA SC-xxxCP-10,180802664,,,Location: 8
+9556dcde-37a4-4fcc-89d4-183c1e5c1ac0,Inverter,SMA,SMA SC-xxxCP-10,180802678,,,Location: 9
+9556dcde-37a4-4fcc-89d4-183c1e5c1ac0,Inverter,SMA,SMA SC-xxxCP-10,180802667,,,Location: 10
+9556dcde-37a4-4fcc-89d4-183c1e5c1ac0,Inverter,SMA,SMA SC-xxxCP-10,180802679,,,Location: 11
+bcab8720-b6a2-4d7f-b0de-c5a7fbf5a5a9,Inverter,Schneider,Schneider Conext Core XC,U21511020005,,,Station: A | Location: A.1 | Power: 680kW | Inverters: 6
+bcab8720-b6a2-4d7f-b0de-c5a7fbf5a5a9,Inverter,Schneider,Schneider Conext Core XC,U21511030004,,,Station: A | Location: A.2 | Power: 680kW
+bcab8720-b6a2-4d7f-b0de-c5a7fbf5a5a9,Inverter,Schneider,Schneider Conext Core XC,U21514030006,,,Station: B | Location: B.1 | Power: 680kW
+bcab8720-b6a2-4d7f-b0de-c5a7fbf5a5a9,Inverter,Schneider,Schneider Conext Core XC,U21514001160,,,Station: B | Location: B.2 | Power: 680kW
+bcab8720-b6a2-4d7f-b0de-c5a7fbf5a5a9,Inverter,Schneider,Schneider Conext Core XC,U21516000082,,,Station: C | Location: C.1 | Power: 680kW
+bcab8720-b6a2-4d7f-b0de-c5a7fbf5a5a9,Inverter,Schneider,Schneider Conext Core XC,U21516020008,,,Station: C | Location: C.2 | Power: 680kW
+5a8cd7ff-a41b-447a-920c-a6e80344b1b0,Inverter,SMA,SMA SC-xxxCP-10,180800161,,,Location: 1 | Power: 850kW | Inverters: 12
+5a8cd7ff-a41b-447a-920c-a6e80344b1b0,Inverter,SMA,SMA SC-xxxCP-10,180800164,,,Location: 2 | Power: 850kW
+5a8cd7ff-a41b-447a-920c-a6e80344b1b0,Inverter,SMA,SMA SC-xxxCP-10,Christchurch 3,,,Location: 3 | Power: 850kW
+5a8cd7ff-a41b-447a-920c-a6e80344b1b0,Inverter,SMA,SMA SC-xxxCP-10,Christchurch 4,,,Location: 4 | Power: 850kW
+5a8cd7ff-a41b-447a-920c-a6e80344b1b0,Inverter,SMA,SMA SC-xxxCP-10,Christchurch 5,,,Location: 5 | Power: 850kW
+5a8cd7ff-a41b-447a-920c-a6e80344b1b0,Inverter,SMA,SMA SC-xxxCP-10,Christchurch 6,,,Location: 6 | Power: 850kW
+5a8cd7ff-a41b-447a-920c-a6e80344b1b0,Inverter,SMA,SMA SC-xxxCP-10,180800255,,,Location: 7 | Power: 850kW
+5a8cd7ff-a41b-447a-920c-a6e80344b1b0,Inverter,SMA,SMA SC-xxxCP-10,Christchurch 8,,,Location: 8 | Power: 850kW
+5a8cd7ff-a41b-447a-920c-a6e80344b1b0,Inverter,SMA,SMA SC-xxxCP-10,Christchurch 9,,,Location: 9 | Power: 850kW
+5a8cd7ff-a41b-447a-920c-a6e80344b1b0,Inverter,SMA,SMA SC-xxxCP-10,Christchurch 10,,,Location: 10 | Power: 850kW
+5a8cd7ff-a41b-447a-920c-a6e80344b1b0,Inverter,SMA,SMA SC-xxxCP-10,180800160,,,Location: 11 | Power: 850kW
+5a8cd7ff-a41b-447a-920c-a6e80344b1b0,Inverter,SMA,SMA SC-xxxCP-10,Christchurch 12,,,Location: 12 | Power: 850kW
+1574550b-3145-4613-8038-7006efe75847,Inverter,Schneider,Schneider Conext Core XC,Cobbs Cross 1,,,Station: 1 | Location: 1 | Power: 680kW | Inverters: 8
+1574550b-3145-4613-8038-7006efe75847,Inverter,Schneider,Schneider Conext Core XC,Cobbs Cross 2,,,Station: 1 | Location: 2 | Power: 680kW
+1574550b-3145-4613-8038-7006efe75847,Inverter,Schneider,Schneider Conext Core XC,Cobbs Cross 3,,,Station: 2 | Location: 3 | Power: 680kW
+1574550b-3145-4613-8038-7006efe75847,Inverter,Schneider,Schneider Conext Core XC,Cobbs Cross 4,,,Station: 2 | Location: 4 | Power: 680kW
+1574550b-3145-4613-8038-7006efe75847,Inverter,Schneider,Schneider Conext Core XC,Cobbs Cross 5,,,Station: 3 | Location: 5 | Power: 680kW
+1574550b-3145-4613-8038-7006efe75847,Inverter,Schneider,Schneider Conext Core XC,Cobbs Cross 6,,,Station: 3 | Location: 6 | Power: 680kW
+1574550b-3145-4613-8038-7006efe75847,Inverter,Schneider,Schneider Conext Core XC,Cobbs Cross 7,,,Station: 4 | Location: 7 | Power: 680kW
+1574550b-3145-4613-8038-7006efe75847,Inverter,Schneider,Schneider Conext Core XC,Cobbs Cross 8,,,Station: 4 | Location: 8 | Power: 680kW
+4b2a37ae-420c-47be-af2a-7f337d5c8246,Inverter,Schneider,Schneider Conext Core XC,U21510020030,,,Station: A | Location: A.1 | Power: 680kW | Inverters: 6
+4b2a37ae-420c-47be-af2a-7f337d5c8246,Inverter,Schneider,Schneider Conext Core XC,U21510030024,,,Station: A | Location: A.2 | Power: 680kW
+4b2a37ae-420c-47be-af2a-7f337d5c8246,Inverter,Schneider,Schneider Conext Core XC,U21523000399,,,Station: B | Location: B.1 | Power: 680kW
+4b2a37ae-420c-47be-af2a-7f337d5c8246,Inverter,Schneider,Schneider Conext Core XC,U21523000384,,,Station: B | Location: B.2 | Power: 680kW
+4b2a37ae-420c-47be-af2a-7f337d5c8246,Inverter,Schneider,Schneider Conext Core XC,U21516000027,,,Station: C | Location: C.1 | Power: 680kW
+4b2a37ae-420c-47be-af2a-7f337d5c8246,Inverter,Schneider,Schneider Conext Core XC,U21515020026,,,Station: C | Location: C.2 | Power: 680kW
+e0eee0e2-a5e4-4b97-9778-a30aade9ba07,Inverter,SMA,SMA SC-xxxCP-10,180801288,,,Station: 1 | Location: 1.1 | Power: 1000kW | Inverters: 20
+e0eee0e2-a5e4-4b97-9778-a30aade9ba07,Inverter,SMA,SMA SC-xxxCP-10,180801286,,,Station: 1 | Location: 1.2 | Power: 1000kW
+e0eee0e2-a5e4-4b97-9778-a30aade9ba07,Inverter,SMA,SMA SC-xxxCP-10,180801290,,,Station: 2 | Location: 2.1 | Power: 1000kW
+e0eee0e2-a5e4-4b97-9778-a30aade9ba07,Inverter,SMA,SMA SC-xxxCP-10,180801289,,,Station: 2 | Location: 2.2 | Power: 1000kW
+e0eee0e2-a5e4-4b97-9778-a30aade9ba07,Inverter,SMA,SMA SC-xxxCP-10,180801295,,,Station: 3 | Location: 3.1 | Power: 1000kW
+e0eee0e2-a5e4-4b97-9778-a30aade9ba07,Inverter,SMA,SMA SC-xxxCP-10,180801294,,,Station: 3 | Location: 3.2 | Power: 1000kW
+e0eee0e2-a5e4-4b97-9778-a30aade9ba07,Inverter,SMA,SMA SC-xxxCP-10,180801297,,,Station: 4 | Location: 4.1 | Power: 1000kW
+e0eee0e2-a5e4-4b97-9778-a30aade9ba07,Inverter,SMA,SMA SC-xxxCP-10,180801296,,,Station: 4 | Location: 4.2 | Power: 1000kW
+e0eee0e2-a5e4-4b97-9778-a30aade9ba07,Inverter,SMA,SMA SC-xxxCP-10,180801304,,,Station: 5 | Location: 5.1 | Power: 1000kW
+e0eee0e2-a5e4-4b97-9778-a30aade9ba07,Inverter,SMA,SMA SC-xxxCP-10,180801303,,,Station: 5 | Location: 5.2 | Power: 1000kW
+e0eee0e2-a5e4-4b97-9778-a30aade9ba07,Inverter,SMA,SMA SC-xxxCP-10,180801306,,,Station: 6 | Location: 6.1 | Power: 1000kW
+e0eee0e2-a5e4-4b97-9778-a30aade9ba07,Inverter,SMA,SMA SC-xxxCP-10,180801305,,,Station: 6 | Location: 6.2 | Power: 1000kW
+e0eee0e2-a5e4-4b97-9778-a30aade9ba07,Inverter,SMA,SMA SC-xxxCP-10,180801308,,,Station: 7 | Location: 7.1 | Power: 1000kW
+e0eee0e2-a5e4-4b97-9778-a30aade9ba07,Inverter,SMA,SMA SC-xxxCP-10,180801307,,,Station: 7 | Location: 7.2 | Power: 1000kW
+e0eee0e2-a5e4-4b97-9778-a30aade9ba07,Inverter,SMA,SMA SC-xxxCP-10,180801310,,,Station: 8 | Location: 8.1 | Power: 1000kW
+e0eee0e2-a5e4-4b97-9778-a30aade9ba07,Inverter,SMA,SMA SC-xxxCP-10,180801309,,,Station: 8 | Location: 8.2 | Power: 1000kW
+e0eee0e2-a5e4-4b97-9778-a30aade9ba07,Inverter,SMA,SMA SC-xxxCP-10,180801312,,,Station: 9 | Location: 9.1 | Power: 1000kW
+e0eee0e2-a5e4-4b97-9778-a30aade9ba07,Inverter,SMA,SMA SC-xxxCP-10,180801311,,,Station: 9 | Location: 9.2 | Power: 1000kW
+e0eee0e2-a5e4-4b97-9778-a30aade9ba07,Inverter,SMA,SMA SC-xxxCP-10,180801335,,,Station: 10 | Location: 10.1 | Power: 1000kW
+e0eee0e2-a5e4-4b97-9778-a30aade9ba07,Inverter,SMA,SMA SC-xxxCP-10,180801334,,,Station: 10 | Location: 10.2 | Power: 1000kW
+93760475-85f7-4550-8a50-1e6a665bfeed,Inverter,Schneider,Schneider Conext Core XC,U21505000019,,,Station: A | Location: A.1 | Power: 680kW | Inverters: 22
+93760475-85f7-4550-8a50-1e6a665bfeed,Inverter,Schneider,Schneider Conext Core XC,U21506020006,,,Station: A | Location: A.2 | Power: 680kW
+93760475-85f7-4550-8a50-1e6a665bfeed,Inverter,Schneider,Schneider Conext Core XC,U21505000453,,,Station: B | Location: B.1 | Power: 680kW
+93760475-85f7-4550-8a50-1e6a665bfeed,Inverter,Schneider,Schneider Conext Core XC,U21505000505,,,Station: B | Location: B.2 | Power: 680kW
+93760475-85f7-4550-8a50-1e6a665bfeed,Inverter,Schneider,Schneider Conext Core XC,U21424002920,,,Station: C | Location: C.1 | Power: 680kW
+93760475-85f7-4550-8a50-1e6a665bfeed,Inverter,Schneider,Schneider Conext Core XC,U21424002922,,,Station: C | Location: C.2 | Power: 680kW
+93760475-85f7-4550-8a50-1e6a665bfeed,Inverter,Schneider,Schneider Conext Core XC,U21505000023,,,Station: D | Location: D.1 | Power: 680kW
+93760475-85f7-4550-8a50-1e6a665bfeed,Inverter,Schneider,Schneider Conext Core XC,U21505000497,,,Station: D | Location: D.2 | Power: 680kW
+93760475-85f7-4550-8a50-1e6a665bfeed,Inverter,Schneider,Schneider Conext Core XC,U21505000986,,,Station: E | Location: E.1 | Power: 680kW
+93760475-85f7-4550-8a50-1e6a665bfeed,Inverter,Schneider,Schneider Conext Core XC,U21503000281,,,Station: E | Location: E.2 | Power: 680kW
+93760475-85f7-4550-8a50-1e6a665bfeed,Inverter,Schneider,Schneider Conext Core XC,U21423002418,,,Station: F | Location: F.1 | Power: 680kW
+93760475-85f7-4550-8a50-1e6a665bfeed,Inverter,Schneider,Schneider Conext Core XC,U21425001233,,,Station: F | Location: F.2 | Power: 680kW
+93760475-85f7-4550-8a50-1e6a665bfeed,Inverter,Schneider,Schneider Conext Core XC,U21446000050,,,Station: G | Location: G.1 | Power: 680kW
+93760475-85f7-4550-8a50-1e6a665bfeed,Inverter,Schneider,Schneider Conext Core XC,U21444000303,,,Station: G | Location: G.2 | Power: 680kW
+93760475-85f7-4550-8a50-1e6a665bfeed,Inverter,Schneider,Schneider Conext Core XC,U21504001177,,,Station: H | Location: H.1 | Power: 680kW
+93760475-85f7-4550-8a50-1e6a665bfeed,Inverter,Schneider,Schneider Conext Core XC,U21504001179,,,Station: H | Location: H.2 | Power: 680kW
+93760475-85f7-4550-8a50-1e6a665bfeed,Inverter,Schneider,Schneider Conext Core XC,U21422001690,,,Station: I | Location: I.1 | Power: 680kW
+93760475-85f7-4550-8a50-1e6a665bfeed,Inverter,Schneider,Schneider Conext Core XC,U21426001654,,,Station: I | Location: I.2 | Power: 680kW
+93760475-85f7-4550-8a50-1e6a665bfeed,Inverter,Schneider,Schneider Conext Core XC,U21505000502,,,Station: J | Location: J.1 | Power: 680kW
+93760475-85f7-4550-8a50-1e6a665bfeed,Inverter,Schneider,Schneider Conext Core XC,U21505000501,,,Station: J | Location: J.2 | Power: 680kW
+93760475-85f7-4550-8a50-1e6a665bfeed,Inverter,Schneider,Schneider Conext Core XC,U21448000046,,,Station: K | Location: K.1 | Power: 680kW
+93760475-85f7-4550-8a50-1e6a665bfeed,Inverter,Schneider,Schneider Conext Core XC,U21444000014,,,Station: K | Location: K.2 | Power: 680kW
+d8025d9c-bfd8-4b13-9c26-73a9b52cc0c9,Inverter,SMA,SMA SC-xxxCP-10,180802233,,,Station: 1 | Location: 1 | Power: 800kW | Inverters: 5
+d8025d9c-bfd8-4b13-9c26-73a9b52cc0c9,Inverter,SMA,SMA SC-xxxCP-10,180802232,,,Station: 1 | Location: 2 | Power: 800kW
+d8025d9c-bfd8-4b13-9c26-73a9b52cc0c9,Inverter,SMA,SMA SC-xxxCP-10,180802236,,,Station: 2 | Location: 3 | Power: 850kW
+d8025d9c-bfd8-4b13-9c26-73a9b52cc0c9,Inverter,SMA,SMA SC-xxxCP-10,180802235,,,Station: 3 | Location: 4 | Power: 850kW
+d8025d9c-bfd8-4b13-9c26-73a9b52cc0c9,Inverter,SMA,SMA SC-xxxCP-10,180802234,,,Station: 3 | Location: 5 | Power: 850kW
+512c29b9-8855-4805-8e6a-ff81f7f3dd0c,Inverter,Schneider,Schneider Conext Core XC,,,,Station: 1 | Location: 1.1 | Power: 680kW | Inverters: 6
+512c29b9-8855-4805-8e6a-ff81f7f3dd0c,Inverter,Schneider,Schneider Conext Core XC,U21516000281,,,Station: 1 | Location: 1.2 | Power: 680kW
+512c29b9-8855-4805-8e6a-ff81f7f3dd0c,Inverter,Schneider,Schneider Conext Core XC,,,,Station: 2 | Location: 2.1 | Power: 680kW
+512c29b9-8855-4805-8e6a-ff81f7f3dd0c,Inverter,Schneider,Schneider Conext Core XC,,,,Station: 2 | Location: 2.2 | Power: 680kW
+512c29b9-8855-4805-8e6a-ff81f7f3dd0c,Inverter,Schneider,Schneider Conext Core XC,,,,Station: 3 | Location: 3.1 | Power: 680kW
+512c29b9-8855-4805-8e6a-ff81f7f3dd0c,Inverter,Schneider,Schneider Conext Core XC,,,,Station: 3 | Location: 3.2 | Power: 680kW
+21ca8018-0a4c-41ca-8d50-3a28da190d39,Inverter,SMA,SMA SC-xxxCP-10,180351163,,,Station: 3 | Location: 5 | Power: 900kW | Inverters: 14
+21ca8018-0a4c-41ca-8d50-3a28da190d39,Inverter,SMA,SMA SC-xxxCP-10,180351164,,,Station: 3 | Location: 6 | Power: 900kW
+21ca8018-0a4c-41ca-8d50-3a28da190d39,Inverter,SMA,SMA SC-xxxCP-10,180351169,,,Station: 4 | Location: 7 | Power: 900kW
+21ca8018-0a4c-41ca-8d50-3a28da190d39,Inverter,SMA,SMA SC-xxxCP-10,180351170,,,Station: 4 | Location: 8 | Power: 900kW
+21ca8018-0a4c-41ca-8d50-3a28da190d39,Inverter,SMA,SMA SC-xxxCP-10,180351168,,,Station: 5 | Location: 9 | Power: 900kW
+21ca8018-0a4c-41ca-8d50-3a28da190d39,Inverter,SMA,SMA SC-xxxCP-10,180351167,,,Station: 5 | Location: 10 | Power: 900kW
+21ca8018-0a4c-41ca-8d50-3a28da190d39,Inverter,SMA,SMA SC-xxxCP-10,180351157,,,Station: 6 | Location: 11 | Power: 900kW
+21ca8018-0a4c-41ca-8d50-3a28da190d39,Inverter,SMA,SMA SC-xxxCP-10,180351158,,,Station: 6 | Location: 12 | Power: 900kW
+21ca8018-0a4c-41ca-8d50-3a28da190d39,Inverter,SMA,SMA SC-xxxCP-10,180351161,,,Station: 7 | Location: 13 | Power: 900kW
+21ca8018-0a4c-41ca-8d50-3a28da190d39,Inverter,SMA,SMA SC-xxxCP-10,180351162,,,Station: 7 | Location: 14 | Power: 900kW
+21ca8018-0a4c-41ca-8d50-3a28da190d39,Inverter,SMA,SMA SC-xxxCP-10,180351166,,,Station: 8 | Location: 15 | Power: 900kW
+21ca8018-0a4c-41ca-8d50-3a28da190d39,Inverter,SMA,SMA SC-xxxCP-10,180351165,,,Station: 8 | Location: 16 | Power: 900kW
+21ca8018-0a4c-41ca-8d50-3a28da190d39,Inverter,SMA,SMA SC-xxxCP-10,180351159,,,Station: 9 | Location: 17 | Power: 900kW
+21ca8018-0a4c-41ca-8d50-3a28da190d39,Inverter,SMA,SMA SC-xxxCP-10,180351160,,,Station: 9 | Location: 18 | Power: 900kW
+75f6223e-4bf8-4ffa-aa72-d8a227ef9fa1,Inverter,Ingecon,Ingecon SUN 605TL X320,300142120R80,,,Station: 1 | Location: 1A | Power: 605kW | Inverters: 21
+75f6223e-4bf8-4ffa-aa72-d8a227ef9fa1,Inverter,Ingecon,Ingecon SUN 605TL X320,300142121R00,,,Station: 1 | Location: 1B | Power: 605kW
+75f6223e-4bf8-4ffa-aa72-d8a227ef9fa1,Inverter,Ingecon,Ingecon SUN 605TL X320,300142120R80,,,Station: 2 | Location: 2A | Power: 605kW
+75f6223e-4bf8-4ffa-aa72-d8a227ef9fa1,Inverter,Ingecon,Ingecon SUN 605TL X320,300142121R10,,,Station: 2 | Location: 2B | Power: 605kW
+75f6223e-4bf8-4ffa-aa72-d8a227ef9fa1,Inverter,Ingecon,Ingecon SUN 605TL X320,300142120R50,,,Station: 3 | Location: 3A | Power: 605kW
+75f6223e-4bf8-4ffa-aa72-d8a227ef9fa1,Inverter,Ingecon,Ingecon SUN 605TL X320,300142120R90,,,Station: 3 | Location: 3B | Power: 605kW
+75f6223e-4bf8-4ffa-aa72-d8a227ef9fa1,Inverter,Ingecon,Ingecon SUN 605TL X320,300142120R40,,,Station: 4 | Location: 4A | Power: 605kW
+75f6223e-4bf8-4ffa-aa72-d8a227ef9fa1,Inverter,Ingecon,Ingecon SUN 605TL X320,300142120R70,,,Station: 4 | Location: 4B | Power: 605kW
+75f6223e-4bf8-4ffa-aa72-d8a227ef9fa1,Inverter,Ingecon,Ingecon SUN 605TL X320,300142120R50,,,Station: 5 | Location: 5A | Power: 605kW
+75f6223e-4bf8-4ffa-aa72-d8a227ef9fa1,Inverter,Ingecon,Ingecon SUN 605TL X320,300142121R60,,,Station: 5 | Location: 5B | Power: 605kW
+75f6223e-4bf8-4ffa-aa72-d8a227ef9fa1,Inverter,Ingecon,Ingecon SUN 400TL X320,200142101R40,,,Station: 6 | Location: 6A | Power: 400kW
+75f6223e-4bf8-4ffa-aa72-d8a227ef9fa1,Inverter,Ingecon,Ingecon SUN 605TL X320,300142122R20,,,Station: 7 | Location: 7A | Power: 605kW
+75f6223e-4bf8-4ffa-aa72-d8a227ef9fa1,Inverter,Ingecon,Ingecon SUN 605TL X320,300142122R30,,,Station: 7 | Location: 7B | Power: 605kW
+75f6223e-4bf8-4ffa-aa72-d8a227ef9fa1,Inverter,Ingecon,Ingecon SUN 605TL X320,300142121R30,,,Station: 8 | Location: 8A | Power: 605kW
+75f6223e-4bf8-4ffa-aa72-d8a227ef9fa1,Inverter,Ingecon,Ingecon SUN 605TL X320,300142122R30,,,Station: 8 | Location: 8B | Power: 605kW
+75f6223e-4bf8-4ffa-aa72-d8a227ef9fa1,Inverter,Ingecon,Ingecon SUN 605TL X320,300142121R90,,,Station: 9 | Location: 9A | Power: 605kW
+75f6223e-4bf8-4ffa-aa72-d8a227ef9fa1,Inverter,Ingecon,Ingecon SUN 605TL X320,300142121R80,,,Station: 9 | Location: 9B | Power: 605kW
+75f6223e-4bf8-4ffa-aa72-d8a227ef9fa1,Inverter,Ingecon,Ingecon SUN 605TL X320,300142122R00,,,Station: 10 | Location: 10A | Power: 605kW
+75f6223e-4bf8-4ffa-aa72-d8a227ef9fa1,Inverter,Ingecon,Ingecon SUN 605TL X320,300142121R20,,,Station: 11 | Location: 11A | Power: 605kW
+75f6223e-4bf8-4ffa-aa72-d8a227ef9fa1,Inverter,Ingecon,Ingecon SUN 605TL X320,Crucis 12A,,,Station: 12 | Location: 12A | Power: 605kW
+75f6223e-4bf8-4ffa-aa72-d8a227ef9fa1,Inverter,Ingecon,Ingecon SUN 605TL X320,Crucis 12B,,,Station: 12 | Location: 12B | Power: 605kW
+f95895e7-f735-4fd2-95d2-3c07f10de690,Inverter,Schneider,Schneider Conext Core XC,N21318000406,,,Station: A | Location: A1 | Power: 680kW | Inverters: 46
+f95895e7-f735-4fd2-95d2-3c07f10de690,Inverter,Schneider,Schneider Conext Core XC,U21315000016,,,Station: A | Location: A2 | Power: 680kW
+f95895e7-f735-4fd2-95d2-3c07f10de690,Inverter,Schneider,Schneider Conext Core XC,N21319000038,,,Station: B | Location: B1 | Power: 680kW
+f95895e7-f735-4fd2-95d2-3c07f10de690,Inverter,Schneider,Schneider Conext Core XC,N21317000011,,,Station: B | Location: B2 | Power: 680kW
+f95895e7-f735-4fd2-95d2-3c07f10de690,Inverter,Schneider,Schneider Conext Core XC,N21318000407,,,Station: C | Location: C1 | Power: 680kW
+f95895e7-f735-4fd2-95d2-3c07f10de690,Inverter,Schneider,Schneider Conext Core XC,N21317000018,,,Station: C | Location: C2 | Power: 680kW
+f95895e7-f735-4fd2-95d2-3c07f10de690,Inverter,Schneider,Schneider Conext Core XC,N21317000019,,,Station: D | Location: D1 | Power: 680kW
+f95895e7-f735-4fd2-95d2-3c07f10de690,Inverter,Schneider,Schneider Conext Core XC,N21321000007,,,Station: D | Location: D2 | Power: 680kW
+f95895e7-f735-4fd2-95d2-3c07f10de690,Inverter,Schneider,Schneider Conext Core XC,U21320000234,,,Station: E | Location: E1 | Power: 680kW
+f95895e7-f735-4fd2-95d2-3c07f10de690,Inverter,Schneider,Schneider Conext Core XC,N21320000061,,,Station: E | Location: E2 | Power: 680kW
+f95895e7-f735-4fd2-95d2-3c07f10de690,Inverter,Schneider,Schneider Conext Core XC,U21310000554,,,Station: F | Location: F1 | Power: 680kW
+f95895e7-f735-4fd2-95d2-3c07f10de690,Inverter,Schneider,Schneider Conext Core XC,U21309000989,,,Station: F | Location: F2 | Power: 680kW
+f95895e7-f735-4fd2-95d2-3c07f10de690,Inverter,Schneider,Schneider Conext Core XC,U21245000786,,,Station: G | Location: G1 | Power: 680kW
+f95895e7-f735-4fd2-95d2-3c07f10de690,Inverter,Schneider,Schneider Conext Core XC,U21245000269,,,Station: G | Location: G2 | Power: 680kW
+f95895e7-f735-4fd2-95d2-3c07f10de690,Inverter,Schneider,Schneider Conext Core XC,N21245000737,,,Station: H | Location: H1 | Power: 680kW
+f95895e7-f735-4fd2-95d2-3c07f10de690,Inverter,Schneider,Schneider Conext Core XC,U21245000270,,,Station: H | Location: H2 | Power: 680kW
+f95895e7-f735-4fd2-95d2-3c07f10de690,Inverter,Schneider,Schneider Conext Core XC,U21245000271,,,Station: I | Location: I1 | Power: 680kW
+f95895e7-f735-4fd2-95d2-3c07f10de690,Inverter,Schneider,Schneider Conext Core XC,U21245000787,,,Station: I | Location: I2 | Power: 680kW
+f95895e7-f735-4fd2-95d2-3c07f10de690,Inverter,Schneider,Schneider Conext Core XC,U21405000532,,,Station: J | Location: J1 | Power: 680kW
+f95895e7-f735-4fd2-95d2-3c07f10de690,Inverter,Schneider,Schneider Conext Core XC,U21412001023,,,Station: J | Location: J2 | Power: 680kW
+f95895e7-f735-4fd2-95d2-3c07f10de690,Inverter,Schneider,Schneider Conext Core XC,U21404001736,,,Station: K | Location: K1 | Power: 680kW
+f95895e7-f735-4fd2-95d2-3c07f10de690,Inverter,Schneider,Schneider Conext Core XC,U21404000599,,,Station: K | Location: K2 | Power: 680kW
+f95895e7-f735-4fd2-95d2-3c07f10de690,Inverter,Schneider,Schneider Conext Core XC,U21408000746,,,Station: L | Location: L1 | Power: 680kW
+f95895e7-f735-4fd2-95d2-3c07f10de690,Inverter,Schneider,Schneider Conext Core XC,U21307000375,,,Station: L | Location: L2 | Power: 680kW
+f95895e7-f735-4fd2-95d2-3c07f10de690,Inverter,Schneider,Schneider Conext Core XC,N21306000805,,,Station: M | Location: M1 | Power: 680kW
+f95895e7-f735-4fd2-95d2-3c07f10de690,Inverter,Schneider,Schneider Conext Core XC,U21306000992,,,Station: M | Location: M2 | Power: 680kW
+f95895e7-f735-4fd2-95d2-3c07f10de690,Inverter,Schneider,Schneider Conext Core XC,U21406000887,,,Station: N | Location: N1 | Power: 680kW
+f95895e7-f735-4fd2-95d2-3c07f10de690,Inverter,Schneider,Schneider Conext Core XC,U21306000308,,,Station: N | Location: N2 | Power: 680kW
+f95895e7-f735-4fd2-95d2-3c07f10de690,Inverter,Schneider,Schneider Conext Core XC,N21307000002,,,Station: O | Location: O1 | Power: 680kW
+f95895e7-f735-4fd2-95d2-3c07f10de690,Inverter,Schneider,Schneider Conext Core XC,U21307000218,,,Station: O | Location: O2 | Power: 680kW
+f95895e7-f735-4fd2-95d2-3c07f10de690,Inverter,Schneider,Schneider Conext Core XC,U21306000991,,,Station: P | Location: P1 | Power: 680kW
+f95895e7-f735-4fd2-95d2-3c07f10de690,Inverter,Schneider,Schneider Conext Core XC,U21306000986,,,Station: P | Location: P2 | Power: 680kW
+f95895e7-f735-4fd2-95d2-3c07f10de690,Inverter,Schneider,Schneider Conext Core XC,U21306000310,,,Station: Q | Location: Q1 | Power: 680kW
+f95895e7-f735-4fd2-95d2-3c07f10de690,Inverter,Schneider,Schneider Conext Core XC,U21405000674,,,Station: Q | Location: Q2 | Power: 680kW
+f95895e7-f735-4fd2-95d2-3c07f10de690,Inverter,Schneider,Schneider Conext Core XC,U21319002388,,,Station: R | Location: R1 | Power: 680kW
+f95895e7-f735-4fd2-95d2-3c07f10de690,Inverter,Schneider,Schneider Conext Core XC,N21321000006,,,Station: R | Location: R2 | Power: 680kW
+f95895e7-f735-4fd2-95d2-3c07f10de690,Inverter,Schneider,Schneider Conext Core XC,U21245000272,,,Station: S | Location: S1 | Power: 680kW
+f95895e7-f735-4fd2-95d2-3c07f10de690,Inverter,Schneider,Schneider Conext Core XC,U21245000106,,,Station: S | Location: S2 | Power: 680kW
+f95895e7-f735-4fd2-95d2-3c07f10de690,Inverter,Schneider,Schneider Conext Core XC,N21325000014,,,Station: T | Location: T1 | Power: 680kW
+f95895e7-f735-4fd2-95d2-3c07f10de690,Inverter,Schneider,Schneider Conext Core XC,N21320000002,,,Station: T | Location: T2 | Power: 680kW
+f95895e7-f735-4fd2-95d2-3c07f10de690,Inverter,Schneider,Schneider Conext Core XC,U21315000017,,,Station: U | Location: U1 | Power: 680kW
+f95895e7-f735-4fd2-95d2-3c07f10de690,Inverter,Schneider,Schneider Conext Core XC,U21309000498,,,Station: U | Location: U2 | Power: 680kW
+f95895e7-f735-4fd2-95d2-3c07f10de690,Inverter,Schneider,Schneider Conext Core XC,U21308000249,,,Station: V | Location: V1 | Power: 680kW
+f95895e7-f735-4fd2-95d2-3c07f10de690,Inverter,Schneider,Schneider Conext Core XC,U21315000419,,,Station: V | Location: V2 | Power: 680kW
+f95895e7-f735-4fd2-95d2-3c07f10de690,Inverter,Schneider,Schneider Conext Core XC,N21321000005,,,Station: W | Location: W1 | Power: 680kW
+f95895e7-f735-4fd2-95d2-3c07f10de690,Inverter,Schneider,Schneider Conext Core XC,N21302000194,,,Station: W | Location: W2 | Power: 680kW
+d2f705cd-1311-4d64-bf9f-a867a6c47d26,Inverter,Schneider,Schneider Conext Core XC,U21425001241,,,Station: EA | Location: EA1 | Power: 680kW | Inverters: 8
+d2f705cd-1311-4d64-bf9f-a867a6c47d26,Inverter,Schneider,Schneider Conext Core XC,U21423002420,,,Station: EA | Location: EA2 | Power: 680kW
+d2f705cd-1311-4d64-bf9f-a867a6c47d26,Inverter,Schneider,Schneider Conext Core XC,U21423000077,,,Station: EB | Location: EB1 | Power: 680kW
+d2f705cd-1311-4d64-bf9f-a867a6c47d26,Inverter,Schneider,Schneider Conext Core XC,U21422001689,,,Station: EB | Location: EB2 | Power: 680kW
+d2f705cd-1311-4d64-bf9f-a867a6c47d26,Inverter,Schneider,Schneider Conext Core XC,U21423001578,,,Station: EC | Location: EC1 | Power: 680kW
+d2f705cd-1311-4d64-bf9f-a867a6c47d26,Inverter,Schneider,Schneider Conext Core XC,U21425001234,,,Station: EC | Location: EC2 | Power: 680kW
+d2f705cd-1311-4d64-bf9f-a867a6c47d26,Inverter,Schneider,Schneider Conext Core XC,U21423001581,,,Station: ED | Location: ED1 | Power: 680kW
+d2f705cd-1311-4d64-bf9f-a867a6c47d26,Inverter,Schneider,Schneider Conext Core XC,U21422003439,,,Station: ED | Location: ED2 | Power: 680kW
+03b4a2a2-1c7f-4a97-82dc-1b26466fe011,Inverter,Schneider,Schneider Conext Core XC,U21511020004,,,Station: A | Location: A.1 | Power: 680kW | Inverters: 6
+03b4a2a2-1c7f-4a97-82dc-1b26466fe011,Inverter,Schneider,Schneider Conext Core XC,U21511000237,,,Station: A | Location: A.2 | Power: 680kW
+03b4a2a2-1c7f-4a97-82dc-1b26466fe011,Inverter,Schneider,Schneider Conext Core XC,U21511020009,,,Station: B | Location: B.1 | Power: 680kW
+03b4a2a2-1c7f-4a97-82dc-1b26466fe011,Inverter,Schneider,Schneider Conext Core XC,U21511000190,,,Station: B | Location: B.2 | Power: 680kW
+03b4a2a2-1c7f-4a97-82dc-1b26466fe011,Inverter,Schneider,Schneider Conext Core XC,U21514030004,,,Station: C | Location: C.1 | Power: 680kW
+03b4a2a2-1c7f-4a97-82dc-1b26466fe011,Inverter,Schneider,Schneider Conext Core XC,U21511030003,,,Station: C | Location: C.2 | Power: 680kW
+7c276e28-fdc2-4a92-a245-4bbcf3d36eba,Inverter,SMA,SMA SC-xxxx,3018491563,,,Location: MQA14 | Power: 4000kW
+7c276e28-fdc2-4a92-a245-4bbcf3d36eba,Inverter,SMA,SMA SC-xxxx,CT1540/23,,,Power: 4000kW
+7c276e28-fdc2-4a92-a245-4bbcf3d36eba,Inverter,SMA,SMA SC-xxxx,CT1541/23,,,Power: 4000kW
+7c276e28-fdc2-4a92-a245-4bbcf3d36eba,Inverter,SMA,SMA SC-xxxx,CT1542/23,,,Power: 4000kW
+7c276e28-fdc2-4a92-a245-4bbcf3d36eba,Inverter,SMA,SMA SC-xxxx,CT1543/23,,,Power: 4000kW
+7c276e28-fdc2-4a92-a245-4bbcf3d36eba,Inverter,SMA,SMA SC-xxxx,CT1544/23,,,Power: 4000kW
+7c276e28-fdc2-4a92-a245-4bbcf3d36eba,Inverter,SMA,SMA SC-xxxx,CT1545/23,,,Power: 4000kW
+7c276e28-fdc2-4a92-a245-4bbcf3d36eba,Inverter,SMA,SMA SC-xxxx,CT1546/23,,,Power: 4000kW
+fc5d9e01-0dff-4835-a068-d925d8ab7662,Inverter,Schneider,Schneider Conext Core XC,U21436020008,,,Station: 1 | Location: 1.1 | Power: 680kW | Inverters: 11
+fc5d9e01-0dff-4835-a068-d925d8ab7662,Inverter,Schneider,Schneider Conext Core XC,U21429000280,,,Station: 1 | Location: 1.2 | Power: 680kW
+fc5d9e01-0dff-4835-a068-d925d8ab7662,Inverter,Schneider,Schneider Conext Core XC,U21436020013,,,Station: 2 | Location: 2.1 | Power: 680kW
+fc5d9e01-0dff-4835-a068-d925d8ab7662,Inverter,Schneider,Schneider Conext Core XC,U21312001171,,,Station: 2 | Location: 2.2 | Power: 680kW
+fc5d9e01-0dff-4835-a068-d925d8ab7662,Inverter,Schneider,Schneider Conext Core XC,U21312000307,,,Station: 3 | Location: 3.1 | Power: 680kW
+fc5d9e01-0dff-4835-a068-d925d8ab7662,Inverter,Schneider,Schneider Conext Core XC,U21436030001,,,Station: 3 | Location: 3.2 | Power: 680kW
+fc5d9e01-0dff-4835-a068-d925d8ab7662,Inverter,Schneider,Schneider Conext Core XC,U21312001166,,,Station: 4 | Location: 4.1 | Power: 680kW
+fc5d9e01-0dff-4835-a068-d925d8ab7662,Inverter,Schneider,Schneider Conext Core XC,U21312000304,,,Station: 4 | Location: 4.2 | Power: 680kW
+fc5d9e01-0dff-4835-a068-d925d8ab7662,Inverter,Schneider,Schneider Conext Core XC,U21429000489,,,Station: 5 | Location: 5.1 | Power: 680kW
+fc5d9e01-0dff-4835-a068-d925d8ab7662,Inverter,Schneider,Schneider Conext Core XC,U21429000490,,,Station: 5 | Location: 5.2 | Power: 680kW
+fc5d9e01-0dff-4835-a068-d925d8ab7662,Inverter,Schneider,Schneider Conext Core XC,U21435000660,,,Station: 6 | Location: 6.1 | Power: 680kW
+abebfe97-1877-4de5-a64c-e29d9cd267aa,Inverter,SMA,SMA SC-xxxCP-10,180802330,,,Station: 1 | Location: 1 | Power: 900kW | Inverters: 10
+abebfe97-1877-4de5-a64c-e29d9cd267aa,Inverter,SMA,SMA SC-xxxCP-10,180802331,,,Station: 1 | Location: 2 | Power: 900kW
+abebfe97-1877-4de5-a64c-e29d9cd267aa,Inverter,SMA,SMA SC-xxxCP-10,180802332,,,Station: 2 | Location: 3 | Power: 900kW
+abebfe97-1877-4de5-a64c-e29d9cd267aa,Inverter,SMA,SMA SC-xxxCP-10,180802333,,,Station: 2 | Location: 4 | Power: 900kW
+abebfe97-1877-4de5-a64c-e29d9cd267aa,Inverter,SMA,SMA SC-xxxCP-10,180802334,,,Station: 3 | Location: 5 | Power: 900kW
+abebfe97-1877-4de5-a64c-e29d9cd267aa,Inverter,SMA,SMA SC-xxxCP-10,180802337,,,Station: 3 | Location: 6 | Power: 900kW
+abebfe97-1877-4de5-a64c-e29d9cd267aa,Inverter,SMA,SMA SC-xxxCP-10,180802341,,,Station: 4 | Location: 7 | Power: 900kW
+abebfe97-1877-4de5-a64c-e29d9cd267aa,Inverter,SMA,SMA SC-xxxCP-10,180802340,,,Station: 4 | Location: 8 | Power: 900kW
+abebfe97-1877-4de5-a64c-e29d9cd267aa,Inverter,SMA,SMA SC-xxxCP-10,180802339,,,Station: 5 | Location: 9 | Power: 900kW
+abebfe97-1877-4de5-a64c-e29d9cd267aa,Inverter,SMA,SMA SC-xxxCP-10,180802338,,,Station: 5 | Location: 10 | Power: 900kW
+552c5916-450c-417d-a3f0-7aabf61abd7c,Inverter,Schneider,Schneider Xantrex GT,7804535,,,Station: A | Location: A.1 | Power: 675kW | Inverters: 26
+552c5916-450c-417d-a3f0-7aabf61abd7c,Inverter,Schneider,Schneider Xantrex GT,7804940,,,Station: A | Location: A.2 | Power: 675kW
+552c5916-450c-417d-a3f0-7aabf61abd7c,Inverter,Schneider,Schneider Xantrex GT,7804919,,,Station: B | Location: B.1 | Power: 675kW
+552c5916-450c-417d-a3f0-7aabf61abd7c,Inverter,Schneider,Schneider Xantrex GT,7804833,,,Station: B | Location: B.2 | Power: 675kW
+552c5916-450c-417d-a3f0-7aabf61abd7c,Inverter,Schneider,Schneider Xantrex GT,7803869,,,Station: C | Location: C.1 | Power: 675kW
+552c5916-450c-417d-a3f0-7aabf61abd7c,Inverter,Schneider,Schneider Xantrex GT,7804510,,,Station: C | Location: C.2 | Power: 675kW
+552c5916-450c-417d-a3f0-7aabf61abd7c,Inverter,Schneider,Schneider Xantrex GT,7804834,,,Station: D | Location: D.1 | Power: 675kW
+552c5916-450c-417d-a3f0-7aabf61abd7c,Inverter,Schneider,Schneider Xantrex GT,7804453,,,Station: D | Location: D.2 | Power: 675kW
+552c5916-450c-417d-a3f0-7aabf61abd7c,Inverter,Schneider,Schneider Xantrex GT,7804939,,,Station: E | Location: E.1 | Power: 675kW
+552c5916-450c-417d-a3f0-7aabf61abd7c,Inverter,Schneider,Schneider Xantrex GT,7804936,,,Station: E | Location: E.2 | Power: 675kW
+552c5916-450c-417d-a3f0-7aabf61abd7c,Inverter,Schneider,Schneider Xantrex GT,7804790,,,Station: F | Location: F.1 | Power: 675kW
+552c5916-450c-417d-a3f0-7aabf61abd7c,Inverter,Schneider,Schneider Xantrex GT,7804391,,,Station: F | Location: F.2 | Power: 675kW
+552c5916-450c-417d-a3f0-7aabf61abd7c,Inverter,Schneider,Schneider Xantrex GT,7804941,,,Station: G | Location: G.1 | Power: 675kW
+552c5916-450c-417d-a3f0-7aabf61abd7c,Inverter,Schneider,Schneider Xantrex GT,7804384,,,Station: G | Location: G.2 | Power: 675kW
+552c5916-450c-417d-a3f0-7aabf61abd7c,Inverter,Schneider,Schneider Xantrex GT,7804796,,,Station: H | Location: H.1 | Power: 675kW
+552c5916-450c-417d-a3f0-7aabf61abd7c,Inverter,Schneider,Schneider Xantrex GT,7804397,,,Station: H | Location: H.2 | Power: 675kW
+552c5916-450c-417d-a3f0-7aabf61abd7c,Inverter,Schneider,Schneider Xantrex GT,7804536,,,Station: I | Location: I.1 | Power: 675kW
+552c5916-450c-417d-a3f0-7aabf61abd7c,Inverter,Schneider,Schneider Xantrex GT,7804522,,,Station: I | Location: I.2 | Power: 675kW
+552c5916-450c-417d-a3f0-7aabf61abd7c,Inverter,Schneider,Schneider Xantrex GT,7804920,,,Station: J | Location: J.1 | Power: 675kW
+552c5916-450c-417d-a3f0-7aabf61abd7c,Inverter,Schneider,Schneider Xantrex GT,7804970,,,Station: J | Location: J.2 | Power: 675kW
+552c5916-450c-417d-a3f0-7aabf61abd7c,Inverter,Schneider,Schneider Xantrex GT,7804895,,,Station: K | Location: K.1 | Power: 675kW
+552c5916-450c-417d-a3f0-7aabf61abd7c,Inverter,Schneider,Schneider Xantrex GT,7804369,,,Station: K | Location: K.2 | Power: 675kW
+552c5916-450c-417d-a3f0-7aabf61abd7c,Inverter,Schneider,Schneider Xantrex GT,7804914,,,Station: L | Location: L.1 | Power: 675kW
+552c5916-450c-417d-a3f0-7aabf61abd7c,Inverter,Schneider,Schneider Xantrex GT,7804913,,,Station: L | Location: L.2 | Power: 675kW
+552c5916-450c-417d-a3f0-7aabf61abd7c,Inverter,Schneider,Schneider Xantrex GT,7804933,,,Station: M | Location: M.1 | Power: 675kW
+552c5916-450c-417d-a3f0-7aabf61abd7c,Inverter,Schneider,Schneider Xantrex GT,7804538,,,Station: M | Location: M.2 | Power: 675kW
+76cacd4e-d4c7-49f2-ada0-8d69ef36fdd2,Inverter,Schneider,Schneider Conext Core XC,U21540000853,,,Station: 1 | Location: 1.1 | Power: 680kW | Inverters: 6
+76cacd4e-d4c7-49f2-ada0-8d69ef36fdd2,Inverter,Schneider,Schneider Conext Core XC,U21540000843,,,Station: 1 | Location: 1.2 | Power: 680kW
+76cacd4e-d4c7-49f2-ada0-8d69ef36fdd2,Inverter,Schneider,Schneider Conext Core XC,U21540001203,,,Station: 1 | Location: 1.3 | Power: 680kW
+76cacd4e-d4c7-49f2-ada0-8d69ef36fdd2,Inverter,Schneider,Schneider Conext Core XC,U21539000086,,,Station: 2 | Location: 2.1 | Power: 680kW
+76cacd4e-d4c7-49f2-ada0-8d69ef36fdd2,Inverter,Schneider,Schneider Conext Core XC,U21539000590,,,Station: 2 | Location: 2.2 | Power: 680kW
+76cacd4e-d4c7-49f2-ada0-8d69ef36fdd2,Inverter,Schneider,Schneider Conext Core XC,U21539000587,,,Station: 2 | Location: 2.3 | Power: 680kW
+8beff1f5-09e4-484d-b62b-ca25a4d46f4b,Inverter,SMA,SMA SC-xxxCP-10,180802206,,,Station: 1 | Location: 1.1 | Power: 900kW | Inverters: 8
+8beff1f5-09e4-484d-b62b-ca25a4d46f4b,Inverter,SMA,SMA SC-xxxCP-10,180802207,,,Station: 1 | Location: 1.2 | Power: 900kW
+8beff1f5-09e4-484d-b62b-ca25a4d46f4b,Inverter,SMA,SMA SC-xxxCP-10,180802214,,,Station: 2 | Location: 2.1 | Power: 900kW
+8beff1f5-09e4-484d-b62b-ca25a4d46f4b,Inverter,SMA,SMA SC-xxxCP-10,180802215,,,Station: 2 | Location: 2.2 | Power: 900kW
+8beff1f5-09e4-484d-b62b-ca25a4d46f4b,Inverter,SMA,SMA SC-xxxCP-10,180802210,,,Station: 3 | Location: 3.1 | Power: 900kW
+8beff1f5-09e4-484d-b62b-ca25a4d46f4b,Inverter,SMA,SMA SC-xxxCP-10,180802211,,,Station: 3 | Location: 3.2 | Power: 900kW
+8beff1f5-09e4-484d-b62b-ca25a4d46f4b,Inverter,SMA,SMA SC-xxxCP-10,180802212,,,Station: 4 | Location: 4.1 | Power: 900kW
+8beff1f5-09e4-484d-b62b-ca25a4d46f4b,Inverter,SMA,SMA SC-xxxCP-10,180802213,,,Station: 4 | Location: 4.2 | Power: 900kW
+8beff1f5-09e4-484d-b62b-ca25a4d46f4b,Inverter,SMA,SMA SC-xxxCP-10,180802208,,,Station: 5 | Location: 5.1 | Power: 900kW
+8beff1f5-09e4-484d-b62b-ca25a4d46f4b,Inverter,SMA,SMA SC-xxxCP-10,180802209,,,Station: 5 | Location: 5.2 | Power: 900kW
+68e7b2be-fef2-4b23-8858-f091190111a4,Inverter,SMA,SMA SC-xxxCP-10,180351003,,,Station: 1 | Location: 1 | Power: 900kW | Inverters: 6
+68e7b2be-fef2-4b23-8858-f091190111a4,Inverter,SMA,SMA SC-xxxCP-10,180351004,,,Station: 1 | Location: 2 | Power: 900kW
+68e7b2be-fef2-4b23-8858-f091190111a4,Inverter,SMA,SMA SC-xxxCP-10,180351005,,,Station: 2 | Location: 3 | Power: 900kW
+68e7b2be-fef2-4b23-8858-f091190111a4,Inverter,SMA,SMA SC-xxxCP-10,180351006,,,Station: 2 | Location: 4 | Power: 900kW
+68e7b2be-fef2-4b23-8858-f091190111a4,Inverter,SMA,SMA SC-xxxCP-10,180351007,,,Station: 3 | Location: 5 | Power: 900kW
+68e7b2be-fef2-4b23-8858-f091190111a4,Inverter,SMA,SMA SC-xxxCP-10,180351008,,,Station: 3 | Location: 6 | Power: 900kW
+b7257de4-72a9-4e15-85f3-5cb8a84e860a,Inverter,Schneider,Schneider Conext Core XC,Galton A.1,,,Station: A | Location: A.1 | Power: 680kW | Inverters: 4
+b7257de4-72a9-4e15-85f3-5cb8a84e860a,Inverter,Schneider,Schneider Conext Core XC,U21525001103,,,Station: A | Location: A.2 | Power: 680kW
+b7257de4-72a9-4e15-85f3-5cb8a84e860a,Inverter,Schneider,Schneider Conext Core XC,U21539000956,,,Station: B | Location: B.1 | Power: 680kW
+b7257de4-72a9-4e15-85f3-5cb8a84e860a,Inverter,Schneider,Schneider Conext Core XC,U21539000550,,,Station: B | Location: B.2 | Power: 680kW
+adfe59d5-b65e-41cc-ac0b-319af4cebeda,Inverter,SMA,SMA SC-xxxCP-10,180351315,,,Station: 1 | Location: 1 | Power: 900kW | Inverters: 14
+adfe59d5-b65e-41cc-ac0b-319af4cebeda,Inverter,SMA,SMA SC-xxxCP-10,180351323,,,Station: 1 | Location: 2 | Power: 900kW
+adfe59d5-b65e-41cc-ac0b-319af4cebeda,Inverter,SMA,SMA SC-xxxCP-10,180351325,,,Station: 2 | Location: 3 | Power: 900kW
+adfe59d5-b65e-41cc-ac0b-319af4cebeda,Inverter,SMA,SMA SC-xxxCP-10,180351343,,,Station: 2 | Location: 4 | Power: 900kW
+adfe59d5-b65e-41cc-ac0b-319af4cebeda,Inverter,SMA,SMA SC-xxxCP-10,180351326,,,Station: 3 | Location: 5 | Power: 900kW
+adfe59d5-b65e-41cc-ac0b-319af4cebeda,Inverter,SMA,SMA SC-xxxCP-10,180351330,,,Station: 3 | Location: 6 | Power: 900kW
+adfe59d5-b65e-41cc-ac0b-319af4cebeda,Inverter,SMA,SMA SC-xxxCP-10,180351327,,,Station: 4 | Location: 7 | Power: 900kW
+adfe59d5-b65e-41cc-ac0b-319af4cebeda,Inverter,SMA,SMA SC-xxxCP-10,180351316,,,Station: 4 | Location: 8 | Power: 900kW
+adfe59d5-b65e-41cc-ac0b-319af4cebeda,Inverter,SMA,SMA SC-xxxCP-10,180351344,,,Station: 5 | Location: 9 | Power: 900kW
+adfe59d5-b65e-41cc-ac0b-319af4cebeda,Inverter,SMA,SMA SC-xxxCP-10,180351317,,,Station: 5 | Location: 10 | Power: 900kW
+adfe59d5-b65e-41cc-ac0b-319af4cebeda,Inverter,SMA,SMA SC-xxxCP-10,180351324,,,Station: 6 | Location: 11 | Power: 900kW
+adfe59d5-b65e-41cc-ac0b-319af4cebeda,Inverter,SMA,SMA SC-xxxCP-10,180351329,,,Station: 6 | Location: 12 | Power: 900kW
+adfe59d5-b65e-41cc-ac0b-319af4cebeda,Inverter,SMA,SMA SC-xxxCP-10,180351318,,,Station: 7 | Location: 13 | Power: 900kW
+adfe59d5-b65e-41cc-ac0b-319af4cebeda,Inverter,SMA,SMA SC-xxxCP-10,180351328,,,Station: 7 | Location: 14 | Power: 900kW
+ef861583-51d8-452e-8287-d992b268a718,Inverter,Schneider,Schneider Conext Core XC,U21537000010,,,Station: A | Location: A.1 | Power: 680kW | Inverters: 6
+ef861583-51d8-452e-8287-d992b268a718,Inverter,Schneider,Schneider Conext Core XC,U21537001228,,,Station: A | Location: A.2 | Power: 680kW
+ef861583-51d8-452e-8287-d992b268a718,Inverter,Schneider,Schneider Conext Core XC,U21537000011,,,Station: B | Location: B.1 | Power: 680kW
+ef861583-51d8-452e-8287-d992b268a718,Inverter,Schneider,Schneider Conext Core XC,U21536000314,,,Station: B | Location: B.2 | Power: 680kW
+ef861583-51d8-452e-8287-d992b268a718,Inverter,Schneider,Schneider Conext Core XC,U21540000888,,,Station: C | Location: C.1 | Power: 680kW
+ef861583-51d8-452e-8287-d992b268a718,Inverter,Schneider,Schneider Conext Core XC,U21542001823,,,Station: C | Location: C.2 | Power: 680kW
+c9028bc5-0449-4fc0-a6b2-f5a736e7931f,Inverter,SMA,SMA SC-xxxCP-10,180800148,,,Station: 1 | Location: 1 | Power: 900kW | Inverters: 5
+c9028bc5-0449-4fc0-a6b2-f5a736e7931f,Inverter,SMA,SMA SC-xxxCP-10,180800150,,,Station: 1 | Location: 2 | Power: 900kW
+c9028bc5-0449-4fc0-a6b2-f5a736e7931f,Inverter,SMA,SMA SC-xxxCP-10,180351301,,,Station: 2 | Location: 3 | Power: 900kW
+c9028bc5-0449-4fc0-a6b2-f5a736e7931f,Inverter,SMA,SMA SC-xxxCP-10,180800149,,,Station: 3 | Location: 4 | Power: 900kW
+c9028bc5-0449-4fc0-a6b2-f5a736e7931f,Inverter,SMA,SMA SC-xxxCP-10,180800151,,,Station: 3 | Location: 5 | Power: 900kW
+2f9ceb4f-6f8e-4410-a59b-ec014e222c9b,Inverter,SMA,SMA SC-xxxCP-10,180340379,,,Station: 1 | Location: 1 | Power: 850kW | Inverters: 10
+2f9ceb4f-6f8e-4410-a59b-ec014e222c9b,Inverter,SMA,SMA SC-xxxCP-10,180340380,,,Station: 1 | Location: 2 | Power: 850kW
+2f9ceb4f-6f8e-4410-a59b-ec014e222c9b,Inverter,SMA,SMA SC-xxxCP-10,180340381,,,Station: 2 | Location: 3 | Power: 850kW
+2f9ceb4f-6f8e-4410-a59b-ec014e222c9b,Inverter,SMA,SMA SC-xxxCP-10,180340382,,,Station: 2 | Location: 4 | Power: 850kW
+2f9ceb4f-6f8e-4410-a59b-ec014e222c9b,Inverter,SMA,SMA SC-xxxCP-10,180340383,,,Station: 3 | Location: 5 | Power: 850kW
+2f9ceb4f-6f8e-4410-a59b-ec014e222c9b,Inverter,SMA,SMA SC-xxxCP-10,180340384,,,Station: 3 | Location: 6 | Power: 850kW
+2f9ceb4f-6f8e-4410-a59b-ec014e222c9b,Inverter,SMA,SMA SC-xxxCP-10,180340385,,,Station: 4 | Location: 7 | Power: 850kW
+2f9ceb4f-6f8e-4410-a59b-ec014e222c9b,Inverter,SMA,SMA SC-xxxCP-10,180340386,,,Station: 4 | Location: 8 | Power: 850kW
+2f9ceb4f-6f8e-4410-a59b-ec014e222c9b,Inverter,SMA,SMA SC-xxxCP-10,180340388,,,Station: 5 | Location: 9 | Power: 850kW
+2f9ceb4f-6f8e-4410-a59b-ec014e222c9b,Inverter,SMA,SMA SC-xxxCP-10,180340387,,,Station: 5 | Location: 10 | Power: 850kW
+d778cfd6-23af-4569-acbc-0dc0cdfbed3a,Inverter,Schneider,Schneider Conext Core XC,N21318000323,,,Location: 1 | Power: 680kW | Inverters: 11
+d778cfd6-23af-4569-acbc-0dc0cdfbed3a,Inverter,Schneider,Schneider Conext Core XC,U21313000696,,,Location: 2 | Power: 680kW
+d778cfd6-23af-4569-acbc-0dc0cdfbed3a,Inverter,Schneider,Schneider Conext Core XC,U21438030007,,,Location: 3 | Power: 680kW
+d778cfd6-23af-4569-acbc-0dc0cdfbed3a,Inverter,Schneider,Schneider Conext Core XC,N21317000197,,,Location: 4 | Power: 680kW
+d778cfd6-23af-4569-acbc-0dc0cdfbed3a,Inverter,Schneider,Schneider Conext Core XC,U21437020020,,,Location: 5 | Power: 680kW
+d778cfd6-23af-4569-acbc-0dc0cdfbed3a,Inverter,Schneider,Schneider Conext Core XC,U21439030007,,,Location: 6 | Power: 680kW
+d778cfd6-23af-4569-acbc-0dc0cdfbed3a,Inverter,Schneider,Schneider Conext Core XC,U21437030006,,,Location: 7 | Power: 680kW
+d778cfd6-23af-4569-acbc-0dc0cdfbed3a,Inverter,Schneider,Schneider Conext Core XC,U21438020002,,,Location: 8 | Power: 680kW
+d778cfd6-23af-4569-acbc-0dc0cdfbed3a,Inverter,Schneider,Schneider Conext Core XC,U21438030008,,,Location: 9 | Power: 680kW
+d778cfd6-23af-4569-acbc-0dc0cdfbed3a,Inverter,Schneider,Schneider Conext Core XC,Grange 10,,,Location: 10 | Power: 680kW
+d778cfd6-23af-4569-acbc-0dc0cdfbed3a,Inverter,Schneider,Schneider Conext Core XC,Grange 11,,,Location: 11 | Power: 680kW
+6ccb1622-cbbd-45c1-a721-520787f681c2,Inverter,Schneider,Schneider Xantrex GT,7804766,,,Station: 1 | Location: 1.1 | Power: 675kW | Inverters: 7
+6ccb1622-cbbd-45c1-a721-520787f681c2,Inverter,Schneider,Schneider Xantrex GT,7804760,,,Station: 1 | Location: 1.2 | Power: 675kW
+6ccb1622-cbbd-45c1-a721-520787f681c2,Inverter,Schneider,Schneider Xantrex GT,7804761,,,Station: 2 | Location: 2.1 | Power: 675kW
+6ccb1622-cbbd-45c1-a721-520787f681c2,Inverter,Schneider,Schneider Xantrex GT,7804759,,,Station: 2 | Location: 2.2 | Power: 675kW
+6ccb1622-cbbd-45c1-a721-520787f681c2,Inverter,Schneider,Schneider Xantrex GT,7804765,,,Station: 3 | Location: 3.1 | Power: 675kW
+6ccb1622-cbbd-45c1-a721-520787f681c2,Inverter,Schneider,Schneider Xantrex GT,7804752,,,Station: 3 | Location: 3.2 | Power: 675kW
+6ccb1622-cbbd-45c1-a721-520787f681c2,Inverter,Schneider,Schneider Xantrex GT,7804769,,,Station: 4 | Location: 4.1 | Power: 675kW
+8ed93a20-1877-44fe-8432-229a7e296da6,Inverter,Schneider,Schneider Conext Core XC,U21313000702,,,Station: 1 | Location: 1.1 | Power: 680kW | Inverters: 44
+8ed93a20-1877-44fe-8432-229a7e296da6,Inverter,Schneider,Schneider Conext Core XC,U21437030012,,,Station: 1 | Location: 1.2 | Power: 680kW
+8ed93a20-1877-44fe-8432-229a7e296da6,Inverter,Schneider,Schneider Conext Core XC,U21437030011,,,Station: 2 | Location: 2.1 | Power: 680kW
+8ed93a20-1877-44fe-8432-229a7e296da6,Inverter,Schneider,Schneider Conext Core XC,U21437020017,,,Station: 2 | Location: 2.2 | Power: 680kW
+8ed93a20-1877-44fe-8432-229a7e296da6,Inverter,Schneider,Schneider Conext Core XC,U21437020016,,,Station: 3 | Location: 3.1 | Power: 680kW
+8ed93a20-1877-44fe-8432-229a7e296da6,Inverter,Schneider,Schneider Conext Core XC,U21437020008,,,Station: 3 | Location: 3.2 | Power: 680kW
+8ed93a20-1877-44fe-8432-229a7e296da6,Inverter,Schneider,Schneider Conext Core XC,U21312001170,,,Station: 4 | Location: 4.1 | Power: 680kW
+8ed93a20-1877-44fe-8432-229a7e296da6,Inverter,Schneider,Schneider Conext Core XC,U21437020011,,,Station: 4 | Location: 4.2 | Power: 680kW
+8ed93a20-1877-44fe-8432-229a7e296da6,Inverter,Schneider,Schneider Conext Core XC,U21428001094,,,Station: 5 | Location: 5.1 | Power: 680kW
+8ed93a20-1877-44fe-8432-229a7e296da6,Inverter,Schneider,Schneider Conext Core XC,U21427000067,,,Station: 5 | Location: 5.2 | Power: 680kW
+8ed93a20-1877-44fe-8432-229a7e296da6,Inverter,Schneider,Schneider Conext Core XC,U21436030011,,,Station: 6 | Location: 6.1 | Power: 680kW
+8ed93a20-1877-44fe-8432-229a7e296da6,Inverter,Schneider,Schneider Conext Core XC,U21437020003,,,Station: 6 | Location: 6.2 | Power: 680kW
+8ed93a20-1877-44fe-8432-229a7e296da6,Inverter,Schneider,Schneider Conext Core XC,U21429000983,,,Station: 7 | Location: 7.1 | Power: 680kW
+8ed93a20-1877-44fe-8432-229a7e296da6,Inverter,Schneider,Schneider Conext Core XC,U21431000167,,,Station: 7 | Location: 7.2 | Power: 680kW
+8ed93a20-1877-44fe-8432-229a7e296da6,Inverter,Schneider,Schneider Conext Core XC,U21436020020,,,Station: 8 | Location: 8.1 | Power: 680kW
+8ed93a20-1877-44fe-8432-229a7e296da6,Inverter,Schneider,Schneider Conext Core XC,U21436020017,,,Station: 8 | Location: 8.2 | Power: 680kW
+8ed93a20-1877-44fe-8432-229a7e296da6,Inverter,Schneider,Schneider Conext Core XC,U21437030017,,,Station: 9 | Location: 9.1 | Power: 680kW
+8ed93a20-1877-44fe-8432-229a7e296da6,Inverter,Schneider,Schneider Conext Core XC,U21437020025,,,Station: 9 | Location: 9.2 | Power: 680kW
+8ed93a20-1877-44fe-8432-229a7e296da6,Inverter,Schneider,Schneider Conext Core XC,N21318000403,,,Station: 10 | Location: 10.1 | Power: 680kW
+8ed93a20-1877-44fe-8432-229a7e296da6,Inverter,Schneider,Schneider Conext Core XC,U21436020012,,,Station: 10 | Location: 10.2 | Power: 680kW
+8ed93a20-1877-44fe-8432-229a7e296da6,Inverter,Schneider,Schneider Conext Core XC,U21437030004,,,Station: 11 | Location: 11.1 | Power: 680kW
+8ed93a20-1877-44fe-8432-229a7e296da6,Inverter,Schneider,Schneider Conext Core XC,U21437020024,,,Station: 11 | Location: 11.2 | Power: 680kW
+8ed93a20-1877-44fe-8432-229a7e296da6,Inverter,Schneider,Schneider Conext Core XC,U21313000700,,,Station: 12 | Location: 12.1 | Power: 680kW
+8ed93a20-1877-44fe-8432-229a7e296da6,Inverter,Schneider,Schneider Conext Core XC,U21312000301,,,Station: 12 | Location: 12.2 | Power: 680kW
+8ed93a20-1877-44fe-8432-229a7e296da6,Inverter,Schneider,Schneider Conext Core XC,U21438030011,,,Station: 13 | Location: 13.1 | Power: 680kW
+8ed93a20-1877-44fe-8432-229a7e296da6,Inverter,Schneider,Schneider Conext Core XC,U21438020003,,,Station: 13 | Location: 13.2 | Power: 680kW
+8ed93a20-1877-44fe-8432-229a7e296da6,Inverter,Schneider,Schneider Conext Core XC,U21437030013,,,Station: 14 | Location: 14.1 | Power: 680kW
+8ed93a20-1877-44fe-8432-229a7e296da6,Inverter,Schneider,Schneider Conext Core XC,N21317000196,,,Station: 14 | Location: 14.2 | Power: 680kW
+8ed93a20-1877-44fe-8432-229a7e296da6,Inverter,Schneider,Schneider Conext Core XC,U21437030002,,,Station: 15 | Location: 15.1 | Power: 680kW
+8ed93a20-1877-44fe-8432-229a7e296da6,Inverter,Schneider,Schneider Conext Core XC,U21436020011,,,Station: 15 | Location: 15.2 | Power: 680kW
+8ed93a20-1877-44fe-8432-229a7e296da6,Inverter,Schneider,Schneider Conext Core XC,U21440030002,,,Station: 16 | Location: 16.1 | Power: 680kW
+8ed93a20-1877-44fe-8432-229a7e296da6,Inverter,Schneider,Schneider Conext Core XC,U21433000503,,,Station: 16 | Location: 16.2 | Power: 680kW
+8ed93a20-1877-44fe-8432-229a7e296da6,Inverter,Schneider,Schneider Conext Core XC,U21427000072,,,Station: 17 | Location: 17.1 | Power: 680kW
+8ed93a20-1877-44fe-8432-229a7e296da6,Inverter,Schneider,Schneider Conext Core XC,U21427000077,,,Station: 17 | Location: 17.2 | Power: 680kW
+8ed93a20-1877-44fe-8432-229a7e296da6,Inverter,Schneider,Schneider Conext Core XC,U21437020014,,,Station: 18 | Location: 18.1 | Power: 680kW
+8ed93a20-1877-44fe-8432-229a7e296da6,Inverter,Schneider,Schneider Conext Core XC,U21312000302,,,Station: 18 | Location: 18.2 | Power: 680kW
+8ed93a20-1877-44fe-8432-229a7e296da6,Inverter,Schneider,Schneider Conext Core XC,U21438020005,,,Station: 19 | Location: 19.1 | Power: 680kW
+8ed93a20-1877-44fe-8432-229a7e296da6,Inverter,Schneider,Schneider Conext Core XC,U21312000299,,,Station: 19 | Location: 19.2 | Power: 680kW
+8ed93a20-1877-44fe-8432-229a7e296da6,Inverter,Schneider,Schneider Conext Core XC,U21437020019,,,Station: 20 | Location: 20.1 | Power: 680kW
+8ed93a20-1877-44fe-8432-229a7e296da6,Inverter,Schneider,Schneider Conext Core XC,U21437020001,,,Station: 20 | Location: 20.2 | Power: 680kW
+8ed93a20-1877-44fe-8432-229a7e296da6,Inverter,Schneider,Schneider Conext Core XC,U21313000697,,,Station: 21 | Location: 21.1 | Power: 680kW
+8ed93a20-1877-44fe-8432-229a7e296da6,Inverter,Schneider,Schneider Conext Core XC,U21314000953,,,Station: 21 | Location: 21.2 | Power: 680kW
+8ed93a20-1877-44fe-8432-229a7e296da6,Inverter,Schneider,Schneider Conext Core XC,U21437020013,,,Station: 22 | Location: 22.1 | Power: 680kW
+8ed93a20-1877-44fe-8432-229a7e296da6,Inverter,Schneider,Schneider Conext Core XC,U21312000306,,,Station: 22 | Location: 22.2 | Power: 680kW
+276246b7-eee0-4d80-87aa-1235fc985dc6,Inverter,Schneider,Schneider Conext Core XC,Hall 1,,,Location: 1 | Power: 680kW | Inverters: 17
+276246b7-eee0-4d80-87aa-1235fc985dc6,Inverter,Schneider,Schneider Conext Core XC,Hall 2,,,Location: 2 | Power: 680kW
+276246b7-eee0-4d80-87aa-1235fc985dc6,Inverter,Schneider,Schneider Conext Core XC,Hall 3,,,Location: 3 | Power: 680kW
+276246b7-eee0-4d80-87aa-1235fc985dc6,Inverter,Schneider,Schneider Conext Core XC,Hall 4,,,Location: 4 | Power: 680kW
+276246b7-eee0-4d80-87aa-1235fc985dc6,Inverter,Schneider,Schneider Conext Core XC,U21438030004,,,Location: 5 | Power: 680kW
+276246b7-eee0-4d80-87aa-1235fc985dc6,Inverter,Schneider,Schneider Conext Core XC,U21438030001,,,Location: 6 | Power: 680kW
+276246b7-eee0-4d80-87aa-1235fc985dc6,Inverter,Schneider,Schneider Conext Core XC,Hall 7,,,Location: 7 | Power: 680kW
+276246b7-eee0-4d80-87aa-1235fc985dc6,Inverter,Schneider,Schneider Conext Core XC,Hall 8,,,Location: 8 | Power: 680kW
+276246b7-eee0-4d80-87aa-1235fc985dc6,Inverter,Schneider,Schneider Conext Core XC,Hall 9,,,Location: 9 | Power: 680kW
+276246b7-eee0-4d80-87aa-1235fc985dc6,Inverter,Schneider,Schneider Conext Core XC,Hall 10,,,Location: 10 | Power: 680kW
+276246b7-eee0-4d80-87aa-1235fc985dc6,Inverter,Schneider,Schneider Conext Core XC,Hall 11,,,Location: 11 | Power: 680kW
+276246b7-eee0-4d80-87aa-1235fc985dc6,Inverter,Schneider,Schneider Conext Core XC,Hall 12,,,Location: 12 | Power: 680kW
+276246b7-eee0-4d80-87aa-1235fc985dc6,Inverter,Schneider,Schneider Conext Core XC,U21310001044,,,Location: 13 | Power: 680kW
+276246b7-eee0-4d80-87aa-1235fc985dc6,Inverter,Schneider,Schneider Conext Core XC,U21439020009,,,Location: 14 | Power: 680kW
+276246b7-eee0-4d80-87aa-1235fc985dc6,Inverter,Schneider,Schneider Conext Core XC,U21435030005,,,Location: 15 | Power: 680kW
+276246b7-eee0-4d80-87aa-1235fc985dc6,Inverter,Schneider,Schneider Conext Core XC,N21311000028,,,Location: 16 | Power: 680kW
+276246b7-eee0-4d80-87aa-1235fc985dc6,Inverter,Schneider,Schneider Conext Core XC,U21310001043,,,Location: 17 | Power: 680kW
+a2b68f26-bacc-4106-a4c2-29ab429c022c,Inverter,SMA,SMA SC-xxxCP-10,180801057,,,Station: 1 | Location: 1.1 | Power: 1000kW | Inverters: 4
+a2b68f26-bacc-4106-a4c2-29ab429c022c,Inverter,SMA,SMA SC-xxxCP-10,180801056,,,Station: 1 | Location: 1.2 | Power: 1000kW
+a2b68f26-bacc-4106-a4c2-29ab429c022c,Inverter,SMA,SMA SC-xxxCP-10,180801059,,,Station: 2 | Location: 2.1 | Power: 1000kW
+a2b68f26-bacc-4106-a4c2-29ab429c022c,Inverter,SMA,SMA SC-xxxCP-10,180801058,,,Station: 2 | Location: 2.2 | Power: 1000kW
+ca54a62a-5394-4e2e-a8cb-1f89beebe990,Inverter,SMA,SMA SC-xxxCP-10,180192682,,,Station: 1 | Location: 1 | Power: 800kW | Inverters: 6
+ca54a62a-5394-4e2e-a8cb-1f89beebe990,Inverter,SMA,SMA SC-xxxCP-10,180192680,,,Station: 1 | Location: 2 | Power: 800kW
+ca54a62a-5394-4e2e-a8cb-1f89beebe990,Inverter,SMA,SMA SC-xxxCP-10,180192684,,,Station: 2 | Location: 3 | Power: 800kW
+ca54a62a-5394-4e2e-a8cb-1f89beebe990,Inverter,SMA,SMA SC-xxxCP-10,180192685,,,Station: 2 | Location: 4 | Power: 800kW
+ca54a62a-5394-4e2e-a8cb-1f89beebe990,Inverter,SMA,SMA SC-xxxCP-10,180192681,,,Station: 3 | Location: 5 | Power: 800kW
+ca54a62a-5394-4e2e-a8cb-1f89beebe990,Inverter,SMA,SMA SC-xxxCP-10,180192683,,,Station: 3 | Location: 6 | Power: 800kW
+4540e226-f335-4a3f-9c7a-266fdaec5a42,Inverter,SMA,SMA SC-xxxCP-10,180191838,,,Station: 1 | Location: 1.1 | Power: 800kW | Inverters: 5
+4540e226-f335-4a3f-9c7a-266fdaec5a42,Inverter,SMA,SMA SC-xxxCP-10,180191839,,,Station: 1 | Location: 2.1 | Power: 800kW
+4540e226-f335-4a3f-9c7a-266fdaec5a42,Inverter,SMA,SMA SC-xxxCP-10,180191841,,,Station: 2 | Location: 2.2 | Power: 800kW
+4540e226-f335-4a3f-9c7a-266fdaec5a42,Inverter,SMA,SMA SC-xxxCP-10,180191840,,,Station: 3 | Location: 3.1 | Power: 800kW
+4540e226-f335-4a3f-9c7a-266fdaec5a42,Inverter,SMA,SMA SC-xxxCP-10,180191837,,,Station: 3 | Location: 3.2 | Power: 800kW
+48c1723b-fd01-40bb-9d38-92b7057ec6a3,Inverter,Gamesa,Gamesa 630kw TL+,210003,,,Station: 1 | Location: 1 | Power: 630kW | Inverters: 5
+48c1723b-fd01-40bb-9d38-92b7057ec6a3,Inverter,Gamesa,Gamesa 630kw TL+,210001,,,Station: 1 | Location: 2 | Power: 630kW
+48c1723b-fd01-40bb-9d38-92b7057ec6a3,Inverter,Gamesa,Gamesa 630kw TL+,210002,,,Station: 2 | Location: 3 | Power: 630kW
+48c1723b-fd01-40bb-9d38-92b7057ec6a3,Inverter,Gamesa,Gamesa 630kw TL+,210005,,,Station: 3 | Location: 4 | Power: 630kW
+48c1723b-fd01-40bb-9d38-92b7057ec6a3,Inverter,Gamesa,Gamesa 630kw TL+,210004,,,Station: 3 | Location: 5 | Power: 630kW
+6e386ddf-c597-4858-9410-5107ea542426,Inverter,Schneider,Schneider Conext Core XC,U21424002919,,,Station: A | Location: A.1 | Power: 680kW | Inverters: 34
+6e386ddf-c597-4858-9410-5107ea542426,Inverter,Schneider,Schneider Conext Core XC,U21421000669,,,Station: A | Location: A.2 | Power: 680kW
+6e386ddf-c597-4858-9410-5107ea542426,Inverter,Schneider,Schneider Conext Core XC,U21421000253,,,Station: B | Location: B.1 | Power: 680kW
+6e386ddf-c597-4858-9410-5107ea542426,Inverter,Schneider,Schneider Conext Core XC,U21423000078,,,Station: B | Location: B.2 | Power: 680kW
+6e386ddf-c597-4858-9410-5107ea542426,Inverter,Schneider,Schneider Conext Core XC,U21424001191,,,Station: C | Location: C.1 | Power: 680kW
+6e386ddf-c597-4858-9410-5107ea542426,Inverter,Schneider,Schneider Conext Core XC,U21440020001,,,Station: C | Location: C.2 | Power: 680kW
+6e386ddf-c597-4858-9410-5107ea542426,Inverter,Schneider,Schneider Conext Core XC,U21426001653,,,Station: D | Location: D.1 | Power: 680kW
+6e386ddf-c597-4858-9410-5107ea542426,Inverter,Schneider,Schneider Conext Core XC,U21426002668,,,Station: D | Location: D.2 | Power: 680kW
+6e386ddf-c597-4858-9410-5107ea542426,Inverter,Schneider,Schneider Conext Core XC,U21423002419,,,Station: E | Location: E.1 | Power: 680kW
+6e386ddf-c597-4858-9410-5107ea542426,Inverter,Schneider,Schneider Conext Core XC,U21421000248,,,Station: E | Location: E.2 | Power: 680kW
+6e386ddf-c597-4858-9410-5107ea542426,Inverter,Schneider,Schneider Conext Core XC,U21423001584,,,Station: F | Location: F.1 | Power: 680kW
+6e386ddf-c597-4858-9410-5107ea542426,Inverter,Schneider,Schneider Conext Core XC,U21422001696,,,Station: F | Location: F.2 | Power: 680kW
+6e386ddf-c597-4858-9410-5107ea542426,Inverter,Schneider,Schneider Conext Core XC,U21423000076,,,Station: G | Location: G.1 | Power: 680kW
+6e386ddf-c597-4858-9410-5107ea542426,Inverter,Schneider,Schneider Conext Core XC,U21422003889,,,Station: G | Location: G.2 | Power: 680kW
+6e386ddf-c597-4858-9410-5107ea542426,Inverter,Schneider,Schneider Conext Core XC,U21421000008,,,Station: H | Location: H.1 | Power: 680kW
+6e386ddf-c597-4858-9410-5107ea542426,Inverter,Schneider,Schneider Conext Core XC,U21425001611,,,Station: H | Location: H.2 | Power: 680kW
+6e386ddf-c597-4858-9410-5107ea542426,Inverter,Schneider,Schneider Conext Core XC,U21426001661,,,Station: I | Location: I.1 | Power: 680kW
+6e386ddf-c597-4858-9410-5107ea542426,Inverter,Schneider,Schneider Conext Core XC,U21426002667,,,Station: I | Location: I.2 | Power: 680kW
+6e386ddf-c597-4858-9410-5107ea542426,Inverter,Schneider,Schneider Conext Core XC,U21423001577,,,Station: J | Location: J.1 | Power: 680kW
+6e386ddf-c597-4858-9410-5107ea542426,Inverter,Schneider,Schneider Conext Core XC,U21421000673,,,Station: J | Location: J.2 | Power: 680kW
+6e386ddf-c597-4858-9410-5107ea542426,Inverter,Schneider,Schneider Conext Core XC,U21422003440,,,Station: K | Location: K.1 | Power: 680kW
+6e386ddf-c597-4858-9410-5107ea542426,Inverter,Schneider,Schneider Conext Core XC,U21421000672,,,Station: K | Location: K.2 | Power: 680kW
+6e386ddf-c597-4858-9410-5107ea542426,Inverter,Schneider,Schneider Conext Core XC,U21426001655,,,Station: L | Location: L.1 | Power: 680kW
+6e386ddf-c597-4858-9410-5107ea542426,Inverter,Schneider,Schneider Conext Core XC,U21426001656,,,Station: L | Location: L.2 | Power: 680kW
+6e386ddf-c597-4858-9410-5107ea542426,Inverter,Schneider,Schneider Conext Core XC,U21421000251,,,Station: M | Location: M.1 | Power: 680kW
+6e386ddf-c597-4858-9410-5107ea542426,Inverter,Schneider,Schneider Conext Core XC,U21421000666,,,Station: M | Location: M.2 | Power: 680kW
+6e386ddf-c597-4858-9410-5107ea542426,Inverter,Schneider,Schneider Conext Core XC,U21421000007,,,Station: N | Location: N.1 | Power: 680kW
+6e386ddf-c597-4858-9410-5107ea542426,Inverter,Schneider,Schneider Conext Core XC,U21422001695,,,Station: N | Location: N.2 | Power: 680kW
+6e386ddf-c597-4858-9410-5107ea542426,Inverter,Schneider,Schneider Conext Core XC,U21422001691,,,Station: O | Location: O.1 | Power: 680kW
+6e386ddf-c597-4858-9410-5107ea542426,Inverter,Schneider,Schneider Conext Core XC,U21426001660,,,Station: O | Location: O.2 | Power: 680kW
+6e386ddf-c597-4858-9410-5107ea542426,Inverter,Schneider,Schneider Conext Core XC,U21421000254,,,Station: P | Location: P.1 | Power: 680kW
+6e386ddf-c597-4858-9410-5107ea542426,Inverter,Schneider,Schneider Conext Core XC,U21423001583,,,Station: P | Location: P.2 | Power: 680kW
+6e386ddf-c597-4858-9410-5107ea542426,Inverter,Schneider,Schneider Conext Core XC,U21422003442,,,Station: Q | Location: Q.1 | Power: 680kW
+6e386ddf-c597-4858-9410-5107ea542426,Inverter,Schneider,Schneider Conext Core XC,U21425001240,,,Station: Q | Location: Q.2 | Power: 680kW
+2c43f73e-1969-4e8c-9864-57d6df3ca97a,Inverter,SMA,SMA SC-xxxCP-10,180191785,,,Station: 1 | Location: E1 | Power: 800kW | Inverters: 9
+2c43f73e-1969-4e8c-9864-57d6df3ca97a,Inverter,SMA,SMA SC-xxxCP-10,180191793,,,Station: 1 | Location: E2 | Power: 800kW
+2c43f73e-1969-4e8c-9864-57d6df3ca97a,Inverter,SMA,SMA SC-xxxCP-10,180191794,,,Station: 2 | Location: E3 | Power: 800kW
+2c43f73e-1969-4e8c-9864-57d6df3ca97a,Inverter,SMA,SMA SC-xxxCP-10,180191795,,,Station: 2 | Location: E4 | Power: 800kW
+2c43f73e-1969-4e8c-9864-57d6df3ca97a,Inverter,SMA,SMA SC-xxxCP-10,180191791,,,Station: 3 | Location: E5 | Power: 800kW
+2c43f73e-1969-4e8c-9864-57d6df3ca97a,Inverter,SMA,SMA SC-xxxCP-10,180191790,,,Station: 3 | Location: E6 | Power: 800kW
+2c43f73e-1969-4e8c-9864-57d6df3ca97a,Inverter,SMA,SMA SC-xxxCP-10,180191784,,,Station: 4 | Location: E7 | Power: 800kW
+2c43f73e-1969-4e8c-9864-57d6df3ca97a,Inverter,SMA,SMA SC-xxxCP-10,180191792,,,Station: 4 | Location: E8 | Power: 800kW
+2c43f73e-1969-4e8c-9864-57d6df3ca97a,Inverter,SMA,SMA SC-xxxCP-10,180191796,,,Station: 5 | Location: E9 | Power: 800kW
+4b0641c8-cce6-40b2-a331-6274b0cc3de2,Inverter,SMA,SMA SC-xxxCP-10,180350599,,,Station: 1 | Location: 1.1 | Power: 900kW | Inverters: 8
+4b0641c8-cce6-40b2-a331-6274b0cc3de2,Inverter,SMA,SMA SC-xxxCP-10,180350600,,,Station: 1 | Location: 1.2 | Power: 900kW
+4b0641c8-cce6-40b2-a331-6274b0cc3de2,Inverter,SMA,SMA SC-xxxCP-10,180350650,,,Station: 2 | Location: 2.1 | Power: 900kW
+4b0641c8-cce6-40b2-a331-6274b0cc3de2,Inverter,SMA,SMA SC-xxxCP-10,180350651,,,Station: 2 | Location: 2.2 | Power: 900kW
+4b0641c8-cce6-40b2-a331-6274b0cc3de2,Inverter,SMA,SMA SC-xxxCP-10,180350652,,,Station: 3 | Location: 3.1 | Power: 900kW
+4b0641c8-cce6-40b2-a331-6274b0cc3de2,Inverter,SMA,SMA SC-xxxCP-10,180350653,,,Station: 3 | Location: 3.2 | Power: 900kW
+4b0641c8-cce6-40b2-a331-6274b0cc3de2,Inverter,SMA,SMA SC-xxxCP-10,180356054,,,Station: 4 | Location: 4.1 | Power: 900kW
+4b0641c8-cce6-40b2-a331-6274b0cc3de2,Inverter,SMA,SMA SC-xxxCP-10,180350655,,,Station: 4 | Location: 4.2 | Power: 900kW
+661d4079-69b2-42cc-b52b-6762eb5b0cce,Inverter,SMA,SMA SC-xxxCP-10,180192627,,,Station: 1 | Location: 1.1 | Power: 800kW | Inverters: 14
+661d4079-69b2-42cc-b52b-6762eb5b0cce,Inverter,SMA,SMA SC-xxxCP-10,180192621,,,Station: 2 | Location: 2.1 | Power: 800kW
+661d4079-69b2-42cc-b52b-6762eb5b0cce,Inverter,SMA,SMA SC-xxxCP-10,180192624,,,Station: 2 | Location: 2.2 | Power: 800kW
+661d4079-69b2-42cc-b52b-6762eb5b0cce,Inverter,SMA,SMA SC-xxxCP-10,180192622,,,Station: 3 | Location: 3.1 | Power: 800kW
+661d4079-69b2-42cc-b52b-6762eb5b0cce,Inverter,SMA,SMA SC-xxxCP-10,180192620,,,Station: 3 | Location: 3.2 | Power: 800kW
+661d4079-69b2-42cc-b52b-6762eb5b0cce,Inverter,SMA,SMA SC-xxxCP-10,180192676,,,Station: 4 | Location: 4.1 | Power: 800kW
+661d4079-69b2-42cc-b52b-6762eb5b0cce,Inverter,SMA,SMA SC-xxxCP-10,180192675,,,Station: 4 | Location: 4.2 | Power: 800kW
+661d4079-69b2-42cc-b52b-6762eb5b0cce,Inverter,SMA,SMA SC-xxxCP-10,180192626,,,Station: 5 | Location: 5.1 | Power: 800kW
+661d4079-69b2-42cc-b52b-6762eb5b0cce,Inverter,SMA,SMA SC-xxxCP-10,180192623,,,Station: 5 | Location: 5.2 | Power: 800kW
+661d4079-69b2-42cc-b52b-6762eb5b0cce,Inverter,SMA,SMA SC-xxxCP-10,180192628,,,Station: 6 | Location: 6.1 | Power: 800kW
+661d4079-69b2-42cc-b52b-6762eb5b0cce,Inverter,SMA,SMA SC-xxxCP-10,180192674,,,Station: 6 | Location: 6.2 | Power: 800kW
+661d4079-69b2-42cc-b52b-6762eb5b0cce,Inverter,SMA,SMA SC-xxxCP-10,180192687,,,Station: 7 | Location: 7.1 | Power: 800kW
+661d4079-69b2-42cc-b52b-6762eb5b0cce,Inverter,SMA,SMA SC-xxxCP-10,180192686,,,Station: 7 | Location: 7.2 | Power: 800kW
+661d4079-69b2-42cc-b52b-6762eb5b0cce,Inverter,SMA,SMA SC-xxxCP-10,180192625,,,Station: 8 | Location: 8.1 | Power: 800kW
+f729d7fa-6443-488e-bec0-9866df33cac1,Inverter,SMA,SMA SC-xxxCP-10,180340320,,,Station: A | Location: A.1 | Power: 850kW | Inverters: 11
+f729d7fa-6443-488e-bec0-9866df33cac1,Inverter,SMA,SMA SC-xxxCP-10,180340316,,,Station: B | Location: B.1 | Power: 850kW
+f729d7fa-6443-488e-bec0-9866df33cac1,Inverter,SMA,SMA SC-xxxCP-10,180340317,,,Station: B | Location: B.2 | Power: 850kW
+f729d7fa-6443-488e-bec0-9866df33cac1,Inverter,SMA,SMA SC-xxxCP-10,180340313,,,Station: C | Location: C.1 | Power: 850kW
+f729d7fa-6443-488e-bec0-9866df33cac1,Inverter,SMA,SMA SC-xxxCP-10,180340312,,,Station: C | Location: C.2 | Power: 850kW
+f729d7fa-6443-488e-bec0-9866df33cac1,Inverter,SMA,SMA SC-xxxCP-10,180340311,,,Station: D | Location: D.1 | Power: 850kW
+f729d7fa-6443-488e-bec0-9866df33cac1,Inverter,SMA,SMA SC-xxxCP-10,180340310,,,Station: D | Location: D.2 | Power: 850kW
+f729d7fa-6443-488e-bec0-9866df33cac1,Inverter,SMA,SMA SC-xxxCP-10,180340315,,,Station: E | Location: E.1 | Power: 850kW
+f729d7fa-6443-488e-bec0-9866df33cac1,Inverter,SMA,SMA SC-xxxCP-10,180340314,,,Station: E | Location: E.2 | Power: 850kW
+f729d7fa-6443-488e-bec0-9866df33cac1,Inverter,SMA,SMA SC-xxxCP-10,180340319,,,Station: F | Location: F.1 | Power: 850kW
+f729d7fa-6443-488e-bec0-9866df33cac1,Inverter,SMA,SMA SC-xxxCP-10,180340318,,,Station: F | Location: F.2 | Power: 850kW
+809fbf9c-4e05-4383-864d-8d1585b84f69,Inverter,SMA,SMA SC-xxxCP-10,180802085,,,Location: 1 | Power: 850kW | Inverters: 5
+809fbf9c-4e05-4383-864d-8d1585b84f69,Inverter,SMA,SMA SC-xxxCP-10,180802086,,,Location: 2 | Power: 850kW
+809fbf9c-4e05-4383-864d-8d1585b84f69,Inverter,SMA,SMA SC-xxxCP-10,180802089,,,Location: 3 | Power: 850kW
+809fbf9c-4e05-4383-864d-8d1585b84f69,Inverter,SMA,SMA SC-xxxCP-10,180802083,,,Location: 4 | Power: 850kW
+809fbf9c-4e05-4383-864d-8d1585b84f69,Inverter,SMA,SMA SC-xxxCP-10,180802087,,,Location: 5 | Power: 850kW
+f7f68a4f-0a07-44f1-bfc1-b4833f87b498,Inverter,SMA,SMA SC-xxxCP-10,180800013,,,Station: 1 | Location: 1.1 | Power: 800kW | Inverters: 8
+f7f68a4f-0a07-44f1-bfc1-b4833f87b498,Inverter,SMA,SMA SC-xxxCP-10,180800014,,,Station: 1 | Location: 1.2 | Power: 800kW
+f7f68a4f-0a07-44f1-bfc1-b4833f87b498,Inverter,SMA,SMA SC-xxxCP-10,180800017,,,Station: 2 | Location: 2.1 | Power: 800kW
+f7f68a4f-0a07-44f1-bfc1-b4833f87b498,Inverter,SMA,SMA SC-xxxCP-10,180800018,,,Station: 2 | Location: 2.2 | Power: 800kW
+f7f68a4f-0a07-44f1-bfc1-b4833f87b498,Inverter,SMA,SMA SC-xxxCP-10,180800019,,,Station: 3 | Location: 3.1 | Power: 800kW
+f7f68a4f-0a07-44f1-bfc1-b4833f87b498,Inverter,SMA,SMA SC-xxxCP-10,180800020,,,Station: 3 | Location: 3.2 | Power: 800kW
+f7f68a4f-0a07-44f1-bfc1-b4833f87b498,Inverter,SMA,SMA SC-xxxCP-10,180800015,,,Station: 4 | Location: 4.1 | Power: 800kW
+f7f68a4f-0a07-44f1-bfc1-b4833f87b498,Inverter,SMA,SMA SC-xxxCP-10,180800016,,,Station: 4 | Location: 4.2 | Power: 800kW
+4022910f-20b8-4e74-9ce8-50e8196aed1b,Inverter,SMA,SMA SC-xxxCP-10,180340348,,,Station: 1 | Location: 1.1 | Power: 850kW | Inverters: 34
+4022910f-20b8-4e74-9ce8-50e8196aed1b,Inverter,SMA,SMA SC-xxxCP-10,180340341,,,Station: 1 | Location: 1.2 | Power: 850kW
+4022910f-20b8-4e74-9ce8-50e8196aed1b,Inverter,SMA,SMA SC-xxxCP-10,180340340,,,Station: 2 | Location: 2.1 | Power: 850kW
+4022910f-20b8-4e74-9ce8-50e8196aed1b,Inverter,SMA,SMA SC-xxxCP-10,180340339,,,Station: 2 | Location: 2.2 | Power: 850kW
+4022910f-20b8-4e74-9ce8-50e8196aed1b,Inverter,SMA,SMA SC-xxxCP-10,180340347,,,Station: 3 | Location: 3.1 | Power: 850kW
+4022910f-20b8-4e74-9ce8-50e8196aed1b,Inverter,SMA,SMA SC-xxxCP-10,180340346,,,Station: 3 | Location: 3.2 | Power: 850kW
+4022910f-20b8-4e74-9ce8-50e8196aed1b,Inverter,SMA,SMA SC-xxxCP-10,180340345,,,Station: 4 | Location: 4.1 | Power: 850kW
+4022910f-20b8-4e74-9ce8-50e8196aed1b,Inverter,SMA,SMA SC-xxxCP-10,180340344,,,Station: 4 | Location: 4.2 | Power: 850kW
+4022910f-20b8-4e74-9ce8-50e8196aed1b,Inverter,SMA,SMA SC-xxxCP-10,180340362,,,Station: 5 | Location: 5.1 | Power: 850kW
+4022910f-20b8-4e74-9ce8-50e8196aed1b,Inverter,SMA,SMA SC-xxxCP-10,180340361,,,Station: 5 | Location: 5.2 | Power: 850kW
+4022910f-20b8-4e74-9ce8-50e8196aed1b,Inverter,SMA,SMA SC-xxxCP-10,180340364,,,Station: 6 | Location: 6.1 | Power: 850kW
+4022910f-20b8-4e74-9ce8-50e8196aed1b,Inverter,SMA,SMA SC-xxxCP-10,180340363,,,Station: 6 | Location: 6.2 | Power: 850kW
+4022910f-20b8-4e74-9ce8-50e8196aed1b,Inverter,SMA,SMA SC-xxxCP-10,180340372,,,Station: 7 | Location: 7.1 | Power: 850kW
+4022910f-20b8-4e74-9ce8-50e8196aed1b,Inverter,SMA,SMA SC-xxxCP-10,180340371,,,Station: 7 | Location: 7.2 | Power: 850kW
+4022910f-20b8-4e74-9ce8-50e8196aed1b,Inverter,SMA,SMA SC-xxxCP-10,180340370,,,Station: 8 | Location: 8.1 | Power: 850kW
+4022910f-20b8-4e74-9ce8-50e8196aed1b,Inverter,SMA,SMA SC-xxxCP-10,180340369,,,Station: 8 | Location: 8.2 | Power: 850kW
+4022910f-20b8-4e74-9ce8-50e8196aed1b,Inverter,SMA,SMA SC-xxxCP-10,180340360,,,Station: 9 | Location: 9.1 | Power: 850kW
+4022910f-20b8-4e74-9ce8-50e8196aed1b,Inverter,SMA,SMA SC-xxxCP-10,180340358,,,Station: 9 | Location: 9.2 | Power: 850kW
+4022910f-20b8-4e74-9ce8-50e8196aed1b,Inverter,SMA,SMA SC-xxxCP-10,180340343,,,Station: 10 | Location: 10.1 | Power: 850kW
+4022910f-20b8-4e74-9ce8-50e8196aed1b,Inverter,SMA,SMA SC-xxxCP-10,180340342,,,Station: 10 | Location: 10.2 | Power: 850kW
+4022910f-20b8-4e74-9ce8-50e8196aed1b,Inverter,SMA,SMA SC-xxxCP-10,180340359,,,Station: 11 | Location: 11.1 | Power: 850kW
+4022910f-20b8-4e74-9ce8-50e8196aed1b,Inverter,SMA,SMA SC-xxxCP-10,180340357,,,Station: 11 | Location: 11.2 | Power: 850kW
+4022910f-20b8-4e74-9ce8-50e8196aed1b,Inverter,SMA,SMA SC-xxxCP-10,180340351,,,Station: 12 | Location: 12.1 | Power: 850kW
+4022910f-20b8-4e74-9ce8-50e8196aed1b,Inverter,SMA,SMA SC-xxxCP-10,180340349,,,Station: 12 | Location: 12.2 | Power: 850kW
+4022910f-20b8-4e74-9ce8-50e8196aed1b,Inverter,SMA,SMA SC-xxxCP-10,180340353,,,Station: 13 | Location: 13.1 | Power: 850kW
+4022910f-20b8-4e74-9ce8-50e8196aed1b,Inverter,SMA,SMA SC-xxxCP-10,180340350,,,Station: 13 | Location: 13.2 | Power: 850kW
+4022910f-20b8-4e74-9ce8-50e8196aed1b,Inverter,SMA,SMA SC-xxxCP-10,180340354,,,Station: 14 | Location: 14.1 | Power: 850kW
+4022910f-20b8-4e74-9ce8-50e8196aed1b,Inverter,SMA,SMA SC-xxxCP-10,180340352,,,Station: 14 | Location: 14.2 | Power: 850kW
+4022910f-20b8-4e74-9ce8-50e8196aed1b,Inverter,SMA,SMA SC-xxxCP-10,180340356,,,Station: 15 | Location: 15.1 | Power: 850kW
+4022910f-20b8-4e74-9ce8-50e8196aed1b,Inverter,SMA,SMA SC-xxxCP-10,180340355,,,Station: 15 | Location: 15.2 | Power: 850kW
+4022910f-20b8-4e74-9ce8-50e8196aed1b,Inverter,SMA,SMA SC-xxxCP-10,180340368,,,Station: 16 | Location: 16.1 | Power: 850kW
+4022910f-20b8-4e74-9ce8-50e8196aed1b,Inverter,SMA,SMA SC-xxxCP-10,180340366,,,Station: 16 | Location: 16.2 | Power: 850kW
+4022910f-20b8-4e74-9ce8-50e8196aed1b,Inverter,SMA,SMA SC-xxxCP-10,180340365,,,Station: 17 | Location: 17.1 | Power: 850kW
+4022910f-20b8-4e74-9ce8-50e8196aed1b,Inverter,SMA,SMA SC-xxxCP-10,180340367,,,Station: 17 | Location: 17.2 | Power: 850kW
+6308be9e-2cf5-4478-a251-6690eaaa2e31,Inverter,Schneider,Schneider Conext Core XC,Kerriers 1.1,,,Station: 1 | Location: 1.1 | Power: 680kW | Inverters: 8
+6308be9e-2cf5-4478-a251-6690eaaa2e31,Inverter,Schneider,Schneider Conext Core XC,Kerriers 1.2,,,Station: 1 | Location: 1.2 | Power: 680kW
+6308be9e-2cf5-4478-a251-6690eaaa2e31,Inverter,Schneider,Schneider Conext Core XC,Kerriers 2.1,,,Station: 2 | Location: 2.1 | Power: 680kW
+6308be9e-2cf5-4478-a251-6690eaaa2e31,Inverter,Schneider,Schneider Conext Core XC,U21406001086,,,Station: 2 | Location: 2.2 | Power: 680kW
+6308be9e-2cf5-4478-a251-6690eaaa2e31,Inverter,Schneider,Schneider Conext Core XC,Kerriers 3.1,,,Station: 3 | Location: 3.1 | Power: 680kW
+6308be9e-2cf5-4478-a251-6690eaaa2e31,Inverter,Schneider,Schneider Conext Core XC,Kerriers 3.2,,,Station: 3 | Location: 3.2 | Power: 680kW
+6308be9e-2cf5-4478-a251-6690eaaa2e31,Inverter,Schneider,Schneider Conext Core XC,Kerriers 4.1,,,Station: 4 | Location: 4.1 | Power: 680kW
+6308be9e-2cf5-4478-a251-6690eaaa2e31,Inverter,Schneider,Schneider Conext Core XC,Kerriers 4.2,,,Station: 4 | Location: 4.2 | Power: 680kW
+0144a602-b8ea-4537-a6fd-897102002639,Inverter,Gamesa,Gamesa 1.25MW,210066,,,Station: 1 | Location: 1.1 | Power: 630kW | Inverters: 12
+0144a602-b8ea-4537-a6fd-897102002639,Inverter,Gamesa,Gamesa 1.25MW,210065,,,Station: 1 | Location: 1.2 | Power: 630kW
+0144a602-b8ea-4537-a6fd-897102002639,Inverter,Gamesa,Gamesa 1.25MW,Ketton 1 - 2.1,,,Station: 2 | Location: 2.1 | Power: 630kW
+0144a602-b8ea-4537-a6fd-897102002639,Inverter,Gamesa,Gamesa 1.25MW,Ketton 1 - 2.2,,,Station: 2 | Location: 2.2 | Power: 630kW
+0144a602-b8ea-4537-a6fd-897102002639,Inverter,Gamesa,Gamesa 1.25MW,Ketton 1 - 3.1,,,Station: 3 | Location: 3.1 | Power: 630kW
+0144a602-b8ea-4537-a6fd-897102002639,Inverter,Gamesa,Gamesa 1.25MW,Ketton 1 - 3.2,,,Station: 3 | Location: 3.2 | Power: 630kW
+0144a602-b8ea-4537-a6fd-897102002639,Inverter,Gamesa,Gamesa 1.25MW,Ketton 1 - 4.1,,,Station: 4 | Location: 4.1 | Power: 630kW
+0144a602-b8ea-4537-a6fd-897102002639,Inverter,Gamesa,Gamesa 1.25MW,Ketton 1 - 4.2,,,Station: 4 | Location: 4.2 | Power: 630kW
+0144a602-b8ea-4537-a6fd-897102002639,Inverter,Gamesa,Gamesa 1.25MW,Ketton 1 - 5.1,,,Station: 5 | Location: 5.1 | Power: 630kW
+0144a602-b8ea-4537-a6fd-897102002639,Inverter,Gamesa,Gamesa 1.25MW,Ketton 1 - 5.2,,,Station: 5 | Location: 5.2 | Power: 630kW
+0144a602-b8ea-4537-a6fd-897102002639,Inverter,Gamesa,Gamesa 1.25MW,Ketton 1 - 6.1,,,Station: 6 | Location: 6.1 | Power: 630kW
+0144a602-b8ea-4537-a6fd-897102002639,Inverter,Gamesa,Gamesa 1.25MW,Ketton 1 - 6.2,,,Station: 6 | Location: 6.2 | Power: 630kW
+42e4fadc-9551-4abc-a66f-20983168faef,Inverter,Schneider,Schneider Conext Core XC,U21539000498,,,Station: B | Location: B.1 | Power: 680kW | Inverters: 6
+42e4fadc-9551-4abc-a66f-20983168faef,Inverter,Schneider,Schneider Conext Core XC,U21539000589,,,Station: B | Location: B.2 | Power: 680kW
+42e4fadc-9551-4abc-a66f-20983168faef,Inverter,Schneider,Schneider Conext Core XC,U21539000499,,,Station: C | Location: C.1 | Power: 680kW
+42e4fadc-9551-4abc-a66f-20983168faef,Inverter,Schneider,Schneider Conext Core XC,U21539000954,,,Station: C | Location: C.2 | Power: 680kW
+42e4fadc-9551-4abc-a66f-20983168faef,Inverter,Schneider,Schneider Conext Core XC,U21539000593,,,Station: D | Location: D.1 | Power: 680kW
+42e4fadc-9551-4abc-a66f-20983168faef,Inverter,Schneider,Schneider Conext Core XC,U21539020003,,,Station: D | Location: D.2 | Power: 680kW
+28118401-1a3b-48b3-afc5-69d46bccf24d,Inverter,Schneider,Schneider Conext Core XC,U21312000300,,,Station: A | Location: A.1 | Power: 680kW | Inverters: 14
+28118401-1a3b-48b3-afc5-69d46bccf24d,Inverter,Schneider,Schneider Conext Core XC,U21314000949,,,Station: A | Location: A.2 | Power: 680kW
+28118401-1a3b-48b3-afc5-69d46bccf24d,Inverter,Schneider,Schneider Conext Core XC,N21232000056,,,Station: B | Location: B.1 | Power: 680kW
+28118401-1a3b-48b3-afc5-69d46bccf24d,Inverter,Schneider,Schneider Conext Core XC,N21236000136,,,Station: B | Location: B.2 | Power: 680kW
+28118401-1a3b-48b3-afc5-69d46bccf24d,Inverter,Schneider,Schneider Conext Core XC,U21308000246,,,Station: C | Location: C.1 | Power: 680kW
+28118401-1a3b-48b3-afc5-69d46bccf24d,Inverter,Schneider,Schneider Conext Core XC,U21306000993,,,Station: C | Location: C.2 | Power: 680kW
+28118401-1a3b-48b3-afc5-69d46bccf24d,Inverter,Schneider,Schneider Conext Core XC,U21313000703,,,Station: D | Location: D.1 | Power: 680kW
+28118401-1a3b-48b3-afc5-69d46bccf24d,Inverter,Schneider,Schneider Conext Core XC,U21309000500,,,Station: D | Location: D.2 | Power: 680kW
+28118401-1a3b-48b3-afc5-69d46bccf24d,Inverter,Schneider,Schneider Conext Core XC,N21311000024,,,Station: E | Location: E.1 | Power: 680kW
+28118401-1a3b-48b3-afc5-69d46bccf24d,Inverter,Schneider,Schneider Conext Core XC,N21317000017,,,Station: E | Location: E.2 | Power: 680kW
+28118401-1a3b-48b3-afc5-69d46bccf24d,Inverter,Schneider,Schneider Conext Core XC,N21236000219,,,Station: F | Location: F.1 | Power: 680kW
+28118401-1a3b-48b3-afc5-69d46bccf24d,Inverter,Schneider,Schneider Conext Core XC,N21236000135,,,Station: F | Location: F.2 | Power: 680kW
+28118401-1a3b-48b3-afc5-69d46bccf24d,Inverter,Schneider,Schneider Conext Core XC,U21313000704,,,Station: G | Location: G.1 | Power: 680kW
+28118401-1a3b-48b3-afc5-69d46bccf24d,Inverter,Schneider,Schneider Conext Core XC,U21309000987,,,Station: G | Location: G.2 | Power: 680kW
+c5315694-8b7f-47d2-bd40-5c4e9683c999,Inverter,SMA,SMA SC-xxxCP-10,180350894,,,Station: 1 | Location: 1.1 | Power: 900kW | Inverters: 18
+c5315694-8b7f-47d2-bd40-5c4e9683c999,Inverter,SMA,SMA SC-xxxCP-10,180350893,,,Station: 1 | Location: 1.2 | Power: 900kW
+c5315694-8b7f-47d2-bd40-5c4e9683c999,Inverter,SMA,SMA SC-xxxCP-10,180350895,,,Station: 2 | Location: 2.1 | Power: 900kW
+c5315694-8b7f-47d2-bd40-5c4e9683c999,Inverter,SMA,SMA SC-xxxCP-10,180350896,,,Station: 2 | Location: 2.2 | Power: 900kW
+c5315694-8b7f-47d2-bd40-5c4e9683c999,Inverter,SMA,SMA SC-xxxCP-10,180350898,,,Station: 3 | Location: 3.1 | Power: 900kW
+c5315694-8b7f-47d2-bd40-5c4e9683c999,Inverter,SMA,SMA SC-xxxCP-10,180350897,,,Station: 3 | Location: 3.2 | Power: 900kW
+c5315694-8b7f-47d2-bd40-5c4e9683c999,Inverter,SMA,SMA SC-xxxCP-10,180350899,,,Station: 4 | Location: 4.1 | Power: 900kW
+c5315694-8b7f-47d2-bd40-5c4e9683c999,Inverter,SMA,SMA SC-xxxCP-10,180350900,,,Station: 4 | Location: 4.2 | Power: 900kW
+c5315694-8b7f-47d2-bd40-5c4e9683c999,Inverter,SMA,SMA SC-xxxCP-10,180350902,,,Station: 5 | Location: 5.1 | Power: 900kW
+c5315694-8b7f-47d2-bd40-5c4e9683c999,Inverter,SMA,SMA SC-xxxCP-10,180350901,,,Station: 5 | Location: 5.2 | Power: 900kW
+c5315694-8b7f-47d2-bd40-5c4e9683c999,Inverter,SMA,SMA SC-xxxCP-10,180350903,,,Station: 6 | Location: 6.1 | Power: 900kW
+c5315694-8b7f-47d2-bd40-5c4e9683c999,Inverter,SMA,SMA SC-xxxCP-10,180350904,,,Station: 6 | Location: 6.2 | Power: 900kW
+c5315694-8b7f-47d2-bd40-5c4e9683c999,Inverter,SMA,SMA SC-xxxCP-10,180350906,,,Station: 7 | Location: 7.1 | Power: 900kW
+c5315694-8b7f-47d2-bd40-5c4e9683c999,Inverter,SMA,SMA SC-xxxCP-10,180350905,,,Station: 7 | Location: 7.2 | Power: 900kW
+c5315694-8b7f-47d2-bd40-5c4e9683c999,Inverter,SMA,SMA SC-xxxCP-10,180350907,,,Station: 8 | Location: 8.1 | Power: 900kW
+c5315694-8b7f-47d2-bd40-5c4e9683c999,Inverter,SMA,SMA SC-xxxCP-10,180350908,,,Station: 8 | Location: 8.2 | Power: 900kW
+c5315694-8b7f-47d2-bd40-5c4e9683c999,Inverter,SMA,SMA SC-xxxCP-10,180350909,,,Station: 9 | Location: 9.1 | Power: 900kW
+c5315694-8b7f-47d2-bd40-5c4e9683c999,Inverter,SMA,SMA SC-xxxCP-10,180350910,,,Station: 9 | Location: 9.2 | Power: 900kW
+49ab56fa-65cc-4f1c-a62d-de265d0bae8a,Inverter,SMA,SMA SC-xxxCP-10,180351137,,,Station: 1 | Location: 1 | Power: 900kW | Inverters: 18
+49ab56fa-65cc-4f1c-a62d-de265d0bae8a,Inverter,SMA,SMA SC-xxxCP-10,180351135,,,Station: 2 | Location: 2 | Power: 900kW
+49ab56fa-65cc-4f1c-a62d-de265d0bae8a,Inverter,SMA,SMA SC-xxxCP-10,180351138,,,Station: 3 | Location: 3 | Power: 900kW
+49ab56fa-65cc-4f1c-a62d-de265d0bae8a,Inverter,SMA,SMA SC-xxxCP-10,180351124,,,Station: 4 | Location: 4 | Power: 900kW
+49ab56fa-65cc-4f1c-a62d-de265d0bae8a,Inverter,SMA,SMA SC-xxxCP-10,180351140,,,Station: 5 | Location: 5 | Power: 900kW
+49ab56fa-65cc-4f1c-a62d-de265d0bae8a,Inverter,SMA,SMA SC-xxxCP-10,180351136,,,Station: 1 | Location: 6 | Power: 900kW
+49ab56fa-65cc-4f1c-a62d-de265d0bae8a,Inverter,SMA,SMA SC-xxxCP-10,180351134,,,Station: 2 | Location: 7 | Power: 900kW
+49ab56fa-65cc-4f1c-a62d-de265d0bae8a,Inverter,SMA,SMA SC-xxxCP-10,180351139,,,Station: 3 | Location: 8 | Power: 900kW
+49ab56fa-65cc-4f1c-a62d-de265d0bae8a,Inverter,SMA,SMA SC-xxxCP-10,180351125,,,Station: 4 | Location: 9 | Power: 900kW
+49ab56fa-65cc-4f1c-a62d-de265d0bae8a,Inverter,SMA,SMA SC-xxxCP-10,180351128,,,Station: 5 | Location: 10 | Power: 900kW
+49ab56fa-65cc-4f1c-a62d-de265d0bae8a,Inverter,SMA,SMA SC-xxxCP-10,180351129,,,Station: 6 | Location: 11 | Power: 900kW
+49ab56fa-65cc-4f1c-a62d-de265d0bae8a,Inverter,SMA,SMA SC-xxxCP-10,180351127,,,Station: 6 | Location: 12 | Power: 900kW
+49ab56fa-65cc-4f1c-a62d-de265d0bae8a,Inverter,SMA,SMA SC-xxxCP-10,180351126,,,Station: 7 | Location: 13 | Power: 900kW
+49ab56fa-65cc-4f1c-a62d-de265d0bae8a,Inverter,SMA,SMA SC-xxxCP-10,180351131,,,Station: 7 | Location: 14 | Power: 900kW
+49ab56fa-65cc-4f1c-a62d-de265d0bae8a,Inverter,SMA,SMA SC-xxxCP-10,180351130,,,Station: 8 | Location: 15 | Power: 900kW
+49ab56fa-65cc-4f1c-a62d-de265d0bae8a,Inverter,SMA,SMA SC-xxxCP-10,180351132,,,Station: 8 | Location: 16 | Power: 900kW
+49ab56fa-65cc-4f1c-a62d-de265d0bae8a,Inverter,SMA,SMA SC-xxxCP-10,180351133,,,Station: 9 | Location: 17 | Power: 900kW
+49ab56fa-65cc-4f1c-a62d-de265d0bae8a,Inverter,SMA,SMA SC-xxxCP-10,180351141,,,Station: 9 | Location: 18 | Power: 900kW
+a3bd66b2-4234-43ae-b3ed-00987980b979,Inverter,Schneider,Schneider Xantrex GT,7804478,,,Station: 1 | Location: 1.1 | Power: 675kW | Inverters: 7
+a3bd66b2-4234-43ae-b3ed-00987980b979,Inverter,Schneider,Schneider Xantrex GT,7804469,,,Station: 2 | Location: 2.1 | Power: 675kW
+a3bd66b2-4234-43ae-b3ed-00987980b979,Inverter,Schneider,Schneider Xantrex GT,7804347,,,Station: 2 | Location: 2.2 | Power: 675kW
+a3bd66b2-4234-43ae-b3ed-00987980b979,Inverter,Schneider,Schneider Xantrex GT,7804480,,,Station: 3 | Location: 3.1 | Power: 675kW
+a3bd66b2-4234-43ae-b3ed-00987980b979,Inverter,Schneider,Schneider Xantrex GT,7804444,,,Station: 3 | Location: 3.2 | Power: 675kW
+a3bd66b2-4234-43ae-b3ed-00987980b979,Inverter,Schneider,Schneider Xantrex GT,7804481,,,Station: 4 | Location: 4.1 | Power: 675kW
+a3bd66b2-4234-43ae-b3ed-00987980b979,Inverter,Schneider,Schneider Xantrex GT,7804945,,,Station: 4 | Location: 4.2 | Power: 675kW
+e34802ce-3b6f-4e74-92d5-7be62639d901,Inverter,Schneider,Schneider Xantrex GT,7804742,,,Station: 1 | Location: 1 | Power: 675kW | Inverters: 7
+e34802ce-3b6f-4e74-92d5-7be62639d901,Inverter,Schneider,Schneider Xantrex GT,7804763,,,Station: 1 | Location: 2 | Power: 675kW
+e34802ce-3b6f-4e74-92d5-7be62639d901,Inverter,Schneider,Schneider Xantrex GT,7804856,,,Station: 2 | Location: 3 | Power: 675kW
+e34802ce-3b6f-4e74-92d5-7be62639d901,Inverter,Schneider,Schneider Xantrex GT,7804861,,,Station: 3 | Location: 5 | Power: 675kW
+e34802ce-3b6f-4e74-92d5-7be62639d901,Inverter,Schneider,Schneider Xantrex GT,7804858,,,Station: 3 | Location: 6 | Power: 675kW
+e34802ce-3b6f-4e74-92d5-7be62639d901,Inverter,Schneider,Schneider Xantrex GT,7804743,,,Station: 4 | Location: 7 | Power: 675kW
+e34802ce-3b6f-4e74-92d5-7be62639d901,Inverter,Schneider,Schneider Xantrex GT,7804855,,,Station: 4 | Location: 8 | Power: 675kW
+704b8ee8-7308-4b6c-8b4f-6b13d08d4278,Inverter,Schneider,Schneider Conext Core XC,U21541001049,,,Station: 1 | Location: 1.1 | Power: 680kW | Inverters: 6
+704b8ee8-7308-4b6c-8b4f-6b13d08d4278,Inverter,Schneider,Schneider Conext Core XC,U21539000957,,,Station: 1 | Location: 1.2 | Power: 680kW
+704b8ee8-7308-4b6c-8b4f-6b13d08d4278,Inverter,Schneider,Schneider Conext Core XC,U21541001044,,,Station: 1 | Location: 1.3 | Power: 680kW
+704b8ee8-7308-4b6c-8b4f-6b13d08d4278,Inverter,Schneider,Schneider Conext Core XC,U21545001696,,,Station: 2 | Location: 2.1 | Power: 680kW
+704b8ee8-7308-4b6c-8b4f-6b13d08d4278,Inverter,Schneider,Schneider Conext Core XC,U21545001695,,,Station: 2 | Location: 2.2 | Power: 680kW
+704b8ee8-7308-4b6c-8b4f-6b13d08d4278,Inverter,Schneider,Schneider Conext Core XC,U21545001785,,,Station: 2 | Location: 2.3 | Power: 680kW
+2efb2a47-f663-4b06-b7de-347e7e69ec32,Inverter,SMA,SMA SC-xxxCP-10,180191833,,,Station: 1 | Location: 1.1 | Power: 800kW | Inverters: 5
+2efb2a47-f663-4b06-b7de-347e7e69ec32,Inverter,SMA,SMA SC-xxxCP-10,180191832,,,Station: 1 | Location: 1.2 | Power: 800kW
+2efb2a47-f663-4b06-b7de-347e7e69ec32,Inverter,SMA,SMA SC-xxxCP-10,180191831,,,Station: 2 | Location: 2.1 | Power: 800kW
+2efb2a47-f663-4b06-b7de-347e7e69ec32,Inverter,SMA,SMA SC-xxxCP-10,180191834,,,Station: 3 | Location: 3.1 | Power: 800kW
+2efb2a47-f663-4b06-b7de-347e7e69ec32,Inverter,SMA,SMA SC-xxxCP-10,180191835,,,Station: 3 | Location: 3.2 | Power: 800kW
+e9cad788-32f0-4c96-a172-9926cc121c9f,Inverter,Schneider,Schneider Conext Core XC,U21510001249,,,Station: A | Location: A.1 | Power: 680kW | Inverters: 6
+e9cad788-32f0-4c96-a172-9926cc121c9f,Inverter,Schneider,Schneider Conext Core XC,U21515000723,,,Station: A | Location: A.2 | Power: 680kW
+e9cad788-32f0-4c96-a172-9926cc121c9f,Inverter,Schneider,Schneider Conext Core XC,U21515000909,,,Station: B | Location: B.1 | Power: 680kW
+e9cad788-32f0-4c96-a172-9926cc121c9f,Inverter,Schneider,Schneider Conext Core XC,U21515000765,,,Station: B | Location: B.2 | Power: 680kW
+e9cad788-32f0-4c96-a172-9926cc121c9f,Inverter,Schneider,Schneider Conext Core XC,U21510020043,,,Station: C | Location: C.1 | Power: 680kW
+e9cad788-32f0-4c96-a172-9926cc121c9f,Inverter,Schneider,Schneider Conext Core XC,U21515000910,,,Station: C | Location: C.2 | Power: 680kW
+f72f6f56-e784-4242-8502-bfffcf32b649,Inverter,Schneider,Schneider Xantrex GT,7804372,,,Station: 1 | Location: 1 | Power: 675kW | Inverters: 11
+f72f6f56-e784-4242-8502-bfffcf32b649,Inverter,Schneider,Schneider Xantrex GT,7804474,,,Station: 2 | Location: 2.1 | Power: 675kW
+f72f6f56-e784-4242-8502-bfffcf32b649,Inverter,Schneider,Schneider Xantrex GT,7804476,,,Station: 2 | Location: 2.2 | Power: 675kW
+f72f6f56-e784-4242-8502-bfffcf32b649,Inverter,Schneider,Schneider Xantrex GT,7804513,,,Station: 3 | Location: 3.1 | Power: 675kW
+f72f6f56-e784-4242-8502-bfffcf32b649,Inverter,Schneider,Schneider Xantrex GT,7804459,,,Station: 3 | Location: 3.2 | Power: 675kW
+f72f6f56-e784-4242-8502-bfffcf32b649,Inverter,Schneider,Schneider Xantrex GT,7804371,,,Station: 4 | Location: 4.1 | Power: 675kW
+f72f6f56-e784-4242-8502-bfffcf32b649,Inverter,Schneider,Schneider Xantrex GT,7804370,,,Station: 4 | Location: 4.2 | Power: 675kW
+f72f6f56-e784-4242-8502-bfffcf32b649,Inverter,Schneider,Schneider Xantrex GT,7804958,,,Station: 5 | Location: 5.1 | Power: 675kW
+f72f6f56-e784-4242-8502-bfffcf32b649,Inverter,Schneider,Schneider Xantrex GT,7804957,,,Station: 5 | Location: 5.2 | Power: 675kW
+f72f6f56-e784-4242-8502-bfffcf32b649,Inverter,Schneider,Schneider Xantrex GT,7804918,,,Station: 6 | Location: 6.1 | Power: 675kW
+f72f6f56-e784-4242-8502-bfffcf32b649,Inverter,Schneider,Schneider Xantrex GT,7804455,,,Station: 6 | Location: 6.2 | Power: 675kW
+55311387-02cc-4f68-9f86-8865cdfa57fa,Inverter,SMA,SMA SC-xxxCP-10,180801738,,,Station: 1 | Location: 1.1 | Power: 900kW | Inverters: 4
+55311387-02cc-4f68-9f86-8865cdfa57fa,Inverter,SMA,SMA SC-xxxCP-10,180801724,,,Station: 1 | Location: 1.2 | Power: 900kW
+55311387-02cc-4f68-9f86-8865cdfa57fa,Inverter,SMA,SMA SC-xxxCP-10,180802335,,,Station: 2 | Location: 2.1 | Power: 900kW
+55311387-02cc-4f68-9f86-8865cdfa57fa,Inverter,SMA,SMA SC-xxxCP-10,180802336,,,Station: 2 | Location: 2.2 | Power: 900kW
+80bc34c4-644f-4aba-b548-1937715db761,Inverter,SMA,SMA SC-xxxCP-10,180193022,,,Station: 1 | Location: 1 | Power: 900kW | Inverters: 5
+80bc34c4-644f-4aba-b548-1937715db761,Inverter,SMA,SMA SC-xxxCP-10,180193018,,,Station: 1 | Location: 2 | Power: 900kW
+80bc34c4-644f-4aba-b548-1937715db761,Inverter,SMA,SMA SC-xxxCP-10,180193019,,,Station: 2 | Location: 3 | Power: 900kW
+80bc34c4-644f-4aba-b548-1937715db761,Inverter,SMA,SMA SC-xxxCP-10,180193021,,,Station: 2 | Location: 4 | Power: 900kW
+80bc34c4-644f-4aba-b548-1937715db761,Inverter,SMA,SMA SC-xxxCP-10,180193020,,,Station: 3 | Location: 5 | Power: 900kW
+d333568b-b5dc-4425-8c91-7d2c45d7b41d,Inverter,Schneider,Schneider Conext Core XC,U21505000021,,,Station: A | Location: A.1 | Power: 680kW | Inverters: 6
+d333568b-b5dc-4425-8c91-7d2c45d7b41d,Inverter,Schneider,Schneider Conext Core XC,U21505000499,,,Station: A | Location: A.2 | Power: 680kW
+d333568b-b5dc-4425-8c91-7d2c45d7b41d,Inverter,Schneider,Schneider Conext Core XC,U21507001835,,,Station: B | Location: B.1 | Power: 680kW
+d333568b-b5dc-4425-8c91-7d2c45d7b41d,Inverter,Schneider,Schneider Conext Core XC,U21506030032,,,Station: B | Location: B.2 | Power: 680kW
+d333568b-b5dc-4425-8c91-7d2c45d7b41d,Inverter,Schneider,Schneider Conext Core XC,U21515000907,,,Station: C | Location: C.1 | Power: 680kW
+d333568b-b5dc-4425-8c91-7d2c45d7b41d,Inverter,Schneider,Schneider Conext Core XC,U21515000917,,,Station: C | Location: C.2 | Power: 680kW
+7e39fc6d-12bf-425a-9d91-44dc01c4de3f,Inverter,SMA,SMA SC-xxxCP-10,180191570,,,Station: 1 | Location: 1 | Power: 900kW | Inverters: 4
+7e39fc6d-12bf-425a-9d91-44dc01c4de3f,Inverter,SMA,SMA SC-xxxCP-10,180191571,,,Station: 1 | Location: 2 | Power: 900kW
+7e39fc6d-12bf-425a-9d91-44dc01c4de3f,Inverter,SMA,SMA SC-xxxCP-10,180801723,,,Station: 2 | Location: 3 | Power: 900kW
+7e39fc6d-12bf-425a-9d91-44dc01c4de3f,Inverter,SMA,SMA SC-xxxCP-10,180210548,,,Station: 2 | Location: 4 | Power: 900kW
+2376bec1-3506-4959-a694-62cb1a3a5110,Inverter,SMA,SMA SC-xxxCP-10,180800091,,,Station: 1 | Location: 1.1 | Power: 900kW | Inverters: 3
+2376bec1-3506-4959-a694-62cb1a3a5110,Inverter,SMA,SMA SC-xxxCP-10,180800089,,,Station: 2 | Location: 2.1 | Power: 900kW
+2376bec1-3506-4959-a694-62cb1a3a5110,Inverter,SMA,SMA SC-xxxCP-10,180800090,,,Station: 2 | Location: 2.2 | Power: 900kW
+110e2ab3-ca4e-4530-beeb-4f23b6aa472c,Inverter,SMA,SMA SC-xxxCP-10,180804134,,,Station: 1 | Location: 1 | Power: 850kW | Inverters: 4
+110e2ab3-ca4e-4530-beeb-4f23b6aa472c,Inverter,SMA,SMA SC-xxxCP-10,180804135,,,Station: 1 | Location: 2 | Power: 850kW
+110e2ab3-ca4e-4530-beeb-4f23b6aa472c,Inverter,SMA,SMA SC-xxxx,180501782,,,Station: 2 | Location: 3 | Power: 2200kW
+110e2ab3-ca4e-4530-beeb-4f23b6aa472c,Inverter,SMA,SMA SC-xxxx,180501778,,,Station: 3 | Location: 4 | Power: 2200kW
+bc1f5a25-6112-42e0-bac9-9e3faa230259,Inverter,SMA,SMA SC-xxxCP-10,180340447,,,Station: 1 | Location: 1.1 | Power: 850kW | Inverters: 22
+bc1f5a25-6112-42e0-bac9-9e3faa230259,Inverter,SMA,SMA SC-xxxCP-10,180340448,,,Station: 1 | Location: 1.2 | Power: 850kW
+bc1f5a25-6112-42e0-bac9-9e3faa230259,Inverter,SMA,SMA SC-xxxCP-10,180340445,,,Station: 2 | Location: 2.1 | Power: 850kW
+bc1f5a25-6112-42e0-bac9-9e3faa230259,Inverter,SMA,SMA SC-xxxCP-10,180340446,,,Station: 2 | Location: 2.2 | Power: 850kW
+bc1f5a25-6112-42e0-bac9-9e3faa230259,Inverter,SMA,SMA SC-xxxCP-10,180340441,,,Station: 3 | Location: 3.1 | Power: 850kW
+bc1f5a25-6112-42e0-bac9-9e3faa230259,Inverter,SMA,SMA SC-xxxCP-10,180340442,,,Station: 3 | Location: 3.2 | Power: 850kW
+bc1f5a25-6112-42e0-bac9-9e3faa230259,Inverter,SMA,SMA SC-xxxCP-10,180340456,,,Station: 4 | Location: 4.1 | Power: 850kW
+bc1f5a25-6112-42e0-bac9-9e3faa230259,Inverter,SMA,SMA SC-xxxCP-10,180340455,,,Station: 4 | Location: 4.2 | Power: 850kW
+bc1f5a25-6112-42e0-bac9-9e3faa230259,Inverter,SMA,SMA SC-xxxCP-10,180340444,,,Station: 5 | Location: 5.1 | Power: 850kW
+bc1f5a25-6112-42e0-bac9-9e3faa230259,Inverter,SMA,SMA SC-xxxCP-10,180340443,,,Station: 5 | Location: 5.2 | Power: 850kW
+bc1f5a25-6112-42e0-bac9-9e3faa230259,Inverter,SMA,SMA SC-xxxCP-10,180340451,,,Station: 6 | Location: 6.1 | Power: 850kW
+bc1f5a25-6112-42e0-bac9-9e3faa230259,Inverter,SMA,SMA SC-xxxCP-10,180340452,,,Station: 6 | Location: 6.2 | Power: 850kW
+bc1f5a25-6112-42e0-bac9-9e3faa230259,Inverter,SMA,SMA SC-xxxCP-10,180340453,,,Station: 7 | Location: 7.1 | Power: 850kW
+bc1f5a25-6112-42e0-bac9-9e3faa230259,Inverter,SMA,SMA SC-xxxCP-10,180340454,,,Station: 7 | Location: 7.2 | Power: 850kW
+bc1f5a25-6112-42e0-bac9-9e3faa230259,Inverter,SMA,SMA SC-xxxCP-10,180340449,,,Station: 8 | Location: 8.1 | Power: 850kW
+bc1f5a25-6112-42e0-bac9-9e3faa230259,Inverter,SMA,SMA SC-xxxCP-10,180340450,,,Station: 8 | Location: 8.2 | Power: 850kW
+bc1f5a25-6112-42e0-bac9-9e3faa230259,Inverter,SMA,SMA SC-xxxCP-10,180340459,,,Station: 9 | Location: 9.1 | Power: 850kW
+bc1f5a25-6112-42e0-bac9-9e3faa230259,Inverter,SMA,SMA SC-xxxCP-10,180340460,,,Station: 9 | Location: 9.2 | Power: 850kW
+bc1f5a25-6112-42e0-bac9-9e3faa230259,Inverter,SMA,SMA SC-xxxCP-10,180340457,,,Station: 10 | Location: 10.1 | Power: 850kW
+bc1f5a25-6112-42e0-bac9-9e3faa230259,Inverter,SMA,SMA SC-xxxCP-10,180340458,,,Station: 10 | Location: 10.2 | Power: 850kW
+bc1f5a25-6112-42e0-bac9-9e3faa230259,Inverter,SMA,SMA SC-xxxCP-10,180351270,,,Station: 11 | Location: 11.1 | Power: 850kW
+bc1f5a25-6112-42e0-bac9-9e3faa230259,Inverter,SMA,SMA SC-xxxCP-10,180351271,,,Station: 11 | Location: 11.2 | Power: 850kW
+7008a3b0-a451-4ae6-bda1-d3eac70fde51,Inverter,SMA,SMA SC-xxxCP-10,180181309,,,Station: 1 | Location: 1.1 | Power: 630kW | Inverters: 6
+7008a3b0-a451-4ae6-bda1-d3eac70fde51,Inverter,SMA,SMA SC-xxxCP-10,180181310,,,Station: 1 | Location: 1.2 | Power: 630kW
+7008a3b0-a451-4ae6-bda1-d3eac70fde51,Inverter,SMA,SMA SC-xxxCP-10,180181311,,,Station: 2 | Location: 2.1 | Power: 630kW
+7008a3b0-a451-4ae6-bda1-d3eac70fde51,Inverter,SMA,SMA SC-xxxCP-10,180181308,,,Station: 2 | Location: 2.2 | Power: 630kW
+7008a3b0-a451-4ae6-bda1-d3eac70fde51,Inverter,SMA,SMA SC-xxxCP-10,180171304,,,Station: 3 | Location: 3.1 | Power: 500kW
+7008a3b0-a451-4ae6-bda1-d3eac70fde51,Inverter,SMA,SMA SC-xxxCP-10,180171305,,,Station: 3 | Location: 3.2 | Power: 500kW
+b08ca683-63e6-4b12-a37b-56fb3561f29b,Inverter,Schneider,Schneider Conext Core XC,U21538000869,,,Station: A | Location: A.1 | Power: 680kW | Inverters: 6
+b08ca683-63e6-4b12-a37b-56fb3561f29b,Inverter,Schneider,Schneider Conext Core XC,U21537001232,,,Station: A | Location: A.2 | Power: 680kW
+b08ca683-63e6-4b12-a37b-56fb3561f29b,Inverter,Schneider,Schneider Conext Core XC,U21537001215,,,Station: B | Location: B.1 | Power: 680kW
+b08ca683-63e6-4b12-a37b-56fb3561f29b,Inverter,Schneider,Schneider Conext Core XC,U21539000953,,,Station: B | Location: B.2 | Power: 680kW
+b08ca683-63e6-4b12-a37b-56fb3561f29b,Inverter,Schneider,Schneider Conext Core XC,U21539000591,,,Station: C | Location: C.1 | Power: 680kW
+b08ca683-63e6-4b12-a37b-56fb3561f29b,Inverter,Schneider,Schneider Conext Core XC,U21538000461,,,Station: C | Location: C.2 | Power: 680kW
+c6487aa5-b323-4494-b184-bd90defd7755,Inverter,SMA,SMA SC-xxxCP-10,180800377,,,Station: 1 | Location: 1.1 | Power: 900kW | Inverters: 4
+c6487aa5-b323-4494-b184-bd90defd7755,Inverter,SMA,SMA SC-xxxCP-10,180800378,,,Station: 1 | Location: 1.2 | Power: 900kW
+c6487aa5-b323-4494-b184-bd90defd7755,Inverter,SMA,SMA SC-xxxCP-10,180800375,,,Station: 2 | Location: 2.1 | Power: 900kW
+c6487aa5-b323-4494-b184-bd90defd7755,Inverter,SMA,SMA SC-xxxCP-10,180800376,,,Station: 2 | Location: 2.2 | Power: 900kW
+834c9db8-6283-4f8a-aafe-1c1a7bb4701d,Inverter,SMA,SMA SC-xxxCP-10,180800224,,,Station: 1 | Location: 1 | Power: 900kW | Inverters: 15
+834c9db8-6283-4f8a-aafe-1c1a7bb4701d,Inverter,SMA,SMA SC-xxxCP-10,180800231,,,Station: 1 | Location: 2 | Power: 900kW
+834c9db8-6283-4f8a-aafe-1c1a7bb4701d,Inverter,SMA,SMA SC-xxxCP-10,180800225,,,Station: 2 | Location: 3 | Power: 900kW
+834c9db8-6283-4f8a-aafe-1c1a7bb4701d,Inverter,SMA,SMA SC-xxxCP-10,180800232,,,Station: 2 | Location: 4 | Power: 900kW
+834c9db8-6283-4f8a-aafe-1c1a7bb4701d,Inverter,SMA,SMA SC-xxxCP-10,180800226,,,Station: 3 | Location: 5 | Power: 900kW
+834c9db8-6283-4f8a-aafe-1c1a7bb4701d,Inverter,SMA,SMA SC-xxxCP-10,180800223,,,Station: 3 | Location: 6 | Power: 900kW
+834c9db8-6283-4f8a-aafe-1c1a7bb4701d,Inverter,SMA,SMA SC-xxxCP-10,180800227,,,Station: 4 | Location: 7 | Power: 900kW
+834c9db8-6283-4f8a-aafe-1c1a7bb4701d,Inverter,SMA,SMA SC-xxxCP-10,180800222,,,Station: 4 | Location: 8 | Power: 900kW
+834c9db8-6283-4f8a-aafe-1c1a7bb4701d,Inverter,SMA,SMA SC-xxxCP-10,180800228,,,Station: 5 | Location: 9 | Power: 900kW
+834c9db8-6283-4f8a-aafe-1c1a7bb4701d,Inverter,SMA,SMA SC-xxxCP-10,180800233,,,Station: 5 | Location: 10 | Power: 900kW
+834c9db8-6283-4f8a-aafe-1c1a7bb4701d,Inverter,SMA,SMA SC-xxxCP-10,180800229,,,Station: 6 | Location: 11 | Power: 900kW
+834c9db8-6283-4f8a-aafe-1c1a7bb4701d,Inverter,SMA,SMA SC-xxxCP-10,180800221,,,Station: 6 | Location: 12 | Power: 900kW
+834c9db8-6283-4f8a-aafe-1c1a7bb4701d,Inverter,SMA,SMA SC-xxxCP-10,180800230,,,Station: 7 | Location: 13 | Power: 900kW
+834c9db8-6283-4f8a-aafe-1c1a7bb4701d,Inverter,SMA,SMA SC-xxxCP-10,180800234,,,Station: 7 | Location: 14 | Power: 900kW
+834c9db8-6283-4f8a-aafe-1c1a7bb4701d,Inverter,SMA,SMA SC-xxxCP-10,180800220,,,Station: 8 | Location: 15 | Power: 900kW
+4cb72715-a49f-4e89-b5fa-1f00f36d1f9d,Inverter,Schneider,Schneider Xantrex GT,7804348,,,Station: A | Location: A.1 | Power: 675kW | Inverters: 9
+4cb72715-a49f-4e89-b5fa-1f00f36d1f9d,Inverter,Schneider,Schneider Xantrex GT,7804462,,,Station: A | Location: A.2 | Power: 675kW
+4cb72715-a49f-4e89-b5fa-1f00f36d1f9d,Inverter,Schneider,Schneider Xantrex GT,7804394,,,Station: B | Location: B.1 | Power: 675kW
+4cb72715-a49f-4e89-b5fa-1f00f36d1f9d,Inverter,Schneider,Schneider Xantrex GT,7804461,,,Station: B | Location: B.2 | Power: 675kW
+4cb72715-a49f-4e89-b5fa-1f00f36d1f9d,Inverter,Schneider,Schneider Xantrex GT,7804899,,,Station: C | Location: C.1 | Power: 675kW
+4cb72715-a49f-4e89-b5fa-1f00f36d1f9d,Inverter,Schneider,Schneider Xantrex GT,7804044,,,Station: D | Location: D.1 | Power: 675kW
+4cb72715-a49f-4e89-b5fa-1f00f36d1f9d,Inverter,Schneider,Schneider Xantrex GT,7803985,,,Station: D | Location: D.2 | Power: 675kW
+4cb72715-a49f-4e89-b5fa-1f00f36d1f9d,Inverter,Schneider,Schneider Xantrex GT,7803987,,,Station: E | Location: E.1 | Power: 675kW
+4cb72715-a49f-4e89-b5fa-1f00f36d1f9d,Inverter,Schneider,Schneider Xantrex GT,7803753,,,Station: E | Location: E.2 | Power: 675kW
+cac8ad0a-d3e2-49a9-8036-4ffe6f4257c0,Inverter,Schneider,Schneider Xantrex GT,7804762,,,Station: 1 | Location: 1 | Power: 675kW | Inverters: 7
+cac8ad0a-d3e2-49a9-8036-4ffe6f4257c0,Inverter,Schneider,Schneider Xantrex GT,7804764,,,Station: 1 | Location: 2 | Power: 675kW
+cac8ad0a-d3e2-49a9-8036-4ffe6f4257c0,Inverter,Schneider,Schneider Xantrex GT,7804767,,,Station: 2 | Location: 3 | Power: 675kW
+cac8ad0a-d3e2-49a9-8036-4ffe6f4257c0,Inverter,Schneider,Schneider Xantrex GT,7804741,,,Station: 2 | Location: 4 | Power: 675kW
+cac8ad0a-d3e2-49a9-8036-4ffe6f4257c0,Inverter,Schneider,Schneider Xantrex GT,7804770,,,Station: 3 | Location: 5 | Power: 675kW
+cac8ad0a-d3e2-49a9-8036-4ffe6f4257c0,Inverter,Schneider,Schneider Xantrex GT,7804857,,,Station: 3 | Location: 6 | Power: 675kW
+cac8ad0a-d3e2-49a9-8036-4ffe6f4257c0,Inverter,Schneider,Schneider Xantrex GT,7804740,,,Station: 4 | Location: 7 | Power: 675kW
+36d2ee0f-6708-4ce5-a622-67460f97cce1,Inverter,SMA,SMA SC-xxxCP-10,180800137,,,Station: 7 | Location: 7.1 | Power: 900kW | Inverters: 41
+36d2ee0f-6708-4ce5-a622-67460f97cce1,Inverter,SMA,SMA SC-xxxCP-10,180800122,,,Station: 7 | Location: 7.2 | Power: 900kW
+7c385a75-3c51-44fc-b61f-ab87cbb5129d,Inverter,SMA,SMA SC-xxxCP-10,180351376,,,Station: 1 | Location: 1.1 | Power: 900kW | Inverters: 8
+7c385a75-3c51-44fc-b61f-ab87cbb5129d,Inverter,SMA,SMA SC-xxxCP-10,180800035,,,Station: 1 | Location: 1.2 | Power: 900kW
+7c385a75-3c51-44fc-b61f-ab87cbb5129d,Inverter,SMA,SMA SC-xxxCP-10,180800036,,,Station: 2 | Location: 2.1 | Power: 900kW
+7c385a75-3c51-44fc-b61f-ab87cbb5129d,Inverter,SMA,SMA SC-xxxCP-10,180800037,,,Station: 2 | Location: 2.2 | Power: 900kW
+7c385a75-3c51-44fc-b61f-ab87cbb5129d,Inverter,SMA,SMA SC-xxxCP-10,180800065,,,Station: 3 | Location: 3.1 | Power: 900kW
+7c385a75-3c51-44fc-b61f-ab87cbb5129d,Inverter,SMA,SMA SC-xxxCP-10,180800066,,,Station: 3 | Location: 3.2 | Power: 900kW
+7c385a75-3c51-44fc-b61f-ab87cbb5129d,Inverter,SMA,SMA SC-xxxCP-10,180351385,,,Station: 4 | Location: 4.1 | Power: 900kW
+7c385a75-3c51-44fc-b61f-ab87cbb5129d,Inverter,SMA,SMA SC-xxxCP-10,180351386,,,Station: 4 | Location: 4.2 | Power: 900kW
+acddca06-77aa-406f-bf93-3ade753e9531,Inverter,SMA,SMA SC-xxxCP-10,180193226,,,Station: 1 | Location: 1.1 | Power: 800kW | Inverters: 6
+acddca06-77aa-406f-bf93-3ade753e9531,Inverter,SMA,SMA SC-xxxCP-10,180193227,,,Station: 1 | Location: 1.2 | Power: 800kW
+acddca06-77aa-406f-bf93-3ade753e9531,Inverter,SMA,SMA SC-xxxCP-10,180193228,,,Station: 2 | Location: 2.1 | Power: 800kW
+acddca06-77aa-406f-bf93-3ade753e9531,Inverter,SMA,SMA SC-xxxCP-10,180193229,,,Station: 2 | Location: 2.2 | Power: 800kW
+acddca06-77aa-406f-bf93-3ade753e9531,Inverter,SMA,SMA SC-xxxCP-10,180193230,,,Station: 3 | Location: 3.1 | Power: 800kW
+acddca06-77aa-406f-bf93-3ade753e9531,Inverter,SMA,SMA SC-xxxCP-10,180193231,,,Station: 3 | Location: 3.2 | Power: 800kW
+0a0cb556-269f-4a61-9b8b-e3fea2306c21,Inverter,Schneider,Schneider Conext Core XC,U21433000824,,,Station: A | Location: A.1 | Power: 680kW | Inverters: 42
+0a0cb556-269f-4a61-9b8b-e3fea2306c21,Inverter,Schneider,Schneider Conext Core XC,U21427000005,,,Station: A | Location: A.2 | Power: 680kW
+0a0cb556-269f-4a61-9b8b-e3fea2306c21,Inverter,Schneider,Schneider Conext Core XC,U21431000176,,,Station: A | Location: A.3 | Power: 680kW
+0a0cb556-269f-4a61-9b8b-e3fea2306c21,Inverter,Schneider,Schneider Conext Core XC,U21432000953,,,Station: A | Location: A.4 | Power: 680kW
+0a0cb556-269f-4a61-9b8b-e3fea2306c21,Inverter,Schneider,Schneider Conext Core XC,N21311000029,,,Station: B | Location: B.1 | Power: 680kW
+0a0cb556-269f-4a61-9b8b-e3fea2306c21,Inverter,Schneider,Schneider Conext Core XC,N21310000009,,,Station: B | Location: B.2 | Power: 680kW
+0a0cb556-269f-4a61-9b8b-e3fea2306c21,Inverter,Schneider,Schneider Conext Core XC,U21429000283,,,Station: B | Location: B.3 | Power: 680kW
+0a0cb556-269f-4a61-9b8b-e3fea2306c21,Inverter,Schneider,Schneider Conext Core XC,U21428000425,,,Station: B | Location: B.4 | Power: 680kW
+0a0cb556-269f-4a61-9b8b-e3fea2306c21,Inverter,Schneider,Schneider Conext Core XC,U21428000424,,,Station: C | Location: C.1 | Power: 680kW
+0a0cb556-269f-4a61-9b8b-e3fea2306c21,Inverter,Schneider,Schneider Conext Core XC,U21431000161,,,Station: C | Location: C.2 | Power: 680kW
+0a0cb556-269f-4a61-9b8b-e3fea2306c21,Inverter,Schneider,Schneider Conext Core XC,Port Farm D.1,,,Station: D | Location: D.1 | Power: 680kW
+0a0cb556-269f-4a61-9b8b-e3fea2306c21,Inverter,Schneider,Schneider Conext Core XC,U21430000616,,,Station: D | Location: D.2 | Power: 680kW
+0a0cb556-269f-4a61-9b8b-e3fea2306c21,Inverter,Schneider,Schneider Conext Core XC,Port Farm D.3,,,Station: D | Location: D.3 | Power: 680kW
+0a0cb556-269f-4a61-9b8b-e3fea2306c21,Inverter,Schneider,Schneider Conext Core XC,Port Farm D.4,,,Station: D | Location: D.4 | Power: 680kW
+0a0cb556-269f-4a61-9b8b-e3fea2306c21,Inverter,Schneider,Schneider Conext Core XC,Port Farm E.1,,,Station: E | Location: E.1 | Power: 680kW
+0a0cb556-269f-4a61-9b8b-e3fea2306c21,Inverter,Schneider,Schneider Conext Core XC,Port Farm E.2,,,Station: E | Location: E.2 | Power: 680kW
+0a0cb556-269f-4a61-9b8b-e3fea2306c21,Inverter,Schneider,Schneider Conext Core XC,Port Farm E.3,,,Station: E | Location: E.3 | Power: 680kW
+0a0cb556-269f-4a61-9b8b-e3fea2306c21,Inverter,Schneider,Schneider Conext Core XC,Port Farm E.4,,,Station: E | Location: E.4 | Power: 680kW
+0a0cb556-269f-4a61-9b8b-e3fea2306c21,Inverter,Schneider,Schneider Conext Core XC,U21431000168,,,Station: F | Location: F.1 | Power: 680kW
+0a0cb556-269f-4a61-9b8b-e3fea2306c21,Inverter,Schneider,Schneider Conext Core XC,U21430000620,,,Station: F | Location: F.2 | Power: 680kW
+0a0cb556-269f-4a61-9b8b-e3fea2306c21,Inverter,Schneider,Schneider Conext Core XC,U21310001045,,,Station: F | Location: F.3 | Power: 680kW
+0a0cb556-269f-4a61-9b8b-e3fea2306c21,Inverter,Schneider,Schneider Conext Core XC,U21431000169,,,Station: F | Location: F.4 | Power: 680kW
+0a0cb556-269f-4a61-9b8b-e3fea2306c21,Inverter,Schneider,Schneider Conext Core XC,U21427000076,,,Station: G | Location: G.1 | Power: 680kW
+0a0cb556-269f-4a61-9b8b-e3fea2306c21,Inverter,Schneider,Schneider Conext Core XC,U21432001224,,,Station: G | Location: G.2 | Power: 680kW
+0a0cb556-269f-4a61-9b8b-e3fea2306c21,Inverter,Schneider,Schneider Conext Core XC,Port Farm G.3,,,Station: G | Location: G.3 | Power: 680kW
+0a0cb556-269f-4a61-9b8b-e3fea2306c21,Inverter,Schneider,Schneider Conext Core XC,Port Farm G.4,,,Station: G | Location: G.4 | Power: 680kW
+0a0cb556-269f-4a61-9b8b-e3fea2306c21,Inverter,Schneider,Schneider Conext Core XC,U21310000561,,,Station: H | Location: H.1 | Power: 680kW
+0a0cb556-269f-4a61-9b8b-e3fea2306c21,Inverter,Schneider,Schneider Conext Core XC,N21317000195,,,Station: H | Location: H.2 | Power: 680kW
+0a0cb556-269f-4a61-9b8b-e3fea2306c21,Inverter,Schneider,Schneider Conext Core XC,U21433000126,,,Station: H | Location: H.3 | Power: 680kW
+0a0cb556-269f-4a61-9b8b-e3fea2306c21,Inverter,Schneider,Schneider Conext Core XC,U21430000622,,,Station: H | Location: H.4 | Power: 680kW
+0a0cb556-269f-4a61-9b8b-e3fea2306c21,Inverter,Schneider,Schneider Conext Core XC,U21431000160,,,Station: I | Location: I.1 | Power: 680kW
+0a0cb556-269f-4a61-9b8b-e3fea2306c21,Inverter,Schneider,Schneider Conext Core XC,U21427000071,,,Station: I | Location: I.2 | Power: 680kW
+0a0cb556-269f-4a61-9b8b-e3fea2306c21,Inverter,Schneider,Schneider Conext Core XC,U21431000164,,,Station: I | Location: I.3 | Power: 680kW
+0a0cb556-269f-4a61-9b8b-e3fea2306c21,Inverter,Schneider,Schneider Conext Core XC,U21432000954,,,Station: I | Location: I.4 | Power: 680kW
+0a0cb556-269f-4a61-9b8b-e3fea2306c21,Inverter,Schneider,Schneider Conext Core XC,Port Farm J.1,,,Station: J | Location: J.1 | Power: 680kW
+0a0cb556-269f-4a61-9b8b-e3fea2306c21,Inverter,Schneider,Schneider Conext Core XC,Port Farm J.2,,,Station: J | Location: J.2 | Power: 680kW
+0a0cb556-269f-4a61-9b8b-e3fea2306c21,Inverter,Schneider,Schneider Conext Core XC,Port Farm J.3,,,Station: J | Location: J.3 | Power: 680kW
+0a0cb556-269f-4a61-9b8b-e3fea2306c21,Inverter,Schneider,Schneider Conext Core XC,N21310000010,,,Station: J | Location: J.4 | Power: 680kW
+0a0cb556-269f-4a61-9b8b-e3fea2306c21,Inverter,Schneider,Schneider Conext Core XC,U21431000177,,,Station: K | Location: K.1 | Power: 680kW
+0a0cb556-269f-4a61-9b8b-e3fea2306c21,Inverter,Schneider,Schneider Conext Core XC,Port Farm K.2,,,Station: K | Location: K.2 | Power: 680kW
+0a0cb556-269f-4a61-9b8b-e3fea2306c21,Inverter,Schneider,Schneider Conext Core XC,Port Farm K.3,,,Station: K | Location: K.3 | Power: 680kW
+0a0cb556-269f-4a61-9b8b-e3fea2306c21,Inverter,Schneider,Schneider Conext Core XC,Port Farm K.4,,,Station: K | Location: K.4 | Power: 680kW
+8e78cd39-69c4-496c-9ad2-e8a66a7cc478,Inverter,SMA,SMA SC-xxxCP-10,180350876,,,Station: 1 | Location: 1.1 | Power: 900kW | Inverters: 8
+8e78cd39-69c4-496c-9ad2-e8a66a7cc478,Inverter,SMA,SMA SC-xxxCP-10,180350877,,,Station: 1 | Location: 1.2 | Power: 900kW
+8e78cd39-69c4-496c-9ad2-e8a66a7cc478,Inverter,SMA,SMA SC-xxxCP-10,180192644,,,Station: 2 | Location: 2.1 | Power: 800kW
+8e78cd39-69c4-496c-9ad2-e8a66a7cc478,Inverter,SMA,SMA SC-xxxCP-10,180192640,,,Station: 2 | Location: 2.2 | Power: 800kW
+8e78cd39-69c4-496c-9ad2-e8a66a7cc478,Inverter,SMA,SMA SC-xxxCP-10,180192643,,,Station: 3 | Location: 3.1 | Power: 800kW
+8e78cd39-69c4-496c-9ad2-e8a66a7cc478,Inverter,SMA,SMA SC-xxxCP-10,180192641,,,Station: 3 | Location: 3.2 | Power: 800kW
+8e78cd39-69c4-496c-9ad2-e8a66a7cc478,Inverter,SMA,SMA SC-xxxCP-10,180192645,,,Station: 4 | Location: 4.1 | Power: 800kW
+8e78cd39-69c4-496c-9ad2-e8a66a7cc478,Inverter,SMA,SMA SC-xxxCP-10,180192642,,,Station: 4 | Location: 4.2 | Power: 800kW
+3b92372f-8e12-4f02-92fe-74589d3125f5,Inverter,Schneider,Schneider Xantrex GT,7803546,,,Station: A | Location: A.1 | Power: 675kW | Inverters: 8
+3b92372f-8e12-4f02-92fe-74589d3125f5,Inverter,Schneider,Schneider Xantrex GT,7803756,,,Station: A | Location: A.2 | Power: 675kW
+3b92372f-8e12-4f02-92fe-74589d3125f5,Inverter,Schneider,Schneider Xantrex GT,7803930,,,Station: B | Location: B.1 | Power: 675kW
+3b92372f-8e12-4f02-92fe-74589d3125f5,Inverter,Schneider,Schneider Xantrex GT,7804096,,,Station: B | Location: B.2 | Power: 675kW
+3b92372f-8e12-4f02-92fe-74589d3125f5,Inverter,Schneider,Schneider Xantrex GT,7803986,,,Station: C | Location: C.1 | Power: 675kW
+3b92372f-8e12-4f02-92fe-74589d3125f5,Inverter,Schneider,Schneider Xantrex GT,7803925,,,Station: C | Location: C.2 | Power: 675kW
+3b92372f-8e12-4f02-92fe-74589d3125f5,Inverter,Schneider,Schneider Xantrex GT,7803982,,,Station: D | Location: D.1 | Power: 675kW
+3b92372f-8e12-4f02-92fe-74589d3125f5,Inverter,Schneider,Schneider Xantrex GT,7803548,,,Station: D | Location: D.2 | Power: 675kW
+4ae83513-2012-4fbf-85ca-b932d9468376,Inverter,SMA,SMA SC-xxxCP-10,180802242,,,Station: 1 | Location: 1 | Power: 850kW | Inverters: 3
+4ae83513-2012-4fbf-85ca-b932d9468376,Inverter,SMA,SMA SC-xxxx,180500837,,,Station: 2 | Location: 2 | Power: 2200kW
+4ae83513-2012-4fbf-85ca-b932d9468376,Inverter,SMA,SMA SC-xxxx,180500836,,,Station: 3 | Location: 3 | Power: 2200kW
+26e24274-1f71-4a33-8e6e-d727ee5bf099,Inverter,SMA,SMA SC-xxxCP-10,TBC,,,Station: 1 | Location: 1.1 | Power: 900kW | Inverters: 4
+26e24274-1f71-4a33-8e6e-d727ee5bf099,Inverter,SMA,SMA SC-xxxCP-10,TBC,,,Station: 1 | Location: 1.2 | Power: 900kW
+26e24274-1f71-4a33-8e6e-d727ee5bf099,Inverter,SMA,SMA SC-xxxCP-10,180804399,,,Station: 2 | Location: 2.1 | Power: 900kW
+26e24274-1f71-4a33-8e6e-d727ee5bf099,Inverter,SMA,SMA SC-xxxCP-10,180804400,,,Station: 2 | Location: 2.2 | Power: 900kW
+b76a341e-bf56-4d7b-9e4f-4e9c3278c1cf,Inverter,SMA,SMA SC-xxxCP-10,180800205,,,Station: 1 | Location: 1 | Power: 850kW | Inverters: 5
+b76a341e-bf56-4d7b-9e4f-4e9c3278c1cf,Inverter,SMA,SMA SC-xxxCP-10,180800206,,,Station: 1 | Location: 2 | Power: 850kW
+b76a341e-bf56-4d7b-9e4f-4e9c3278c1cf,Inverter,SMA,SMA SC-xxxCP-10,180802090,,,Station: 2 | Location: 3 | Power: 850kW
+b76a341e-bf56-4d7b-9e4f-4e9c3278c1cf,Inverter,SMA,SMA SC-xxxCP-10,180802084,,,Station: 3 | Location: 4 | Power: 850kW
+b76a341e-bf56-4d7b-9e4f-4e9c3278c1cf,Inverter,SMA,SMA SC-xxxCP-10,180802088,,,Station: 3 | Location: 5 | Power: 850kW
+f34e5c19-f7dc-44c1-8bc1-4264e4d15bda,Inverter,Schneider,Schneider Conext Core XC,N21209000007,,,Station: 1 | Location: 1.1 | Power: 680kW | Inverters: 5
+f34e5c19-f7dc-44c1-8bc1-4264e4d15bda,Inverter,Schneider,Schneider Conext Core XC,N21209000005,,,Station: 1 | Location: 1.2 | Power: 680kW
+f34e5c19-f7dc-44c1-8bc1-4264e4d15bda,Inverter,Schneider,Schneider Conext Core XC,N21211000003,,,Station: 2 | Location: 2.1 | Power: 680kW
+f34e5c19-f7dc-44c1-8bc1-4264e4d15bda,Inverter,Schneider,Schneider Conext Core XC,N21209000008,,,Station: 2 | Location: 2.2 | Power: 680kW
+f34e5c19-f7dc-44c1-8bc1-4264e4d15bda,Inverter,Schneider,Schneider Conext Core XC,N21212000021,,,Station: 3 | Location: 3.1 | Power: 680kW
+bb08c76f-6d3b-4cb3-8ed5-3496221fba77,Inverter,Schneider,Schneider Conext Core XC,U21544000080,,,Station: A | Location: A.1 | Power: 680kW | Inverters: 6
+bb08c76f-6d3b-4cb3-8ed5-3496221fba77,Inverter,Schneider,Schneider Conext Core XC,U21537001235,,,Station: A | Location: A.2 | Power: 680kW
+bb08c76f-6d3b-4cb3-8ed5-3496221fba77,Inverter,Schneider,Schneider Conext Core XC,U21544000312,,,Station: B | Location: SN14 8HH | Power: 680kW
+bb08c76f-6d3b-4cb3-8ed5-3496221fba77,Inverter,Schneider,Schneider Conext Core XC,U21543000099,,,Station: B | Location: B.2 | Power: 680kW
+bb08c76f-6d3b-4cb3-8ed5-3496221fba77,Inverter,Schneider,Schneider Conext Core XC,U21537001212,,,Station: C | Location: C.1 | Power: 680kW
+bb08c76f-6d3b-4cb3-8ed5-3496221fba77,Inverter,Schneider,Schneider Conext Core XC,U21539000087,,,Station: C | Location: C.2 | Power: 680kW
+6b325d0e-37a2-48ea-8fd2-1168285faacd,Inverter,SMA,SMA SC-xxxCP-10,180192631,,,Station: 1 | Location: 1 | Power: 800kW | Inverters: 5
+6b325d0e-37a2-48ea-8fd2-1168285faacd,Inverter,SMA,SMA SC-xxxCP-10,180192633,,,Station: 1 | Location: 2 | Power: 800kW
+6b325d0e-37a2-48ea-8fd2-1168285faacd,Inverter,SMA,SMA SC-xxxCP-10,180192630,,,Station: 2 | Location: 3 | Power: 800kW
+6b325d0e-37a2-48ea-8fd2-1168285faacd,Inverter,SMA,SMA SC-xxxCP-10,180192632,,,Station: 2 | Location: 4 | Power: 800kW
+6b325d0e-37a2-48ea-8fd2-1168285faacd,Inverter,SMA,SMA SC-xxxCP-10,180192629,,,Station: 3 | Location: 5 | Power: 800kW
+c5982799-c68f-4afe-9dec-f92778adaddb,Inverter,SMA,SMA SCS-xxxx,3006909569,,,Station: 1 | Location: 1 | Power: 2900kW | Inverters: 10
+c5982799-c68f-4afe-9dec-f92778adaddb,Inverter,SMA,SMA SCS-xxxx,3002255052,,,Station: 2 | Location: 2 | Power: 2900kW
+c5982799-c68f-4afe-9dec-f92778adaddb,Inverter,SMA,SMA SCS-xxxx,3002255042,,,Station: 3 | Location: 3 | Power: 2900kW
+c5982799-c68f-4afe-9dec-f92778adaddb,Inverter,SMA,SMA SCS-xxxx,3002255910,,,Station: 6 | Location: 6 | Power: 2900kW
+c5982799-c68f-4afe-9dec-f92778adaddb,Inverter,SMA,SMA SCS-xxxx,3002255019,,,Station: 8 | Location: 8 | Power: 2900kW
+5b856501-f64d-4d7e-a7f5-d00371797640,Inverter,Schneider,Schneider Conext Core XC,U21536000590,,,Station: 1 | Location: 1.1 | Power: 680kW | Inverters: 54
+5b856501-f64d-4d7e-a7f5-d00371797640,Inverter,Schneider,Schneider Conext Core XC,U21536000311,,,Station: 1 | Location: 1.2 | Power: 680kW
+5b856501-f64d-4d7e-a7f5-d00371797640,Inverter,Schneider,Schneider Conext Core XC,U21537000904,,,Station: 1 | Location: 1.3 | Power: 680kW
+5b856501-f64d-4d7e-a7f5-d00371797640,Inverter,Schneider,Schneider Conext Core XC,U21537000976,,,Station: 1 | Location: 1.4 | Power: 680kW
+5b856501-f64d-4d7e-a7f5-d00371797640,Inverter,Schneider,Schneider Conext Core XC,U21535000166,,,Station: 2 | Location: 2.1 | Power: 680kW
+5b856501-f64d-4d7e-a7f5-d00371797640,Inverter,Schneider,Schneider Conext Core XC,U21536000254,,,Station: 2 | Location: 2.2 | Power: 680kW
+5b856501-f64d-4d7e-a7f5-d00371797640,Inverter,Schneider,Schneider Conext Core XC,U21535000169,,,Station: 2 | Location: 2.3 | Power: 680kW
+5b856501-f64d-4d7e-a7f5-d00371797640,Inverter,Schneider,Schneider Conext Core XC,U21537000009,,,Station: 2 | Location: 2.4 | Power: 680kW
+5b856501-f64d-4d7e-a7f5-d00371797640,Inverter,Schneider,Schneider Conext Core XC,U21537000007,,,Station: 3 | Location: 3.1 | Power: 680kW
+5b856501-f64d-4d7e-a7f5-d00371797640,Inverter,Schneider,Schneider Conext Core XC,U21537000255,,,Station: 3 | Location: 3.2 | Power: 680kW
+5b856501-f64d-4d7e-a7f5-d00371797640,Inverter,Schneider,Schneider Conext Core XC,U21537000576,,,Station: 3 | Location: 3.3 | Power: 680kW
+5b856501-f64d-4d7e-a7f5-d00371797640,Inverter,Schneider,Schneider Conext Core XC,U21536000588,,,Station: 3 | Location: 3.4 | Power: 680kW
+5b856501-f64d-4d7e-a7f5-d00371797640,Inverter,Schneider,Schneider Conext Core XC,U21536000255,,,Station: 4 | Location: 4.1 | Power: 680kW
+5b856501-f64d-4d7e-a7f5-d00371797640,Inverter,Schneider,Schneider Conext Core XC,U21536000587,,,Station: 4 | Location: 4.2 | Power: 680kW
+5b856501-f64d-4d7e-a7f5-d00371797640,Inverter,Schneider,Schneider Conext Core XC,U21537001229,,,Station: 4 | Location: 4.3 | Power: 680kW
+5b856501-f64d-4d7e-a7f5-d00371797640,Inverter,Schneider,Schneider Conext Core XC,U21536000306,,,Station: 4 | Location: 4.4 | Power: 680kW
+5b856501-f64d-4d7e-a7f5-d00371797640,Inverter,Schneider,Schneider Conext Core XC,U21522000353,,,Station: 5 | Location: 5.1 | Power: 680kW
+5b856501-f64d-4d7e-a7f5-d00371797640,Inverter,Schneider,Schneider Conext Core XC,U21535000949,,,Station: 5 | Location: 5.2 | Power: 680kW
+5b856501-f64d-4d7e-a7f5-d00371797640,Inverter,Schneider,Schneider Conext Core XC,U21535000409,,,Station: 5 | Location: 5.3 | Power: 680kW
+5b856501-f64d-4d7e-a7f5-d00371797640,Inverter,Schneider,Schneider Conext Core XC,U21543000195,,,Station: 6 | Location: 6.1 | Power: 680kW
+5b856501-f64d-4d7e-a7f5-d00371797640,Inverter,Schneider,Schneider Conext Core XC,U21543000198,,,Station: 6 | Location: 6.2 | Power: 680kW
+5b856501-f64d-4d7e-a7f5-d00371797640,Inverter,Schneider,Schneider Conext Core XC,U21543000241,,,Station: 6 | Location: 6.3 | Power: 680kW
+5b856501-f64d-4d7e-a7f5-d00371797640,Inverter,Schneider,Schneider Conext Core XC,U21536000716,,,Station: 7 | Location: 7.1 | Power: 680kW
+5b856501-f64d-4d7e-a7f5-d00371797640,Inverter,Schneider,Schneider Conext Core XC,U21536000592,,,Station: 7 | Location: 7.2 | Power: 680kW
+5b856501-f64d-4d7e-a7f5-d00371797640,Inverter,Schneider,Schneider Conext Core XC,U21537000257,,,Station: 7 | Location: 7.3 | Power: 680kW
+5b856501-f64d-4d7e-a7f5-d00371797640,Inverter,Schneider,Schneider Conext Core XC,U21536000258,,,Station: 7 | Location: 7.4 | Power: 680kW
+5b856501-f64d-4d7e-a7f5-d00371797640,Inverter,Schneider,Schneider Conext Core XC,U21537000256,,,Station: 8 | Location: 8.1 | Power: 680kW
+5b856501-f64d-4d7e-a7f5-d00371797640,Inverter,Schneider,Schneider Conext Core XC,U21537000258,,,Station: 8 | Location: 8.2 | Power: 680kW
+5b856501-f64d-4d7e-a7f5-d00371797640,Inverter,Schneider,Schneider Conext Core XC,U21536000714,,,Station: 8 | Location: 8.3 | Power: 680kW
+5b856501-f64d-4d7e-a7f5-d00371797640,Inverter,Schneider,Schneider Conext Core XC,U21536000307,,,Station: 8 | Location: 8.4 | Power: 680kW
+5b856501-f64d-4d7e-a7f5-d00371797640,Inverter,Schneider,Schneider Conext Core XC,U21540000856,,,Station: 9 | Location: 9.1 | Power: 680kW
+5b856501-f64d-4d7e-a7f5-d00371797640,Inverter,Schneider,Schneider Conext Core XC,U21540000505,,,Station: 9 | Location: 9.2 | Power: 680kW
+5b856501-f64d-4d7e-a7f5-d00371797640,Inverter,Schneider,Schneider Conext Core XC,U21540000857,,,Station: 9 | Location: 9.3 | Power: 680kW
+5b856501-f64d-4d7e-a7f5-d00371797640,Inverter,Schneider,Schneider Conext Core XC,U21540001204,,,Station: 9 | Location: 9.4 | Power: 680kW
+5b856501-f64d-4d7e-a7f5-d00371797640,Inverter,Schneider,Schneider Conext Core XC,U21535000164,,,Station: 10 | Location: 10.1 | Power: 680kW
+5b856501-f64d-4d7e-a7f5-d00371797640,Inverter,Schneider,Schneider Conext Core XC,U21535000165,,,Station: 10 | Location: 10.2 | Power: 680kW
+5b856501-f64d-4d7e-a7f5-d00371797640,Inverter,Schneider,Schneider Conext Core XC,U21536000589,,,Station: 10 | Location: 10.3 | Power: 680kW
+5b856501-f64d-4d7e-a7f5-d00371797640,Inverter,Schneider,Schneider Conext Core XC,U21535000161,,,Station: 10 | Location: 10.4 | Power: 680kW
+5b856501-f64d-4d7e-a7f5-d00371797640,Inverter,Schneider,Schneider Conext Core XC,U21535000402,,,Station: 11 | Location: 11.1 | Power: 680kW
+5b856501-f64d-4d7e-a7f5-d00371797640,Inverter,Schneider,Schneider Conext Core XC,U21536000251,,,Station: 11 | Location: 11.2 | Power: 680kW
+5b856501-f64d-4d7e-a7f5-d00371797640,Inverter,Schneider,Schneider Conext Core XC,U21535000954,,,Station: 11 | Location: 11.3 | Power: 680kW
+5b856501-f64d-4d7e-a7f5-d00371797640,Inverter,Schneider,Schneider Conext Core XC,U21537000008,,,Station: 11 | Location: 11.4 | Power: 680kW
+5b856501-f64d-4d7e-a7f5-d00371797640,Inverter,Schneider,Schneider Conext Core XC,U21535000054,,,Station: 12 | Location: 12.1 | Power: 680kW
+5b856501-f64d-4d7e-a7f5-d00371797640,Inverter,Schneider,Schneider Conext Core XC,U21535000049,,,Station: 12 | Location: 12.2 | Power: 680kW
+5b856501-f64d-4d7e-a7f5-d00371797640,Inverter,Schneider,Schneider Conext Core XC,U21522001067,,,Station: 12 | Location: 12.3 | Power: 680kW
+5b856501-f64d-4d7e-a7f5-d00371797640,Inverter,Schneider,Schneider Conext Core XC,U21535000168,,,Station: 13 | Location: 13.1 | Power: 680kW
+5b856501-f64d-4d7e-a7f5-d00371797640,Inverter,Schneider,Schneider Conext Core XC,U21535000167,,,Station: 13 | Location: 13.2 | Power: 680kW
+5b856501-f64d-4d7e-a7f5-d00371797640,Inverter,Schneider,Schneider Conext Core XC,U21535000162,,,Station: 13 | Location: 13.3 | Power: 680kW
+5b856501-f64d-4d7e-a7f5-d00371797640,Inverter,Schneider,Schneider Conext Core XC,U21522000708,,,Station: 14 | Location: 14.1 | Power: 680kW
+5b856501-f64d-4d7e-a7f5-d00371797640,Inverter,Schneider,Schneider Conext Core XC,U21535000401,,,Station: 14 | Location: 14.2 | Power: 680kW
+5b856501-f64d-4d7e-a7f5-d00371797640,Inverter,Schneider,Schneider Conext Core XC,U21535000413,,,Station: 14 | Location: 14.3 | Power: 680kW
+5b856501-f64d-4d7e-a7f5-d00371797640,Inverter,Schneider,Schneider Conext Core XC,U21535000055,,,Station: 15 | Location: 15.1 | Power: 680kW
+5b856501-f64d-4d7e-a7f5-d00371797640,Inverter,Schneider,Schneider Conext Core XC,U21535000171,,,Station: 15 | Location: 15.2 | Power: 680kW
+5b856501-f64d-4d7e-a7f5-d00371797640,Inverter,Schneider,Schneider Conext Core XC,U21535001020,,,Station: 15 | Location: 15.3 | Power: 680kW
+5b856501-f64d-4d7e-a7f5-d00371797640,Inverter,Schneider,Schneider Conext Core XC,U21535000946,,,Station: 15 | Location: 15.4 | Power: 680kW
+5b856501-f64d-4d7e-a7f5-d00371797640,Inverter,Schneider,Schneider Conext Core XC,U21535000056,,,Station: 16 | Location: 16.1 | Power: 680kW
+5b856501-f64d-4d7e-a7f5-d00371797640,Inverter,Schneider,Schneider Conext Core XC,U21535000170,,,Station: 16 | Location: 16.2 | Power: 680kW
+5b856501-f64d-4d7e-a7f5-d00371797640,Inverter,Schneider,Schneider Conext Core XC,U21535000411,,,Station: 16 | Location: 16.3 | Power: 680kW
+a929d602-f984-49cb-b2de-be7eee83fd94,Inverter,SMA,SMA SC-xxxCP-10,1808001093,,,Station: 4 | Location: 7 | Power: 900kW | Inverters: 12
+a929d602-f984-49cb-b2de-be7eee83fd94,Inverter,SMA,SMA SC-xxxCP-10,180800106,,,Station: 5 | Location: 9 | Power: 900kW
+74044fee-aca8-4de5-9711-38aa887c1ca5,Inverter,SMA,SMA SC-xxxCP-10,180802394,,,Station: 1 | Location: 1.1 | Power: 900kW | Inverters: 60
+74044fee-aca8-4de5-9711-38aa887c1ca5,Inverter,SMA,SMA SC-xxxCP-10,180802413,,,Station: 1 | Location: 1.2 | Power: 900kW
+74044fee-aca8-4de5-9711-38aa887c1ca5,Inverter,SMA,SMA SC-xxxCP-10,180802406,,,Station: 2 | Location: 2.1 | Power: 900kW
+74044fee-aca8-4de5-9711-38aa887c1ca5,Inverter,SMA,SMA SC-xxxCP-10,180802407,,,Station: 2 | Location: 2.2 | Power: 900kW
+74044fee-aca8-4de5-9711-38aa887c1ca5,Inverter,SMA,SMA SC-xxxCP-10,180802404,,,Station: 3 | Location: 3.1 | Power: 900kW
+74044fee-aca8-4de5-9711-38aa887c1ca5,Inverter,SMA,SMA SC-xxxCP-10,180802405,,,Station: 3 | Location: 3.2 | Power: 900kW
+74044fee-aca8-4de5-9711-38aa887c1ca5,Inverter,SMA,SMA SC-xxxCP-10,180802408,,,Station: 4 | Location: 4.1 | Power: 900kW
+74044fee-aca8-4de5-9711-38aa887c1ca5,Inverter,SMA,SMA SC-xxxCP-10,180802409,,,Station: 4 | Location: 4.2 | Power: 900kW
+74044fee-aca8-4de5-9711-38aa887c1ca5,Inverter,SMA,SMA SC-xxxCP-10,180802412,,,Station: 5 | Location: 5.1 | Power: 900kW
+74044fee-aca8-4de5-9711-38aa887c1ca5,Inverter,SMA,SMA SC-xxxCP-10,180802414,,,Station: 5 | Location: 5.2 | Power: 900kW
+74044fee-aca8-4de5-9711-38aa887c1ca5,Inverter,SMA,SMA SC-xxxCP-10,180802400,,,Station: 6 | Location: 6.1 | Power: 900kW
+74044fee-aca8-4de5-9711-38aa887c1ca5,Inverter,SMA,SMA SC-xxxCP-10,180802401,,,Station: 6 | Location: 6.2 | Power: 900kW
+74044fee-aca8-4de5-9711-38aa887c1ca5,Inverter,SMA,SMA SC-xxxCP-10,180802402,,,Station: 7 | Location: 7.1 | Power: 900kW
+74044fee-aca8-4de5-9711-38aa887c1ca5,Inverter,SMA,SMA SC-xxxCP-10,180802403,,,Station: 7 | Location: 7.2 | Power: 900kW
+74044fee-aca8-4de5-9711-38aa887c1ca5,Inverter,SMA,SMA SC-xxxCP-10,180802398,,,Station: 8 | Location: 8.1 | Power: 900kW
+74044fee-aca8-4de5-9711-38aa887c1ca5,Inverter,SMA,SMA SC-xxxCP-10,180802399,,,Station: 8 | Location: 8.2 | Power: 900kW
+74044fee-aca8-4de5-9711-38aa887c1ca5,Inverter,SMA,SMA SC-xxxCP-10,180802389,,,Station: 9 | Location: 9.1 | Power: 900kW
+74044fee-aca8-4de5-9711-38aa887c1ca5,Inverter,SMA,SMA SC-xxxCP-10,180802397,,,Station: 9 | Location: 9.2 | Power: 900kW
+74044fee-aca8-4de5-9711-38aa887c1ca5,Inverter,SMA,SMA SC-xxxCP-10,180802411,,,Station: 10 | Location: 10.1 | Power: 900kW
+74044fee-aca8-4de5-9711-38aa887c1ca5,Inverter,SMA,SMA SC-xxxCP-10,180802410,,,Station: 10 | Location: 10.2 | Power: 900kW
+74044fee-aca8-4de5-9711-38aa887c1ca5,Inverter,SMA,SMA SC-xxxCP-10,180802328,,,Station: 11 | Location: 11.1 | Power: 900kW
+74044fee-aca8-4de5-9711-38aa887c1ca5,Inverter,SMA,SMA SC-xxxCP-10,180802329,,,Station: 11 | Location: 11.2 | Power: 900kW
+74044fee-aca8-4de5-9711-38aa887c1ca5,Inverter,SMA,SMA SC-xxxCP-10,180802391,,,Station: 12 | Location: 12.1 | Power: 900kW
+74044fee-aca8-4de5-9711-38aa887c1ca5,Inverter,SMA,SMA SC-xxxCP-10,180802396,,,Station: 12 | Location: 12.2 | Power: 900kW
+74044fee-aca8-4de5-9711-38aa887c1ca5,Inverter,SMA,SMA SC-xxxCP-10,180802392,,,Station: 13 | Location: 13.1 | Power: 900kW
+74044fee-aca8-4de5-9711-38aa887c1ca5,Inverter,SMA,SMA SC-xxxCP-10,180802390,,,Station: 13 | Location: 13.2 | Power: 900kW
+74044fee-aca8-4de5-9711-38aa887c1ca5,Inverter,SMA,SMA SC-xxxCP-10,180802393,,,Station: 14 | Location: 14.1 | Power: 900kW
+74044fee-aca8-4de5-9711-38aa887c1ca5,Inverter,SMA,SMA SC-xxxCP-10,180802395,,,Station: 14 | Location: 14.2 | Power: 900kW
+74044fee-aca8-4de5-9711-38aa887c1ca5,Inverter,SMA,SMA SC-xxxCP-10,180802387,,,Station: 15 | Location: 15.1 | Power: 900kW
+74044fee-aca8-4de5-9711-38aa887c1ca5,Inverter,SMA,SMA SC-xxxCP-10,180802388,,,Station: 15 | Location: 15.2 | Power: 900kW
+74044fee-aca8-4de5-9711-38aa887c1ca5,Inverter,SMA,SMA SC-xxxCP-10,180802385,,,Station: 16 | Location: 16.1 | Power: 900kW
+74044fee-aca8-4de5-9711-38aa887c1ca5,Inverter,SMA,SMA SC-xxxCP-10,180802386,,,Station: 16 | Location: 16.2 | Power: 900kW
+74044fee-aca8-4de5-9711-38aa887c1ca5,Inverter,SMA,SMA SC-xxxCP-10,180802298,,,Station: 17 | Location: 17.1 | Power: 900kW
+74044fee-aca8-4de5-9711-38aa887c1ca5,Inverter,SMA,SMA SC-xxxCP-10,180802299,,,Station: 17 | Location: 17.2 | Power: 900kW
+74044fee-aca8-4de5-9711-38aa887c1ca5,Inverter,SMA,SMA SC-xxxCP-10,180802296,,,Station: 18 | Location: 18.1 | Power: 900kW
+74044fee-aca8-4de5-9711-38aa887c1ca5,Inverter,SMA,SMA SC-xxxCP-10,180802297,,,Station: 18 | Location: 18.2 | Power: 900kW
+74044fee-aca8-4de5-9711-38aa887c1ca5,Inverter,SMA,SMA SC-xxxCP-10,180802326,,,Station: 19 | Location: 19.1 | Power: 900kW
+74044fee-aca8-4de5-9711-38aa887c1ca5,Inverter,SMA,SMA SC-xxxCP-10,180802327,,,Station: 19 | Location: 19.2 | Power: 900kW
+74044fee-aca8-4de5-9711-38aa887c1ca5,Inverter,SMA,SMA SC-xxxCP-10,180802321,,,Station: 20 | Location: 20.1 | Power: 900kW
+74044fee-aca8-4de5-9711-38aa887c1ca5,Inverter,SMA,SMA SC-xxxCP-10,180802320,,,Station: 20 | Location: 20.2 | Power: 900kW
+74044fee-aca8-4de5-9711-38aa887c1ca5,Inverter,SMA,SMA SC-xxxCP-10,180802322,,,Station: 21 | Location: 21.1 | Power: 900kW
+74044fee-aca8-4de5-9711-38aa887c1ca5,Inverter,SMA,SMA SC-xxxCP-10,180802323,,,Station: 21 | Location: 21.2 | Power: 900kW
+74044fee-aca8-4de5-9711-38aa887c1ca5,Inverter,SMA,SMA SC-xxxCP-10,180802284,,,Station: 22 | Location: 22.1 | Power: 900kW
+74044fee-aca8-4de5-9711-38aa887c1ca5,Inverter,SMA,SMA SC-xxxCP-10,180802285,,,Station: 22 | Location: 22.2 | Power: 900kW
+74044fee-aca8-4de5-9711-38aa887c1ca5,Inverter,SMA,SMA SC-xxxCP-10,180802286,,,Station: 23 | Location: 23.1 | Power: 900kW
+74044fee-aca8-4de5-9711-38aa887c1ca5,Inverter,SMA,SMA SC-xxxCP-10,180802287,,,Station: 23 | Location: 23.2 | Power: 900kW
+74044fee-aca8-4de5-9711-38aa887c1ca5,Inverter,SMA,SMA SC-xxxCP-10,180802290,,,Station: 24 | Location: 24.1 | Power: 900kW
+74044fee-aca8-4de5-9711-38aa887c1ca5,Inverter,SMA,SMA SC-xxxCP-10,180802291,,,Station: 24 | Location: 24.2 | Power: 900kW
+74044fee-aca8-4de5-9711-38aa887c1ca5,Inverter,SMA,SMA SC-xxxCP-10,180802288,,,Station: 25 | Location: 25.1 | Power: 900kW
+74044fee-aca8-4de5-9711-38aa887c1ca5,Inverter,SMA,SMA SC-xxxCP-10,180802289,,,Station: 25 | Location: 25.2 | Power: 900kW
+74044fee-aca8-4de5-9711-38aa887c1ca5,Inverter,SMA,SMA SC-xxxCP-10,180802324,,,Station: 26 | Location: 26.1 | Power: 900kW
+74044fee-aca8-4de5-9711-38aa887c1ca5,Inverter,SMA,SMA SC-xxxCP-10,180802325,,,Station: 26 | Location: 26.2 | Power: 900kW
+74044fee-aca8-4de5-9711-38aa887c1ca5,Inverter,SMA,SMA SC-xxxCP-10,180802292,,,Station: 27 | Location: 27.1 | Power: 900kW
+74044fee-aca8-4de5-9711-38aa887c1ca5,Inverter,SMA,SMA SC-xxxCP-10,180802293,,,Station: 27 | Location: 27.2 | Power: 900kW
+74044fee-aca8-4de5-9711-38aa887c1ca5,Inverter,SMA,SMA SC-xxxCP-10,180802280,,,Station: 28 | Location: 28.1 | Power: 900kW
+74044fee-aca8-4de5-9711-38aa887c1ca5,Inverter,SMA,SMA SC-xxxCP-10,180802281,,,Station: 28 | Location: 28.2 | Power: 900kW
+74044fee-aca8-4de5-9711-38aa887c1ca5,Inverter,SMA,SMA SC-xxxCP-10,180802282,,,Station: 29 | Location: 29.1 | Power: 900kW
+74044fee-aca8-4de5-9711-38aa887c1ca5,Inverter,SMA,SMA SC-xxxCP-10,180802283,,,Station: 29 | Location: 29.2 | Power: 900kW
+74044fee-aca8-4de5-9711-38aa887c1ca5,Inverter,SMA,SMA SC-xxxCP-10,180802294,,,Station: 30 | Location: 30.1 | Power: 900kW
+74044fee-aca8-4de5-9711-38aa887c1ca5,Inverter,SMA,SMA SC-xxxCP-10,180802295,,,Station: 30 | Location: 30.2 | Power: 900kW
+04acb0a3-ab9f-454d-8a5d-6b0e069fc2ea,Inverter,SMA,SMA SC-xxxCP-10,180801600,,,Station: 1 | Location: 1.1 | Power: 900kW | Inverters: 4
+04acb0a3-ab9f-454d-8a5d-6b0e069fc2ea,Inverter,SMA,SMA SC-xxxCP-10,180801599,,,Station: 1 | Location: 1.2 | Power: 900kW
+04acb0a3-ab9f-454d-8a5d-6b0e069fc2ea,Inverter,SMA,SMA SC-xxxCP-10,180801601,,,Station: 2 | Location: 2.1 | Power: 900kW
+04acb0a3-ab9f-454d-8a5d-6b0e069fc2ea,Inverter,SMA,SMA SC-xxxCP-10,180801602,,,Station: 2 | Location: 2.2 | Power: 900kW
+0320b71d-a899-49d4-92e8-ca83988442f5,Inverter,SMA,SMA SC-xxxCP-10,180351375,,,Station: 1 | Location: 1.1 | Power: 900kW | Inverters: 8
+0320b71d-a899-49d4-92e8-ca83988442f5,Inverter,SMA,SMA SC-xxxCP-10,180351382,,,Station: 1 | Location: 1.2 | Power: 900kW
+0320b71d-a899-49d4-92e8-ca83988442f5,Inverter,SMA,SMA SC-xxxCP-10,180351383,,,Station: 2 | Location: 2.1 | Power: 900kW
+0320b71d-a899-49d4-92e8-ca83988442f5,Inverter,SMA,SMA SC-xxxCP-10,180351384,,,Station: 2 | Location: 2.2 | Power: 900kW
+0320b71d-a899-49d4-92e8-ca83988442f5,Inverter,SMA,SMA SC-xxxCP-10,180800031,,,Station: 3 | Location: 3.1 | Power: 900kW
+0320b71d-a899-49d4-92e8-ca83988442f5,Inverter,SMA,SMA SC-xxxCP-10,180800032,,,Station: 3 | Location: 3.2 | Power: 900kW
+0320b71d-a899-49d4-92e8-ca83988442f5,Inverter,SMA,SMA SC-xxxCP-10,180800033,,,Station: 4 | Location: 4.1 | Power: 900kW
+0320b71d-a899-49d4-92e8-ca83988442f5,Inverter,SMA,SMA SC-xxxCP-10,180800034,,,Station: 4 | Location: 4.2 | Power: 900kW
+b3058443-1992-4c8e-8a11-b198f58f822c,Inverter,GP,GP Tech,1339 051 0007,,,Station: 8 | Location: 8.1 | Power: 1000kW | Inverters: 16
+b3058443-1992-4c8e-8a11-b198f58f822c,Inverter,GP,GP Tech,1339 051 0002,,,Station: 8 | Location: 8.2 | Power: 1000kW
+568fdc4a-5ed5-4be1-b679-caced0ee7823,Inverter,SMA,SMA SC-xxxx,180500844,,,Station: 1 | Location: 1 | Power: 2200kW | Inverters: 2
+568fdc4a-5ed5-4be1-b679-caced0ee7823,Inverter,SMA,SMA SC-xxxx,180500843,,,Station: 2 | Location: 2 | Power: 2200kW
+9d774d8e-109a-48ce-88f5-fac2d4538127,Inverter,Schneider,Schneider Conext Core XC,U21522000227,,,Station: A | Location: A.1 | Power: 680kW | Inverters: 6
+9d774d8e-109a-48ce-88f5-fac2d4538127,Inverter,Schneider,Schneider Conext Core XC,U21523000400,,,Station: A | Location: A.2 | Power: 680kW
+9d774d8e-109a-48ce-88f5-fac2d4538127,Inverter,Schneider,Schneider Conext Core XC,U21522000352,,,Station: B | Location: B.1 | Power: 680kW
+9d774d8e-109a-48ce-88f5-fac2d4538127,Inverter,Schneider,Schneider Conext Core XC,U21523000383,,,Station: B | Location: B.2 | Power: 680kW
+9d774d8e-109a-48ce-88f5-fac2d4538127,Inverter,Schneider,Schneider Conext Core XC,U21522000710,,,Station: C | Location: C.1 | Power: 680kW
+9d774d8e-109a-48ce-88f5-fac2d4538127,Inverter,Schneider,Schneider Conext Core XC,U21522000668,,,Station: C | Location: C.2 | Power: 680kW
+d5d7d26f-a684-4e77-86ff-57ebe03113b4,Inverter,Schneider,Schneider Conext Core XC,TBC,,,Station: 1 | Location: 1 | Power: 680kW | Inverters: 6
+d5d7d26f-a684-4e77-86ff-57ebe03113b4,Inverter,Schneider,Schneider Conext Core XC,TBC,,,Station: 1 | Location: 2 | Power: 680kW
+d5d7d26f-a684-4e77-86ff-57ebe03113b4,Inverter,Schneider,Schneider Conext Core XC,TBC,,,Station: 1 | Location: 3 | Power: 680kW
+d5d7d26f-a684-4e77-86ff-57ebe03113b4,Inverter,Schneider,Schneider Conext Core XC,U21539000958,,,Station: 2 | Location: 4 | Power: 680kW
+d5d7d26f-a684-4e77-86ff-57ebe03113b4,Inverter,Schneider,Schneider Conext Core XC,U21536000525,,,Station: 2 | Location: 5 | Power: 680kW
+d5d7d26f-a684-4e77-86ff-57ebe03113b4,Inverter,Schneider,Schneider Conext Core XC,U21544001452,,,Station: 2 | Location: 6 | Power: 680kW
+f9d2e6f5-2a41-4900-9b63-736556c4a2ce,Inverter,Schneider,Schneider Conext Core XC,U31301000101,,,Station: A | Location: A.1 | Power: 680kW | Inverters: 14
+f9d2e6f5-2a41-4900-9b63-736556c4a2ce,Inverter,Schneider,Schneider Conext Core XC,N21326000004,,,Station: A | Location: A.2 | Power: 680kW
+f9d2e6f5-2a41-4900-9b63-736556c4a2ce,Inverter,Schneider,Schneider Conext Core XC,N21317000016,,,Station: B | Location: B.1 | Power: 680kW
+f9d2e6f5-2a41-4900-9b63-736556c4a2ce,Inverter,Schneider,Schneider Conext Core XC,N21317000205,,,Station: B | Location: B.2 | Power: 680kW
+f9d2e6f5-2a41-4900-9b63-736556c4a2ce,Inverter,Schneider,Schneider Conext Core XC,N21232000058,,,Station: C | Location: C.1 | Power: 680kW
+f9d2e6f5-2a41-4900-9b63-736556c4a2ce,Inverter,Schneider,Schneider Conext Core XC,N21232000055,,,Station: C | Location: C.2 | Power: 680kW
+f9d2e6f5-2a41-4900-9b63-736556c4a2ce,Inverter,Schneider,Schneider Conext Core XC,N21320000068,,,Station: D | Location: D.1 | Power: 680kW
+f9d2e6f5-2a41-4900-9b63-736556c4a2ce,Inverter,Schneider,Schneider Conext Core XC,U21301000103,,,Station: D | Location: D.2 | Power: 680kW
+f9d2e6f5-2a41-4900-9b63-736556c4a2ce,Inverter,Schneider,Schneider Conext Core XC,N21318000325,,,Station: E | Location: E.1 | Power: 680kW
+f9d2e6f5-2a41-4900-9b63-736556c4a2ce,Inverter,Schneider,Schneider Conext Core XC,Tamar Heights E.2,,,Station: E | Location: E.2 | Power: 680kW
+f9d2e6f5-2a41-4900-9b63-736556c4a2ce,Inverter,Schneider,Schneider Conext Core XC,N21236000137,,,Station: F | Location: F.1 | Power: 680kW
+f9d2e6f5-2a41-4900-9b63-736556c4a2ce,Inverter,Schneider,Schneider Conext Core XC,Tamar Heights F.2,,,Station: F | Location: F.2 | Power: 680kW
+f9d2e6f5-2a41-4900-9b63-736556c4a2ce,Inverter,Schneider,Schneider Conext Core XC,N21229000010,,,Station: G | Location: G.1 | Power: 680kW
+f9d2e6f5-2a41-4900-9b63-736556c4a2ce,Inverter,Schneider,Schneider Conext Core XC,N21229000014,,,Station: G | Location: G.2 | Power: 680kW
+73ae686f-bc08-4527-ab14-5d9355b375b0,Inverter,SMA,SMA SC-xxxCP-10,180350947,,,Station: 1 | Location: 1.1 | Power: 900kW | Inverters: 3
+73ae686f-bc08-4527-ab14-5d9355b375b0,Inverter,SMA,SMA SC-xxxCP-10,180350942,,,Station: 2 | Location: 2.1 | Power: 900kW
+73ae686f-bc08-4527-ab14-5d9355b375b0,Inverter,SMA,SMA SC-xxxCP-10,180350941,,,Station: 2 | Location: 2.2 | Power: 900kW
+60b4e8b8-0530-474a-af5d-f7139c5a2b69,Inverter,SMA,SMA SC-xxxCP-10,180801626,,,Station: 4 | Location: 4.1 | Power: 900kW | Inverters: 4
+60b4e8b8-0530-474a-af5d-f7139c5a2b69,Inverter,SMA,SMA SC-xxxCP-10,180801627,,,Station: 4 | Location: 4.2 | Power: 900kW
+60b4e8b8-0530-474a-af5d-f7139c5a2b69,Inverter,SMA,SMA SC-xxxCP-10,180801641,,,Station: 5 | Location: 5.1 | Power: 900kW
+60b4e8b8-0530-474a-af5d-f7139c5a2b69,Inverter,SMA,SMA SC-xxxCP-10,180801628,,,Station: 5 | Location: 5.2 | Power: 900kW
+045e9e4d-f386-4ba0-be2b-b2c5e9a03b8f,Inverter,SMA,SMA SCS-xxxx,3017888212,,,Station: 1 | Location: 01-SCS-11 | Power: 2900kW | Inverters: 21
+045e9e4d-f386-4ba0-be2b-b2c5e9a03b8f,Inverter,SMA,SMA SCS-xxxx,3007414652,,,Station: 1 | Location: 01-SCS-12 | Power: 2900kW
+045e9e4d-f386-4ba0-be2b-b2c5e9a03b8f,Inverter,SMA,SMA SCS-xxxx,3007528261,,,Station: 1 | Location: 01-SCS-21 | Power: 2900kW
+045e9e4d-f386-4ba0-be2b-b2c5e9a03b8f,Inverter,SMA,SMA SCS-xxxx,3007414664,,,Station: 1 | Location: 01-SCS-22 | Power: 2900kW
+045e9e4d-f386-4ba0-be2b-b2c5e9a03b8f,Inverter,SMA,SMA SCS-xxxx,3007857350,,,Station: 1 | Location: 01-SCS-31 | Power: 2900kW
+045e9e4d-f386-4ba0-be2b-b2c5e9a03b8f,Inverter,SMA,SMA SCS-xxxx,3007857368,,,Station: 1 | Location: 01-SCS-32 | Power: 2900kW
+045e9e4d-f386-4ba0-be2b-b2c5e9a03b8f,Inverter,SMA,SMA SCS-xxxx,3007857320,,,Station: 2 | Location: 02-SCS-11 | Power: 2900kW
+045e9e4d-f386-4ba0-be2b-b2c5e9a03b8f,Inverter,SMA,SMA SCS-xxxx,3007857383,,,Station: 2 | Location: 02-SCS-12 | Power: 2900kW
+045e9e4d-f386-4ba0-be2b-b2c5e9a03b8f,Inverter,SMA,SMA SCS-xxxx,3007857375,,,Station: 2 | Location: 02-SCS-21 | Power: 2900kW
+045e9e4d-f386-4ba0-be2b-b2c5e9a03b8f,Inverter,SMA,SMA SCS-xxxx,3007857327,,,Station: 2 | Location: 02-SCS-22 | Power: 2900kW
+045e9e4d-f386-4ba0-be2b-b2c5e9a03b8f,Inverter,SMA,SMA SCS-xxxx,3007550368,,,Station: 2 | Location: 02-SCS-31 | Power: 2900kW
+045e9e4d-f386-4ba0-be2b-b2c5e9a03b8f,Inverter,SMA,SMA SCS-xxxx,3007528286,,,Station: 2 | Location: 02-SCS-32 | Power: 2900kW
+045e9e4d-f386-4ba0-be2b-b2c5e9a03b8f,Inverter,SMA,SMA SCS-xxxx,3007528266,,,Station: 2 | Location: 02-SCS-41 | Power: 2900kW
+045e9e4d-f386-4ba0-be2b-b2c5e9a03b8f,Inverter,SMA,SMA SCS-xxxx,3007528274,,,Station: 3 | Location: 03-SCS-11 | Power: 2900kW
+045e9e4d-f386-4ba0-be2b-b2c5e9a03b8f,Inverter,SMA,SMA SCS-xxxx,3007528282,,,Station: 3 | Location: 03-SCS-12 | Power: 2900kW
+045e9e4d-f386-4ba0-be2b-b2c5e9a03b8f,Inverter,SMA,SMA SCS-xxxx,3007528285,,,Station: 3 | Location: 03-SCS-21 | Power: 2900kW
+045e9e4d-f386-4ba0-be2b-b2c5e9a03b8f,Inverter,SMA,SMA SCS-xxxx,3007550375,,,Station: 3 | Location: 03-SCS-22 | Power: 2900kW
+045e9e4d-f386-4ba0-be2b-b2c5e9a03b8f,Inverter,SMA,SMA SCS-xxxx,3007857359,,,Station: 3 | Location: 03-SCS-31 | Power: 2900kW
+045e9e4d-f386-4ba0-be2b-b2c5e9a03b8f,Inverter,SMA,SMA SCS-xxxx,3007857312,,,Station: 3 | Location: 03-SCS-32 | Power: 2900kW
+045e9e4d-f386-4ba0-be2b-b2c5e9a03b8f,Inverter,SMA,SMA SCS-xxxx,3007857337,,,Station: 3 | Location: 03-SCS-41 | Power: 2900kW
+045e9e4d-f386-4ba0-be2b-b2c5e9a03b8f,Inverter,SMA,SMA SCS-xxxx,3007857304,,,Station: 3 | Location: 03-SCS-42 | Power: 2900kW
+225d959b-cfe4-4f14-ad05-b1d78bb27f5d,Inverter,SMA,SMA SC-xxxCP-10,180800317,,,Station: 1 | Location: 1 | Power: 760kW | Inverters: 5
+225d959b-cfe4-4f14-ad05-b1d78bb27f5d,Inverter,SMA,SMA SC-xxxCP-10,180800316,,,Station: 1 | Location: 2 | Power: 760kW
+225d959b-cfe4-4f14-ad05-b1d78bb27f5d,Inverter,SMA,SMA SC-xxxCP-10,180800322,,,Station: 2 | Location: 3 | Power: 800kW
+225d959b-cfe4-4f14-ad05-b1d78bb27f5d,Inverter,SMA,SMA SC-xxxCP-10,180800320,,,Station: 3 | Location: 4 | Power: 800kW
+225d959b-cfe4-4f14-ad05-b1d78bb27f5d,Inverter,SMA,SMA SC-xxxCP-10,180800321,,,Station: 3 | Location: 5 | Power: 800kW
+9ef7b709-cb63-4d77-aa1f-bc47e5452eaf,Inverter,SMA,SMA SC-xxxCP-10,180192694,,,Station: 1 | Location: 1.1 | Power: 800kW | Inverters: 12
+9ef7b709-cb63-4d77-aa1f-bc47e5452eaf,Inverter,SMA,SMA SC-xxxCP-10,180192693,,,Station: 1 | Location: 1.2 | Power: 800kW
+9ef7b709-cb63-4d77-aa1f-bc47e5452eaf,Inverter,SMA,SMA SC-xxxCP-10,180182690,,,Station: 2 | Location: 2.1 | Power: 800kW
+9ef7b709-cb63-4d77-aa1f-bc47e5452eaf,Inverter,SMA,SMA SC-xxxCP-10,180192689,,,Station: 2 | Location: 2.2 | Power: 800kW
+9ef7b709-cb63-4d77-aa1f-bc47e5452eaf,Inverter,SMA,SMA SC-xxxCP-10,180192692,,,Station: 3 | Location: 3.1 | Power: 800kW
+9ef7b709-cb63-4d77-aa1f-bc47e5452eaf,Inverter,SMA,SMA SC-xxxCP-10,180192695,,,Station: 3 | Location: 3.2 | Power: 800kW
+9ef7b709-cb63-4d77-aa1f-bc47e5452eaf,Inverter,SMA,SMA SC-xxxCP-10,180171306,,,Station: 4 | Location: 4.1 | Power: 500kW
+9ef7b709-cb63-4d77-aa1f-bc47e5452eaf,Inverter,SMA,SMA SC-xxxCP-10,180210669,,,Station: 5 | Location: 5.1 | Power: 720kW
+9ef7b709-cb63-4d77-aa1f-bc47e5452eaf,Inverter,SMA,SMA SC-xxxCP-10,180210668,,,Station: 5 | Location: 5.2 | Power: 720kW
+9ef7b709-cb63-4d77-aa1f-bc47e5452eaf,Inverter,SMA,SMA SC-xxxCP-10,180192691,,,Station: 6 | Location: 6.1 | Power: 800kW
+9ef7b709-cb63-4d77-aa1f-bc47e5452eaf,Inverter,SMA,SMA SC-xxxCP-10,180192696,,,Station: 7 | Location: 7.1 | Power: 800kW
+9ef7b709-cb63-4d77-aa1f-bc47e5452eaf,Inverter,SMA,SMA SC-xxxCP-10,180192688,,,Station: 7 | Location: 7.2 | Power: 800kW
+4ca4d3f0-1ea3-4be0-b3d0-9322ab257a06,Inverter,SMA,SMA SC-xxxCP-10,180800176,,,Station: 1 | Location: 1 | Power: 800kW | Inverters: 5
+4ca4d3f0-1ea3-4be0-b3d0-9322ab257a06,Inverter,SMA,SMA SC-xxxCP-10,180800174,,,Station: 2 | Location: 2 | Power: 760kW
+4ca4d3f0-1ea3-4be0-b3d0-9322ab257a06,Inverter,SMA,SMA SC-xxxCP-10,180800175,,,Station: 2 | Location: 3 | Power: 760kW
+4ca4d3f0-1ea3-4be0-b3d0-9322ab257a06,Inverter,SMA,SMA SC-xxxCP-10,180800186,,,Station: 3 | Location: 4 | Power: 850kW
+4ca4d3f0-1ea3-4be0-b3d0-9322ab257a06,Inverter,SMA,SMA SC-xxxCP-10,180800169,,,Station: 3 | Location: 5 | Power: 850kW
+72cf5edf-59f4-4183-b940-ee57e295b86b,Inverter,SMA,SMA SC-xxxCP-10,180803221,,,Station: 3 | Location: 3.1 | Power: 1000kW | Inverters: 10
+72cf5edf-59f4-4183-b940-ee57e295b86b,Inverter,SMA,SMA SC-xxxCP-10,180803220,,,Station: 3 | Location: 3.2 | Power: 1000kW
+8902d246-0160-4b37-81e7-ac6ecfe98040,Inverter,Schneider,Schneider Conext Core XC,U21540001208,,,Station: 1 | Location: 1.1 | Power: 680kW | Inverters: 6
+8902d246-0160-4b37-81e7-ac6ecfe98040,Inverter,Schneider,Schneider Conext Core XC,U21540000255,,,Station: 1 | Location: 1.2 | Power: 680kW
+8902d246-0160-4b37-81e7-ac6ecfe98040,Inverter,Schneider,Schneider Conext Core XC,U21540001206,,,Station: 1 | Location: 1.3 | Power: 680kW
+8902d246-0160-4b37-81e7-ac6ecfe98040,Inverter,Schneider,Schneider Conext Core XC,U21537000259,,,Station: 2 | Location: 2.1 | Power: 680kW
+8902d246-0160-4b37-81e7-ac6ecfe98040,Inverter,Schneider,Schneider Conext Core XC,U21536000315,,,Station: 2 | Location: 2.2 | Power: 680kW
+8902d246-0160-4b37-81e7-ac6ecfe98040,Inverter,Schneider,Schneider Conext Core XC,U21541000362,,,Station: 2 | Location: 2.3 | Power: 680kW
+14cd5eab-15be-4a94-b2b4-453ee51ae154,Inverter,SMA,SMA SC-xxxCP-10,180351238,,,Station: 1 | Location: 1.1 | Power: 900kW | Inverters: 8
+14cd5eab-15be-4a94-b2b4-453ee51ae154,Inverter,SMA,SMA SC-xxxCP-10,180351239,,,Station: 1 | Location: 1.2 | Power: 900kW
+14cd5eab-15be-4a94-b2b4-453ee51ae154,Inverter,SMA,SMA SC-xxxCP-10,180351240,,,Station: 2 | Location: 2.1 | Power: 900kW
+14cd5eab-15be-4a94-b2b4-453ee51ae154,Inverter,SMA,SMA SC-xxxCP-10,180351241,,,Station: 2 | Location: 2.2 | Power: 900kW
+14cd5eab-15be-4a94-b2b4-453ee51ae154,Inverter,SMA,SMA SC-xxxCP-10,180351234,,,Station: 3 | Location: 3.1 | Power: 900kW
+14cd5eab-15be-4a94-b2b4-453ee51ae154,Inverter,SMA,SMA SC-xxxCP-10,180351235,,,Station: 3 | Location: 3.2 | Power: 900kW
+14cd5eab-15be-4a94-b2b4-453ee51ae154,Inverter,SMA,SMA SC-xxxCP-10,180351236,,,Station: 4 | Location: 4.1 | Power: 900kW
+14cd5eab-15be-4a94-b2b4-453ee51ae154,Inverter,SMA,SMA SC-xxxCP-10,180351237,,,Station: 4 | Location: 4.2 | Power: 900kW
+2dda260a-32fa-428f-b830-b6e388cac6d6,Inverter,SMA,SMA SC-xxxCP-10,180801196,,,Station: 1 | Location: 1.1 | Power: 1000kW | Inverters: 6
+2dda260a-32fa-428f-b830-b6e388cac6d6,Inverter,SMA,SMA SC-xxxCP-10,180801195,,,Station: 1 | Location: 1.2 | Power: 1000kW
+2dda260a-32fa-428f-b830-b6e388cac6d6,Inverter,SMA,SMA SC-xxxCP-10,180801197,,,Station: 2 | Location: 2.1 | Power: 1000kW
+2dda260a-32fa-428f-b830-b6e388cac6d6,Inverter,SMA,SMA SC-xxxCP-10,180801198,,,Station: 2 | Location: 2.2 | Power: 1000kW
+2dda260a-32fa-428f-b830-b6e388cac6d6,Inverter,SMA,SMA SC-xxxCP-10,180801165,,,Station: 3 | Location: 3.1 | Power: 1000kW
+2dda260a-32fa-428f-b830-b6e388cac6d6,Inverter,SMA,SMA SC-xxxCP-10,180801184,,,Station: 3 | Location: 3.2 | Power: 1000kW
+4c8f11e8-b2c0-41f5-b21a-23e707366772,Inverter,SMA,SMA SC-xxxCP-10,180191291,,,Station: 1 | Location: 1.1 | Power: 800kW | Inverters: 5
+4c8f11e8-b2c0-41f5-b21a-23e707366772,Inverter,SMA,SMA SC-xxxCP-10,180191293,,,Station: 1 | Location: 1.2 | Power: 800kW
+4c8f11e8-b2c0-41f5-b21a-23e707366772,Inverter,SMA,SMA SC-xxxCP-10,180191641,,,Station: 2 | Location: 2.1 | Power: 800kW
+4c8f11e8-b2c0-41f5-b21a-23e707366772,Inverter,SMA,SMA SC-xxxCP-10,180191294,,,Station: 3 | Location: 3.1 | Power: 800kW
+4c8f11e8-b2c0-41f5-b21a-23e707366772,Inverter,SMA,SMA SC-xxxCP-10,180191295,,,Station: 3 | Location: 3.2 | Power: 800kW
+433fd1ad-3541-475b-98a2-b7e52bdcff2c,Inverter,Schneider,Schneider Conext Core XC,U21514030013,,,Station: A | Location: A.1 | Power: 680kW | Inverters: 6
+433fd1ad-3541-475b-98a2-b7e52bdcff2c,Inverter,Schneider,Schneider Conext Core XC,U21514020004,,,Station: A | Location: A.2 | Power: 680kW
+433fd1ad-3541-475b-98a2-b7e52bdcff2c,Inverter,Schneider,Schneider Conext Core XC,U21514030005,,,Station: B | Location: B.1 | Power: 680kW
+433fd1ad-3541-475b-98a2-b7e52bdcff2c,Inverter,Schneider,Schneider Conext Core XC,U21514020005,,,Station: B | Location: B.2 | Power: 680kW
+433fd1ad-3541-475b-98a2-b7e52bdcff2c,Inverter,Schneider,Schneider Conext Core XC,U21514020015,,,Station: C | Location: C.1 | Power: 680kW
+433fd1ad-3541-475b-98a2-b7e52bdcff2c,Inverter,Schneider,Schneider Conext Core XC,U21514020002,,,Station: C | Location: C.2 | Power: 680kW
+2934ca1f-135e-4f6b-9844-c8e9550081b3,Inverter,SMA,SMA SC-xxxCP-10,180210664,,,Station: 1 | Location: 1 | Power: 720kW | Inverters: 4
+2934ca1f-135e-4f6b-9844-c8e9550081b3,Inverter,SMA,SMA SC-xxxCP-10,180210666,,,Station: 1 | Location: 2 | Power: 720kW
+2934ca1f-135e-4f6b-9844-c8e9550081b3,Inverter,SMA,SMA SC-xxxCP-10,180210665,,,Station: 2 | Location: 3 | Power: 720kW
+2934ca1f-135e-4f6b-9844-c8e9550081b3,Inverter,SMA,SMA SC-xxxCP-10,180210667,,,Station: 2 | Location: 4 | Power: 720kW
+7489eb78-66bc-4e9f-acac-5b5bd0a7d306,Inverter,Schneider,Schneider Conext Core XC,West Carclaze 1,,,Station: 1 | Location: 1 | Power: 680kW | Inverters: 6
+7489eb78-66bc-4e9f-acac-5b5bd0a7d306,Inverter,Schneider,Schneider Conext Core XC,West Carclaze 2,,,Station: 1 | Location: 2 | Power: 680kW
+7489eb78-66bc-4e9f-acac-5b5bd0a7d306,Inverter,Schneider,Schneider Conext Core XC,West Carclaze 3,,,Station: 1 | Location: 3 | Power: 680kW
+7489eb78-66bc-4e9f-acac-5b5bd0a7d306,Inverter,Schneider,Schneider Conext Core XC,U21535000403,,,Station: 2 | Location: 4 | Power: 680kW
+7489eb78-66bc-4e9f-acac-5b5bd0a7d306,Inverter,Schneider,Schneider Conext Core XC,U21537001233,,,Station: 2 | Location: 5 | Power: 680kW
+7489eb78-66bc-4e9f-acac-5b5bd0a7d306,Inverter,Schneider,Schneider Conext Core XC,U21532030202,,,Station: 2 | Location: 6 | Power: 680kW
+a80308a1-d5bc-4596-bbd5-234a30573a4e,Inverter,Schneider,Schneider Xantrex GT,7803802,,,Station: A | Location: A1 | Power: 675kW | Inverters: 10
+a80308a1-d5bc-4596-bbd5-234a30573a4e,Inverter,Schneider,Schneider Xantrex GT,7803870,,,Station: A | Location: A2 | Power: 675kW
+a80308a1-d5bc-4596-bbd5-234a30573a4e,Inverter,Schneider,Schneider Xantrex GT,7803920,,,Station: B | Location: B1 | Power: 675kW
+a80308a1-d5bc-4596-bbd5-234a30573a4e,Inverter,Schneider,Schneider Xantrex GT,7803862,,,Station: B | Location: B2 | Power: 675kW
+a80308a1-d5bc-4596-bbd5-234a30573a4e,Inverter,Schneider,Schneider Xantrex GT,7803988,,,Station: C | Location: C1 | Power: 675kW
+a80308a1-d5bc-4596-bbd5-234a30573a4e,Inverter,Schneider,Schneider Xantrex GT,7803859,,,Station: C | Location: C2 | Power: 675kW
+a80308a1-d5bc-4596-bbd5-234a30573a4e,Inverter,Schneider,Schneider Xantrex GT,7804542,,,Station: D | Location: D1 | Power: 675kW
+a80308a1-d5bc-4596-bbd5-234a30573a4e,Inverter,Schneider,Schneider Xantrex GT,7804381,,,Station: D | Location: D2 | Power: 675kW
+a80308a1-d5bc-4596-bbd5-234a30573a4e,Inverter,Schneider,Schneider Xantrex GT,7804040,,,Station: E | Location: E1 | Power: 675kW
+a80308a1-d5bc-4596-bbd5-234a30573a4e,Inverter,Schneider,Schneider Xantrex GT,7803759,,,Station: E | Location: E2 | Power: 675kW
+1acc02d8-f242-44b0-b890-6092e325f065,Inverter,Schneider,Schneider Conext Core XC,U21506000300,,,Station: A | Location: A.1 | Power: 680kW | Inverters: 6
+1acc02d8-f242-44b0-b890-6092e325f065,Inverter,Schneider,Schneider Conext Core XC,U21510020042,,,Station: A | Location: A.2 | Power: 680kW
+1acc02d8-f242-44b0-b890-6092e325f065,Inverter,Schneider,Schneider Conext Core XC,U21514020019,,,Station: B | Location: B.1 | Power: 680kW
+1acc02d8-f242-44b0-b890-6092e325f065,Inverter,Schneider,Schneider Conext Core XC,U21514030015,,,Station: B | Location: B.2 | Power: 680kW
+1acc02d8-f242-44b0-b890-6092e325f065,Inverter,Schneider,Schneider Conext Core XC,U21511020008,,,Station: C | Location: C.1 | Power: 680kW
+1acc02d8-f242-44b0-b890-6092e325f065,Inverter,Schneider,Schneider Conext Core XC,U21523000397,,,Station: C | Location: C.2 | Power: 680kW
+02a9ed88-60d5-4a00-9eef-d3e058b0b654,Inverter,SMA,SMA SC-xxxCP-10,180800343,,,Station: 1 | Location: 1 | Power: 900kW | Inverters: 10
+02a9ed88-60d5-4a00-9eef-d3e058b0b654,Inverter,SMA,SMA SC-xxxCP-10,180800338,,,Station: 1 | Location: 2 | Power: 900kW
+02a9ed88-60d5-4a00-9eef-d3e058b0b654,Inverter,SMA,SMA SC-xxxCP-10,180800342,,,Station: 2 | Location: 3 | Power: 900kW
+02a9ed88-60d5-4a00-9eef-d3e058b0b654,Inverter,SMA,SMA SC-xxxCP-10,180800337,,,Station: 2 | Location: 4 | Power: 900kW
+02a9ed88-60d5-4a00-9eef-d3e058b0b654,Inverter,SMA,SMA SC-xxxCP-10,180800341,,,Station: 3 | Location: 5 | Power: 900kW
+02a9ed88-60d5-4a00-9eef-d3e058b0b654,Inverter,SMA,SMA SC-xxxCP-10,180800336,,,Station: 3 | Location: 6 | Power: 900kW
+02a9ed88-60d5-4a00-9eef-d3e058b0b654,Inverter,SMA,SMA SC-xxxCP-10,180800344,,,Station: 4 | Location: 7 | Power: 900kW
+02a9ed88-60d5-4a00-9eef-d3e058b0b654,Inverter,SMA,SMA SC-xxxCP-10,180800339,,,Station: 4 | Location: 8 | Power: 900kW
+02a9ed88-60d5-4a00-9eef-d3e058b0b654,Inverter,SMA,SMA SC-xxxCP-10,180800335,,,Station: 5 | Location: 9 | Power: 900kW
+02a9ed88-60d5-4a00-9eef-d3e058b0b654,Inverter,SMA,SMA SC-xxxCP-10,180800340,,,Station: 5 | Location: 10 | Power: 900kW
+117456a3-5f19-46ea-af40-9411aecb59dd,Inverter,Schneider,Schneider Conext Core XC,U21505000503,,,Station: A | Location: A.1 | Power: 680kW | Inverters: 6
+117456a3-5f19-46ea-af40-9411aecb59dd,Inverter,Schneider,Schneider Conext Core XC,U21505000985,,,Station: A | Location: A.2 | Power: 680kW
+117456a3-5f19-46ea-af40-9411aecb59dd,Inverter,Schneider,Schneider Conext Core XC,U21514030002,,,Station: B | Location: B.1 | Power: 680kW
+117456a3-5f19-46ea-af40-9411aecb59dd,Inverter,Schneider,Schneider Conext Core XC,U21514020024,,,Station: B | Location: B.2 | Power: 680kW
+117456a3-5f19-46ea-af40-9411aecb59dd,Inverter,Schneider,Schneider Conext Core XC,U21511030007,,,Station: C | Location: C.1 | Power: 680kW
+117456a3-5f19-46ea-af40-9411aecb59dd,Inverter,Schneider,Schneider Conext Core XC,U21514020011,,,Station: C | Location: C.2 | Power: 680kW
+c03b22d5-5a96-4366-bbe8-93cc8f0425e6,Inverter,SMA,SMA SC-xxxCP-10,180180449,,,Station: 1 | Location: 1 | Power: 630kW | Inverters: 7
+c03b22d5-5a96-4366-bbe8-93cc8f0425e6,Inverter,SMA,SMA SC-xxxCP-10,180180450,,,Station: 1 | Location: 2 | Power: 630kW
+c03b22d5-5a96-4366-bbe8-93cc8f0425e6,Inverter,SMA,SMA SC-xxxCP-10,180180452,,,Station: 2 | Location: 3 | Power: 630kW
+c03b22d5-5a96-4366-bbe8-93cc8f0425e6,Inverter,SMA,SMA SC-xxxCP-10,180180447,,,Station: 2 | Location: 4 | Power: 630kW
+c03b22d5-5a96-4366-bbe8-93cc8f0425e6,Inverter,SMA,SMA SC-xxxCP-10,180180451,,,Station: 3 | Location: 5 | Power: 630kW
+c03b22d5-5a96-4366-bbe8-93cc8f0425e6,Inverter,SMA,SMA SC-xxxCP-10,180180446,,,Station: 3 | Location: 6 | Power: 630kW
+c03b22d5-5a96-4366-bbe8-93cc8f0425e6,Inverter,SMA,SMA SC-xxxCP-10,180180448,,,Station: 4 | Location: 7 | Power: 630kW
+380f503b-1589-4341-a6a3-eb7ace16f6c0,Inverter,SMA,SMA SC-xxxCP-10,180350641,,,Station: 1 | Location: 1.1 | Power: 900kW | Inverters: 9
+380f503b-1589-4341-a6a3-eb7ace16f6c0,Inverter,SMA,SMA SC-xxxCP-10,180350642,,,Station: 1 | Location: 1.2 | Power: 900kW
+380f503b-1589-4341-a6a3-eb7ace16f6c0,Inverter,SMA,SMA SC-xxxCP-10,180350601,,,Station: 2 | Location: 2.1 | Power: 900kW
+380f503b-1589-4341-a6a3-eb7ace16f6c0,Inverter,SMA,SMA SC-xxxCP-10,180350604,,,Station: 2 | Location: 2.2 | Power: 900kW
+380f503b-1589-4341-a6a3-eb7ace16f6c0,Inverter,SMA,SMA SC-xxxCP-10,180350658,,,Station: 3 | Location: 3.1 | Power: 900kW
+380f503b-1589-4341-a6a3-eb7ace16f6c0,Inverter,SMA,SMA SC-xxxCP-10,180350602,,,Station: 4 | Location: 4.1 | Power: 900kW
+380f503b-1589-4341-a6a3-eb7ace16f6c0,Inverter,SMA,SMA SC-xxxCP-10,180350603,,,Station: 4 | Location: 4.2 | Power: 900kW
+380f503b-1589-4341-a6a3-eb7ace16f6c0,Inverter,SMA,SMA SC-xxxCP-10,180350656,,,Station: 5 | Location: 5.1 | Power: 900kW
+380f503b-1589-4341-a6a3-eb7ace16f6c0,Inverter,SMA,SMA SC-xxxCP-10,180350657,,,Station: 5 | Location: 5.2 | Power: 900kW
+3db49b22-5338-4d2c-ad26-512383c28efb,Inverter,ABB,ABB Ultra,1443909580,,,Station: 1 | Location: 1 | Power: 1200kW | Inverters: 2
+3db49b22-5338-4d2c-ad26-512383c28efb,Inverter,ABB,ABB Ultra,1446125562,,,Station: 2 | Location: 2 | Power: 1200kW
+1faa2e22-54db-4b18-80be-271c6c2003f0,Inverter,Schneider,Schneider Conext Core XC,N21232000057,,,Station: A | Location: A.1 | Power: 680kW | Inverters: 12
+1faa2e22-54db-4b18-80be-271c6c2003f0,Inverter,Schneider,Schneider Conext Core XC,N21232000054,,,Station: A | Location: A.2 | Power: 680kW
+1faa2e22-54db-4b18-80be-271c6c2003f0,Inverter,Schneider,Schneider Conext Core XC,N21230000021,,,Station: B | Location: B.1 | Power: 680kW
+1faa2e22-54db-4b18-80be-271c6c2003f0,Inverter,Schneider,Schneider Conext Core XC,N21229000013,,,Station: B | Location: B.2 | Power: 680kW
+1faa2e22-54db-4b18-80be-271c6c2003f0,Inverter,Schneider,Schneider Conext Core XC,N21318000404,,,Station: C | Location: C.1 | Power: 680kW
+1faa2e22-54db-4b18-80be-271c6c2003f0,Inverter,Schneider,Schneider Conext Core XC,U21301000102,,,Station: C | Location: C.2 | Power: 680kW
+1faa2e22-54db-4b18-80be-271c6c2003f0,Inverter,Schneider,Schneider Conext Core XC,N21230000017,,,Station: D | Location: D.1 | Power: 680kW
+1faa2e22-54db-4b18-80be-271c6c2003f0,Inverter,Schneider,Schneider Conext Core XC,N21230000019,,,Station: D | Location: D.2 | Power: 680kW
+1faa2e22-54db-4b18-80be-271c6c2003f0,Inverter,Schneider,Schneider Conext Core XC,U21308000244,,,Station: E | Location: E.1 | Power: 680kW
+1faa2e22-54db-4b18-80be-271c6c2003f0,Inverter,Schneider,Schneider Conext Core XC,U21307000376,,,Station: E | Location: E.2 | Power: 680kW
+1faa2e22-54db-4b18-80be-271c6c2003f0,Inverter,Schneider,Schneider Conext Core XC,N21301000044,,,Station: F | Location: F.1 | Power: 680kW
+1faa2e22-54db-4b18-80be-271c6c2003f0,Inverter,Schneider,Schneider Conext Core XC,N21301000037,,,Station: F | Location: F.2 | Power: 680kW
+08794731-d975-477f-a767-eb83d4ea54e4,Inverter,SMA,SMA SC-xxxCP-10,180800379,,,Station: 1 | Location: 1.1 | Power: 900kW | Inverters: 4
+08794731-d975-477f-a767-eb83d4ea54e4,Inverter,SMA,SMA SC-xxxCP-10,180800380,,,Station: 1 | Location: 1.2 | Power: 900kW
+08794731-d975-477f-a767-eb83d4ea54e4,Inverter,SMA,SMA SC-xxxCP-10,180800382,,,Station: 2 | Location: 2.1 | Power: 900kW
+08794731-d975-477f-a767-eb83d4ea54e4,Inverter,SMA,SMA SC-xxxCP-10,180800381,,,Station: 2 | Location: 2.2 | Power: 900kW
+88a79345-1e06-4419-8808-2c9cc4065780,Inverter,SMA,SMA SCS-xxxx,3007914864,,,Station: 1 | Location: 01-11 | Power: 2900kW | Inverters: 20
+88a79345-1e06-4419-8808-2c9cc4065780,Inverter,SMA,SMA SCS-xxxx,3007898343,,,Station: 1 | Location: 01-32 | Power: 2900kW
+88a79345-1e06-4419-8808-2c9cc4065780,Inverter,SMA,SMA SCS-xxxx,3007898333,,,Station: 1 | Location: 01-41 | Power: 2900kW
+88a79345-1e06-4419-8808-2c9cc4065780,Inverter,SMA,SMA SCS-xxxx,3007905916,,,Station: 2 | Location: 02-12 | Power: 2900kW
+88a79345-1e06-4419-8808-2c9cc4065780,Inverter,SMA,SMA SCS-xxxx,3007905920,,,Station: 2 | Location: 02-22 | Power: 2900kW
+88a79345-1e06-4419-8808-2c9cc4065780,Inverter,SMA,SMA SCS-xxxx,3007914784,,,Station: 2 | Location: 02-31 | Power: 2900kW
+88a79345-1e06-4419-8808-2c9cc4065780,Inverter,SMA,SMA SCS-xxxx,3007905887,,,Station: 2 | Location: 02-32 | Power: 2900kW
+88a79345-1e06-4419-8808-2c9cc4065780,Inverter,SMA,SMA SCS-xxxx,3007914809,,,Station: 3 | Location: 03-12 | Power: 2900kW
+88a79345-1e06-4419-8808-2c9cc4065780,Inverter,SMA,SMA SCS-xxxx,3007914849,,,Station: 3 | Location: 03-21 | Power: 2900kW
+88a79345-1e06-4419-8808-2c9cc4065780,Inverter,SMA,SMA SCS-xxxx,3007914823,,,Station: 3 | Location: 03-22 | Power: 2900kW
+88a79345-1e06-4419-8808-2c9cc4065780,Inverter,SMA,SMA SCS-xxxx,3007914806,,,Station: 3 | Location: 03-31 | Power: 2900kW
+88a79345-1e06-4419-8808-2c9cc4065780,Inverter,SMA,SMA SCS-xxxx,3007905931,,,Station: 3 | Location: 03-32 | Power: 2900kW
+1e99d943-f68f-4b0c-99f9-18db141b0462,Inverter,SMA,SMA SC-xxxCP-10,180351076,,,Station: 1 | Location: 1 | Power: 800kW | Inverters: 8
+1e99d943-f68f-4b0c-99f9-18db141b0462,Inverter,SMA,SMA SC-xxxCP-10,180351073,,,Station: 1 | Location: 2 | Power: 800kW
+1e99d943-f68f-4b0c-99f9-18db141b0462,Inverter,SMA,SMA SC-xxxCP-10,180351077,,,Station: 2 | Location: 3 | Power: 800kW
+1e99d943-f68f-4b0c-99f9-18db141b0462,Inverter,SMA,SMA SC-xxxCP-10,180351078,,,Station: 2 | Location: 4 | Power: 800kW
+1e99d943-f68f-4b0c-99f9-18db141b0462,Inverter,SMA,SMA SC-xxxCP-10,180351074,,,Station: 3 | Location: 5 | Power: 800kW
+1e99d943-f68f-4b0c-99f9-18db141b0462,Inverter,SMA,SMA SC-xxxCP-10,180351072,,,Station: 3 | Location: 6 | Power: 800kW
+1e99d943-f68f-4b0c-99f9-18db141b0462,Inverter,SMA,SMA SC-xxxCP-10,180351071,,,Station: 4 | Location: 7 | Power: 800kW
+1e99d943-f68f-4b0c-99f9-18db141b0462,Inverter,SMA,SMA SC-xxxCP-10,180351075,,,Station: 4 | Location: 8 | Power: 800kW
+d25c3494-c0d2-49c9-b830-423961694f03,Inverter,SMA,SMA SCS-xxxx,3004890616,,,Station: 1 | Location: 1 | Power: 2900kW | Inverters: 2
+d25c3494-c0d2-49c9-b830-423961694f03,Inverter,SMA,SMA SCS-xxxx,3004890620,,,Station: 2 | Location: 2 | Power: 2900kW
+f18e25df-4a14-4aa1-baa4-cee9d3c493ad,Inverter,Schneider,Schneider Conext Core XC,N21311000030,,,Station: A | Location: A.1 | Power: 680kW | Inverters: 14
+f18e25df-4a14-4aa1-baa4-cee9d3c493ad,Inverter,Schneider,Schneider Conext Core XC,U21435000097,,,Station: A | Location: A.2 | Power: 680kW
+f18e25df-4a14-4aa1-baa4-cee9d3c493ad,Inverter,Schneider,Schneider Conext Core XC,U21439030006,,,Station: B | Location: B.1 | Power: 680kW
+f18e25df-4a14-4aa1-baa4-cee9d3c493ad,Inverter,Schneider,Schneider Conext Core XC,U21438030002,,,Station: B | Location: B.2 | Power: 680kW
+f18e25df-4a14-4aa1-baa4-cee9d3c493ad,Inverter,Schneider,Schneider Conext Core XC,U21422001692,,,Station: C | Location: C.1 | Power: 680kW
+f18e25df-4a14-4aa1-baa4-cee9d3c493ad,Inverter,Schneider,Schneider Conext Core XC,U21423000079,,,Station: C | Location: C.2 | Power: 680kW
+f18e25df-4a14-4aa1-baa4-cee9d3c493ad,Inverter,Schneider,Schneider Conext Core XC,U21444000301,,,Station: D | Location: D.1 | Power: 680kW
+f18e25df-4a14-4aa1-baa4-cee9d3c493ad,Inverter,Schneider,Schneider Conext Core XC,U21447001404,,,Station: D | Location: D.2 | Power: 680kW
+f18e25df-4a14-4aa1-baa4-cee9d3c493ad,Inverter,Schneider,Schneider Conext Core XC,U21421000250,,,Station: E | Location: E.1 | Power: 680kW
+f18e25df-4a14-4aa1-baa4-cee9d3c493ad,Inverter,Schneider,Schneider Conext Core XC,U21423001580,,,Station: E | Location: E.2 | Power: 680kW
+f18e25df-4a14-4aa1-baa4-cee9d3c493ad,Inverter,Schneider,Schneider Conext Core XC,U21446000049,,,Station: F | Location: F.1 | Power: 680kW
+f18e25df-4a14-4aa1-baa4-cee9d3c493ad,Inverter,Schneider,Schneider Conext Core XC,U21444000045,,,Station: F | Location: F.2 | Power: 680kW
+f18e25df-4a14-4aa1-baa4-cee9d3c493ad,Inverter,Schneider,Schneider Conext Core XC,U21447001383,,,Station: G | Location: G.1 | Power: 680kW
+f18e25df-4a14-4aa1-baa4-cee9d3c493ad,Inverter,Schneider,Schneider Conext Core XC,U21445000076,,,Station: G | Location: G.2 | Power: 680kW

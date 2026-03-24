@@ -1,0 +1,411 @@
+part_name,part_number,category,manufacturer,unit_price,warehouse_stock,terry_van_stock,jason_van_stock,min_stock_level,notes
+ABB PVS-800:2 x 15V Mini Power Supply,,ABB PVS800,,250.0,0,0,0,0,240VAC / 2x15VDC Mini Power Supply
+ABB PVS-800:ABB Charging Resistor,64803689,ABB PVS800,,75.48,0,0,0,0,CBHX 165 C 5R 414 Charging Resistor
+ABB PVS-800:ABB DC Module,3AUA0000114471,ABB PVS800,,10000.0,0,0,0,0,DC Module for PVS-800-57
+ABB PVS-800:ABB IGBT,ABB IGBT,ABB PVS800,,2500.0,0,0,0,0,ABB IGBT
+ABB PVS-800:ABB Module Inspection,,ABB PVS800,,250.0,0,0,0,0,Inspection of ABB PVS800-57 module
+ABB PVS-800:ABB PVS-800 Main Switch,,ABB PVS800,,4000.0,0,0,0,0,ABB PVS-800 Main Switch
+ABB PVS-800:ABB PVS800 Cabinet Door Air Filters,,ABB PVS800,,200.0,0,0,0,0,Cabinet Door Air Filters
+ABB PVS-800:ABB PVS800 LCL Filter,,ABB PVS800,,2000.0,0,0,0,0,ABB PVS800 LCL Filter
+ABB PVS-800:ABB R8i Module,,ABB PVS800,,20000.0,0,0,0,0,R8i Module
+ABB PVS-800:ACS800-104-XXXX-3/5/7; FLAT CABLE,,ABB PVS800,,109.5,0,0,0,0,ACS800-104-XXXX-3/5/7; FLAT CABLE
+ABB PVS-800:AFIN-02C,3AXD50000038423,ABB PVS800,,1000.0,0,0,0,0,AFIN-02C Motor Control Board
+ABB PVS-800:AFPS-11,,ABB PVS800,,1000.0,0,0,0,0,AFPS-11 PCB
+ABB PVS-800:AINT-14C,68685826,ABB PVS800,,1021.88,0,0,0,0,MC Interface Board
+ABB PVS-800:APOW-01C,64605666,ABB PVS800,,585.37,0,0,0,0,Power Supply Board APOW-01C
+ABB PVS-800:Cabinet Fan,,ABB PVS800,,200.0,0,0,0,0,Single cabinet fan for PVS-800
+ABB PVS-800:Cooling fan of LCL-filter unit,64650424,ABB PVS800,,1650.0,0,0,0,0,Cooling fan of LCL-filter unit
+ABB PVS-800:DC Measurement Board,A21,ABB PVS800,,600.0,0,0,0,0,DC Measurement Board
+ABB PVS-800:Main cooling fan inverter unit PVS800,,ABB PVS800,,495.0,0,0,0,0,Main cooling fan inverter unit
+ABB PVS-800:Memory backup-battery in the Data Logger Unit,,ABB PVS800,,3.0,0,0,0,0,BR2032 Battery
+ABB PVS-800:Murr Elecktronik 24V Power Supply,,ABB PVS800,,250.0,0,0,0,0,Murr Elecktronik 24V Power Supply
+ABB PVS-800:Premium Drive Repair,,ABB PVS800,,550.0,0,0,0,0,"Premium Drive Repair, including strip & clean, removal of IGBTs, renew thermal paste & replace IGBTs"
+ABB PVS-800:PVS-800 Capacitor,,ABB PVS800,,750.0,0,0,0,0,Single Capacitor
+ABB PVS-800:RDCU-12C Control Unit,3AUA0000036521,ABB PVS800,,800.0,0,0,0,0,RDCU-12C Control Unit
+ABB PVS-800:RDIO-01,64379216,ABB PVS800,,100.0,0,0,0,0,Digital I/O Extension
+ALoMCP:Change of ALoMCP Settings - On-site,,Services,,1000.0,0,0,0,0,Changing of the required settings to the upgraded ALoMCP requirements ON-SITE per site
+ALoMCP:Change of ALoMCP Settings - Remote,,Services,,600.0,0,0,0,0,Changing of the required settings to the upgraded ALoMCP requirements REMOTELY per site
+Circuit Breakers:250 NSX and Micrologic 2.2,,Circuit Breakers,,1000.0,0,0,0,0,250 NSX with a micrologic 2.2
+Circuit Breakers:ABB 3 Pole MCCB,,Circuit Breakers,,5700.0,0,0,0,0,ABB MCCB
+Circuit Breakers:Compact NS 2500 N,Compact NS 2500 N,Circuit Breakers,,11495.0,0,0,0,0,Compact NS 2500 N
+Circuit Breakers:Masterpact Interlock Mechanism,Masterpact Interlock Mechanism,Circuit Breakers,,150.0,5,0,0,0,Masterpact Interlock Mechanism
+Circuit Breakers:Masterpact Interlock System,,Circuit Breakers,,795.0,0,0,0,0,Masterpact Interlock Mechanism
+Circuit Breakers:Masterpact NW40 H1 3-pole,NW40 H1 3-pole,Circuit Breakers,,14995.0,0,0,0,0,Schneider Masterpact NW40 H1 3-pole
+Circuit Breakers:Masterpact overhaul,Masterpact overhaul,Circuit Breakers,,350.0,0,0,0,0,Masterpact overhaul
+Circuit Breakers:Schneider Masterpact NW32 H2 4-pole,NW32 H2,Circuit Breakers,,12000.0,0,0,0,0,Schneider Masterpact NW32 H2 4-pole
+Circuit Breakers:Schneider NSX250F Circuit Breaker,,Circuit Breakers,,600.0,0,0,0,0,Schneider NSX250F Circuit Breaker
+Circuit Breakers:Schneider NT16 H2 AC Circuit Breaker,,Circuit Breakers,,4000.0,0,0,0,0,Schneider NT16 H2 AC Circuit Breaker (3P+N)
+Discount Training,,Training,,-250.0,0,0,0,0,Discount for multiple course bookings
+Electrical Items:2.5mm T&E Cable (100m),,Electrical,,90.0,0,0,0,0,Prysmian 6242Y Grey 2.5mm² Twin & Earth Cable (100m drum)
+Electrical Items:200-250v UVR coil,200-250v UVR coil,Electrical,,400.0,0,0,0,0,200-250v UVR coil
+Electrical Items:DC safety cover replacement,DC safety cover replacement,Electrical,,400.0,0,0,0,0,DC safety cover replacement
+Electrical Items:Dimplex 2kW PLXE Panel Heater,PLX200E,Electrical,,190.0,0,0,0,0,"Dimplex 2kW PLXE Panel Heater
+(H)430 mm x (W)860 mm x (D)108 mm"
+Electrical Items:Filter rust treatment,Filter rust treatment,Electrical,,400.0,0,0,0,0,Filter rust treatment
+Electrical Items:Hyundai CB retro fit with Schneider Compact NS CB,Schneider Compact NS1600,Electrical,,7698.0,0,0,0,0,Schneider Compact NS1600
+Electrical Items:LCL Line filter,LCL Line filter,Electrical,,1000.0,0,0,0,0,LCL Line filter
+Electrical Items:LV Panel maintenance,Maintenance and testing of LV panels,Electrical,,7150.0,0,0,0,0,Maintenance and testing of LV panels and associated equipment along with protection relay test sheets and microohm meter report.
+Electrical Items:Masterpact NW32H1,Masterpact NW32H1,Circuit Breakers,,17000.0,0,0,0,0,Masterpact NW32H1
+Electrical Items:Micrologic 6.0E,Micrologic 6.0E,Circuit Breakers,,2300.0,2,0,0,0,Installation and commissioning of new Micrologic 6.0E
+Electrical Items:Micrologic 6.0E NW,Micrologic 6.0E,Circuit Breakers,,2300.0,0,0,0,0,Micrologic 6.0e
+Electrical Items:MT2 Trunking (sticky),,Electrical,,10.0,0,0,0,0,25mm x 16mm PVC Self Adhesive Mini Trunking White (3m Length)
+Electrical Items:NS Compact circuit breaker 1000H,NS Compact circuit breaker 1000H,Circuit Breakers,,3995.0,0,0,0,0,NS Compact circuit breaker 1000H
+Electrical Items:Parts to repair AC section on an XC inverter,Parts to repair AC section on a XC inverter,Schneider Conext Core XC,,6204.0,0,0,0,0,Parts to repair AC section on an XC inverter
+Electrical Items:Power stage fan bearing replacement,Power stage fan bearing replacement,Schneider Conext Core XC,,650.0,0,0,0,0,Power stage fan bearing replacement
+Electrical Items:Pumping system,,Electrical,,2500.0,0,0,0,0,Pump Installation
+Electrical Items:Schneider 10A MCB (single phase),,Electrical,,18.0,0,0,0,0,Schneider Acti9 10A Single Pole 10kA B Curve MCB
+Electrical Items:Schneider 16A MCB (single phase),,Electrical,,18.0,0,0,0,0,Schneider Acti9 16A Single Pole 10kA B Curve MCB
+Electrical Items:Schneider CL25 Inverter,,Electrical,,700.0,0,0,0,0,Schneider CL25 Inverter
+Electrical Items:Siemens fan replacement,,Electrical,,8200.0,0,0,0,0,
+Electrical Items:Single Surface Pattress Box,,Electrical,,5.0,0,0,0,0,Single Surface Pattress Box
+Electrical Items:Single Switched 13A Fused Spur,,Electrical,,10.0,0,0,0,0,13A. Double pole fused connection unit with flex outlet. BS 1363 Part 4: 1995.
+Electrical Items:Tinned Busbar,50 x 20 Tinned Busbar,Electrical,,850.0,0,0,0,0,50 x 20 Tinned Busbar
+Electrical Testing:EIC Report,,Services,,50.0,0,0,0,0,Electrical Inspection Certificate
+Electrical Testing:EICR Test Report,,Services,,160.0,0,0,0,0,Complete EICR report
+Electrical Testing:LV Maintenance,LV Maintenance,Services,,6000.0,0,0,0,0,LV Maintenance
+Electrical Testing:Micrologic testing,Micrologic testing,Services,,800.0,0,0,0,0,Micrologic testing
+Expenses for Miscellaneous items:Customs Fee,,Miscellaneous,,1685.0,0,0,0,0,Customs charges applied to items
+Expenses for Miscellaneous items:Hotels and food,expenses,Site Visit,,2000.0,0,0,0,0,Hotel and Food
+Expenses for Miscellaneous items:Miscellaneous,Miscellaneous Items,Miscellaneous,,150.0,0,0,0,0,Expenses for Miscellaneous items
+Fire Safety:2kg CO2 Fire Extinguisher,,Miscellaneous,,85.0,0,0,0,0,Provision of a 2kg CO2 Fire Extinguisher
+Fire Safety:5kg CO2 Fire Extinguisher,,Miscellaneous,,120.0,0,0,0,0,Provision of a 5kg CO2 Fire Extinguisher
+Fire Safety:Fire Extinguisher Disposal,,Miscellaneous,,15.0,0,0,0,0,The removal and disposal of a single fire extinguisher
+Fire Safety:Fire Extinguisher Stand,,Miscellaneous,,45.0,0,0,0,0,A fire extinguisher stand for a single fire extinguisher.
+Fire Safety:Service of a fire extinguisher,,Miscellaneous,,15.0,0,0,0,0,The service or commission of a single fire extinguisher.
+Firmware:Hummels AST Firmware Update,,SMA SC-xxxCP-10,,250.0,0,0,0,0,Update of firmware on AST and DSTM
+Firmware:SMA SC-xxxCP-10 SC-COM Firmware Update,,SMA SC-xxxCP-10,,150.0,0,0,0,0,Update of SC-COM firmware to a newer version.
+Firmware:SMA SC-xxxCP-10 SC20CONT Firmware Update,,SMA SC-xxxCP-10,,250.0,0,0,0,0,Update of SC20CONT firmware to a newer version.
+Firmware:Sunny Portal Upgrade,,SMA SC-xxxCP-10,,1983.33,0,0,0,0,Sunny Portal Upgrade
+fuse 5A 10x85mm gPV,116301-00.01,SMA SC-xxxx,,8.52,0,0,0,0,fuse 5A 10x85mm gPV
+Gamesa 630kW TL Plus:AC CTs,,Gamesa 630kW TL+,,1000.0,0,0,0,0,Set of AC CTs for installation on the busbars of each AC Contactor (3 No.)
+Gamesa 630kW TL Plus:Gamesa IGBT,,Gamesa 630kW TL+,,650.0,0,0,0,0,Single unit IGBT for Gamesa central inverters
+Haulage,,Miscellaneous,,2000.0,0,0,0,0,Haulage and Lifting services on site
+Hours,,Services,,,0,0,0,0,
+Installation Inspection Report,,Services,,500.0,0,0,0,0,Installation Inspection report - Two x MVPS Stations
+IPC Installation:IPC Installation in a station with 1 inverter,,Services,,650.0,0,0,0,0,Installation of an IPC system within a Schneider station with 2 x Schneider Conext Core XC
+IPC Installation:IPC Installation in a station with 2 inverters,,Services,,850.0,0,0,0,0,Installation of an IPC system within a Schneider station with 2 x Schneider Conext Core XC
+IPC Installation:IPC Installation in a station with 3 inverters,,Services,,1100.0,0,0,0,0,Installation of an IPC system within a Schneider station with 3 x Schneider Conext Core XC
+IPC Installation:IPC Installation in a station with 4 inverters,,Services,,1315.0,0,0,0,0,Installation of an IPC system within a Schneider station with 4 x Schneider Conext Core XC
+Maintenance:ABB Central Inverter Annual Maintenance,,ABB PVS800,,400.0,0,0,0,0,Inverter annual PM completed on inverter including report.
+Maintenance:ABB PVS800 Annual Maintenance,,ABB PVS800,,300.0,0,0,0,0,Inverter annual PM completed on inverter including report
+Maintenance:ACB Maintenance,,Circuit Breakers,,500.0,0,0,0,0,LV ACB Maintenance
+Maintenance:Complete Site Maintenance,,Site Visit,,3500.0,0,0,0,0,Price for maintenance across site
+Maintenance:Gamesa 630kW-TL Plus Annual Maintenance,,Gamesa 630kW TL+,,300.0,0,0,0,0,Inverter annual PM completed on inverter including report.
+Maintenance:Installation Fee,,Services,,25.0,0,0,0,0,Installation Fee for replacing components
+Maintenance:Masterpact Circuit Breaker Maintenance,Masterpact,Circuit Breakers,,300.0,0,0,0,0,Masterpact Maintenance for Schneider XC inverters
+Maintenance:Masterpact Maintenance LS,Masterpact,Circuit Breakers,,350.0,0,0,0,0,Masterpact Maintenance
+Maintenance:SCB Annual Maintenance,,SCBs,,75.0,0,0,0,0,Maintenance of an individual String Combiner Box
+Maintenance:SCB Oxidisation Works - SMA Combiner Box,,SCBs,,100.0,0,0,0,0,Oxidisation rectification work completed on a single String Combiner Box.
+Maintenance:Schneider Conext Core XC 5-year Annual Maintenance,,Schneider Conext Core XC,,300.0,0,0,0,0,5-year Inverter annual PM completed on inverter including report.
+Maintenance:Schneider Conext Core XC Annual Maintenance,,Schneider Conext Core XC,,300.0,0,0,0,0,Inverter annual PM completed on inverter including report.
+Maintenance:Schneider Conext Core XC Inverter Inspection,,Schneider Conext Core XC,,150.0,0,0,0,0,General Health inspection for the Schneider Conext Core XC inverter
+Maintenance:Schneider Xantrex GT Annual Maintenance,,Schneider Xantrex GT,,300.0,0,0,0,0,Inverter annual PM completed on inverter including report.
+Maintenance:Service & Maintenance Contract,,Services,,4000.0,0,0,0,0,Monthly payment for service and maintenance contract
+Maintenance:Service Contract per inverter,,Services,,15000.0,0,0,0,0,Service Contract per inverter
+Maintenance:SMA SC-xxxCP-10 Annual Maintenance,,SMA SC-xxxCP-10,,250.0,0,0,0,0,Inverter annual PM completed on inverter including report.
+Maintenance:SMA SC-xxxx Annual Maintenance,,SMA SC-xxxx,,250.0,0,0,0,0,Inverter annual PM completed on inverter including report.
+Maintenance:SMA SSM Annual Maintenance,,SCBs,,75.0,0,0,0,0,Maintenance of an individual SMA Combiner Box (SSM)
+Maintenance:Thermal Surveys - Central Inverter,,Services,,150.0,0,0,0,0,Thermal survey of a central inverter
+Maintenance:TX oil replacement across site,,Services,,30000.0,0,0,0,0,TX oil replacement across site
+Manufacturing:manufacturing,Manufacturing Bus Bar,Services,,750.0,0,0,0,0,Manufacturing Bus Bar
+Miscellaneous:Aux Supply to Station,,Electrical,,1495.0,0,0,0,0,
+Miscellaneous:Cabling,,Electrical,,100.0,0,0,0,0,Various size cabling
+Miscellaneous:Capacitor Bank Cleanse,,Schneider Conext Core XC,,200.0,0,0,0,0,Cleanse and replace washers/nuts on capacitor bank
+Miscellaneous:Copper work bench hire,,Miscellaneous,,400.0,0,0,0,0,Copper work bench hire
+Miscellaneous:Delivery,,Miscellaneous,,300.0,0,0,0,0,Delivery of equipment
+Miscellaneous:Installation of 2kW Heater within Schneider Inverter Station,,Electrical,,320.0,0,0,0,0,Complete installation of a 2kW with a switched fused spur. All testing to be included.
+Miscellaneous:Lifting Equipment,,Miscellaneous,,250.0,0,0,0,0,Lifting Equipment for heavy duty tasks
+Miscellaneous:Miscellaneous Materials,,Miscellaneous,,50.0,0,0,0,0,Materials purchased for site work
+Miscellaneous:Panel Trunking,,Electrical,,100.0,0,0,0,0,Panel Trunking for Commercial Installations
+Miscellaneous:Schneider Door Vent Filters,,Schneider Conext Core XC,,75.0,0,0,0,0,Specialist filters for door filters of the Schneider Conext Core XC inverters
+Miscellaneous:Shipping,,Miscellaneous,,50.0,0,0,0,0,Shipping of Items
+Miscellaneous:Silica Gel Packs,,Miscellaneous,,30.0,0,0,0,0,Silica gel packs for reducing moisture within compartments.
+Miscellaneous:SMA PUK Code,,SMA SC-xxxCP-10,,20.0,0,0,0,0,PUK Code to unlock SMA String inverters
+Miscellaneous:Specialised copper bench hire,Copper workbench hire,Miscellaneous,,400.0,0,0,0,0,Copper workbench hire
+Parts:10-Year Annual Maintenance Including Parts,10YAMPL,Schneider Conext Core XC,,1550.0,30,0,0,0,"Black Fans
+K1 Contactor
+Fan Caps
+48V Power Supplies
+24V Power Supplies
+Annual PM (Labour)"
+Parts:CMX Communication Board,,Schneider Conext Core XC,,400.0,2,0,0,0,Communication Board
+Parts:New retention kit,,Schneider Conext Core XC,,100.0,0,0,0,0,Masterpact retention kit
+Parts:Pre Authorised Spend,,Miscellaneous,,2000.0,0,0,0,0,Pre Authorised Spend - Parts Potentially Required
+Parts:Use Of Micellaneous Parts,,Miscellaneous,,,0,0,0,0,
+Retrofit Filter Preventative Solution,,Schneider Conext Core XC,,500.0,0,0,0,0,Retrofit filter per inverter to capture ingress of Moisture and Debry
+Schneider Conext Core XC:24V Power Supply,0J-921-0015,Schneider Conext Core XC,,250.0,0,0,0,0,24V Power Supply
+Schneider Conext Core XC:24VDC Control Relay Contact,,Schneider Conext Core XC,,65.0,0,0,0,0,24VDC Control Relay Contact
+Schneider Conext Core XC:4-pole DC Breaker,,Schneider Conext Core XC,,1980.0,0,0,0,0,ABB 4-pole DC Breaker
+Schneider Conext Core XC:400W Heater,0J-101-0500,Schneider Conext Core XC,,400.0,0,0,0,0,400W Heater installed within the inverter
+Schneider Conext Core XC:48V Capacitors,,Schneider Conext Core XC,,400.0,0,0,0,0,48V Capacitors
+Schneider Conext Core XC:48V Power Supply,0J-921-0014,Schneider Conext Core XC,,300.0,0,0,0,0,48V Power Supply
+Schneider Conext Core XC:48V Shunt Trip Coil,,Schneider Conext Core XC,,450.0,0,0,0,0,48V Shunt Trip Coil installed in the Schneider Masterpact Switches
+Schneider Conext Core XC:48V UVR Coil,,Schneider Conext Core XC,,525.0,0,0,0,0,48V UVR Coil installed in the Schneider Masterpact Switches
+Schneider Conext Core XC:A14 Board,0J-391-0051,Schneider Conext Core XC,,700.0,0,0,0,0,A14 Board - Power Stage Area
+Schneider Conext Core XC:A15 Board,0J-391-0050,Schneider Conext Core XC,,700.0,0,0,0,0,A15 Board - Power Stage Area
+Schneider Conext Core XC:AC / DC Fan,0J-490-0171,Schneider Conext Core XC,,625.0,0,0,0,0,Fan installed in the AC or DC section
+Schneider Conext Core XC:AC Board Resistors,0J-121-04R0,Schneider Conext Core XC,,200.0,0,0,0,0,Resistors fitted behind the AC Board
+Schneider Conext Core XC:AC Fuse 1250A,0J-515-9300,Schneider Conext Core XC,,300.0,0,0,0,0,AC Fuse 1250A
+Schneider Conext Core XC:AC Masterpact Switch,0J-530-2148,Schneider Conext Core XC,,6500.0,0,0,0,0,AC Masterpact Switch
+Schneider Conext Core XC:AC Schneider Masterpact Refurbishment,,Schneider Conext Core XC,,1500.0,0,0,0,0,Test and complete refurbishment of a Schneider AC Masterpact Switch
+Schneider Conext Core XC:AIC Fan Framework,,Schneider Conext Core XC,,250.0,0,0,0,0,Black framework for the AIC Power Stage Fans
+Schneider Conext Core XC:AIC Fan Housing,,Schneider Conext Core XC,,3.0,0,0,0,0,Replacement AIC Fan Housing
+Schneider Conext Core XC:AIC IGBT Driver Board,,Schneider Conext Core XC,,2000.0,0,0,0,0,IGBT Driver Board
+Schneider Conext Core XC:AIC Power Stage Fan,0J-490-0175,Schneider Conext Core XC,,3495.0,0,0,0,0,AIC Power Stage Fan
+Schneider Conext Core XC:Aux Time Delay Sensor,,Schneider Conext Core XC,,95.0,0,0,0,0,Telemecanique Time Delay Sensor
+Schneider Conext Core XC:Balancing Board,0J-3D657481G001,Schneider Conext Core XC,,1200.0,0,0,0,0,Balancing Board in Power Stage Area
+Schneider Conext Core XC:Bussmann 160A Fuse,0J-515-9305-Z,Schneider Conext Core XC,,25.0,0,0,0,0,FUSE 160A/500V GL/GG NH00
+Schneider Conext Core XC:Bussmann BVL 50 Microswitch for NH Fuses,0J-540-0357,Schneider Conext Core XC,,50.0,0,0,0,0,Microswitch for NH fuses in AC cabinet
+Schneider Conext Core XC:Control Block,,Schneider Conext Core XC,,700.0,0,0,0,0,Schneider XC Control Block
+Schneider Conext Core XC:DC CT,,Schneider Conext Core XC,,1500.0,0,0,0,0,DC CT in the DC section
+Schneider Conext Core XC:DC Masterpact Switch,0J-530-2149,Schneider Conext Core XC,,10500.0,0,0,0,0,DC Masterpact Switch
+Schneider Conext Core XC:DC Safety Cage,,Schneider Conext Core XC,,600.0,0,0,0,0,DC Protective Cage installed in the DC section in front of the DC busbars.
+Schneider Conext Core XC:DC Safety Plastics,,Schneider Conext Core XC,,50.0,0,0,0,0,Plastic covers installed alongside the DC cage
+Schneider Conext Core XC:DC Schneider Masterpact Refurbishment,,Schneider Conext Core XC,,1500.0,0,0,0,0,Test and complete refurbishment of a Schneider DC Masterpact Switch
+Schneider Conext Core XC:Fan Capacitor,0J-0783,Schneider Conext Core XC,,20.0,0,0,0,0,Fan capacitor for the AC and DC fan circuits.
+Schneider Conext Core XC:Fan Card,0J-3D657917G905,Schneider Conext Core XC,,750.0,0,0,0,0,Fan Card - controls the AIC fans in the power stage area
+Schneider Conext Core XC:Fan Refurbishment Programme (per inverter),,Schneider Conext Core XC,,600.0,0,0,0,0,Refurbishment of the 3 no. AIC stage fans
+Schneider Conext Core XC:Gate Driver Board Comms Cabling,,Schneider Conext Core XC,,350.0,0,0,0,0,Cabling to connect all Gate Driver Boards with the Measuring Board
+Schneider Conext Core XC:Gate Driver Board Inter-Comm Cabling,,Schneider Conext Core XC,,100.0,0,0,0,0,Short cable between each Gate Driver Board
+Schneider Conext Core XC:Gate Driver Sensor,,Schneider Conext Core XC,,150.0,0,0,0,0,Gate Driver Board Sensor
+Schneider Conext Core XC:GKP for Conext Core XC,,Schneider Conext Core XC,,450.0,0,0,0,0,Graphic Key Display
+Schneider Conext Core XC:Heater Control DC Section,0J-0279,Schneider Conext Core XC,,500.0,0,0,0,0,SA Heater Control DC Section XC500
+Schneider Conext Core XC:Inverter Gasket Strip,0J-850-1787B,Schneider Conext Core XC,,40.0,0,0,0,0,Gasket Strip (10 x 3.0mm)
+Schneider Conext Core XC:K1 Contactor,0J-451-1102,Schneider Conext Core XC,,150.0,0,0,0,0,K1 Contactor
+Schneider Conext Core XC:Masterpact Auxiliary Kit,,Schneider Conext Core XC,,3325.0,0,0,0,0,"Masterpact Aux Kit including: motor, UVR coil, UVR time delay, PF switch, relays & relay holders"
+Schneider Conext Core XC:Masterpact Mech Changes,,Schneider Conext Core XC,,2500.0,0,0,0,0,Mech change for a single Masterpact Circuit Breaker
+Schneider Conext Core XC:Masterpact Motor,,Schneider Conext Core XC,,1800.0,0,0,0,0,Motor installed in the Schneider Masterpact Switches
+Schneider Conext Core XC:Masterpact PF Switch,,Schneider Conext Core XC,,300.0,0,0,0,0,PF Switch installed in the Schneider Masterpact Switches
+Schneider Conext Core XC:Masterpact Retention Kit,,Schneider Conext Core XC,,120.0,0,0,0,0,Retaining kit for connections on top of Masterpact switches
+Schneider Conext Core XC:Metal Thermistor Clamps,,Schneider Conext Core XC,,50.0,0,0,0,0,Metal Thermistor Clamps
+Schneider Conext Core XC:Micrologic 2.0A,,Schneider Conext Core XC,,1895.0,0,0,0,0,Micrologic protection for installation in AC Masterpact circuit breakers
+Schneider Conext Core XC:Micrologic 5.0A,,Schneider Conext Core XC,,1000.0,0,0,0,0,Micrologic protection for installation in AC Masterpact circuit breakers
+Schneider Conext Core XC:Micrologic Battery,,Schneider Conext Core XC,,7.5,0,0,0,0,Battery for Micrologic protection device
+Schneider Conext Core XC:Micrologic Commissioning,,Schneider Conext Core XC,,250.0,0,0,0,0,Commissioning & Testing of Micrologic devices
+Schneider Conext Core XC:Power Stage Parts,,Schneider Conext Core XC,,6000.0,0,0,0,0,All parts required for a power stage repair
+Schneider Conext Core XC:Power Stage Repair (per phase),,Schneider Conext Core XC,,5000.0,0,0,0,0,Repair of one phase of the power stage area within the inverter
+Schneider Conext Core XC:Powerstage Rebuild,,Schneider Conext Core XC,,6500.0,0,0,0,0,Schneider XC Inverters full Powerstage rebuild including testing and commissioning
+Schneider Conext Core XC:PVO Board,0J-0P5235,Schneider Conext Core XC,,2000.0,0,0,0,0,Programmed PVO Board for Control Block
+Schneider Conext Core XC:QF2,0J-540-0327,Schneider Conext Core XC,,200.0,0,0,0,0,QF2 Switch
+Schneider Conext Core XC:QF3,0J-540-0326,Schneider Conext Core XC,,100.0,0,0,0,0,QF3 Switch
+Schneider Conext Core XC:QF4 Switch,0J-540-0328,Schneider Conext Core XC,,150.0,0,0,0,0,SWITCH MOTOR PROTECTOR GV2-RT16 9-14
+Schneider Conext Core XC:QF5,0J-540-0325,Schneider Conext Core XC,,100.0,0,0,0,0,QF5 Switch
+Schneider Conext Core XC:Red Auxiliary Switch,,Schneider Conext Core XC,,150.0,0,0,0,0,"Schneider Electric Handle, Padlockable for use with GV3L Series"
+Schneider Conext Core XC:Relay,0J-450-0176-Z,Schneider Conext Core XC,,50.0,0,0,0,0,Single relay installed within the AC and DC sections
+Schneider Conext Core XC:Relay Holder,0J-450-0177-Z,Schneider Conext Core XC,,100.0,0,0,0,0,Single relay holder installed within the AC and DC sections of the inverter
+Schneider Conext Core XC:Schneider IGBT,,Schneider Conext Core XC,,500.0,0,0,0,0,Single IGBT for Schneider XC Inverters
+Schneider Conext Core XC:Schneider Masterpact Refurbishment - FAIL,,Schneider Conext Core XC,,500.0,0,0,0,0,Full refurbishment of a Masterpact with a FAILED result
+Schneider Conext Core XC:Schneider Masterpact Refurbishment - PASS,,Schneider Conext Core XC,,1500.0,0,0,0,0,Full refurbishment of a Masterpact with a successful result
+Schneider Conext Core XC:Schneider XC Discharge Resistors,,Schneider Conext Core XC,,500.0,0,0,0,0,Discharge resistors for the AIC stage of the Schneider XC
+Schneider Conext Core XC:Spare Parts,,Schneider Conext Core XC,,52620.0,0,0,0,0,Payment for inverter spare parts
+Schneider Conext Core XC:Spare Parts Upfront Payment,,Schneider Conext Core XC,,17540.0,0,0,0,0,Upfront payment for a bespoke spare parts order
+Schneider Conext Core XC:TC1 Transformer,0J-432-0096,Schneider Conext Core XC,,3500.0,0,0,0,0,TC1 Transformer
+Schneider Conext Core XC:TC2 Transformer,0J-430-0762,Schneider Conext Core XC,,800.0,0,0,0,0,TC2 Transformer
+Schneider Conext Core XC:TC3 Transformer,0J-430-0759,Schneider Conext Core XC,,1700.0,0,0,0,0,TC3 Transformer
+Schneider Conext Core XC:Terminal Board,0J-950-9387A,Schneider Conext Core XC,,650.0,0,0,0,0,Terminal Board - Power Stage Area
+Schneider Conext Core XC:Thermoclicks,0J-541-0130,Schneider Conext Core XC,,50.0,0,0,0,0,Thermaclix fitted onto resistors behind AC Board
+Schneider Conext Core XC:UVR Time Delay,0J-530-2165,Schneider Conext Core XC,,400.0,0,0,0,0,UVR 48V Time Delay
+Schneider Conext Core XC:VSE Board,0J-0P5236,Schneider Conext Core XC,,1500.0,0,0,0,0,VSE Board
+Schneider Conext Core XC:XC 10-year Annual Maintenance,,Schneider Conext Core XC,,6920.0,0,0,0,0,10-year Inverter Maintenance
+Schneider Conext Core XC:XC AC Board Terminations,,Schneider Conext Core XC,,100.0,0,0,0,0,Terminal clamp for precharge circuit
+Schneider Conext Core XC:XC Gate Driver Board,0J-3D657473G005,Schneider Conext Core XC,,2500.0,0,0,0,0,Gate Driver Board AIC 15P
+Schneider Conext Core XC:XC Measurement Board,0J-3D657476G006,Schneider Conext Core XC,,2000.0,0,0,0,0,Measurement Board in Power Stage Area
+Schneider Conext Core XC:XC Power Board,0J-3D657479G001,Schneider Conext Core XC,,2000.0,0,0,0,0,Power Board in power stage area
+Schneider Conext Core XC:XC Precharge Circuit Testing,,Schneider Conext Core XC,,6000.0,0,0,0,0,Testing of the XC Precharge Circuit
+Schneider Conext Core XC:XC Precharge Kit,,Schneider Conext Core XC,,1950.0,0,0,0,0,"6 x Precharge Resistors, Thermoclicks + Terminations, 1 x K1 Contactor, 1 x QF2"
+Schneider Conext Core XC:XC Resistor Clamp Terminals,,Schneider Conext Core XC,,10.0,0,0,0,0,Clamp terminal for the resistors
+Schneider Conext Core XC:XC Thermoclicks Clamp Terminals,,Schneider Conext Core XC,,7.5,0,0,0,0,Terminal clamp for thermaclix wiring
+Schneider Conext Core XC:XC Thermoclicks Terminal Plate,,Schneider Conext Core XC,,50.0,50,0,0,0,Set of clamp terminals for thermaclix wiring
+Schneider GT Series:48V Power Supply,,Schneider Xantrex GT,,80.0,0,0,0,0,48V Power Supply for Schneider GT Series inverters
+Schneider GT Series:A3 Measuring Board,A3,Schneider Xantrex GT,,2200.0,0,0,0,0,Schneider GT Measuring Board
+Schneider GT Series:A4 Examination Board,,Schneider Xantrex GT,,12.95,0,0,0,0,A4 Examination Board
+Schneider GT Series:B1 Hygrostat,,Schneider Xantrex GT,,160.0,0,0,0,0,Hygrostat for B1 position
+Schneider GT Series:CT Wiring Loom,,Schneider Xantrex GT,,450.0,0,0,0,0,Schneider GT CT Wiring Loom
+Schneider GT Series:Distributor (A5),,Schneider Xantrex GT,,5700.0,-1,0,0,0,LOHER (A5)
+Schneider GT Series:GT 24V Power Supply,,Schneider Xantrex GT,,250.0,0,0,0,0,24V Power Supply
+Schneider GT Series:GT AC Contactor,,Schneider Xantrex GT,,12695.0,0,0,0,0,AC Contactor for Schneider GT Series
+Schneider GT Series:GT CCU Board,0J-0P-3994-01-01,Schneider Xantrex GT,,7500.0,0,0,0,0,CCU Board for Schneider GT Inverters
+Schneider GT Series:GT Centrifrugal Fan,D2E133-CI33-22 | EBM-PAPST,Schneider Xantrex GT,,375.0,0,0,0,0,Fan Centrifugal 230VAC 133mm 175W 420m3/h Ball IP44
+Schneider GT Series:GT Display,,Schneider Xantrex GT,,1500.0,0,0,0,0,GT Series Display
+Schneider GT Series:GT IGBTs,,Schneider Xantrex GT,,500.0,0,0,0,0,GT Series IGBTs
+Schneider GT Series:GT Matrix Cleanse,,Schneider Xantrex GT,,4295.0,0,0,0,0,Schneider GT Matrix Cleanse
+Schneider GT Series:GT Series Ceiling Fan,W2E200-HK38-01 | EBM-PAPST,Schneider Xantrex GT,,225.0,0,0,0,0,"Fan Axial 225x80mm 230VAC 1029,6m3/h Ball"
+Schneider GT Series:K60 Relay,,Schneider Xantrex GT,,350.0,0,0,0,0,K60 relay for installation within the GT inverters.
+Schneider GT Series:Schneider GT AC CT,,Schneider Xantrex GT,,1500.0,0,0,0,0,Individual CT for the AC cables
+Schneider GT Series:Schneider GT Matrix Service Kit,0J-901-7350,Schneider Xantrex GT,,17995.0,0,0,0,0,Single Mains Phase kit for Schneider GT Matrix
+Schneider GT Series:Schneider GT Patch Cable,,Schneider Xantrex GT,,400.0,0,0,0,0,F/O Patch Cable
+Schneider XC Cortex Bus Bar,,Schneider Conext Core XC,,1900.0,10,0,0,0,Schneider XC Cortex Bus Bar in the powerstage area
+Schneider XC Training Programme R2025,,Training,,2000.0,0,0,0,0,Training on the Schneider XC Inverter for one person R25
+Service:10-Year Masterpact Preventative Maintenance,,Circuit Breakers,,300.0,0,0,0,0,Preventative Maintenance for DC/AC Masterpacts
+Service:AC Schneider Masterpact Refurbishment with mech replacement,,Circuit Breakers,,3500.0,0,0,0,0,
+Service:Annual Subscription,,Miscellaneous,,1500.0,0,0,0,0,Annual Subscription for Harmonics
+Service:Component Condition Report,,Schneider Conext Core XC,,50.0,0,0,0,0,Component Condition Report - Assess the condition of the 10 year components not being replaced in the Schneider recommended 10-Year maintenance schedule
+Service:DC Schneider Masterpact mech replacement/refurbishment,,Circuit Breakers,,4000.0,0,0,0,0,
+Service:Floating to Negative earthing works,,Miscellaneous,,6000.0,0,0,0,0,Floating to Negative earthing works
+Service:LV Switchboard Maintenance,,Electrical,,4995.0,0,0,0,0,This quote is for full LV Switchboard maintenance of T1A T3A and T4. The boards will be deep cleaned along with exterior all ACBs/MCCBs PFCs will be maintained and tested along with test sheets to prove and all main connections checked along with end to end Ductor test on main Bus Bars.
+Service:Power Stage Cleanse,,Schneider Conext Core XC,,3295.0,0,0,0,0,"Remove, clean, re-paste and re-fit IGBTs To manufacturer specification 
+Cleanse Power Stage
+Cleanse Capacitor Bank
+Install Silica Packs"
+Service:Project Management,,Miscellaneous,,2000.0,0,0,0,0,Project Management
+Service:Site Visit - 2-Engineers Required PM,,Site Visit,,1500.0,0,0,0,0,Site Attendance Preventative Maintenance two Engineers
+Service:Site Visit - R25 4H,,Site Visit,,1350.0,0,0,0,0,Site Visit Rate - 2025 +4H
+Service:Site Visit 25R One Engineer,SVR251E,Site Visit,,950.0,0,0,0,0,Site Visit Rate Charge Single Engineer
+Service:Site Visit Actrees,,Site Visit,,950.0,0,0,0,0,Site Visit Rate Charge Single Engineer
+Service:Site Visit Ardleigh,,Site Visit,,950.0,0,0,0,0,Site Visit Rate Charge Single Engineer
+Service:Site Visit Cooper House,,Site Visit,,1200.0,0,0,0,0,Site Visit Rate Charge Single Engineer
+Service:Site Visit Court Colman,,Site Visit,,1200.0,0,0,0,0,Site Visit Rate Charge Single Engineer
+Service:Site Visit Crundale,,Site Visit,,1200.0,0,0,0,0,Site Visit Rate Charge Single Engineer
+Service:Site Visit Drakelow,,Site Visit,,950.0,0,0,0,0,Site Visit Rate Charge Single Engineer
+Service:Site Visit Goddards Green,,Site Visit,,950.0,0,0,0,0,Site Visit Rate Charge Single Engineer
+Service:Site Visit Luscott Barton,,Site Visit,,1200.0,0,0,0,0,Site Visit Rate Charge Single Engineer
+Service:Site Visit Marshborough,,Site Visit,,950.0,0,0,0,0,Site Visit Rate Charge Single Engineer
+Service:Site Visit Newby West,,Site Visit,,1200.0,0,0,0,0,Site Visit Rate Charge Single Engineer
+Service:Site Visit Wambrook,,Site Visit,,1200.0,0,0,0,0,Site Visit Rate Charge Single Engineer
+Service:Site Visit West Woodlands,,Site Visit,,950.0,0,0,0,0,Site Visit Rate Charge Single Engineer
+Service:SLA,,Miscellaneous,,,0,0,0,0,72 Hour SLA - Annual Preventative Maintenance
+Service:SMA Central Inverter Training,,Training,,1500.0,0,0,0,0,SMA Central Inverter Training
+Service:SMA Stack Cube Cleanse PM,,SMA SC-xxxCP-10,,2525.0,0,0,0,0,"Removal of Stack Cube and IGBTs, Test - Re-paste - Rebuild and Test"
+Service:Workshop Repair,,ABB PVS800,,,0,0,0,0,ABB/Fimer Ultra 390kW inverter modules
+shunt closing release 220-240V AC/DC,116543-00.01,SMA SC-xxxx,,227.97,0,0,0,0,shunt closing release 220-240V AC/DC
+shunt release 220-240VAC/DC,60-201000,SMA SC-xxxx,,116.74,0,0,0,0,shunt release 220-240VAC/DC
+Site Visits:Accommodation,,Site Visit,,150.0,0,0,0,0,Charges for hotel & subsistence
+Site Visits:Communication Engineer,,Site Visit,,1100.0,0,0,0,0,"Communication Engineer, Troubleshot and Rectify"
+Site Visits:Discount,,Site Visit,,-300.0,0,0,0,0,Discount for services
+Site Visits:Expert Services,,Site Visit,,200.0,0,0,0,0,Specialist assistance from an expert
+Site Visits:Extra day labour,,Site Visit,,450.0,0,0,0,0,Extra labour needed to complete works
+Site Visits:Extra Labour,,Site Visit,,50.0,0,0,0,0,Installation Labour
+Site Visits:HV Site Visit,,Site Visit,,1082.52,0,0,0,0,HV Engineer Site Visit Including Oil
+Site Visits:Mileage,,Site Visit,,0.5,0,0,0,0,Price per mile per vehicle
+Site Visits:Remote assistance to an inverter,,Site Visit,,300.0,0,0,0,0,Remote assistance to an inverter issue with potential of resolving problem.
+Site Visits:SAP Services,,Site Visit,,1732.5,0,0,0,0,SAP Services to isolate and provide PTW
+Site Visits:Service and fault log downloads,Service and fault log downloads,Site Visit,,3000.0,0,0,0,0,Service and fault log downloads
+Site Visits:Site Visit,,Site Visit,,,0,0,0,0,
+Site Visits:Site Visit - 2-Engineers Required,,Site Visit,,1200.0,0,0,0,0,Site Visit Charges
+Site Visits:Site Visit - BESS,,Site Visit,,1500.0,0,0,0,0,Site Visit for BESS Sites (2 engineers)
+Site Visits:Site Visit - Lightsource,,Site Visit,,800.0,0,0,0,0,Site Visit costs
+Site Visits:Site Visit - Lightsource Special,,Site Visit,,650.0,0,0,0,0,Site Visit for Quotation Purposes
+Site Visits:Site Visit - Rate 1,,Site Visit,,800.0,0,0,0,0,Site Visit Charges
+Site Visits:Site Visit - Rate 2,,Site Visit,,850.0,0,0,0,0,Site Visit Charges
+Site Visits:SLA - Anesco,,Site Visit,,4000.0,0,0,0,0,Monthly SLA Agreement
+Site Visits:SMA Site Visit,,Site Visit,,2049.85,0,0,0,0,SMA Site Visit
+Site Visits:Subsistence,,Site Visit,,50.0,0,0,0,0,Subsistence for an entire site visit
+Site Visits:Travel Costs,,Site Visit,,1500.0,0,0,0,0,Complete costs of travel for a site visit (bespoke visits)
+Site Visits:Visit - Power Stage Repair,,Site Visit,,1000.0,0,0,0,0,Specialist services for power stage repairs
+Site Visits:Welfare Hire,,Site Visit,,2000.0,0,0,0,0,Welfare Hire for duration of project
+SMA SC-xxxCP-10:3-phase Capacitor,02-911005,SMA SC-xxxCP-10,,300.0,0,0,0,0,Three phase capacitor 100µF/750VAC/80A ±5% MKP
+SMA SC-xxxCP-10:3-Phase Fan,46-50705,SMA SC-xxxCP-10,,2595.0,0,0,0,0,3-Phase Fan for the stack area
+SMA SC-xxxCP-10:3-Phase Fan (2nd hand),,SMA SC-xxxCP-10,,2500.0,0,0,0,0,3-Phase Fan for the stack area
+SMA SC-xxxCP-10:ABB 24V EMax UVR Coil,,SMA SC-xxxCP-10,,500.0,0,0,0,0,24V UVR Coil for installation in ABB DC EMax Switches
+SMA SC-xxxCP-10:ABB AC Switch T7S,,SMA SC-xxxCP-10,,3995.0,0,0,0,0,"ABB AC Switch for SMA CP Inverters (T7S, 1600 A, 3-pole)"
+SMA SC-xxxCP-10:ABB DC Switch 24V UVR Coil,60-90455,SMA SC-xxxCP-10,,250.0,0,0,0,0,Undervoltage release UVR 230V AC/DC
+SMA SC-xxxCP-10:ABB DC Switch Closing Release Coil 230V,60-90452,SMA SC-xxxCP-10,,250.0,0,0,0,0,Closing release 220V...240VAC/DC
+SMA SC-xxxCP-10:ABB DC Switch Repair Pack,,SMA SC-xxxCP-10,,2700.0,0,0,0,0,Internal components for ABB DC Switch
+SMA SC-xxxCP-10:ABB SACE DC Switch Motor,,SMA SC-xxxCP-10,,1800.0,0,0,0,0,Switch motor (230V) for ABB SACE Switches
+SMA SC-xxxCP-10:AC Contactor,60-000390,SMA SC-xxxCP-10,,4295.0,0,0,0,0,Contactor 3-pole 1000V 1050A
+SMA SC-xxxCP-10:AC Contactor Capacitor PCB,,SMA SC-xxxCP-10,,750.0,0,0,0,0,Contactor PCB for contactor AF1650
+SMA SC-xxxCP-10:AC Contactor Inductor PCB,,SMA SC-xxxCP-10,,750.0,0,0,0,0,Inductor PCB for contactor AF1650
+SMA SC-xxxCP-10:AC Contactor Main PCB,114322-00.01,SMA SC-xxxCP-10,,1000.0,0,0,0,0,PCB Multi Pac for contactor AF1650 new circuit board multi pac
+SMA SC-xxxCP-10:AC CT (LEM),04-0215004,SMA SC-xxxCP-10,,150.0,0,0,0,0,Current transformer 1500A ±15V
+SMA SC-xxxCP-10:Bender IRDH275B-49335,,SMA SC-xxxCP-10,,2550.0,0,0,0,0,"Bender IRDH275B-49335
+3(N)AC0-793V/DC0-650V"
+SMA SC-xxxCP-10:Bender isoPV1685-425,30-102700.01,SMA SC-xxxCP-10,,3600.0,0,0,0,0,Bender isolation monitoring device
+SMA SC-xxxCP-10:Buffer Module - CP,30-90383,SMA SC-xxxCP-10,,795.0,0,0,0,0,DC-buffer module 22.6VDC 10A 1kJ
+SMA SC-xxxCP-10:Buffer Module - CP - repair,,SMA SC-xxxCP-10,,375.0,0,0,0,0,Buffer Module repair
+SMA SC-xxxCP-10:CP 10-year Maintenance,,SMA SC-xxxCP-10,,350.0,0,0,0,0,SMA SC-xxxCP-10 10-year Maintenance
+SMA SC-xxxCP-10:CP Filter Choke,,SMA SC-xxxCP-10,,6500.0,0,0,0,0,107µFx3 1300A filter choke
+SMA SC-xxxCP-10:CP Ventilation Plate,65-05000938,SMA SC-xxxCP-10,,1500.0,0,0,0,0,Power Cabinet filter frame cpl. C1
+SMA SC-xxxCP-10:DC Switch,60-9045,SMA SC-xxxCP-10,,5795.0,0,0,0,0,Switch disconnector Tmax T7D 1600A 4pole
+SMA SC-xxxCP-10:Display (MOStron),16-101000.01,SMA SC-xxxCP-10,,1200.0,0,0,0,0,"LCD-TFT Display 5,7"" 640x480"
+SMA SC-xxxCP-10:Display (new version),3F0-419-001-001,SMA SC-xxxCP-10,,2600.0,0,0,0,0,"LCD-TFT Display 5,7"" 640x480"
+SMA SC-xxxCP-10:Display (old version with lid),16-1541,SMA SC-xxxCP-10,,3200.0,0,0,0,0,LCD TFT Display with touch function
+SMA SC-xxxCP-10:Freight/Insurance,Freight/Insurance,SMA SC-xxxCP-10,,,0,0,0,0,
+SMA SC-xxxCP-10:Hummels F/O Cable,,SMA SC-xxxCP-10,,395.0,0,0,0,0,F/O cable for Hummels Stacks
+SMA SC-xxxCP-10:Insulation Monitoring Device,6UP-849-002-001,SMA SC-xxxCP-10,,2995.0,0,0,0,0,isoPV1685-425
+SMA SC-xxxCP-10:LVDS Cable (between SC-COM and display),16-13134,SMA SC-xxxCP-10,,300.0,0,0,0,0,LVDS-cable 1400mm
+SMA SC-xxxCP-10:LVDS Cable (between SC-COM and display) - URGENT PRICE,16-13134,SMA SC-xxxCP-10,,415.0,0,0,0,0,LVDS-cable 1400mm
+SMA SC-xxxCP-10:MVPS Station Leg,,SMA SC-xxxCP-10,,400.0,0,0,0,0,SMA MVPS Station Leg
+SMA SC-xxxCP-10:NTC Temperature Sensor,09-02050,SMA SC-xxxCP-10,,10.0,0,0,0,0,NTC 2K00 1% 60mW temperature sensor
+SMA SC-xxxCP-10:NTC Temperature Sensor in Bushing,09-02051,SMA SC-xxxCP-10,,100.0,0,0,0,0,Temperature sensor NTC 2K00 in bushing
+SMA SC-xxxCP-10:Parts for IMD Installation,Bender IMD SMA Installation,SMA SC-xxxCP-10,,1460.0,0,0,0,0,All parts required for installation of Bender IMD and Remote GFDI.
+SMA SC-xxxCP-10:Power Supply (Quint),31-9211,SMA SC-xxxCP-10,,150.0,0,0,0,0,Power unit 24VDC 10A (Quint Power Supply)
+SMA SC-xxxCP-10:Power Supply (Wieland),30-017446,SMA SC-xxxCP-10,,150.0,0,0,0,0,Power unit 24VDC 10A (Wieland Power Supply)
+SMA SC-xxxCP-10:Radial Fan (Cabinet 3),46-5185201,SMA SC-xxxCP-10,,775.0,0,0,0,0,Fan Radial 230VAC 27W 165x165x72mm
+"SMA SC-xxxCP-10:Radial Fan Cabinets 1, 2",105588-00.01,SMA SC-xxxCP-10,,650.0,0,0,0,0,Radial fan K3G175-CF19-XA with cables
+SMA SC-xxxCP-10:SC String Monitor Controller,SCSMC-20.GR1,SMA SC-xxxCP-10,,500.0,0,0,0,0,Sunny Central String Monitor Controller
+SMA SC-xxxCP-10:SC-COM Battery,,SMA SC-xxxCP-10,,15.0,0,0,0,0,SC-COM Battery
+SMA SC-xxxCP-10:SC-COM GR5,SCCOMGR5-00.01,SMA SC-xxxCP-10,,3000.0,0,0,0,0,SCCOMGR5 Version C2 communication unit for SC (with LWL)
+SMA SC-xxxCP-10:SC-COM GR6,SCCOMGR6-00.01,SMA SC-xxxCP-10,,3000.0,0,0,0,0,SCCOMGR6 Version C2 communication unit for SC (without LWL)
+SMA SC-xxxCP-10:SC-COM-SERVICECARD,SC-COM-SERVICECARD,SMA SC-xxxCP-10,,200.0,0,0,0,0,Servicecard for SC-COM
+SMA SC-xxxCP-10:SC-CU1015.3B-R,SC-CU1015.3B-R,SMA SC-xxxCP-10,,7995.0,0,0,0,0,Hummels Stack Cube
+SMA SC-xxxCP-10:SC20CAIO,SC20CAIOGR3-00.01,SMA SC-xxxCP-10,,1000.0,0,0,0,0,IO expansion for SC20CONT
+SMA SC-xxxCP-10:SC20CAIO Connector Plug,,SMA SC-xxxCP-10,,50.0,0,0,0,0,Connector plug for SC20CAIO
+SMA SC-xxxCP-10:SC20CONT,SC20CONTGRH3-00.01,SMA SC-xxxCP-10,,2500.0,0,0,0,0,SC20CONT.GR-H3 Version H2 Adapter module for Sunny Central Requirements Specification: D_00092621 Rev.04
+SMA SC-xxxCP-10:SCAST1015GR4-00.02,,SMA SC-xxxCP-10,,850.0,0,0,0,0,Interface assembly for SCDSTM1015
+SMA SC-xxxCP-10:SCDSTM Board,,SMA SC-xxxCP-10,,1195.0,0,0,0,0,DSTM Board for CP Inverters
+SMA SC-xxxCP-10:SCDSTM1015BG-00.02,,SMA SC-xxxCP-10,,1100.0,0,0,0,0,SCDSTM1015BG version B3 controlling assembly for SCDST1015
+SMA SC-xxxCP-10:Semikron IGBT,,SMA SC-xxxCP-10,,340.0,250,0,0,0,IGBT Supply
+SMA SC-xxxCP-10:SMA Hummels CT,,SMA SC-xxxCP-10,,100.0,0,0,0,0,Single Hummels Stack CT
+SMA SC-xxxCP-10:SMA Hummels Stack Cube,SC-CU1015.3B,SMA SC-xxxCP-10,,7995.0,0,0,0,0,Cube Powerstack SC-CU1015.3B with splitted AC busbar
+SMA SC-xxxCP-10:SMA Semikron Stack Cube,64-114830,SMA SC-xxxCP-10,,7000.0,0,0,0,0,1200V IGBT-module stack trench3 size 3H UL
+SMA SC-xxxCP-10:SMA Semikron Stack Cube - refurbished,64-114830,SMA SC-xxxCP-10,,3500.0,0,0,0,0,1200V IGBT-module stack trench3 size 3H UL
+SMA SC-xxxCP-10:SMU Board,SMU8HV21.BG1,SMA SC-xxxCP-10,,1395.0,0,0,0,0,String-Monitor-Unit for SC-WR m. PV1100V
+SMA SC-xxxCP-10:SMU Hub,SMU8-HUB,SMA SC-xxxCP-10,,500.0,0,0,0,0,Power supply and RS485 repeater for SMU8
+SMA SC-xxxCP-10:SMU8HV21 Connector Plug,,SMA SC-xxxCP-10,,75.0,0,0,0,0,Connector Plug for SMU8HV21
+SMA SC-xxxCP-10:Strikesorb RAYCAP,,SMA SC-xxxCP-10,,75.0,0,0,0,0,Raycap for SMA CP inverters
+SMA SC-xxxCP-10:Susol AC Switch,,SMA SC-xxxCP-10,,6650.0,0,0,0,0,Susol AC Switch for SMA CP inverters
+SMA SC-xxxCP-10:System cable M12 - RJ45 1.3m,,SMA SC-xxxCP-10,,150.0,0,0,0,0,System cable M12 - RJ45 1.3m
+SMA SC-xxxCP-10:Voltage divider unit (AC),SC20ACBGE2-00.01,SMA SC-xxxCP-10,,250.0,0,0,0,0,Voltage divider unit (AC)
+SMA SC-xxxx:ABB SACE T7N-D/PV 1000M DC Switch,,SMA SC-xxxx,,7000.0,0,0,0,0,Kodiak DC Switch (T7N-D/PV 1000M)
+SMA SC-xxxx:Auxiliary Contact 2W 24V DC,103140-00.01,SMA SC-xxxx,,39.44,0,0,0,0,Auxiliary Contact 2W 24V DC
+SMA SC-xxxx:cabinet fan kit 200-277VAC Option 37_0,6UP-720-002-002,SMA SC-xxxx,,676.17,0,0,0,0,cabinet fan kit 200-277VAC Option 37_0
+SMA SC-xxxx:closing release 220V...240VAC/DC,60-90452,SMA SC-xxxx,,126.57,0,0,0,0,closing release 220V...240VAC/DC
+SMA SC-xxxx:DST Board,,SMA SC-xxxx,,2244.37,0,0,0,0,DST Board for Kodiak Stacks
+SMA SC-xxxx:Geared Motor Device 220-250 VAC/DC,116556-00.01,SMA SC-xxxx,,982.71,0,0,0,0,Geared Motor Device 220-250 VAC/DC
+SMA SC-xxxx:Motor Drive DC Circuit Breaker,103132-00.01,SMA SC-xxxx,,885.83,0,0,0,0,motor drive DC circuit breaker
+SMA SC-xxxx:POWER STACK SC-UP 1500V IEC/IEEE,6UP-778-002-004,SMA SC-xxxx,,26697.84,0,0,0,0,POWER STACK SC-UP 1500V IEC/IEEE
+SMA SC-xxxx:Q10 Contactor (Eaton),,SMA SC-xxxx,,5995.0,0,0,0,0,Eaton DILM500 XTCE500M
+SMA SC-xxxx:Q12 Contactor (Eaton),Q12,SMA SC-xxxx,,495.0,0,0,0,0,Q12 Contactor
+SMA SC-xxxx:SC-UP 3phase voltage converter,6UP-849-001-001,SMA SC-xxxx,,360.09,0,0,0,0,SC-UP 3phase voltage converter
+SMA SC-xxxx:SC-UP buffered power supply 25VDC 420W,6UP-840-001-001,SMA SC-xxxx,,1169.12,0,0,0,0,SC-UP buffered power supply 25VDC 420W
+SMA SC-xxxx:SC-UP Circuit breaker 3600A 3-pol UL,6UP-577-002-001,SMA SC-xxxx,,15730.26,0,0,0,0,SC-UP Circuit breaker 3600A 3-pol UL
+SMA SC-xxxx:SC-UP Circuit breaker 4000A 3-pol,6UP-577-001-001,SMA SC-xxxx,,13402.58,0,0,0,0,SC-UP Circuit breaker 4000A 3-pol
+SMA SC-xxxx:SC-UP DC-switch 1500VDC1000A,6UP-577-003-001,SMA SC-xxxx,,6613.89,0,0,0,0,SC-UP DC-switch 1500VDC1000A
+SMA SC-xxxx:SC-UP DC-switch 1500VDC1600A,6UP-577-004-001,SMA SC-xxxx,,5375.51,0,0,0,0,SC-UP DC-switch 1500VDC1600A
+SMA SC-xxxx:SC-UP Fan radial 400VAC 5370W,6UP-720-003-001,SMA SC-xxxx,,3018.6,0,0,0,0,SC-UP Fan radial 400VAC 5370W
+SMA SC-xxxx:SC-UP IsoMonitoring 1500VDC v2.0,6UP-849-002-001,SMA SC-xxxx,,1348.22,0,0,0,0,SC-UP IsoMonitoring 1500VDC v2.0
+SMA SC-xxxx:SC-UP power supply extension module,6UP-840-002-001,SMA SC-xxxx,,710.32,0,0,0,0,SC-UP power supply extension module
+SMA SC-xxxx:SC30ACC AC Controller,6UP-450-005-001,SMA SC-xxxx,,1504.32,0,0,0,0,SC30ACC AC Controller
+SMA SC-xxxx:SC30ACC.BG4,,SMA SC-xxxx,,900.0,0,0,0,0,SC30ACC board for Kodiak inverters
+SMA SC-xxxx:SC30COM - Multi Mode FX,6UP-450-004-004,SMA SC-xxxx,,4494.36,0,0,0,0,SC30COM - Multi Mode FX
+SMA SC-xxxx:SC30COM - Single Mode FX,6UP-450-003-004,SMA SC-xxxx,,4628.52,0,0,0,0,SC30COM - Single Mode FX
+SMA SC-xxxx:SC30Cont Central Controllerboard,6UP-450-001-001,SMA SC-xxxx,,1801.76,0,0,0,0,SC30Cont Central Controllerboard
+SMA SC-xxxx:SC30DCC DC Controller,6UP-450-006-001,SMA SC-xxxx,,1497.02,0,0,0,0,SC30DCC DC Controller
+SMA SC-xxxx:SC30RIO - IO extension,6UP-450-008-002,SMA SC-xxxx,,1031.69,0,0,0,0,SC30RIO - IO extension
+SMA SC-xxxx:Sinefiltercapacitormodule 8x31?F,6UP-200-001-002,SMA SC-xxxx,,2119.73,0,0,0,0,Sinefiltercapacitormodule 8x31?F
+SMA SC-xxxx:SSM30BASE,SSM30BASE,SMA SC-xxxx,,2450.0,0,0,0,0,SSM30BASE PCB for SMA Combiner Boxes
+SMA Semikron Cube Refurbishment:Fitting Charge - Semikron Capacitor,,SMA SC-xxxCP-10,,25.0,0,0,0,0,Charge for fitting stack capacitors
+SMA Semikron Cube Refurbishment:Fitting Charge - Semikron IGBTs,,SMA SC-xxxCP-10,,50.0,0,0,0,0,Charge for fitting of Semikron Cube IGBTs
+SMA Semikron Cube Refurbishment:Fitting Charge - Semikron Snubbers,,SMA SC-xxxCP-10,,25.0,0,0,0,0,Charge for fitting the snubbers within the Semikron Stack Cube
+SMA Semikron Cube Refurbishment:Semikron Capacitor,,SMA SC-xxxCP-10,,30.0,0,0,0,0,Electronicon Capacitor (420µF)
+SMA Semikron Cube Refurbishment:Semikron Stack IGBT,,SMA SC-xxxCP-10,,250.0,0,0,0,0,IGBT for installation in SMA Semikron Stack Cubes
+SMA Semikron Cube Refurbishment:Semikron Stack Repair,,SMA SC-xxxCP-10,,1200.0,0,0,0,0,Repair of 1 No. Semikron Stack Cube
+SMA Semikron Cube Refurbishment:Semikron Stack Snubber,,SMA SC-xxxCP-10,,50.0,0,0,0,0,Snubber for installation in Semikron Stack Cube
+SMA Semikron Cube Refurbishment:Testing per Cube,,SMA SC-xxxCP-10,,600.0,0,0,0,0,Cost for the overall testing
+Station repairs:Floor replacement inside inverter stations,Floor replacement inside inverter stations,Miscellaneous,,1500.0,0,0,0,0,Floor replacement inside inverter stations
+Station repairs:Station cleaning/Maintenance,Station cleaning/Maintenance,Miscellaneous,,200.0,0,0,0,0,Station cleaning/Maintenance
+Testing:Harmonics Testing,,Services,,14628.0,0,0,0,0,One Off Harmonics Testing
+Testing:Testing of Gamesa IGBTs,,Gamesa 630kW TL+,,200.0,0,0,0,0,Testing of Gamesa IGBTs
+Testing:Testing of Schneider AIC Stage,,Schneider Conext Core XC,,500.0,0,0,0,0,Testing of Schneider AIC Stage (all 3 phases)
+Testing:Testing of SMA Semikron Stack Cube,,SMA SC-xxxCP-10,,600.0,0,0,0,0,Testing of SMA Semikron Stack Cube
+Training:Laptop Configured for XC,,Schneider Conext Core XC,,2500.0,0,0,0,0,
+Training:LT Training Academy SMA,,Training,,2000.0,0,0,0,0,LT Training Academy SMA Two day Foundation Module
+Training:LT training Academy XC,,Training,,2000.0,0,0,0,0,LT Training Academy XC Two day Foundation Module
+Training:Schneider XC Annual Maintenance Training,XCAPM2025T,Training,,,0,0,0,0,Onsite training for annual preventative maintenance per MW price
+Training:Schneider XC Training Programme,,Training,,1500.0,0,0,0,0,Training on the Schneider XC Inverter for one person
+Training:Training Subsistence,,Training,,500.0,0,0,0,0,Subsistence Includes travel and accommodation for the trainer
+Transformers:6kVA Auxiliary Transformer,,Miscellaneous,,1375.0,0,0,0,0,6kVA Auxiliary Transformer
+undervoltage release 24 VAC/DC,116554-00.01,SMA SC-xxxx,,328.69,0,0,0,0,undervoltage release 24 VAC/DC
+undervoltage release UVR 24 V AC/DC,60-90455,SMA SC-xxxx,,154.74,0,0,0,0,undervoltage release UVR 24 V AC/DC
+Voltage Control Board,,Schneider Conext Core XC,,1600.0,0,0,0,0,Voltage Control Board
+Waste Removal,,Miscellaneous,,,0,0,0,0,Removal of Unrepairable Electrical Equipment
