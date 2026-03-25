@@ -49,13 +49,14 @@ const AppLayout = () => {
         const admin1Emails = [
           "luke@ltenergyservices.co.uk", 
           "terry@ltenergyservices.co.uk", 
-          "rish@25terawatts.com"
+          "rish@25terawatts.com",
+          "saphaarelabs@gmail.com"
         ];
         
         let role: "admin1" | "admin2" | "engineer" = "engineer";
         if (admin1Emails.includes(emailLower)) {
           role = "admin1";
-        } else if (emailLower === "simon@ltenergyservices.co.uk") {
+        } else if (emailLower === "simon@ltenergyservices.co.uk" || emailLower === "reddyvamsi587@gmail.com") {
           role = "admin2";
         }
         
@@ -80,13 +81,14 @@ const AppLayout = () => {
         const admin1Emails = [
           "luke@ltenergyservices.co.uk", 
           "terry@ltenergyservices.co.uk", 
-          "rish@25terawatts.com"
+          "rish@25terawatts.com",
+          "saphaarelabs@gmail.com"
         ];
         
         let role: "admin1" | "admin2" | "engineer" = "engineer";
         if (admin1Emails.includes(emailLower)) {
           role = "admin1";
-        } else if (emailLower === "simon@ltenergyservices.co.uk") {
+        } else if (emailLower === "simon@ltenergyservices.co.uk" || emailLower === "reddyvamsi587@gmail.com") {
           role = "admin2";
         }
         
